@@ -1,0 +1,32 @@
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+//--page width
+$max-width: 116rem;
+
+//=== layout dimensions
+$page-height: 497.5rem;
+
+/* ---------- page sections height ----------------------*/
+
+$hd-fr: 78rem / $page-height * 1fr; /* header */
+$gap1-fr: 14rem / $page-height * 1fr;
+$ar-fr: 40.3rem / $page-height * 1fr; /* article */
+$gap2-fr: 18rem / $page-height* 1fr;
+$ph-fr: 87.2rem / $page-height * 1fr; /* photo animals */
+$bt-fr: 23.4rem / $page-height * 1fr; /* button - choose favorite */
+$fd-fr: 100.4rem / $page-height * 1fr; /* section - feed a friend */
+$gap3-fr: 14rem / $page-height * 1fr;
+$tm-fr: 57.5rem / $page-height * 1fr; /* testimonials */
+$gap4-fr: 20.4rem / $page-height * 1fr;
+$ft-fr: 44.3rem / $page-height * 1fr; /* footer */
+
+
+
+
+
+
+
+
+
+

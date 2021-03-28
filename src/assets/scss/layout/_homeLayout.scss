@@ -1,0 +1,73 @@
+@use '../abstracts/var' as *;
+
+.container {
+  max-width: $max-width;
+  width: 116rem;
+  height: 497.5rem;
+  background-color: lightgreen;
+
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+
+  grid-template-rows:
+      $hd-fr  /*header*/
+      $gap1-fr    /* gap1 */
+      $ar-fr   /*article - backstage of wildness*/
+      $gap2-fr    /* gap2 */
+      $ph-fr  /* photo animals*/
+      $bt-fr  /* button - choose favorite*/
+      $fd-fr  /* section - feed a friend*/
+      $gap3-fr  /* gap3 */
+      $tm-fr  /* testimonials */
+      $gap4-fr    /* gap */
+      $ft-fr; /* footer */
+
+  grid-template-areas:
+      " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"
+      " .   .   .   .   .   .   .   .   .   .    .    . "
+      " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar"  /*article - backstage of wildnes*/
+      " .   .   .   .   .   .   .   .   .   .    .    . "
+      " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph"  /*animals photo*/
+      " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt"  /*choose favorite button*/
+      " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd"  /*feed a friend*/
+      " .   .   .   .   .   .   .   .   .   .    .    . "
+      " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm"  /*testimonials*/
+      " .   .   .   .   .   .   .   .   .   .    .    . "
+      " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft"; /*footer*/
+  /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
+
+  grid-column-gap: 3rem;
+  grid-row-gap: 1px;
+}
+
+.header {
+  grid-area: hd;
+  background-color: orange;
+}
+
+.backstage-article {
+  grid-area: ar;
+  background-color: green;
+}
+
+.photo-section {
+  grid-area: ph;
+  background-color: blue;
+}
+
+.chose-favorite-btn {
+  grid-area: bt;
+  background-color: yellow;
+}
+
+.testimonials {
+  grid-area: tm;
+  background-color: black;
+}
+
+.footer {
+  grid-area: ft;
+  background-color: blue;
+}
+

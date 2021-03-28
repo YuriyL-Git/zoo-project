@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use 'vendors/normalize';
+@use 'base/base';
+@use 'abstracts/var';
+
+@use 'layout/homeLayout';
+@use 'components/header';
+@use 'components/article';
+@use 'components/photo';
+@use 'components/button-favorite';
+@use 'components/feed-fried';
+@use 'components/testimonials';
+@use 'components/footer';
+
+
+
