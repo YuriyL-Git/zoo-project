@@ -330,9 +330,9 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 0.1567839196fr 0.0281407035fr 0.0810050251fr 0.0361809045fr 0.1752763819fr 0.0470351759fr 0.2018090452fr 0.0281407035fr 0.1155778894fr 0.0410050251fr 0.0890452261fr;
-  /* footer */
+  /*- footer */
   grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " .   .   .   .   .   .   .   .   .   .    .    . " " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar" " .   .   .   .   .   .   .   .   .   .    .    . " " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph" " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt" " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd" " .   .   .   .   .   .   .   .   .   .    .    . " " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm" " .   .   .   .   .   .   .   .   .   .    .    . " " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
-  /*footer*/
+  /*- footer -*/
   /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
   grid-column-gap: 3rem;
   grid-row-gap: 1px;
@@ -340,7 +340,6 @@ body {
 
 .header {
   grid-area: hd;
-  background-color: orange;
 }
 
 .backstage-article {
@@ -366,4 +365,18 @@ body {
 .footer {
   grid-area: ft;
   background-color: blue;
+}
+
+.header {
+  display: flex;
+}
+
+.background-photo {
+  width: 100%;
+  height: 78rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/photos/Panda.jpg") no-repeat center center;
+  background-size: cover;
 }

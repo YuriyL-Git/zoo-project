@@ -19,7 +19,7 @@
       $gap3-fr  /*- gap3 -*/
       $tm-fr    /*- testimonials -*/
       $gap4-fr  /*- gap */
-      $ft-fr;   /*- footer */
+      $ft-fr; /*- footer */
 
   grid-template-areas:
       " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"  /*- header -*/
@@ -41,7 +41,6 @@
 
 .header {
   grid-area: hd;
-  background-color: orange;
 }
 
 .backstage-article {
