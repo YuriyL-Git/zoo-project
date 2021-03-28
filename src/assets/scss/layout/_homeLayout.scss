@@ -7,34 +7,32 @@
   background-color: lightgreen;
 
   display: grid;
-
   grid-template-columns: repeat(12, 1fr);
-
   grid-template-rows:
-      $hd-fr  /*header*/
-      $gap1-fr    /* gap1 */
-      $ar-fr   /*article - backstage of wildness*/
-      $gap2-fr    /* gap2 */
-      $ph-fr  /* photo animals*/
-      $bt-fr  /* button - choose favorite*/
-      $fd-fr  /* section - feed a friend*/
-      $gap3-fr  /* gap3 */
-      $tm-fr  /* testimonials */
-      $gap4-fr    /* gap */
-      $ft-fr; /* footer */
+      $hd-fr    /*- header -*/
+      $gap1-fr  /*- gap1 -*/
+      $ar-fr    /*- article -*/
+      $gap2-fr  /*- gap2 -*/
+      $ph-fr    /*- photo animals -*/
+      $bt-fr    /*- button - choose favorite -*/
+      $fd-fr    /*- section - feed a friend -*/
+      $gap3-fr  /*- gap3 -*/
+      $tm-fr    /*- testimonials -*/
+      $gap4-fr  /*- gap */
+      $ft-fr;   /*- footer */
 
   grid-template-areas:
-      " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"
+      " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"  /*- header -*/
       " .   .   .   .   .   .   .   .   .   .    .    . "
-      " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar"  /*article - backstage of wildnes*/
+      " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar"  /*- article -*/
       " .   .   .   .   .   .   .   .   .   .    .    . "
-      " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph"  /*animals photo*/
-      " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt"  /*choose favorite button*/
-      " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd"  /*feed a friend*/
+      " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph"  /*- animals photo -*/
+      " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt"  /*- choose favorite button -*/
+      " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd"  /*- feed a friend -*/
       " .   .   .   .   .   .   .   .   .   .    .    . "
-      " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm"  /*testimonials*/
+      " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm"  /*- testimonials -*/
       " .   .   .   .   .   .   .   .   .   .    .    . "
-      " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft"; /*footer*/
+      " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft"; /*- footer -*/
   /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
 
   grid-column-gap: 3rem;
