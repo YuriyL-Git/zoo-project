@@ -59,7 +59,7 @@ function serve() {
       baseDir: "./" + distPath
     }
     // ==== for two browsers ============
-    , browser: ["chrome", "firefox"]
+    , browser: ["google-chrome" , "firefox"]
   });
 }
 
