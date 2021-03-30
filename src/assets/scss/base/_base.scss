@@ -1,6 +1,9 @@
+@import '../vendors/include-media.scss';
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
 }
 
 *,
@@ -14,4 +17,6 @@ body {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
+
 }

@@ -27,9 +27,15 @@
 <div class="container">
   <!-- Header -->
   <header class="header">
+  
+  <!--  absolute positioned elements -->
     <div class="background-photo"></div>
     <div class="nav-panel"></div>
+    <div class="circle"></div>
+    <h1 class="title">Watch your <span class="title__favorite">favorite</span>  animal online</h1>
+    <button class="btn btn--watch-online">watch online</button>
   
+  <!--  nav bar-->
     <nav class="nav">
       <a href="#" class="nav__logo-link">
         <img src="assets/images/icons/logo.svg" alt="logo">
@@ -59,13 +65,70 @@
   
 
   <!-- backstage article -->
-  <article class="backstage-article"></article>
+  <article class="article">
+    <!--  absolute positioned elements -->
+      <div class="article__image-container"></div>
+    <img class="article__photo" src="assets/images/photos/article_photo.jpg" alt="bamboo cap">
+  
+    <div class="article__text-section">
+      <h2 class="article__title">The Backstage of the Wilderness World.</h2>
+      <p class="article__par-one">The site was founded on the basis of a volunteer movement to protect and care for
+        animals.</p>
+      <h3 class="article__subtitle">How it works</h3>
+      <p class="article__par-two">The main goal is to help the animals, as well as the nature reserves and zoos where they
+        are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los
+        Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and
+        reptiles.</p>
+    </div>
+  
+  </article>
   <!-- photo of animals -->
-  <section class="photo-section"></section>
+  <section class="photo-section">
+  
+    <button class="btn photo-section__btn-left"></button>
+    <button class="btn photo-section__btn-right"></button>
+  
+    <div class="photo-section__container">
+      <img class="photo-section__photo" src="assets/images/photos/pandas.jpg" alt="pandas">
+      <div class="photo-section__title">giant pandas</div>
+      <div class="photo-section__text">Native to Southwest China</div>
+    </div>
+  
+    <div class="photo-section__container">
+      <img class="photo-section__photo" src="assets/images/photos/eagle.jpg" alt="pandas">
+      <div class="photo-section__title">Eagles</div>
+      <div class="photo-section__text">Native to South America</div>
+    </div>
+  
+    <div class="photo-section__container">
+      <img class="photo-section__photo" src="assets/images/photos/gorilla.jpg" alt="pandas">
+      <div class="photo-section__title">Gorillas</div>
+      <div class="photo-section__text">Native to Congo</div>
+    </div>
+  
+    <div class="photo-section__container">
+      <img class="photo-section__photo" src="assets/images/photos/sloth.jpg" alt="pandas">
+      <div class="photo-section__title">Two-toed Sloth</div>
+      <div class="photo-section__text">Mesoamerica, South America</div>
+    </div>
+  
+    <div class="photo-section__container">
+      <img class="photo-section__photo" src="assets/images/photos/cheetahs.jpg" alt="pandas">
+      <div class="photo-section__title">cheetahs</div>
+      <div class="photo-section__text">Native to Africa</div>
+    </div>
+  
+    <div class="photo-section__container">
+      <img class="photo-section__photo" src="assets/images/photos/penguins.jpg" alt="pandas">
+      <div class="photo-section__title">Penguins</div>
+      <div class="photo-section__text">Native to Antarctica</div>
+    </div>
+  
+  </section>
   <!-- Button choose favorite animal -->
   <div class="chose-favorite-btn"></div>
   <!--    feed animal section-->
-  <section class="feed-fried"></section>
+  <section class="feed-friend"></section>
   <!--    Testimonials section-->
   <section class="testimonials"></section>
   <!--  Footer-->

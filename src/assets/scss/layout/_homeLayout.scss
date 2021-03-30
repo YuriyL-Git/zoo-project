@@ -1,25 +1,25 @@
 @use '../abstracts/var' as *;
 
 .container {
-  max-width: $max-width;
-  width: 116rem;
-  height: 497.5rem;
-  background-color: lightgreen;
+  max-width: 1160px;
+  width: 1160px;
+  min-height: 497.5rem;
+  //background-color: lightgreen;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:
-      $hd-fr    /*- header -*/
-      $gap1-fr  /*- gap1 -*/
-      $ar-fr    /*- article -*/
-      $gap2-fr  /*- gap2 -*/
-      $ph-fr    /*- photo animals -*/
-      $bt-fr    /*- button - choose favorite -*/
-      $fd-fr    /*- section - feed a friend -*/
-      $gap3-fr  /*- gap3 -*/
-      $tm-fr    /*- testimonials -*/
-      $gap4-fr  /*- gap */
-      $ft-fr; /*- footer */
+      $hd    /*- header -*/
+      $gap1  /*- gap1 -*/
+      $ar    /*- article -*/
+      $gap2  /*- gap2 -*/
+      $ph    /*- photo animals -*/
+      $bt    /*- button - choose favorite -*/
+      $fd    /*- section - feed a friend -*/
+      $gap3  /*- gap3 -*/
+      $tm    /*- testimonials -*/
+      $gap4  /*- gap */
+      $ft; /*- footer */
 
   grid-template-areas:
       " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"  /*- header -*/
@@ -43,19 +43,22 @@
   grid-area: hd;
 }
 
-.backstage-article {
+.article {
   grid-area: ar;
-  background-color: green;
 }
 
 .photo-section {
   grid-area: ph;
-  background-color: blue;
 }
 
 .chose-favorite-btn {
   grid-area: bt;
   background-color: yellow;
+}
+
+.feed-friend {
+  grid-area: fd;
+  background-color: #4B9200;
 }
 
 .testimonials {

@@ -1,0 +1,15 @@
+@use "../abstracts/var";
+
+.btn {
+  z-index: 10;
+  text-transform: uppercase;
+  color: #fff;
+  background: var.$orange;
+  border: none;
+  border-radius: 2.5rem;
+  width: 29.8rem;
+  height: 5.4rem;
+  text-align: center;
+  //letter-spacing: 0.1rem;
+  font: var.$body-btn-roboto;
+}

@@ -4,13 +4,14 @@
 @use 'abstracts/var';
 
 @use 'layout/homeLayout';
-@use 'components/header';
-@use 'components/article';
-@use 'components/photo';
-@use 'components/button-favorite';
-@use 'components/feed-fried';
-@use 'components/testimonials';
-@use 'components/footer';
+@use 'components/buton';
+@use 'sections/header';
+@use 'sections/article';
+@use 'sections/photo';
+@use 'sections/button-favorite';
+@use 'sections/feed-fried';
+@use 'sections/testimonials';
+@use 'sections/footer';
 
 
 
