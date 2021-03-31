@@ -332,7 +332,7 @@ body {
   min-height: 497.5rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 78rem 14rem 40.3rem 17.7rem 87.2rem 23.2rem 100.4rem 14rem 57.5rem 20.4rem 44.3rem;
+  grid-template-rows: 78rem 14rem 40.3rem 17.7rem 87.2rem 23.2rem 100.4rem 14rem 57.5rem 20rem 44.3rem;
   /*- footer */
   grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " .   .   .   .   .   .   .   .   .   .    .    . " " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar" " .   .   .   .   .   .   .   .   .   .    .    . " " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph" " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt" " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd" " .   .   .   .   .   .   .   .   .   .    .    . " " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm" " .   .   .   .   .   .   .   .   .   .    .    . " " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
   /*- footer -*/
@@ -367,7 +367,6 @@ body {
 
 .footer {
   grid-area: ft;
-  background-color: blue;
 }
 
 .btn {
@@ -387,7 +386,20 @@ body {
 .background-image {
   position: absolute;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  z-index: -1;
+  z-index: -10;
+}
+
+.logo {
+  width: 8.2rem;
+  height: 5.2rem;
+  z-index: 10;
+  border: 1px solid #FFFFFF;
+  border-radius: 0.2rem;
+  position: relative;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
@@ -413,22 +425,7 @@ body {
   align-items: center;
 }
 .nav__logo-link {
-  width: 8.2rem;
-  height: 5.2rem;
-  z-index: 10;
-  border: 1px solid #FFFFFF;
-  border-radius: 0.2rem;
-  position: relative;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-right: 6.3rem;
-}
-.nav__logo-icon {
-  position: absolute;
-  top: 45%;
-  left: 12%;
 }
 .nav__link {
   color: #fff;
@@ -513,9 +510,9 @@ body {
   }
 }
 .article__image-container {
-  background: url("../images/photos/flower_foto1.png") no-repeat;
-  width: 8.5%;
-  height: 60.5rem;
+  background: url("../images/photos/flower_foto.png") no-repeat;
+  width: 15rem;
+  height: 100%;
   right: 0;
   top: 79.2rem;
 }
@@ -705,6 +702,7 @@ body {
   margin-bottom: 12rem;
   position: relative;
   display: flex;
+  background-color: white;
 }
 .feed-friend__card-container:first-child .feed-friend__card-text {
   bottom: -6.9rem;
@@ -798,4 +796,48 @@ body {
   position: absolute;
   border-radius: 0.5rem;
   margin-top: 5.2rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+.footer__background {
+  background: #111115;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 44.3rem;
+  z-index: -1;
+}
+.footer__image-container {
+  background: url("../images/photos/leav_foto.png") no-repeat;
+  width: 24.5rem;
+  height: 100%;
+  right: 0;
+  top: 426rem;
+}
+.footer__container-main {
+  height: 35.2rem;
+  width: 100%;
+  background-color: orange;
+  margin-bottom: 1rem;
+  display: flex;
+}
+.footer__container-top {
+  height: 8.5rem;
+  width: 100%;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__subscribe-container {
+  height: 100%;
+  width: 36.7rem;
+  background-color: blue;
+}
+.footer__subscribe-title {
+  font: normal normal 2.4rem/120% Roboto, sans-serif;
+  color: #fff;
+  margin: 0;
 }

@@ -1,3 +1,51 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+@use '../abstracts/var';
+
+.footer {
+  display: flex;
+  align-items: center;
+
+  &__background {
+    background: #111115;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 44.3rem;
+    z-index: -1;
+  }
+
+  &__image-container {
+    background: url("../images/photos/leav_foto.png") no-repeat;
+    width: 24.5rem;
+    height: 100%;
+    right: 0;
+    top: 426rem;
+  }
+
+  &__container-main {
+    height: 35.2rem;
+    width: 100%;
+    background-color: orange;
+    margin-bottom: 1rem;
+    display: flex;
+  }
+
+  &__container-top {
+    height: 8.5rem;
+    width: 100%;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__subscribe-container {
+    height: 100%;
+    width: 36.7rem;
+    background-color: blue;
+  }
+
+  &__subscribe-title {
+    font: var.$subtitle-roboto-regular;
+    color: #fff;
+    margin: 0;
+  }
+}

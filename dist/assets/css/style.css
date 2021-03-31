@@ -335,7 +335,7 @@ body {
   min-height: 497.5rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 78rem 14rem 40.3rem 17.7rem 87.2rem 23.2rem 100.4rem 14rem 57.5rem 20.4rem 44.3rem;
+  grid-template-rows: 78rem 14rem 40.3rem 17.7rem 87.2rem 23.2rem 100.4rem 14rem 57.5rem 20rem 44.3rem;
   /*- footer */
   grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " .   .   .   .   .   .   .   .   .   .    .    . " " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar" " .   .   .   .   .   .   .   .   .   .    .    . " " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph" " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt" " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd" " .   .   .   .   .   .   .   .   .   .    .    . " " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm" " .   .   .   .   .   .   .   .   .   .    .    . " " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
   /*- footer -*/
@@ -366,12 +366,10 @@ body {
 
 .testimonials {
   grid-area: tm;
-  background-color: lightgreen;
 }
 
 .footer {
   grid-area: ft;
-  background-color: blue;
 }
 
 .btn {
@@ -392,7 +390,24 @@ body {
   position: absolute;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  z-index: -1;
+  z-index: -10;
+}
+
+.logo {
+  width: 8.2rem;
+  height: 5.2rem;
+  z-index: 10;
+  border: 1px solid #FFFFFF;
+  border-radius: 0.2rem;
+  position: relative;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .header {
@@ -423,27 +438,7 @@ body {
 }
 
 .nav__logo-link {
-  width: 8.2rem;
-  height: 5.2rem;
-  z-index: 10;
-  border: 1px solid #FFFFFF;
-  border-radius: 0.2rem;
-  position: relative;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
   margin-right: 6.3rem;
-}
-
-.nav__logo-icon {
-  position: absolute;
-  top: 45%;
-  left: 12%;
 }
 
 .nav__link {
@@ -540,9 +535,9 @@ body {
 }
 
 .article__image-container {
-  background: url("../images/photos/flower_foto1.png") no-repeat;
-  width: 8.5%;
-  height: 60.5rem;
+  background: url("../images/photos/flower_foto.png") no-repeat;
+  width: 15rem;
+  height: 100%;
   right: 0;
   top: 79.2rem;
 }
@@ -815,6 +810,8 @@ body {
 .testimonials__card-container {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
   height: 40rem;
   position: relative;
@@ -827,7 +824,6 @@ body {
   position: relative;
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
   border-radius: 2rem;
-  overflow: hidden;
 }
 
 .testimonials__card:before {
@@ -867,9 +863,50 @@ body {
   top: 2rem;
 }
 
+.testimonials__content-wrapper {
+  height: 30.4rem;
+  overflow: hidden;
+}
+
 .testimonials__content {
   font: normal 300 1.5rem/120% Roboto, sans-serif;
   padding: 0 1.6rem;
   margin-top: 0.8rem;
-  overflow: hidden;
+}
+
+.testimonials__feedback-btn {
+  position: absolute;
+  border-radius: 0.5rem;
+  margin-top: 5.2rem;
+}
+
+.footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__background {
+  background: #111115;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 44.3rem;
+  z-index: -1;
+}
+
+.footer__image-container {
+  background: url("../images/photos/leav_foto.png") no-repeat;
+  width: 24.5rem;
+  height: 100%;
+  right: 0;
+  top: 426rem;
+}
+
+.footer__container-main {
+  height: 35.2rem;
+  width: 100%;
+  background-color: orange;
+  margin-bottom: 1rem;
 }

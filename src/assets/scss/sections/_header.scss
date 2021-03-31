@@ -22,26 +22,15 @@
   display: flex;
   align-items: center;
 
-
   &__logo-link {
-    width: 8.2rem;
-    height: 5.2rem;
-    z-index: 10;
-    border: 1px solid #FFFFFF;
-    border-radius: 0.2rem;
-    position: relative;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-right: 6.3rem;
   }
 
-  &__logo-icon {
-    position: absolute;
-    top: 45%;
-    left: 12%;
-  }
+  //&__logo-icon {
+  //  position: absolute;
+  //  top: 45%;
+  //  left: 12%;
+  //}
 
   &__link {
     color: #fff;
