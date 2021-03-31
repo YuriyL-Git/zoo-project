@@ -332,7 +332,7 @@ body {
   min-height: 497.5rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 78rem 14rem 40.3rem 18rem 87.2rem 23.4rem 100.4rem 14rem 57.5rem 20.4rem 44.3rem;
+  grid-template-rows: 78rem 14rem 40.3rem 17.7rem 87.2rem 23.2rem 100.4rem 14rem 57.5rem 20.4rem 44.3rem;
   /*- footer */
   grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " .   .   .   .   .   .   .   .   .   .    .    . " " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar" " .   .   .   .   .   .   .   .   .   .    .    . " " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph" " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt" " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd" " .   .   .   .   .   .   .   .   .   .    .    . " " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm" " .   .   .   .   .   .   .   .   .   .    .    . " " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
   /*- footer -*/
@@ -353,14 +353,12 @@ body {
   grid-area: ph;
 }
 
-.chose-favorite-btn {
+.chose-favorite {
   grid-area: bt;
-  background-color: yellow;
 }
 
 .feed-friend {
   grid-area: fd;
-  background-color: #4B9200;
 }
 
 .testimonials {
@@ -384,6 +382,13 @@ body {
   height: 5.4rem;
   text-align: center;
   font: normal 500 1.6rem/140% Roboto, sans-serif;
+  outline: none;
+}
+
+.background-image {
+  position: absolute;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: -1;
 }
 
 .header {
@@ -509,14 +514,11 @@ body {
   }
 }
 .article__image-container {
-  position: absolute;
   background: url("../images/photos/flower_foto1.png") no-repeat;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  width: 7.5%;
+  width: 8.5%;
   height: 60.5rem;
   right: 0;
   top: 79.2rem;
-  z-index: -1;
 }
 .article__photo {
   max-height: 100%;
@@ -524,7 +526,7 @@ body {
   display: inline-block;
 }
 .article__text-section {
-  margin-left: 9rem;
+  margin-left: 8.7rem;
   width: 100%;
   height: 100%;
   z-index: 5;
@@ -532,7 +534,7 @@ body {
 .article__title {
   font: normal normal 4.8rem/120% Roboto, sans-serif;
   font-size: 4.8em;
-  margin: 0 0 2.3rem;
+  margin: 0 0 2.1rem;
 }
 .article__par-one {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
@@ -543,7 +545,7 @@ body {
 .article__subtitle {
   font: normal normal 2.4rem/120% Roboto, sans-serif;
   font-size: 2.4em;
-  margin-bottom: 2.9rem;
+  margin-bottom: 3.3rem;
 }
 .article__par-two {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
@@ -568,6 +570,7 @@ body {
   border: 1px solid #FE9013;
   border-radius: 5px;
   overflow: hidden;
+  background-color: white;
 }
 .photo-section__photo {
   height: 36.4rem;
@@ -576,12 +579,12 @@ body {
 .photo-section__title {
   text-transform: uppercase;
   font: normal 500 1.6rem/140% Roboto, sans-serif;
-  margin-left: 1.6rem;
+  margin-left: 1.5rem;
   margin-top: 0.4rem;
 }
 .photo-section__text {
   font: normal 300 1.5rem/120% Roboto, sans-serif;
-  margin-left: 1.6rem;
+  margin-left: 1.4rem;
 }
 .photo-section__btn-left, .photo-section__btn-right {
   position: absolute;
@@ -607,4 +610,124 @@ body {
   .photo-section__btn-right {
     right: -2rem;
   }
+}
+
+.chose-favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chose-favorite__btn {
+  margin-top: -2.4rem;
+}
+.chose-favorite__palm-image {
+  background: url("../images/photos/palm_foto.png") no-repeat;
+  width: 30rem;
+  height: 100%;
+  left: 0;
+  top: 215.8rem;
+}
+.chose-favorite__strelitzia-image {
+  background: url("../images/photos/strelitzia.png") no-repeat;
+  width: 30rem;
+  height: 100%;
+  right: 0;
+  top: 233.4rem;
+}
+
+.feed-friend {
+  display: flex;
+  align-items: center;
+}
+.feed-friend__background {
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100.4rem;
+  z-index: -1;
+  border-radius: 2rem;
+}
+.feed-friend__container-main {
+  height: 83.5rem;
+  width: 116rem;
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  margin-top: -3rem;
+}
+.feed-friend__title {
+  color: #f9804b;
+  font: normal normal 4.8rem/120% Roboto, sans-serif;
+  text-align: center;
+  margin: 4.1rem 0 3rem 0.4rem;
+}
+.feed-friend__subtitle-one {
+  font: normal normal 2.4rem/120% Roboto, sans-serif;
+  color: #333B41;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 0 4rem 9.9rem;
+}
+.feed-friend__par-one {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 130%;
+  font-weight: 500;
+  margin: 0 0 1.1rem 9.9rem;
+}
+.feed-friend__par-two {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  width: 86.3rem;
+  line-height: 130%;
+  margin: 0 0 6.2rem 9.9rem;
+}
+.feed-friend__underline {
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #f9804b;
+}
+.feed-friend__subtitle-two {
+  font: normal normal 3.6rem/130% Roboto, sans-serif;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.feed-friend__container-images {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 76.4rem;
+}
+.feed-friend__card-container {
+  width: 16.8rem;
+  height: 16.8rem;
+  z-index: 3;
+  border-radius: 5px;
+  border: 1px solid #f9804b;
+  margin-bottom: 12rem;
+  position: relative;
+  display: flex;
+}
+.feed-friend__card-container:first-child .feed-friend__card-text {
+  bottom: -6.9rem;
+}
+.feed-friend__card-container:not(first-child) .feed-friend__card-text {
+  bottom: -9.1rem;
+}
+.feed-friend__card-text {
+  position: absolute;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 140%;
+}
+.feed-friend__image {
+  margin: auto;
+}
+.feed-friend__arrow {
+  position: absolute;
+  top: 35.5%;
+  right: -60.9%;
+}
+.feed-friend__btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1.5rem;
 }

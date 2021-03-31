@@ -67,7 +67,7 @@
   <!-- backstage article -->
   <article class="article">
     <!--  absolute positioned elements -->
-      <div class="article__image-container"></div>
+    <div class="background-image article__image-container"></div>
     <img class="article__photo" src="assets/images/photos/article_photo.jpg" alt="bamboo cap">
   
     <div class="article__text-section">
@@ -126,9 +126,46 @@
   
   </section>
   <!-- Button choose favorite animal -->
-  <div class="chose-favorite-btn"></div>
+  <div class="chose-favorite">
+    <div class="background-image chose-favorite__palm-image"></div>
+    <div class="background-image chose-favorite__strelitzia-image"></div>
+    <button type="submit" class="btn chose-favorite__btn">choose your favorite
+    </button>
+  </div>
   <!--    feed animal section-->
-  <section class="feed-friend"></section>
+  <section class="feed-friend">
+    <div class="feed-friend__background"></div>
+  
+    <div class="feed-friend__container-main">
+      <h2 class="feed-friend__title">Pick and feed a friend</h2>
+      <h3 class="feed-friend__subtitle-one">We know the animals bring you joy, and in these extraordinary times, we’re
+        glad.</h3>
+      <p class="feed-friend__par-one">During a time when the COVID-19 epidemic is touching all of our lives, we’re proud
+        and glad that people around the world find joy in PetStory.</p>
+      <p class="feed-friend__par-two">Even though the zoo has reopened, we need you now more than ever to help us deal
+        with these problems. Please consider a gift to our <span
+            class="feed-friend__underline">Emergency Support Fund.</span></p>
+      <h3 class="feed-friend__subtitle-two">How it works</h3>
+      <!--    images container-->
+      <div class="feed-friend__container-images">
+        <div class="feed-friend__card-container">
+          <img class="feed-friend__arrow" src="assets/images/icons/arrow.svg" alt="">
+          <img class="feed-friend__image " src="assets/images/icons/credit-card.svg" alt="">
+          <p class="feed-friend__card-text">Pay with card</p>
+        </div>
+        <div class="feed-friend__card-container">
+          <img class="feed-friend__arrow" src="assets/images/icons/arrow.svg" alt="">
+          <img class="feed-friend__image" src="assets/images/icons/hand.svg" alt="">
+          <p class="feed-friend__card-text">Payment goes to the zoo</p>
+        </div>
+        <div class="feed-friend__card-container">
+          <img class="feed-friend__image" src="assets/images/icons/monkey.svg" alt="">
+          <p class="feed-friend__card-text">Your favourite animal gets delicious dish</p>
+        </div>
+      </div>
+      <button class="btn feed-friend__btn">Feed a friend now</button>
+    </div>
+  </section>
   <!--    Testimonials section-->
   <section class="testimonials"></section>
   <!--  Footer-->

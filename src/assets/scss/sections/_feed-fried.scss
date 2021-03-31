@@ -1,0 +1,117 @@
+@use '../abstracts/var';
+
+.feed-friend {
+  display: flex;
+  align-items: center;
+
+  &__background {
+    background: var.$orange_grad;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100.4rem;
+    z-index: -1;
+    border-radius: 2rem;
+  }
+
+  &__container-main {
+    height: 83.5rem;
+    width: 116rem;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    margin-top: -3rem;
+  }
+
+  &__title {
+    color: var.$orange;
+    font: var.$h2-roboto-regular;
+    text-align: center;
+    margin: 4.1rem 0 3rem 0.4rem;
+  }
+
+  &__subtitle-one {
+    font: var.$subtitle-roboto-regular;
+    color: #333B41;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 0 4rem 9.9rem;
+  }
+
+  &__par-one {
+    font: var.$body-roboto-regular;
+    line-height: 130%;
+    font-weight: 500;
+    margin: 0 0 1.1rem 9.9rem;
+  }
+
+  &__par-two {
+    font: var.$body-roboto-regular;
+    width: 86.3rem;
+    line-height: 130%;
+    margin: 0 0 6.2rem 9.9rem;
+  }
+
+  &__underline {
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var.$orange;
+  }
+
+  &__subtitle-two {
+    font: var.$h3-roboto-regular;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__container-images {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 76.4rem;
+  }
+
+  &__card-container {
+    width: 16.8rem;
+    height: 16.8rem;
+    z-index: 3;
+    border-radius: 5px;
+    border: 1px solid var.$orange;
+    margin-bottom: 12rem;
+    position: relative;
+    display: flex;
+
+
+    &:first-child .feed-friend__card-text {
+      bottom: -6.9rem;
+    }
+
+    &:not(first-child) .feed-friend__card-text {
+      bottom: -9.1rem;
+    }
+  }
+
+  &__card-text {
+    position: absolute;
+    font: var.$body-roboto-regular;
+    line-height: 140%;
+  }
+
+  &__image {
+    margin: auto;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 35.5%;
+    right: -60.9%;
+  }
+
+  &__btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1.5rem;
+  }
+
+
+}

@@ -1,3 +1,25 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+.chose-favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__btn {
+    margin-top: -2.4rem;
+  }
+
+  &__palm-image {
+    background: url("../images/photos/palm_foto.png") no-repeat;
+    width: 30rem;
+    height: 100%;
+    left: 0;
+    top: 215.8rem;
+  }
+
+  &__strelitzia-image {
+    background: url("../images/photos/strelitzia.png") no-repeat;
+    width: 30rem;
+    height: 100%;
+    right: 0;
+    top: 233.4rem;
+  }
+}

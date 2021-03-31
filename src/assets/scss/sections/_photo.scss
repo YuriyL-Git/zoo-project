@@ -16,6 +16,7 @@
     border: 1px solid #FE9013;
     border-radius: 5px;
     overflow: hidden;
+    background-color: white;
   }
 
   &__photo {
@@ -27,13 +28,13 @@
   &__title {
     text-transform: uppercase;
     font: var.$body-btn-roboto;
-    margin-left: 1.6rem;
+    margin-left: 1.5rem;
     margin-top: 0.4rem;
   }
 
   &__text {
     font: var.$small-paragraph;
-    margin-left: 1.6rem;
+    margin-left: 1.4rem;
   }
 
   &__btn-left,
@@ -60,6 +61,4 @@
       right: -2rem;
     }
   }
-
-
 }
