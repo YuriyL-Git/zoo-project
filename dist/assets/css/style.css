@@ -767,6 +767,7 @@ body {
   position: relative;
   display: -ms-flexbox;
   display: flex;
+  background-color: white;
 }
 
 .feed-friend__card-container:first-child .feed-friend__card-text {
@@ -859,7 +860,7 @@ body {
   font: normal 300 1.5rem/120% Roboto, sans-serif;
   color: #bdbdbd;
   position: absolute;
-  left: 6.1rem;
+  left: 6.3rem;
   top: 2rem;
 }
 
@@ -909,4 +910,91 @@ body {
   width: 100%;
   background-color: orange;
   margin-bottom: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.footer__container-top {
+  height: 8.5rem;
+  width: 100%;
+  background-color: lightgreen;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+}
+
+.footer__subscribe-container {
+  height: 100%;
+  width: 36.7rem;
+}
+
+.footer__subscribe-title {
+  font: normal normal 2.4rem/120% Roboto, sans-serif;
+  color: #fff;
+  margin: 0 0 1.4rem 0;
+}
+
+.footer__subscribe-input {
+  width: 22.8rem;
+  height: 4.2rem;
+  border: 1px solid #f9804b;
+  background: #111115;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
+.footer__subscribe-input::-webkit-input-placeholder {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 140%;
+  padding: 0.7rem;
+  color: #bdbdbd;
+}
+
+.footer__subscribe-input::-moz-placeholder {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 140%;
+  padding: 0.7rem;
+  color: #bdbdbd;
+}
+
+.footer__subscribe-input:-ms-input-placeholder {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 140%;
+  padding: 0.7rem;
+  color: #bdbdbd;
+}
+
+.footer__subscribe-input::-ms-input-placeholder {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 140%;
+  padding: 0.7rem;
+  color: #bdbdbd;
+}
+
+.footer__subscribe-input::placeholder {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 140%;
+  padding: 0.7rem;
+  color: #bdbdbd;
+}
+
+.footer__btn-submit {
+  display: inline-block;
+  width: 12.9rem;
+  height: 4.2rem;
+  background: #F1F3F2;
+  border: 1px solid #4B9200;
+  border-radius: 5px;
+  vertical-align: top;
+  color: #4b9200;
+  text-transform: none;
+}
+
+.footer__btn-donate {
+  background-color: blue;
+  border-radius: 0.5rem;
 }
