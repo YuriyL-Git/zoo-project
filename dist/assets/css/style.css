@@ -366,7 +366,7 @@ body {
 
 .testimonials {
   grid-area: tm;
-  background-color: black;
+  background-color: lightgreen;
 }
 
 .footer {
@@ -385,6 +385,7 @@ body {
   height: 5.4rem;
   text-align: center;
   font: normal 500 1.6rem/140% Roboto, sans-serif;
+  outline: none;
 }
 
 .background-image {
@@ -683,6 +684,13 @@ body {
   top: 233.4rem;
 }
 
+.feed-friend {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .feed-friend__background {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
   position: absolute;
@@ -690,21 +698,178 @@ body {
   left: 0;
   height: 100.4rem;
   z-index: -1;
+  border-radius: 2rem;
 }
 
-.feed-friend__container {
+.feed-friend__container-main {
+  vertical-align: center;
   height: 83.5rem;
+  width: 116rem;
   background: rgba(253, 253, 255, 0.52);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border-radius: 20px;
-  margin-top: 6.8rem;
+  margin-top: -3rem;
 }
 
 .feed-friend__title {
   color: #f9804b;
   font: normal normal 4.8rem/120% Roboto, sans-serif;
   text-align: center;
-  margin-top: 11.1rem;
-  margin-left: 0.4rem;
+  margin: 4.1rem 0 3rem 0.4rem;
+}
+
+.feed-friend__subtitle-one {
+  font: normal normal 2.4rem/120% Roboto, sans-serif;
+  color: #333B41;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 0 4rem 9.9rem;
+}
+
+.feed-friend__par-one {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 130%;
+  font-weight: 500;
+  margin: 0 0 1.1rem 9.9rem;
+}
+
+.feed-friend__par-two {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  width: 86.3rem;
+  line-height: 130%;
+  margin: 0 0 6.2rem 9.9rem;
+}
+
+.feed-friend__underline {
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #f9804b;
+}
+
+.feed-friend__subtitle-two {
+  font: normal normal 3.6rem/130% Roboto, sans-serif;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.feed-friend__container-images {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 76.4rem;
+}
+
+.feed-friend__card-container {
+  width: 16.8rem;
+  height: 16.8rem;
+  z-index: 3;
+  border-radius: 5px;
+  border: 1px solid #f9804b;
+  margin-bottom: 12rem;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feed-friend__card-container:first-child .feed-friend__card-text {
+  bottom: -6.9rem;
+}
+
+.feed-friend__card-container:not(first-child) .feed-friend__card-text {
+  bottom: -9.1rem;
+}
+
+.feed-friend__card-text {
+  position: absolute;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 140%;
+}
+
+.feed-friend__image {
+  margin: auto;
+}
+
+.feed-friend__arrow {
+  position: absolute;
+  top: 35.5%;
+  right: -60.9%;
+}
+
+.feed-friend__btn {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 1.5rem;
+}
+
+.testimonials__title {
+  margin: -0.2rem 0 4.5rem;
+  text-align: center;
+  font: normal normal 3.6rem/130% Roboto, sans-serif;
+}
+
+.testimonials__card-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 40rem;
+  position: relative;
+}
+
+.testimonials__card {
+  width: 26.8rem;
+  height: 39.1rem;
+  z-index: 10;
+  position: relative;
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.testimonials__card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: 2px;
+  border-radius: inherit;
+  background: #F1F3F2;
+}
+
+.testimonials__user-photo {
+  width: 3.7rem;
+  display: inline-block;
+  margin: 1.6rem 0 0 1.6rem;
+}
+
+.testimonials__user-name {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  display: inline-block;
+  line-height: 1.92rem;
+  margin-top: 1.6rem;
+  margin-left: 0.7rem;
+  vertical-align: top;
+}
+
+.testimonials__date {
+  display: inline-block;
+  font: normal 300 1.5rem/120% Roboto, sans-serif;
+  color: #bdbdbd;
+  position: absolute;
+  left: 6.1rem;
+  top: 2rem;
+}
+
+.testimonials__content {
+  font: normal 300 1.5rem/120% Roboto, sans-serif;
+  padding: 0 1.6rem;
+  margin-top: 0.8rem;
+  overflow: hidden;
 }

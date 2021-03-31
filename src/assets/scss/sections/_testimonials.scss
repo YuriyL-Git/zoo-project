@@ -10,6 +10,7 @@
 
   &__card-container {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 40rem;
     position: relative;
@@ -61,10 +62,21 @@
     top: 2rem;
   }
 
+  &__content-wrapper {
+    height: 30.4rem;
+    overflow: hidden;
+  }
+
   &__content {
     font: var.$small-paragraph;
     padding: 0 1.6rem;
     margin-top: 0.8rem;
+  }
+
+  &__feedback-btn {
+    position: absolute;
+    border-radius: 0.5rem;
+    margin-top: 5.2rem;
   }
 }
 
