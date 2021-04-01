@@ -1,0 +1,38 @@
+@use '../abstracts/var' as *;
+
+.map-container {
+  max-width: 1160px;
+  width: 1160px;
+  //min-height: 497.5rem;
+  //background-color: lightgreen;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:
+      $hd    /*- header -*/
+      $mp  /*- gap1 -*/
+      $ft; /*- footer */
+
+  grid-template-areas:
+      " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"  /*- header -*/
+      " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp"
+      " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft"; /*- footer -*/
+  /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
+
+  grid-column-gap: 3rem;
+  grid-row-gap: 1px;
+
+  .header {
+    grid-area: hd;
+  }
+
+  .footer {
+    grid-area: ft;
+  }
+
+  .footer__image-container {
+    display: none;
+  }
+}
+
+

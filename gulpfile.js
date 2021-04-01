@@ -24,7 +24,7 @@ const browserSync = require("browser-sync").create();
 /* Paths */
 const srcPath = 'src/';
 const distPath = 'dist/';
-const indexPage = "index.html";
+const indexPage = "map.html";
 
 const path = {
   build: {

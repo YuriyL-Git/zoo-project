@@ -925,7 +925,7 @@ body {
 
 .footer__subscribe-container {
   height: 100%;
-  width: 36.7rem;
+  width: 36.8rem;
 }
 
 .footer__subscribe-title {
@@ -948,36 +948,36 @@ body {
 .footer__subscribe-input::-webkit-input-placeholder {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   line-height: 140%;
-  padding: 0.7rem;
   color: #bdbdbd;
+  padding-left: 2rem;
 }
 
 .footer__subscribe-input::-moz-placeholder {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   line-height: 140%;
-  padding: 0.7rem;
   color: #bdbdbd;
+  padding-left: 2rem;
 }
 
 .footer__subscribe-input:-ms-input-placeholder {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   line-height: 140%;
-  padding: 0.7rem;
   color: #bdbdbd;
+  padding-left: 2rem;
 }
 
 .footer__subscribe-input::-ms-input-placeholder {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   line-height: 140%;
-  padding: 0.7rem;
   color: #bdbdbd;
+  padding-left: 2rem;
 }
 
 .footer__subscribe-input::placeholder {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   line-height: 140%;
-  padding: 0.7rem;
   color: #bdbdbd;
+  padding-left: 2rem;
 }
 
 .footer__btn-submit {

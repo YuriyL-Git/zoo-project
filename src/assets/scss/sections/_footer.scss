@@ -61,8 +61,9 @@
     &::placeholder {
       font: var.$body-roboto-regular;
       line-height: 140%;
-      padding: 0.7rem;
+      //padding: 0.7rem;
       color: #bdbdbd;
+      padding-left: 2rem;
     }
   }
 

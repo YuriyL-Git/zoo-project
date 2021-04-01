@@ -326,6 +326,7 @@ body {
 /* section - feed a friend */
 /* testimonials */
 /* footer */
+/*==========map page==============================================*/
 .home-container {
   max-width: 1160px;
   display: grid;
@@ -365,6 +366,29 @@ body {
 
 .footer {
   grid-area: ft;
+}
+
+.map-container {
+  max-width: 1160px;
+  width: 1160px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 78rem 93.8rem 44.3rem;
+  /*- footer */
+  grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp" " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
+  /*- footer -*/
+  /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
+  grid-column-gap: 3rem;
+  grid-row-gap: 1px;
+}
+.map-container .header {
+  grid-area: hd;
+}
+.map-container .footer {
+  grid-area: ft;
+}
+.map-container .footer__image-container {
+  display: none;
 }
 
 .btn {
@@ -851,8 +875,8 @@ body {
 .footer__subscribe-input::placeholder {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   line-height: 140%;
-  padding: 0.7rem;
   color: #bdbdbd;
+  padding-left: 2rem;
 }
 .footer__btn-submit {
   display: inline-block;
