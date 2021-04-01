@@ -329,6 +329,7 @@ body {
 /* section - feed a friend */
 /* testimonials */
 /* footer */
+/*==========map page==============================================*/
 .home-container {
   max-width: 1160px;
   display: grid;
@@ -370,6 +371,32 @@ body {
   grid-area: ft;
 }
 
+.map-container {
+  max-width: 1160px;
+  width: 1160px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 78rem 93.8rem 44.3rem;
+  /*- footer */
+  grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp" " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
+  /*- footer -*/
+  /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
+  grid-column-gap: 3rem;
+  grid-row-gap: 1px;
+}
+
+.map-container .header {
+  grid-area: hd;
+}
+
+.map-container .footer {
+  grid-area: ft;
+}
+
+.map-container .footer__image-container {
+  display: none;
+}
+
 .btn {
   z-index: 10;
   text-transform: uppercase;
@@ -408,12 +435,12 @@ body {
   align-items: center;
 }
 
-.header {
+.header-home {
   display: -ms-flexbox;
   display: flex;
 }
 
-.nav-panel {
+.header-home .nav-panel {
   width: 100%;
   height: 8rem;
   position: absolute;
@@ -425,7 +452,7 @@ body {
   z-index: 2;
 }
 
-.nav {
+.header-home .nav {
   z-index: 3;
   width: 100%;
   height: 8rem;
@@ -435,18 +462,18 @@ body {
   align-items: center;
 }
 
-.nav__logo-link {
+.header-home .nav__logo-link {
   margin-right: 6.3rem;
 }
 
-.nav__link {
+.header-home .nav__link {
   color: #fff;
   text-decoration: none;
   font: normal 500 1.6rem/140% Roboto, sans-serif;
   text-align: center;
 }
 
-.nav__list {
+.header-home .nav__list {
   height: 100%;
   width: 52.6rem;
   list-style: none;
@@ -459,7 +486,7 @@ body {
   align-items: center;
 }
 
-.nav__item {
+.header-home .nav__item {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -468,7 +495,7 @@ body {
   color: #FFFFFF;
 }
 
-.background-photo {
+.header-home .background-photo {
   width: 100%;
   height: 78rem;
   position: absolute;
@@ -479,7 +506,7 @@ body {
   z-index: 1;
 }
 
-.circle {
+.header-home .circle {
   position: absolute;
   z-index: 3;
   width: 46.5rem;
@@ -491,7 +518,7 @@ body {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 }
 
-.title {
+.header-home .title {
   position: absolute;
   z-index: 3;
   width: 50rem;
@@ -507,11 +534,11 @@ body {
   color: #FFFFFF;
 }
 
-.title__favorite {
+.header-home .title__favorite {
   color: #ffee2e;
 }
 
-.btn--watch-online {
+.header-home .btn--watch-online {
   position: absolute;
   left: calc(50% + 183px);
   top: 626px;

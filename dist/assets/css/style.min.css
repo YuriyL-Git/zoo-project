@@ -373,7 +373,7 @@ body {
   width: 1160px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 78rem 93.8rem 44.3rem;
+  grid-template-rows: 8rem 93.8rem 44.3rem;
   /*- footer */
   grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp" " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
   /*- footer -*/
@@ -424,11 +424,10 @@ body {
   align-items: center;
 }
 
-.header {
+.header-home {
   display: flex;
 }
-
-.nav-panel {
+.header-home .nav-panel {
   width: 100%;
   height: 8rem;
   position: absolute;
@@ -438,24 +437,23 @@ body {
   backdrop-filter: blur(4px);
   z-index: 2;
 }
-
-.nav {
+.header-home .nav {
   z-index: 3;
   width: 100%;
   height: 8rem;
   display: flex;
   align-items: center;
 }
-.nav__logo-link {
+.header-home .nav__logo-link {
   margin-right: 6.3rem;
 }
-.nav__link {
+.header-home .nav__link {
   color: #fff;
   text-decoration: none;
   font: normal 500 1.6rem/140% Roboto, sans-serif;
   text-align: center;
 }
-.nav__list {
+.header-home .nav__list {
   height: 100%;
   width: 52.6rem;
   list-style: none;
@@ -464,7 +462,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.nav__item {
+.header-home .nav__item {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -472,8 +470,7 @@ body {
   line-height: 140%;
   color: #FFFFFF;
 }
-
-.background-photo {
+.header-home .background-photo {
   width: 100%;
   height: 78rem;
   position: absolute;
@@ -483,8 +480,7 @@ body {
   background-size: cover;
   z-index: 1;
 }
-
-.circle {
+.header-home .circle {
   position: absolute;
   z-index: 3;
   width: 46.5rem;
@@ -495,8 +491,7 @@ body {
   opacity: 0.8;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 }
-
-.title {
+.header-home .title {
   position: absolute;
   z-index: 3;
   width: 50rem;
@@ -511,11 +506,10 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-.title__favorite {
+.header-home .title__favorite {
   color: #ffee2e;
 }
-
-.btn--watch-online {
+.header-home .btn--watch-online {
   position: absolute;
   left: calc(50% + 183px);
   top: 626px;

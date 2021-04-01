@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:
-      $hd    /*- header -*/
+      $hd-default    /*- header -*/
       $mp  /*- gap1 -*/
       $ft; /*- footer */
 

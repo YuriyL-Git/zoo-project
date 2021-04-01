@@ -20,11 +20,19 @@ const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require("browser-sync").create();
 
+// save arguments to argv variable
+var argv = require('minimist')(process.argv.slice(2));
+//console.log(argv);
+
 
 /* Paths */
 const srcPath = 'src/';
 const distPath = 'dist/';
-const indexPage = "map.html";
+let indexPage = "map.html";
+if (argv.p) {
+  indexPage = argv.p + '.html'
+}
+console.log("indexPage", indexPage);
 
 const path = {
   build: {
