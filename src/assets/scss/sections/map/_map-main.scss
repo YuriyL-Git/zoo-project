@@ -1,0 +1,30 @@
+.map-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+
+  .map-main__map {
+    width: 108rem;
+    height: 88.9rem;
+
+  }
+
+  &__eagles-container {
+    position: absolute;
+    left: 15%;
+    top: 88%;
+
+  }
+
+  &__eagle-one {
+    width: 4.4rem;
+  }
+}
+
+

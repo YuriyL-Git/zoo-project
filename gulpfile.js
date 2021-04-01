@@ -6,8 +6,6 @@ const autoprefixer = require("gulp-autoprefixer");
 const cssbeautify = require("gulp-cssbeautify");
 const removeComments = require('gulp-strip-css-comments');
 const rename = require("gulp-rename");
-// const sass = require("gulp-sass");
-// const sass = require("sass");
 const sass = require('gulp-dart-sass');
 const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
@@ -29,6 +27,7 @@ var argv = require('minimist')(process.argv.slice(2));
 const srcPath = 'src/';
 const distPath = 'dist/';
 let indexPage = "map.html";
+
 if (argv.p) {
   indexPage = argv.p + '.html'
 }

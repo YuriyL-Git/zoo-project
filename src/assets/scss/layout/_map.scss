@@ -20,10 +20,14 @@
   /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
 
   grid-column-gap: 3rem;
-  grid-row-gap: 1px;
+  grid-row-gap: 0;
 
   .header {
     grid-area: hd;
+  }
+
+  .map-main {
+    grid-area: mp;
   }
 
   .footer {
