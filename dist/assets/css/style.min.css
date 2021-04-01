@@ -328,8 +328,6 @@ body {
 /* footer */
 .container {
   max-width: 1160px;
-  width: 1160px;
-  min-height: 497.5rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 78rem 14rem 40.3rem 17.7rem 87.2rem 23.2rem 100.4rem 14rem 57.5rem 20rem 44.3rem;
@@ -820,7 +818,6 @@ body {
 .footer__container-main {
   height: 35.2rem;
   width: 100%;
-  background-color: orange;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
@@ -828,7 +825,6 @@ body {
 .footer__container-top {
   height: 8.5rem;
   width: 100%;
-  background-color: lightgreen;
   display: flex;
   justify-content: space-between;
   margin-bottom: 3.5rem;
@@ -849,6 +845,8 @@ body {
   background: #111115;
   display: inline-block;
   margin-right: 0.7rem;
+  color: #fff;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
 }
 .footer__subscribe-input::placeholder {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
@@ -874,22 +872,72 @@ body {
 .footer__container-bottom {
   width: 100%;
   height: 13.7rem;
-  background-color: green;
   display: flex;
   justify-content: space-between;
-}
-.footer__social {
-  height: 100%;
-  width: 22.7rem;
-  background: #bdbdbd;
 }
 .footer__nav {
   height: 100%;
   width: 36.2rem;
-  background: lightgreen;
 }
 .footer__designed-by {
   height: 100%;
-  width: 22.7rem;
-  background: violet;
+  width: 23rem;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  font-weight: 200;
+  color: #fff;
+}
+.footer__socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 23rem;
+}
+.footer__link-socials {
+  text-decoration: none;
+  display: flex;
+  color: white;
+  align-items: center;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+}
+.footer__icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  fill: white;
+  background: #c4c4c4;
+  z-index: 3;
+  border-radius: 50%;
+  margin-right: 1.2rem;
+}
+.footer__nav {
+  display: flex;
+  align-items: flex-end;
+}
+.footer__nav-list {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
+  list-style: none;
+}
+.footer__nav-link {
+  text-decoration: none;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  color: #fff;
+}
+.footer__designed-by {
+  height: 100%;
+  width: 23rem;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  line-height: 20.8px;
+  font-weight: 200;
+  color: #fff;
+}
+.footer__designer-name {
+  margin: 8.3rem 0 0;
+}
+.footer__copyright {
+  margin: 1.1rem 0 0;
 }
