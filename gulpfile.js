@@ -24,6 +24,7 @@ const browserSync = require("browser-sync").create();
 /* Paths */
 const srcPath = 'src/';
 const distPath = 'dist/';
+const indexPage = "index.html";
 
 const path = {
   build: {
@@ -56,7 +57,8 @@ const path = {
 function serve() {
   browserSync.init({
     server: {
-      baseDir: "./" + distPath
+      baseDir: "./" + distPath,
+      index: indexPage
     }
     // ==== for two browsers ============
     , browser: ["google-chrome" , "firefox"]

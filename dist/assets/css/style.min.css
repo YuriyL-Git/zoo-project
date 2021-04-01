@@ -326,7 +326,7 @@ body {
 /* section - feed a friend */
 /* testimonials */
 /* footer */
-.container {
+.home-container {
   max-width: 1160px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -831,7 +831,7 @@ body {
 }
 .footer__subscribe-container {
   height: 100%;
-  width: 36.7rem;
+  width: 36.8rem;
 }
 .footer__subscribe-title {
   font: normal normal 2.4rem/120% Roboto, sans-serif;
