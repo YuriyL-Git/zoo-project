@@ -432,7 +432,6 @@ body {
   width: 10rem;
   height: 5rem;
 }
-
 .tooltip-container__tooltip {
   position: absolute;
   top: 80%;
@@ -445,17 +444,16 @@ body {
   border-radius: 6px;
   border: 1px solid #000000;
   text-shadow: 0 0 0 #fff;
-  box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
+  box-shadow: 0 0 4px rgba(56, 54, 54, 0.86);
   text-align: left;
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   line-height: 140%;
   transition: all 0.3s ease-in;
 }
-
 .tooltip-container__tooltip:after {
   content: "";
   position: absolute;
-  bottom: 100%;
+  bottom: 100.5%;
   left: 49.4%;
   margin-left: -30px;
   width: 0;
@@ -464,11 +462,10 @@ body {
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
 }
-
 .tooltip-container__tooltip:before {
   content: "";
   position: absolute;
-  bottom: 100%;
+  bottom: 99.8%;
   left: 50.2%;
   margin-left: -30px;
   width: 0;
