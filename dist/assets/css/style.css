@@ -371,12 +371,12 @@ body {
   grid-area: ft;
 }
 
-.map-container {
+.default-container {
   max-width: 1160px;
   width: 1160px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 8rem 93.8rem 44.3rem;
+  grid-template-rows: 8rem 343.7rem 44.3rem;
   /*- footer */
   grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp" " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
   /*- footer -*/
@@ -385,20 +385,16 @@ body {
   grid-row-gap: 0;
 }
 
-.map-container .header {
+.default-container .header {
   grid-area: hd;
 }
 
-.map-container .map-main {
+.default-container .map-main {
   grid-area: mp;
 }
 
-.map-container .footer {
+.default-container .footer {
   grid-area: ft;
-}
-
-.map-container .footer__image-container {
-  display: none;
 }
 
 .btn {
@@ -444,6 +440,10 @@ body {
   width: 6rem;
   height: 6rem;
   z-index: 2;
+  -webkit-transform: rotate(45deg) scale(0.7);
+  transform: rotate(45deg) scale(0.7);
+  transition: all 0.25s ease-in;
+  cursor: pointer;
 }
 
 .tooltip-container__tooltip {
@@ -456,13 +456,15 @@ body {
   background: white;
   visibility: hidden;
   border-radius: 6px;
-  border: 1px solid #000000;
+  border: #f9804b 1px solid;
   text-shadow: 0 0 0 #fff;
   box-shadow: 0 0 4px rgba(56, 54, 54, 0.86);
   text-align: left;
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   line-height: 140%;
-  transition: all 0.3s ease-in;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+  z-index: 100;
 }
 
 .tooltip-container__tooltip:after {
@@ -473,7 +475,7 @@ body {
   margin-left: -30px;
   width: 0;
   height: 0;
-  border-bottom: 16px solid #000;
+  border-bottom: 16px solid #f9804b;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
 }
@@ -492,17 +494,19 @@ body {
   border-left: 7px solid transparent;
 }
 
+.tooltip-container:hover {
+  -webkit-transform: scale(1.1) rotate(0);
+  transform: scale(1.1) rotate(0);
+}
+
 .tooltip-container:hover .tooltip-container__tooltip {
   cursor: pointer;
   visibility: visible;
   opacity: 0.8;
   margin-left: -76px;
   z-index: 10;
-  transition: 0.1s linear;
   -webkit-animation: wave 1s ease-in-out infinite alternate;
   animation: wave 1s ease-in-out infinite alternate;
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
 }
 
 @-webkit-keyframes wave {
@@ -560,7 +564,7 @@ body {
   cursor: pointer;
   color: #282828;
   border-radius: 0.5rem;
-  transition: background-color 0.2s ease-in;
+  transition: background-color 0.3s ease-out;
 }
 
 .tooltip__btn:hover {
@@ -1047,6 +1051,10 @@ body {
   background-color: #e2ecf1;
 }
 
+.map-page .footer__image-container {
+  display: none;
+}
+
 .map-main {
   display: -ms-flexbox;
   display: flex;
@@ -1119,11 +1127,11 @@ body {
   top: 90%;
 }
 
-.map-main__pandas-one-container {
-  background-color: orange;
+.map-main__panda-one-container {
+  z-index: 10;
   position: absolute;
-  left: 48.3%;
-  top: 60%;
+  left: 77%;
+  top: 45.3%;
 }
 
 .map-main__panda-one {
@@ -1133,11 +1141,17 @@ body {
   top: 47.5%;
 }
 
+.map-main__panda-two-container {
+  position: absolute;
+  left: 76.5%;
+  top: 50.6%;
+}
+
 .map-main__panda-two {
   width: 4.6rem;
   position: absolute;
-  left: 75%;
-  top: 54.5%;
+  left: 76.5%;
+  top: 50.6%;
 }
 
 .map-main__btn-container {
@@ -1379,4 +1393,10 @@ body {
 
 .footer__copyright {
   margin: 1.1rem 0 0;
+}
+
+.default-test {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
 }

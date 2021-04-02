@@ -1,6 +1,6 @@
 @use '../abstracts/var' as *;
 
-.map-container {
+.default-container {
   max-width: 1160px;
   width: 1160px;
   //min-height: 497.5rem;
@@ -10,7 +10,7 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:
       $hd-default    /*- header -*/
-      1fr  /*- gap1 -*/
+      343.7rem  /*- gap1 -*/
       $ft; /*- footer */
 
   grid-template-areas:
@@ -26,7 +26,7 @@
     grid-area: hd;
   }
 
-  .map-main {
+  .default-main {
     grid-area: mp;
   }
 

@@ -4,7 +4,7 @@
 @use 'abstracts/var';
 
 @use 'layout/home';
-@use 'layout/map';
+@use 'layout/default';
 @use 'components/buton';
 @use 'components/background_image';
 @use 'components/logo';
@@ -17,6 +17,7 @@
 @use 'sections/home/testimonials';
 @use 'sections/map/map-main';
 @use 'sections/footer';
+@use 'pages/default-page';
 
 
 
