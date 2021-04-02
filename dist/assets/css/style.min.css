@@ -403,6 +403,11 @@ body {
   text-align: center;
   font: normal 500 1.6rem/140% Roboto, sans-serif;
   outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .background-image {
@@ -1181,8 +1186,102 @@ body {
   margin: 1.1rem 0 0;
 }
 
+.default-main__title {
+  font: normal normal 4.8rem/120% Roboto, sans-serif;
+  margin: 0;
+  padding: 4rem 0 1.5rem;
+}
 .default-main .video-container {
-  height: 72.5rem;
+  display: flex;
+  justify-content: center;
   width: 100%;
   background-color: orange;
+  margin-bottom: 8rem;
+}
+.default-main .preview-container {
+  width: 100%;
+  height: 21rem;
+  background-color: orange;
+  position: relative;
+}
+.default-main .preview-container .btn {
+  top: 34%;
+}
+.default-main .preview-container__btn-left {
+  left: -7%;
+}
+.default-main .preview-container__btn-right {
+  right: -7%;
+}
+.default-main .preview-container__overlay {
+  position: absolute;
+  width: 116rem;
+  height: 21rem;
+  display: flex;
+  justify-content: space-between;
+}
+.default-main .preview-container__camera-title {
+  color: white;
+  margin: 0.2rem;
+  width: 26.7rem;
+  text-align: center;
+  font: normal 300 1.5rem/120% Roboto, sans-serif;
+}
+.default-main .preview-container__videos {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  background-color: blue;
+  z-index: 10;
+}
+.default-main .main-title {
+  margin: 0;
+  font: normal normal 4.8rem/120% Roboto, sans-serif;
+  font-weight: 500;
+  color: #4B9200;
+  padding-top: 14rem;
+  padding-bottom: 2rem;
+}
+.default-main .main-article-container {
+  width: 100%;
+  height: 42.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.default-main .main-article-container__wrapper {
+  width: 66.8rem;
+  height: 100%;
+}
+.default-main .main-article-container__article {
+  margin: 0;
+  width: 66.8rem;
+  height: 28.8rem;
+  font: normal normal 2.4rem/120% Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 140%;
+  margin-bottom: 4.2rem;
+}
+.default-main .separator {
+  width: 100%;
+  height: 1rem;
+  margin-top: 1.1rem;
+  border-bottom: 1px solid #888;
+  margin-bottom: 4.2rem;
+}
+.default-main .paragraph {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  margin-bottom: 2.3rem;
+}
+.default-main .paragraph__title {
+  font: normal normal 2.4rem/120% Roboto, sans-serif;
+}
+.default-main .paragraph__green {
+  text-decoration: none;
+  color: #4B9200;
+}
+.default-main .paragraph--small {
+  margin-bottom: -0.5rem;
+  padding-bottom: 0;
 }

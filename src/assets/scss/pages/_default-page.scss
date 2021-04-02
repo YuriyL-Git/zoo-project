@@ -1,10 +1,128 @@
+@use "../abstracts/var" as *;
+
 .default-main {
 
-  .video-container {
-    height: 72.5rem;
-    width: 100%;
-    background-color: orange;
+  &__title {
+    font: $h2-roboto-regular;
+    margin: 0;
+    padding: 4rem 0 1.5rem;
   }
 
+  .video-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: orange;
+    margin-bottom: 8rem;
+  }
 
+  .preview-container {
+    width: 100%;
+    height: 21rem;
+    background-color: orange;
+    position: relative;
+
+    .btn {
+      top: 34%;
+    }
+
+    &__btn-left {
+      left: -7%;
+    }
+
+    &__btn-right {
+      right: -7%;
+    }
+
+    &__overlay {
+      position: absolute;
+      width: 116rem;
+      height: 21rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__camera-title {
+      color: white;
+      margin: 0.2rem;
+      width: 26.7rem;
+      text-align: center;
+      font: $small-paragraph;
+    }
+
+    &__videos {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+      background-color: blue;
+      z-index: 10;
+    }
+  }
+
+  .main-title {
+    margin: 0;
+    font: $h2-roboto-regular;
+    font-weight: 500;
+    color: $green;
+    padding-top: 14rem;
+    padding-bottom: 2rem;
+  }
+
+  .main-article-container {
+    width: 100%;
+    height: 42.3rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__wrapper {
+      width: 66.8rem;
+      height: 100%;
+    }
+
+    &__article {
+      margin: 0;
+      width: 66.8rem;
+      height: 28.8rem;
+      font: $subtitle-roboto-regular;
+      font-weight: 500;
+      font-size: 2.6rem;
+      line-height: 140%;
+      margin-bottom: 4.2rem;
+    }
+  }
+
+  .separator {
+    width: 100%;
+    height: 1rem;
+    margin-top: 1.1rem;
+    border-bottom: 1px solid #888;
+    margin-bottom: 4.2rem;
+  }
+
+  .paragraph {
+    font: $body-roboto-regular;
+    margin-bottom: 2.3rem;
+
+    &--big {
+
+    }
+
+    &__title {
+      font: $subtitle-roboto-regular;
+
+
+    }
+
+    &__green {
+      text-decoration: none;
+      color: $green;
+    }
+
+    &--small {
+      margin-bottom: -0.5rem;
+      padding-bottom: 0;
+    }
+
+  }
 }

@@ -389,7 +389,7 @@ body {
   grid-area: hd;
 }
 
-.default-container .map-main {
+.default-container .default-main {
   grid-area: mp;
 }
 
@@ -409,6 +409,12 @@ body {
   text-align: center;
   font: normal 500 1.6rem/140% Roboto, sans-serif;
   outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .background-image {
@@ -1395,8 +1401,61 @@ body {
   margin: 1.1rem 0 0;
 }
 
-.default-test {
-  background-color: white;
-  width: 10rem;
-  height: 10rem;
+.default-main__title {
+  font: normal normal 4.8rem/120% Roboto, sans-serif;
+  margin: 0;
+  padding: 4rem 0 1.5rem;
+}
+
+.default-main .video-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  background-color: orange;
+  margin-bottom: 8rem;
+}
+
+.default-main .preview-container {
+  width: 100%;
+  height: 21rem;
+  background-color: orange;
+  position: relative;
+}
+
+.default-main .preview-container .btn {
+  top: 34%;
+}
+
+.default-main .preview-container__btn-left {
+  left: -7%;
+}
+
+.default-main .preview-container__btn-right {
+  right: -7%;
+}
+
+.default-main .preview-container__overlay {
+  position: absolute;
+  width: 116rem;
+  height: 21rem;
+}
+
+.default-main .preview-container__camera {
+  color: white;
+  margin: 0.2rem;
+  padding-left: 8rem;
+  font: normal 300 1.5rem/120% Roboto, sans-serif;
+}
+
+.default-main .preview-container__videos {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: blue;
+  z-index: 10;
 }
