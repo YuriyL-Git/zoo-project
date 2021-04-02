@@ -24,40 +24,22 @@
   &__eagles-container {
     cursor: pointer;
     position: absolute;
-    left: 7%;
+    left: 8.1%;
     top: 49%;
-
-
-    &__tooltip-container {
-      position: relative;
-      background-color: blue;
-    }
-
-    &__eagles-tooltip {
-
-    }
-
-    &:after {
-
-    }
-
-    &:hover {
-
-    }
   }
 
   &__eagle-one {
     width: 4.4rem;
     position: absolute;
-    left: 15%;
+    left: 5%;
     top: 12%;
   }
 
   &__eagle-two {
     width: 5rem;
     position: absolute;
-    left: 48%;
-    top: 60%;
+    left: 30%;
+    top: 85%;
   }
 
   &__alligator-container {
