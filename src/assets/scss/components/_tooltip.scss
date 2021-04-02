@@ -2,26 +2,33 @@
 
 .tooltip-container {
   position: relative;
-  width: 10rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
+  z-index: 2;
+  transform: rotate(45deg) scale(0.7);
+  transition: all 0.25s ease-in;
+  cursor: pointer;
 
   &__tooltip {
     position: absolute;
-    top: 80%;
-    left: 80%;
+    top: 65%;
+    left: 85%;
     width: 15.8rem;
     height: 11rem;
     color: #161212;
     background: white;
     visibility: hidden;
     border-radius: 6px;
-    border: 1px solid #000000;
+    border: $orange 1px solid;
     text-shadow: 0 0 0 #fff;
     box-shadow: 0 0 4px rgba(56, 54, 54, 0.86);
     text-align: left;
     font: $body-roboto-regular;
     line-height: 140%;
-    transition: all 0.3s ease-in;
+
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+    z-index: 100;
 
     &:after {
       content: '';
@@ -31,7 +38,7 @@
       margin-left: -30px;
       width: 0;
       height: 0;
-      border-bottom: 16px solid #000;
+      border-bottom: 16px solid $orange;
       border-right: 8px solid transparent;
       border-left: 8px solid transparent;
     }
@@ -52,6 +59,10 @@
   }
 }
 
+.tooltip-container:hover {
+  transform: scale(1.1) rotate(0);
+}
+
 
 .tooltip-container:hover .tooltip-container__tooltip {
   cursor: pointer;
@@ -59,9 +70,7 @@
   opacity: 0.8;
   margin-left: -76px;
   z-index: 10;
-  transition: .1s linear;
   animation: wave 1s ease-in-out infinite alternate;
-  transform: translateY(-10px);
 }
 
 @keyframes wave {
@@ -104,7 +113,7 @@
   cursor: pointer;
   color: rgb(40, 40, 40);
   border-radius: .5rem;
-  transition: background-color 0.2s ease-in;
+  transition: background-color 0.3s ease-out;
 
   &:hover {
     background-color: #cf6e40;

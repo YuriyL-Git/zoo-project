@@ -429,26 +429,32 @@ body {
 
 .tooltip-container {
   position: relative;
-  width: 10rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
+  z-index: 2;
+  transform: rotate(45deg) scale(0.7);
+  transition: all 0.25s ease-in;
+  cursor: pointer;
 }
 .tooltip-container__tooltip {
   position: absolute;
-  top: 80%;
-  left: 80%;
+  top: 65%;
+  left: 85%;
   width: 15.8rem;
   height: 11rem;
   color: #161212;
   background: white;
   visibility: hidden;
   border-radius: 6px;
-  border: 1px solid #000000;
+  border: #f9804b 1px solid;
   text-shadow: 0 0 0 #fff;
   box-shadow: 0 0 4px rgba(56, 54, 54, 0.86);
   text-align: left;
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   line-height: 140%;
-  transition: all 0.3s ease-in;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+  z-index: 100;
 }
 .tooltip-container__tooltip:after {
   content: "";
@@ -458,7 +464,7 @@ body {
   margin-left: -30px;
   width: 0;
   height: 0;
-  border-bottom: 16px solid #000;
+  border-bottom: 16px solid #f9804b;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
 }
@@ -476,15 +482,17 @@ body {
   border-left: 7px solid transparent;
 }
 
+.tooltip-container:hover {
+  transform: scale(1.1) rotate(0);
+}
+
 .tooltip-container:hover .tooltip-container__tooltip {
   cursor: pointer;
   visibility: visible;
   opacity: 0.8;
   margin-left: -76px;
   z-index: 10;
-  transition: 0.1s linear;
   animation: wave 1s ease-in-out infinite alternate;
-  transform: translateY(-10px);
 }
 
 @keyframes wave {
@@ -525,7 +533,7 @@ body {
   cursor: pointer;
   color: #282828;
   border-radius: 0.5rem;
-  transition: background-color 0.2s ease-in;
+  transition: background-color 0.3s ease-out;
 }
 .tooltip__btn:hover {
   background-color: #cf6e40;
@@ -944,54 +952,68 @@ body {
   height: 88.9rem;
 }
 .map-main__eagles-container {
+  z-index: 5;
   cursor: pointer;
   position: absolute;
-  left: 8.1%;
-  top: 49%;
+  left: 10.9%;
+  top: 48.4%;
 }
 .map-main__eagle-one {
   width: 4.4rem;
   position: absolute;
-  left: 5%;
-  top: 12%;
+  left: -47%;
+  top: 42%;
 }
 .map-main__eagle-two {
   width: 5rem;
   position: absolute;
   left: 30%;
-  top: 85%;
+  top: 90%;
 }
 .map-main__alligator-container {
   position: absolute;
-  left: 21.2%;
-  top: 57%;
+  left: 21.6%;
+  top: 50.4%;
 }
 .map-main__alligator {
+  position: absolute;
+  left: 30%;
+  top: 105%;
   width: 7.5rem;
 }
 .map-main__gorilla-container {
   position: absolute;
-  left: 47.2%;
-  top: 66%;
+  left: 48.3%;
+  top: 60%;
 }
 .map-main__gorilla {
   width: 5rem;
+  position: absolute;
+  left: 20%;
+  top: 90%;
 }
 .map-main__panda-one-container {
+  z-index: 10;
+  position: absolute;
+  left: 77%;
+  top: 45.3%;
+}
+.map-main__panda-one {
+  width: 3.7rem;
   position: absolute;
   left: 75%;
   top: 47.5%;
 }
-.map-main__panda-one {
-  width: 3.7rem;
-}
 .map-main__panda-two-container {
   position: absolute;
-  left: 75%;
-  top: 54.5%;
+  left: 76.5%;
+  top: 50.6%;
 }
 .map-main__panda-two {
   width: 4.6rem;
+  position: absolute;
+  left: 76.5%;
+  top: 50.6%;
 }
 .map-main__btn-container {
   display: flex;
