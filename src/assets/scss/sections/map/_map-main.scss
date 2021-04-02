@@ -1,4 +1,10 @@
+.map-page {
+  background-color: #e2ecf1;
+
+}
+
 .map-main {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,14 +22,103 @@
   }
 
   &__eagles-container {
+    cursor: pointer;
     position: absolute;
-    left: 15%;
-    top: 88%;
+    left: 7%;
+    top: 49%;
 
+
+    &__tooltip-container {
+      position: relative;
+      background-color: blue;
+    }
+
+    &__eagles-tooltip {
+
+    }
+
+    &:after {
+
+    }
+
+    &:hover {
+
+    }
   }
 
   &__eagle-one {
     width: 4.4rem;
+    position: absolute;
+    left: 15%;
+    top: 12%;
+  }
+
+  &__eagle-two {
+    width: 5rem;
+    position: absolute;
+    left: 48%;
+    top: 60%;
+  }
+
+  &__alligator-container {
+    position: absolute;
+    left: 21.2%;
+    top: 57%;
+  }
+
+  &__alligator {
+    width: 7.5rem;
+  }
+
+  &__gorilla-container {
+    position: absolute;
+    left: 47.2%;
+    top: 66%;
+  }
+
+  &__gorilla {
+    width: 5rem;
+  }
+
+  &__panda-one-container {
+    position: absolute;
+    left: 75%;
+    top: 47.5%;
+  }
+
+  &__panda-one {
+    width: 3.7rem;
+  }
+
+  &__panda-two-container {
+    position: absolute;
+    left: 75%;
+    top: 54.5%;
+  }
+
+  &__panda-two {
+    width: 4.6rem;
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 11.5rem;
+    justify-content: space-between;
+    position: absolute;
+    left: 99%;
+    top: 70%;
+  }
+
+  &__map-btn {
+    width: 5.4rem;
+    height: 5.4rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
   }
 }
 
