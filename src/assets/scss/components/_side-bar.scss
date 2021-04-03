@@ -25,7 +25,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+      border: 4px solid orange;
+      padding: 1.5rem;
+    }
   }
+
+  &__icon {
+    transition: transform 0.25s ease-in;
+  }
+
 
   &__item {
     border: 3px solid orange;
@@ -40,6 +50,60 @@
     z-index: 10;
     position: relative;
 
+    &:nth-child(2) .tooltip-container__tooltip {
+      left: 211%;
+      top: 5%;
+    }
+
+    &:nth-child(3) .tooltip-container__tooltip {
+      left: 210%;
+      top: 17%;
+    }
+
+    &:nth-child(4) .tooltip-container__tooltip {
+      left: 215%;
+      top: 23%;
+    }
+
+    &:nth-child(5) .tooltip-container__tooltip {
+      left: 192%;
+      top: -7%;
+    }
+
+    &:nth-child(6) .tooltip-container__tooltip {
+      left: 182%;
+      top: -30%;
+    }
+
+    &:nth-child(7) .tooltip-container__tooltip {
+      left: 215%;
+      top: 17.5%;
+    }
+
+    &:nth-child(5):hover .side-bar__icon {
+      transform: scale(-1.1, 1.1) rotate(-99deg);
+    }
+
+    &:nth-child(6):hover .side-bar__icon {
+      transform: scale(-1.1, 1.1) rotate(-10deg);
+    }
+
+    &:nth-child(7):hover .side-bar__icon {
+      transform: scale(-1.1, 1.1) rotate(90deg);
+    }
+
+
+    &:hover .side-bar__icon {
+      color: $green;
+      transform: scale(-1.1, 1.1);
+      border: 4px solid orange;
+      border-radius: 50%;
+      padding: 1rem;
+      width: 8.5rem;
+      height: 8.5rem;
+      background-color: white;
+
+    }
 
   }
 
@@ -55,22 +119,23 @@
     align-items: center;
     z-index: 5;
 
-    /*---tooltip*/
 
+    /*------------------ tooltip ------------------------*/
     .tooltip-container {
       transform: rotate(0);
       opacity: 1;
 
       &__tooltip {
-        //opacity: 1;
-        //background: $orange;
-        //width: 8rem;
         height: 4rem;
+        width: 12rem;
         text-align: center;
-        padding-top: 0.2rem;
-        top: 17%;
-        left: 230%;
-        border: 2px solid $orange;
+        margin: 0 auto;
+        padding-top: 0.3rem;
+        top: -19%;
+        left: 197%;
+        border: 1px solid $green;
+        box-shadow: none;
+        border-radius: 50%;
 
         &:after,
         &:before {
@@ -88,11 +153,7 @@
       color: $green;
     }
 
-    /*------------- tooltip ------------------------------*/
-  }
-
-  &__link {
-    z-index: 10;
+    /*----------------------------------------------------*/
   }
 
   &__icon {
@@ -101,6 +162,6 @@
     z-index: 11;
     width: 5.5rem;
     height: 5.5rem;
-
+    border-radius: 50%;
   }
 }

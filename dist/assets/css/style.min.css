@@ -567,6 +567,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+.side-bar__item:last-child .side-bar__icon:hover {
+  border: 4px solid orange;
+  padding: 1.5rem;
+}
+.side-bar__icon {
+  transition: transform 0.25s ease-in;
+}
 .side-bar__item {
   border: 3px solid orange;
   background-color: white;
@@ -580,6 +587,49 @@ body {
   z-index: 10;
   position: relative;
 }
+.side-bar__item:nth-child(2) .tooltip-container__tooltip {
+  left: 211%;
+  top: 5%;
+}
+.side-bar__item:nth-child(3) .tooltip-container__tooltip {
+  left: 210%;
+  top: 17%;
+}
+.side-bar__item:nth-child(4) .tooltip-container__tooltip {
+  left: 215%;
+  top: 23%;
+}
+.side-bar__item:nth-child(5) .tooltip-container__tooltip {
+  left: 192%;
+  top: -7%;
+}
+.side-bar__item:nth-child(6) .tooltip-container__tooltip {
+  left: 182%;
+  top: -30%;
+}
+.side-bar__item:nth-child(7) .tooltip-container__tooltip {
+  left: 215%;
+  top: 17.5%;
+}
+.side-bar__item:nth-child(5):hover .side-bar__icon {
+  transform: scale(-1.1, 1.1) rotate(-99deg);
+}
+.side-bar__item:nth-child(6):hover .side-bar__icon {
+  transform: scale(-1.1, 1.1) rotate(-10deg);
+}
+.side-bar__item:nth-child(7):hover .side-bar__icon {
+  transform: scale(-1.1, 1.1) rotate(90deg);
+}
+.side-bar__item:hover .side-bar__icon {
+  color: #4B9200;
+  transform: scale(-1.1, 1.1);
+  border: 4px solid orange;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 8.5rem;
+  height: 8.5rem;
+  background-color: white;
+}
 .side-bar__list {
   margin: 0;
   padding: 1.8rem 0;
@@ -591,8 +641,8 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 5;
-  /*---tooltip*/
-  /*------------- tooltip ------------------------------*/
+  /*------------------ tooltip ------------------------*/
+  /*----------------------------------------------------*/
 }
 .side-bar__list .tooltip-container {
   transform: rotate(0);
@@ -600,11 +650,15 @@ body {
 }
 .side-bar__list .tooltip-container__tooltip {
   height: 4rem;
+  width: 12rem;
   text-align: center;
-  padding-top: 0.2rem;
-  top: 17%;
-  left: 230%;
-  border: 2px solid #f9804b;
+  margin: 0 auto;
+  padding-top: 0.3rem;
+  top: -19%;
+  left: 197%;
+  border: 1px solid #4B9200;
+  box-shadow: none;
+  border-radius: 50%;
 }
 .side-bar__list .tooltip-container__tooltip:after, .side-bar__list .tooltip-container__tooltip:before {
   display: none;
@@ -616,15 +670,13 @@ body {
   font-size: 2rem;
   color: #4B9200;
 }
-.side-bar__link {
-  z-index: 10;
-}
 .side-bar__icon {
   box-sizing: border-box;
   color: black;
   z-index: 11;
   width: 5.5rem;
   height: 5.5rem;
+  border-radius: 50%;
 }
 
 .header-home {
