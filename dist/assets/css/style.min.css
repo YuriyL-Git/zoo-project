@@ -1493,3 +1493,30 @@ body {
   top: 314rem;
   background-size: cover;
 }
+
+.gorilla-page .footer__image--default {
+  background: url("../images/footer/gorilla.jpg") no-repeat;
+  width: 100%;
+  height: 39rem;
+  left: 0;
+  top: 314rem;
+  background-size: cover;
+}
+
+.eagle-page .footer__image--default {
+  background: url("../images/footer/eagle.jpg") no-repeat;
+  width: 100%;
+  height: 39rem;
+  left: 0;
+  top: 314rem;
+  background-size: cover;
+}
+
+.alligator-page .footer__image--default {
+  background: url("../images/footer/alligator.jpg") no-repeat;
+  width: 100%;
+  height: 39rem;
+  left: 0;
+  top: 314rem;
+  background-size: cover;
+}

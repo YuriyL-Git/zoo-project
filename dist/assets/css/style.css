@@ -401,7 +401,7 @@ body {
   z-index: 10;
   text-transform: uppercase;
   color: #fff;
-  background: #f9804b;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   border: none;
   border-radius: 2.5rem;
   width: 29.8rem;
@@ -588,6 +588,7 @@ body {
   width: 9.9rem;
   height: 100%;
   left: -10%;
+  z-index: 20;
 }
 
 .side-bar__nav {
@@ -1037,7 +1038,7 @@ body {
   top: 215.8rem;
 }
 
-.chose-favorite__strelitzia-image {
+.chose-favorite .strelitzia-image-default {
   background: url("../images/photos/strelitzia.png") no-repeat;
   width: 30rem;
   height: 100%;
@@ -1762,8 +1763,51 @@ body {
   top: 285rem;
 }
 
+.default-page .strelitzia-image-default {
+  background: url("../images/photos/strelitzia.png") no-repeat;
+  width: 30rem;
+  height: 100%;
+  left: 0;
+  top: 287rem;
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.default-page .btn-donate-default {
+  position: absolute;
+  bottom: 1.8%;
+  left: 37.1%;
+}
+
 .panda-page .footer__image--default {
   background: url("../images/footer/panda.jpg") no-repeat;
+  width: 100%;
+  height: 39rem;
+  left: 0;
+  top: 314rem;
+  background-size: cover;
+}
+
+.gorilla-page .footer__image--default {
+  background: url("../images/footer/gorilla.jpg") no-repeat;
+  width: 100%;
+  height: 39rem;
+  left: 0;
+  top: 314rem;
+  background-size: cover;
+}
+
+.eagle-page .footer__image--default {
+  background: url("../images/footer/eagle.jpg") no-repeat;
+  width: 100%;
+  height: 39rem;
+  left: 0;
+  top: 314rem;
+  background-size: cover;
+}
+
+.alligator-page .footer__image--default {
+  background: url("../images/footer/alligator.jpg") no-repeat;
   width: 100%;
   height: 39rem;
   left: 0;
