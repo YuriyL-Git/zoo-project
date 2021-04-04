@@ -397,6 +397,32 @@ body {
   grid-area: ft;
 }
 
+.donate-container {
+  max-width: 1160px;
+  width: 1160px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 8rem 186.9rem 44.3rem;
+  /*- footer */
+  grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp" " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
+  /*- footer -*/
+  /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
+  grid-column-gap: 3rem;
+  grid-row-gap: 0;
+}
+
+.donate-container .header {
+  grid-area: hd;
+}
+
+.donate-container .donate-main {
+  grid-area: mp;
+}
+
+.donate-container .footer {
+  grid-area: ft;
+}
+
 .btn {
   z-index: 10;
   text-transform: uppercase;
@@ -1813,4 +1839,55 @@ body {
   left: 0;
   top: 314rem;
   background-size: cover;
+}
+
+.donate-page {
+  background-color: #e2ecf1;
+}
+
+.donate-page .panda-background {
+  background: url("../images/photos/panda_donate.jpg") no-repeat;
+  width: 100%;
+  height: 39rem;
+  left: 0;
+  top: 8rem;
+  z-index: 5;
+  background-size: cover;
+}
+
+.donate-page .footer__image-container {
+  display: none;
+}
+
+.donate-main {
+  background-color: orange;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.donate-main .donate-info {
+  position: absolute;
+  width: 100%;
+  height: 22.6rem;
+  background-color: blue;
+  top: 39rem;
+}
+
+.donate-main .donate-info__header {
+  color: #fff;
+  font: normal normal 3.6rem/130% Roboto, sans-serif;
+  padding: 1rem 0.1rem;
+  background-color: orange;
+  margin-bottom: 0;
+}
+
+.donate-main .donate-info__text {
+  margin: 0;
+  font: normal 500 1.6rem/140% Roboto, sans-serif;
+  color: #fff;
 }

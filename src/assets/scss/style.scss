@@ -5,6 +5,7 @@
 
 @use 'layout/home';
 @use 'layout/default';
+@use 'layout/donate';
 @use 'components/buton';
 @use 'components/background_image';
 @use 'components/logo';
@@ -16,13 +17,14 @@
 @use 'sections/home/button-favorite';
 @use 'sections/home/feed-fried';
 @use 'sections/home/testimonials';
-@use 'sections/map/map-main';
+@use 'pages/map-page';
 @use 'sections/footer';
 @use 'pages/default-page';
 @use 'pages/panda-page';
 @use 'pages/gorilla-page';
 @use 'pages/eagle-page';
 @use 'pages/alligator-page';
+@use 'pages/donate-page';
 
 
 

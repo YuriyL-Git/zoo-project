@@ -1,0 +1,205 @@
+@use "../abstracts/var" as *;
+
+.donate-page {
+  background: $orange_grad;
+
+
+  .panda-background {
+    background: url("../images/photos/panda_donate.jpg") no-repeat;
+    width: 100%;
+    height: 39rem;
+    left: 0;
+    top: 8rem;
+    z-index: 5;
+    background-size: cover;
+  }
+}
+
+.donate-page .footer__image-container {
+  display: none;
+}
+
+.donate-main {
+  position: relative;
+
+  .donate-info {
+    width: 100%;
+    height: 28.6rem;
+    top: 39rem;
+    margin-top: 39rem;
+    display: inline-block;
+
+
+    &__header {
+      color: #fff;
+      font: $h3-roboto-regular;
+      padding: 1rem 0.1rem;
+      margin-bottom: 0;
+    }
+
+    &__text {
+      margin: 0;
+      font: $body-btn-roboto;
+      color: #fff;
+      margin-bottom: 4.6rem;
+    }
+
+    &__subtitle {
+      font: $h3-roboto-regular;
+      color: rgba(254, 144, 19, 1);
+    }
+  }
+
+  .section-donate {
+    width: 100%;
+    height: 96.4rem;
+    background-color: green;
+    margin-top: 5rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      font: $h2-roboto-regular;
+      text-align: center;
+      color: rgba(254, 144, 19, 1);
+      margin-bottom: 0;
+    }
+
+    &__info {
+      font: $subtitle-roboto-regular;
+      padding-left: 9.2rem;
+    }
+
+    &__animal-container {
+      margin-top: 4.5rem;
+      width: 52rem;
+      height: 25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    &__x-icon {
+      width: 2rem;
+      margin-top: 3rem;
+    }
+
+    &__figure {
+      margin-left: 5rem;
+      margin-bottom: 5rem;
+      display: block;
+      font: $h1-roboto-bold;
+      font-size: 72px;
+      font-weight: 500;
+      line-height: 80%;
+    }
+
+    &__diet-info {
+      position: absolute;
+      font: $body-roboto-regular;
+      bottom: 14%;
+      left: -2%;
+    }
+
+    &__amount-container {
+      margin-top: 8.4rem;
+      width: 97.6rem;
+      height: 3rem;
+      background-color: rgba(64, 73, 80, 1);
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2.1rem;
+      border-radius: 0.5rem;
+    }
+
+
+    &__amount-picker {
+      position: relative;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      display: inline-block;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0.6rem;
+      background-clip: content-box;
+      background-color: rgba(255, 238, 46, 1);
+      border-radius: 50%;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:checked:after {
+        position: absolute;
+        content: '';
+        width: 5rem;
+        height: 5rem;
+        background: url('../images/icons/roller_icon.svg') center no-repeat;
+        left: -50%;
+        top: -50%;
+
+        border-radius: 50%;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+
+        top: 175%;
+        left: -90%;
+        font: $subtitle-roboto-regular;
+        font-size: 2.6rem;
+      }
+
+      &:nth-child(1):before {
+        content: '$5000';
+      }
+
+      &:nth-child(2):before {
+        content: '$2000';
+      }
+
+      &:nth-child(3):before {
+        content: '$1000';
+      }
+
+      &:nth-child(4):before {
+        content: '$500';
+        left: -85%;
+      }
+
+      &:nth-child(5):before {
+        content: '$250';
+        left: -85%;
+      }
+
+      &:nth-child(6):before {
+        content: '$100';
+        left: -85%;
+      }
+
+      &:nth-child(7):before {
+        content: '$50';
+        left: -60%;
+      }
+
+      &:nth-child(8):before {
+        content: '$25';
+        left: -60%;
+      }
+
+
+    }
+
+
+  }
+
+}
+
+
