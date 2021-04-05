@@ -714,6 +714,23 @@ body {
   border-radius: 50%;
 }
 
+.radio-btn {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0.6rem;
+  background-clip: content-box;
+  background-color: #ffee2e;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+  outline: none;
+}
+
 .header-home {
   display: flex;
 }
@@ -1590,12 +1607,13 @@ body {
 .donate-main .section-donate {
   width: 100%;
   height: 96.4rem;
-  background-color: green;
   margin-top: 5rem;
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*------ remove arrows from input ----------*/
+  /*-------------------------------------------*/
 }
 .donate-main .section-donate__title {
   font: normal normal 4.8rem/120% Roboto, sans-serif;
@@ -1605,7 +1623,7 @@ body {
 }
 .donate-main .section-donate__info {
   font: normal normal 2.4rem/120% Roboto, sans-serif;
-  padding-left: 9.2rem;
+  margin-bottom: 1rem;
 }
 .donate-main .section-donate__animal-container {
   margin-top: 4.5rem;
@@ -1646,22 +1664,17 @@ body {
   align-items: center;
   padding: 0 2.1rem;
   border-radius: 0.5rem;
+  margin-bottom: 10.6rem;
 }
-.donate-main .section-donate__amount-picker {
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.donate-main .section-donate__amount-container:after {
+  position: absolute;
+  content: "";
+  width: 91rem;
+  height: 0.2rem;
+  background-color: #72828e;
+  left: 3.4%;
+  bottom: 45.5%;
   display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0.6rem;
-  background-clip: content-box;
-  background-color: #ffee2e;
-  border-radius: 50%;
-}
-.donate-main .section-donate__amount-picker:focus {
-  outline: none;
 }
 .donate-main .section-donate__amount-picker:checked:after {
   position: absolute;
@@ -1669,8 +1682,8 @@ body {
   width: 5rem;
   height: 5rem;
   background: url("../images/icons/roller_icon.svg") center no-repeat;
-  left: -50%;
-  top: -50%;
+  left: -54.5%;
+  top: -53%;
   border-radius: 50%;
 }
 .donate-main .section-donate__amount-picker:before {
@@ -1709,4 +1722,81 @@ body {
 .donate-main .section-donate__amount-picker:nth-child(8):before {
   content: "$25";
   left: -60%;
+}
+.donate-main .section-donate__form {
+  width: 97.7rem;
+  height: 18.8rem;
+}
+.donate-main .section-donate__input {
+  width: 26.8rem;
+  height: 5.4rem;
+  border: 1px solid #929699;
+  border-radius: 2px;
+  position: relative;
+  -moz-appearance: textfield;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  font-weight: bold;
+  padding-left: 1rem;
+  outline-color: orange;
+}
+.donate-main .section-donate__input::placeholder {
+  color: #929699;
+  font-weight: normal;
+}
+.donate-main .section-donate input::-webkit-outer-spin-button,
+.donate-main .section-donate input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.donate-main .section-donate__input-wrapper {
+  position: relative;
+  margin-bottom: 0.3rem;
+}
+.donate-main .section-donate__input-wrapper i {
+  position: absolute;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #929699;
+  display: block;
+  transform: translate(24rem, -50%);
+  top: 50%;
+  pointer-events: none;
+  width: 25px;
+  text-align: center;
+  font-style: normal;
+}
+.donate-main .section-donate__section-radio-btn {
+  width: 100%;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.donate-main .section-donate__label {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  padding-left: 1rem;
+  margin-right: 2rem;
+}
+.donate-main .section-donate__label:nth-child(2) {
+  display: block;
+  margin-right: 5rem;
+}
+.donate-main .section-donate__radio-btn {
+  background: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid #fe9013;
+}
+.donate-main .section-donate__radio-btn:focus {
+  background-color: #4B9200;
+}
+.donate-main .section-donate__btn {
+  position: absolute;
+  margin-top: 3.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.donate-main .section-donate__share-text {
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
 }

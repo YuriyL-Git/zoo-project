@@ -87,19 +87,33 @@
         <p class="section-donate__diet-info">Panda diet for the day.</p>
       </div>
   
-      <div class="section-donate__amount-container">
-        <input class="section-donate__amount-picker" name="amount" type="radio" id="amount1">
-        <input class="section-donate__amount-picker" name="amount" type="radio" id="amount2">
-        <input class="section-donate__amount-picker" name="amount" type="radio" id="amount3">
-        <input class="section-donate__amount-picker" name="amount" type="radio" id="amount4">
-        <input class="section-donate__amount-picker" name="amount" type="radio" id="amount5">
-        <input class="section-donate__amount-picker" name="amount" type="radio" id="amount6">
-        <input class="section-donate__amount-picker" name="amount" type="radio" id="amount7">
-        <input class="section-donate__amount-picker" name="amount" type="radio" id="amount8">
   
+      <div class="section-donate__amount-container">
+        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount1">
+        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount2">
+        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount3">
+        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount4">
+        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount5">
+        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount6">
+        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount7">
+        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount8">
       </div>
   
-  
+      <form class="section-donate__form">
+        <div class="section-donate__input-wrapper">
+          <input class="section-donate__input" type="number" id="donate-amount" min="0.00" max="10000.00" step="0.01"
+                 placeholder="Another amount"/>
+          <i>$</i>
+        </div>
+        <div class="section-donate__section-radio-btn">
+          <input class="section-donate__radio-btn radio-btn" name="period" type="radio" id="period-radio-btn1">
+          <label class="section-donate__label" for="period-radio-btn1">Monthly</label>
+          <input class="section-donate__radio-btn radio-btn" name="period" type="radio" id="period-radio-btn2">
+          <label class="section-donate__label" for="period-radio-btn2">Once</label>
+        </div>
+        <button class="section-donate__btn btn">feed a friend now</button>
+      </form>
+      <p class="section-donate__share-text">Share with your friends on social networks </p>
     </section>
   </main>
   

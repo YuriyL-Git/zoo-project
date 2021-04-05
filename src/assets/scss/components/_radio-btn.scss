@@ -1,0 +1,16 @@
+.radio-btn{
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0.6rem;
+  background-clip: content-box;
+  background-color: rgba(255, 238, 46, 1);
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+  outline: none;
+}
