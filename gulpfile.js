@@ -17,6 +17,8 @@ const notify = require("gulp-notify");
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require("browser-sync").create();
+const copy = require('gulp-copy');
+
 
 // save arguments to argv variable
 var argv = require('minimist')(process.argv.slice(2));
@@ -26,7 +28,7 @@ var argv = require('minimist')(process.argv.slice(2));
 /* Paths */
 const srcPath = 'src/';
 const distPath = 'dist/';
-let indexPage = "map.html";
+let indexPage = "index.html";
 
 if (argv.p) {
   indexPage = argv.p + '.html'
@@ -59,6 +61,21 @@ const path = {
 }
 
 
+
+/* ====================== copy task=================================== */
+/* 
+function copyFile(cb) {
+  return 
+    src('*.html')
+    .pipe(gulpCopy(distPath))
+    .dest(distPath);
+
+  cb();
+} */
+/* ====================== copy task=================================== */
+
+
+
 /* Tasks */
 
 function serve() {
@@ -74,10 +91,10 @@ function serve() {
 
 function html(cb) {
   panini.refresh();
-  return src(path.src.html, {base: srcPath})
+  return src('src/pages/**/*.{html,hbs,handlebars}')
       .pipe(plumber())
       .pipe(panini({
-        root: srcPath,
+        root: srcPath+'/pages/',
         layouts: srcPath + 'layouts/',
         partials: srcPath + 'partials/',
         helpers: srcPath + 'helpers/',
@@ -255,7 +272,7 @@ function watchFiles() {
   gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(/* clean, *//* copyFile, */ gulp.parallel(html, css, js, images, fonts));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
@@ -266,6 +283,7 @@ exports.js = js;
 exports.images = images;
 exports.fonts = fonts;
 exports.clean = clean;
+// exports.clean = copyFile;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

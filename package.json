@@ -36,6 +36,7 @@
         "IE 10"
     ],
     "dependencies": {
+        "gulp-copy": "^4.0.1",
         "gulp-open": "^3.0.1",
         "minimist": "^1.2.5"
     }

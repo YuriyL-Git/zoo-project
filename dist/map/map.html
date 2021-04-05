@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="../assets/css/style.min.css">
   <script defer src="assets/js/app.js"></script>
   
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,19 +23,17 @@
   
 </head>
 
-<body class="donate-page">
-<div class="donate-container">
-  <div class="background-image panda-background"></div>
-
+<body class="map-page">
+<div class="map-container">
   <!-- Header -->
   <header class="header-home">
-  <!--  absolute positioned elements -->
+    <!--  absolute positioned elements -->
     <div class="nav-panel"></div>
   
-  <!--  nav bar-->
+    <!--  nav bar-->
     <nav class="nav">
       <a href="#" class="logo nav__logo-link">
-        <img src="assets/images/icons/logo.svg" alt="logo">
+        <img src="../assets/images/icons/logo.svg" alt="logo">
       </a>
   
       <ul class="nav__list">
@@ -43,7 +41,7 @@
           <a class="nav__link" href="#">About</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Map</a>
+          <a class="nav__link" href="map/map.html">Map</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="#">Zoos</a>
@@ -63,60 +61,85 @@
 
   <!-- Main  -->
   
-  <main class="donate-main">
-    <section class="donate-info">
-      <h2 class="donate-info__header">
-        THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!
-      </h2>
-      <p class="donate-info__text">Even though the Zoo has been able to reopen, we are at a greatly reduced capacity with
-        educational programs and public and private events cancelled or postponed for additional months. We need you now
-        more than ever to help ensure that we overcome these challenges. We have been actively raising funds in the
-        community, and we are grateful for the generosity. But much more support is still needed, and we need your help!
-        Please consider a gift today – no matter what size – to help us sustain our mission.</p>
-      <p class="donate-info__subtitle">Donation Information</p>
-    </section>
+  <main class="map-main">
+    <h1 class="header-title">PetStory Online</h1>
+    <div class="map-main__container">
+      <svg class="map-main__map">
+        <use xlink:href="../assets/images/icons/map-sprite.svg#map"></use>
+      </svg>
   
-    <section class="section-donate">
-      <h2 class="section-donate__title">Pick and feed a friend</h2>
-      <p class="section-donate__info">We know the animals bring you joy, and in these extraordinary times, we’re glad.</p>
+      <div class="map-main__eagles-container">
+        <div class="tooltip-container">
+          <div class="tooltip-container__tooltip">
+            <p class="tooltip__par-one">Eagles</p>
+            <p class="tooltip__par-two">Los Angeles, USA</p>
+            <button class="tooltip__btn">Watch online</button>
+          </div>
+        </div>
+        <img class="map-main__eagle-one" src="../assets/images/map-animals/eagle1.png" alt="eagle photo">
+        <img class="map-main__eagle-two" src="../assets/images/map-animals/eagle2.png" alt="eagle photo">
+      </div>
   
-      <div class="section-donate__animal-container">
-        <p class="section-donate__figure">4</p>
-        <img class="section-donate__x-icon" src="assets/images/icons/x_icon.svg" alt="">
-        <img src="assets/images/icons/panda-donate.svg" alt="panda image">
-        <p class="section-donate__diet-info">Panda diet for the day.</p>
+      <div class="map-main__alligator-container">
+        <div class="tooltip-container">
+          <div class="tooltip-container__tooltip">
+            <p class="tooltip__par-one">Alligators</p>
+            <p class="tooltip__par-two">Florida, USA</p>
+            <button class="tooltip__btn">Watch online</button>
+          </div>
+        </div>
+        <img class="map-main__alligator" src="../assets/images/map-animals/lonely-crocodile.png" alt="crocodile photo">
+      </div>
+  
+      <div class="map-main__gorilla-container">
+        <div class="tooltip-container">
+          <div class="tooltip-container__tooltip">
+            <p class="tooltip__par-one">Gorillas</p>
+            <p class="tooltip__par-two">Congo, Central Africa</p>
+            <button class="tooltip__btn">Watch online</button>
+          </div>
+        </div>
+        <img class="map-main__gorilla" src="../assets/images/map-animals/gorilla.png" alt="gorilla photo">
+      </div>
+  
+      <div class="map-main__panda-one-container">
+        <div class="tooltip-container">
+          <div class="tooltip-container__tooltip">
+            <p class="tooltip__par-one">Pandas</p>
+            <p class="tooltip__par-two">Shaanxi, China</p>
+            <button class="tooltip__btn">Watch online</button>
+          </div>
+        </div>
+        <img class="map-main__panda-one" src="../assets/images/map-animals/panda1.png" alt="panda photo">
+      </div>
+  
+      <div class="map-main__panda-two-container">
+        <div class="tooltip-container">
+          <div class="tooltip-container__tooltip">
+            <p class="tooltip__par-one">Pandas</p>
+            <p class="tooltip__par-two">Gansu, China</p>
+            <button class="tooltip__btn">Watch online</button>
+          </div>
+        </div>
+        <img class="map-main__panda-two" src="../assets/images/map-animals/panda2.png" alt="panda photo">
       </div>
   
   
-      <div class="section-donate__amount-container">
-        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount1">
-        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount2">
-        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount3">
-        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount4">
-        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount5">
-        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount6">
-        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount7">
-        <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount8">
+      <!--    Zoom buttons-->
+      <div class="map-main__btn-container">
+        <button class="map-main__plus-btn map-main__map-btn">
+          <img src="../assets/images/icons/plus-btn.svg" alt="">
+        </button>
+        <button class="map-main__plus-btn map-main__map-btn">
+          <img src="../assets/images/icons/minus-btn.svg" alt="">
+        </button>
       </div>
   
-      <form class="section-donate__form">
-        <div class="section-donate__input-wrapper">
-          <input class="section-donate__input" type="number" id="donate-amount" min="0.00" max="10000.00" step="0.01"
-                 placeholder="Another amount"/>
-          <i>$</i>
-        </div>
-        <div class="section-donate__section-radio-btn">
-          <input class="section-donate__radio-btn radio-btn" name="period" type="radio" id="period-radio-btn1">
-          <label class="section-donate__label" for="period-radio-btn1">Monthly</label>
-          <input class="section-donate__radio-btn radio-btn" name="period" type="radio" id="period-radio-btn2">
-          <label class="section-donate__label" for="period-radio-btn2">Once</label>
-        </div>
-        <button class="section-donate__btn btn">feed a friend now</button>
-      </form>
-      <p class="section-donate__share-text">Share with your friends on social networks </p>
-    </section>
+  
+    </div>
+  
+  
   </main>
-  
   
 
 
@@ -131,7 +154,7 @@
       <!--    logo and subscribe section-->
       <div class="footer__container-top">
         <a href="#" class="logo footer__logo">
-          <img src="assets/images/icons/logo.svg" alt="logo">
+          <img src="../assets/images/icons/logo.svg" alt="logo">
         </a>
   
         <!--    subscribe container-->
@@ -151,25 +174,25 @@
         <div class="footer__socials">
           <a href="#" class="footer__link-socials">
             <svg class="footer__icon">
-              <use xlink:href="assets/images/icons/socials.svg#facebook"></use>
+              <use xlink:href="../assets/images/icons/socials.svg#facebook"></use>
             </svg>
             Facebook</a>
   
           <a href="#" class="footer__link-socials">
             <svg class="footer__icon">
-              <use xlink:href="assets/images/icons/socials.svg#twitter"></use>
+              <use xlink:href="../assets/images/icons/socials.svg#twitter"></use>
             </svg>
             Twitter</a>
   
           <a href="#" class="footer__link-socials">
             <svg class="footer__icon">
-              <use xlink:href="assets/images/icons/socials.svg#instagram"></use>
+              <use xlink:href="../assets/images/icons/socials.svg#instagram"></use>
             </svg>
             Instagram</a>
   
           <a href="#" class="footer__link-socials">
             <svg class="footer__icon">
-              <use xlink:href="assets/images/icons/socials.svg#youtube"></use>
+              <use xlink:href="../assets/images/icons/socials.svg#youtube"></use>
             </svg>
             YouTube</a>
         </div>
