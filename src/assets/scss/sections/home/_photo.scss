@@ -16,16 +16,60 @@
     border: 1px solid #FE9013;
     border-radius: 5px;
     overflow: hidden;
-    background-color: white;
+    background-color: orange;
+    z-index: 5;
+    position: relative;
+  }
+
+  &__photo-container {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    &:hover .photo-section__photo {
+      transform: scale(1.1);
+      -webkit-filter: brightness(40%);
+      filter: brightness(40%);
+    }
+
+    &:hover .photo-section__text-float {
+      transform: translateY(-170%);
+      opacity: 1;
+    }
   }
 
   &__photo {
     height: 36.4rem;
     width: 100%;
+    z-index: -2;
+    transition: transform 0.25s ease-in-out;
+  }
 
+  &__text-float {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 80%;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+
+    &__animal {
+      color: #fff;
+      font: var.$h2-roboto-regular;
+      text-align: center;
+      margin: 0;
+    }
+
+    &__place {
+      color: #fff;
+      font: var.$subtitle-roboto-regular;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
   }
 
   &__title {
+    z-index: 5;
     text-transform: uppercase;
     font: var.$body-btn-roboto;
     margin-left: 1.5rem;

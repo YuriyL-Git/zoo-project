@@ -6,17 +6,17 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:
-      $hd    /*- header -*/
-      $gap1  /*- gap1 -*/
-      $ar    /*- article -*/
-      $gap2  /*- gap2 -*/
-      $ph    /*- photo animals -*/
-      $bt    /*- button - choose favorite -*/
-      $fd    /*- section - feed a friend -*/
-      $gap3  /*- gap3 -*/
-      $tm    /*- testimonials -*/
-      $gap4  /*- gap */
-      $ft; /*- footer */
+      $hd   // - header -
+      $gap1 // - gap1 -
+      $ar    //- article -
+      $gap2  //- gap2 -
+      $ph    //- photo animals -
+      $bt    //- button - choose favorite -
+      $fd    //- section - feed a friend -
+      $gap3  //- gap3 -
+      $tm    //- testimonials -
+      $gap4  //- gap
+      $ft;   //- footer
 
   grid-template-areas:
       " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"  /*- header -*/
@@ -30,7 +30,7 @@
       " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm"  /*- testimonials -*/
       " .   .   .   .   .   .   .   .   .   .    .    . "
       " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft"; /*- footer -*/
-  /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
+  //   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-
 
   grid-column-gap: 3rem;
   grid-row-gap: 1px;

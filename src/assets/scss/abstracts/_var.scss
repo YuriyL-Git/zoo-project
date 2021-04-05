@@ -1,10 +1,10 @@
-/* ============= layout dimensions ===============================*/
+//============= layout dimensions ===============================
 $max-width: 116rem;
 $page-height: 497.5rem;
 
-/* =========== page sections heights =============================*/
+//=========== page sections heights =============================
 
-$hd: 78rem; /* / $page-height * 1fr*/
+$hd: 78rem; /*  $page-height * 1fr*/
 ; /* header */
 $gap1: 14rem; /* $page-height * 1fr*/
 ;
@@ -16,11 +16,11 @@ $fd: 100.4rem; /* section - feed a friend */
 $gap3: 14rem;
 $tm: 57.5rem; /* testimonials */
 $gap4: 20rem;
-$ft: 44.3rem; /* footer */
+$ft: 44.3rem; //footer
 
 //*=========default page===================*/
 
-/*==========map page==============================================*/
+///*==========map page==============================================*/
 $mp: 93.8rem;
 $hd-default: 8rem;
 //*=================== colors ===================================*/

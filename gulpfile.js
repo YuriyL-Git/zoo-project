@@ -131,12 +131,12 @@ function css(cb) {
         autosemicolon: true
       }))
       .pipe(dest(path.build.css))
-      .pipe(cssnano({
+      /* .pipe(cssnano({
         zindex: false,
         discardComments: {
           removeAll: true
         }
-      }))
+      })) */
       .pipe(removeComments())
       .pipe(rename({
         suffix: ".min",

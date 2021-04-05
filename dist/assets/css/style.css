@@ -318,9 +318,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ============= layout dimensions ===============================*/
-/* =========== page sections heights =============================*/
-/* / $page-height * 1fr*/
+/*  $page-height * 1fr*/
 /* header */
 /* $page-height * 1fr*/
 /* article */
@@ -328,17 +326,13 @@ body {
 /* button - choose favorite */
 /* section - feed a friend */
 /* testimonials */
-/* footer */
-/*==========map page==============================================*/
 .home-container {
   max-width: 1160px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 78rem 14rem 40.3rem 17.7rem 87.2rem 23.2rem 100.4rem 14rem 57.5rem 20rem 44.3rem;
-  /*- footer */
   grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " .   .   .   .   .   .   .   .   .   .    .    . " " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar" " .   .   .   .   .   .   .   .   .   .    .    . " " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph" " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt" " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd" " .   .   .   .   .   .   .   .   .   .    .    . " " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm" " .   .   .   .   .   .   .   .   .   .    .    . " " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
   /*- footer -*/
-  /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
   grid-column-gap: 3rem;
   grid-row-gap: 1px;
 }
@@ -380,7 +374,6 @@ body {
   /*- footer */
   grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp" " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
   /*- footer -*/
-  /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
   grid-column-gap: 3rem;
   grid-row-gap: 0;
 }
@@ -403,10 +396,8 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 8rem 186.9rem 44.3rem;
-  /*- footer */
   grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp" " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
   /*- footer -*/
-  /*   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-*/
   grid-column-gap: 3rem;
   grid-row-gap: 0;
 }
@@ -442,6 +433,11 @@ body {
   cursor: pointer;
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+}
+
+.btn:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .background-image {
