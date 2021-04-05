@@ -2168,3 +2168,8 @@ body {
 .donate-main .section-donate__share-text {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
 }
+
+a.nav__link.link-disabled {
+  color: orange;
+  pointer-events: none;
+}
