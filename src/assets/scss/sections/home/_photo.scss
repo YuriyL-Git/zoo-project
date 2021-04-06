@@ -93,16 +93,10 @@
   &__btn-left {
     background: url(../images/icons/arrow-left.svg) #f9804b center no-repeat;
     left: -8.3rem;
-    @include media('<=1323px') {
-      left: -2rem;
-    }
   }
 
   &__btn-right {
     background: url(../images/icons/arrow-right.svg) #f9804b center no-repeat;
     right: -8.3rem;
-    @include media('<=1323px') {
-      right: -2rem;
-    }
   }
 }

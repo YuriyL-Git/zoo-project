@@ -568,7 +568,7 @@ body {
   position: absolute;
   width: 9.9rem;
   height: 100%;
-  left: -10%;
+  left: -16.5%;
   z-index: 20;
 }
 .side-bar__nav {
@@ -956,19 +956,9 @@ body {
   background: url(../images/icons/arrow-left.svg) #f9804b center no-repeat;
   left: -8.3rem;
 }
-@media (max-width: 1323px) {
-  .photo-section__btn-left {
-    left: -2rem;
-  }
-}
 .photo-section__btn-right {
   background: url(../images/icons/arrow-right.svg) #f9804b center no-repeat;
   right: -8.3rem;
-}
-@media (max-width: 1323px) {
-  .photo-section__btn-right {
-    right: -2rem;
-  }
 }
 
 .chose-favorite {
