@@ -11,17 +11,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 116rem;
 
   &__container {
     width: fit-content;
     height: fit-content;
     position: relative;
+    margin-bottom: 6.1rem;
   }
 
   .map-main__map {
     width: 108rem;
-    height: 88.9rem;
-
+    height: 91.7rem;
   }
 
 
@@ -119,6 +120,19 @@
     justify-content: center;
     align-items: center;
     background-color: white;
+    outline: none;
+    transition: all 0.15s ease-out;
+
+    &:hover {
+      background-color: rgba(265, 165, 0, 0.5);
+      color: red;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 }
 

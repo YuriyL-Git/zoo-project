@@ -21,6 +21,15 @@
     top: 426rem;
   }
 
+  &__image-rotated {
+    background: url("../images/photos/leav_rotated.png") no-repeat;
+    width: 24.5rem;
+    height: 30rem;
+    right: -4rem;
+
+    top: 320rem;
+  }
+
   &__image--default {
     //display: none;
   }
@@ -41,9 +50,17 @@
     margin-bottom: 3.5rem;
   }
 
-  &__subscribe-container {
+  &__subscribe-form {
     height: 100%;
     width: 36.8rem;
+
+    &:invalid .footer__btn-submit {
+      color: red;
+    }
+
+    &:invalid .footer__subscribe-input {
+      color: red;
+    }
   }
 
   &__subscribe-title {
@@ -65,9 +82,8 @@
     &::placeholder {
       font: var.$body-roboto-regular;
       line-height: 140%;
-      //padding: 0.7rem;
       color: #bdbdbd;
-      padding-left: 2rem;
+      padding-left: 0.8rem;
     }
   }
 
@@ -157,6 +173,10 @@
     text-decoration: none;
     font: var.$body-roboto-regular;
     color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__designed-by {

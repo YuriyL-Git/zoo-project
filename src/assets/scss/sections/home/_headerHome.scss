@@ -32,6 +32,10 @@
       text-decoration: none;
       font: var.$body-btn-roboto;
       text-align: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &__list {
@@ -51,6 +55,8 @@
       font-size: 1rem;
       line-height: 140%;
       color: #FFFFFF;
+
+
     }
   }
 

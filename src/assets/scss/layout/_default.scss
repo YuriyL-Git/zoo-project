@@ -3,6 +3,7 @@
 .default-container {
   max-width: 1160px;
   width: 1160px;
+
   //min-height: 497.5rem;
   //background-color: lightgreen;
 
@@ -10,14 +11,14 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:
       $hd-default    /*- header -*/
-      343.7rem  /*- gap1 -*/
+      minmax(300.7rem, max-content)  /*- gap1 -*/
       $ft; /*- footer */
 
   grid-template-areas:
       " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"  /*- header -*/
       " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp"
       " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft"; /*- footer -*/
- //   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-
+  //   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-
 
   grid-column-gap: 3rem;
   grid-row-gap: 0;

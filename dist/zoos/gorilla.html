@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="../assets/images/icons/tab-icon.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.min.css">
@@ -68,14 +69,15 @@
         <ul class="side-bar__list">
   
           <li class="side-bar__item tooltip-container">
-            <a href="../zoos/gorilla.html" class="side-bar__link">
-              <div class="tooltip-container__tooltip">
-                <p class="tooltip__par-one">Gorilla</p>
-              </div>
-              <svg class="side-bar__icon">
-                <use xlink:href="../assets/images/sidebar/sprite-sidebar.svg#gorilla"></use>
-              </svg>
-            </a></li>
+            <!--          <a href="../zoos/gorilla.html" class="side-bar__link">-->
+            <div class="tooltip-container__tooltip">
+              <p class="tooltip__par-one">Gorilla</p>
+            </div>
+            <svg class="side-bar__icon-inactive">
+              <use xlink:href="../assets/images/sidebar/sprite-sidebar.svg#gorilla"></use>
+            </svg>
+            <!--          </a>-->
+          </li>
   
           <li class="side-bar__item tooltip-container">
             <a href="../zoos/alligator.html" class="side-bar__link">
@@ -157,43 +159,50 @@
       <button class="btn photo-section__btn-left"></button>
       <button class="btn photo-section__btn-right"></button>
       <div class="preview-container__overlay">
-        <p class="preview-container__camera-title">Live camera 1</p>
-        <p class="preview-container__camera-title">Live camera 2</p>
-        <p class="preview-container__camera-title">Live camera 3</p>
-        <p class="preview-container__camera-title">Live camera 4</p>
+        <div class="preview-container__title-wrapper">
+          <p class="preview-container__camera-title">Live</p>
+        </div>
+        <div class="preview-container__title-wrapper">
+          <p class="preview-container__camera-title">Live</p>
+        </div>
+        <div class="preview-container__title-wrapper">
+          <p class="preview-container__camera-title">Live</p>
+        </div>
+        <div class="preview-container__title-wrapper">
+          <p class="preview-container__camera-title">Live</p>
+        </div>
+  
       </div>
       <div class="preview-container__videos">
-        <iframe width="267" height="210" src="https://www.youtube.com/embed/8xJyOw8bwZM" title="YouTube video player"
+        <iframe width="267" height="210" src="https://www.youtube.com/embed/awPNvzBMT74" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        <iframe width="267" height="210" src="https://www.youtube.com/embed/Tish3KkNnLc" title="YouTube video player"
+        <iframe width="267" height="210" src="https://www.youtube.com/embed/awPNvzBMT74" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        <iframe width="267" height="210" src="https://www.youtube.com/embed/D7xWXk5T3-g" title="YouTube video player"
+        <iframe width="267" height="210" src="https://www.youtube.com/embed/awPNvzBMT74" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        <iframe width="267" height="210" src="https://www.youtube.com/embed/dqT-UlYlg1s" title="YouTube video player"
+        <iframe width="267" height="210" src="https://www.youtube.com/embed/awPNvzBMT74" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
       </div>
     </div>
   
-    <h2 class="main-title">Giant Panda</h2>
+    <h2 class="main-title">Western Lowland Gorilla</h2>
     <div class="main-article-container">
-      <img class="main-article-container__photo" src="../assets/images/photos/giant-panda-article.png"
+      <img class="main-article-container__photo" src="../assets/images/photos/gorilla-article.jpg"
            alt="giant panda">
       <div class="main-article-container__wrapper">
-        <p class="main-article-container__article">Giant pandas are very unusual animals that eat almost exclusively
-          bamboo,
-          which is very low in nutrients. Because of this, they have many unique adaptations for their low-energy
-          lifestyle.
-          Giant pandas are solitary, with males and females coming together only briefly to mate. Habitat loss is the
-          primary threat to this species. Its popularity around the world has helped the giant panda become the focus of
-          successful conservation programs.</p>
+        <p class="main-article-container__article">Western lowland gorillas live in troops led by a dominant silverback,
+          several adult females, and their offspring.
+          There are two species of gorilla, each containing two subspecies. The two species are eastern and western, and
+          the four sub-species are Cross River and Western Lowland (are sub-species of the Western species) and Grauer’s
+          and Mountain (are sub-species of the Eastern species).</p>
         <button class="btn">feed a friend now</button>
       </div>
     </div>
@@ -202,18 +211,18 @@
     <!--=========  info section =======================-->
     <section class="info-section">
       <div class="info-section__paragraph-wrapper">
-        <p class="info-section__paragraph"><span class="info-section__title">Diet : </span>Herbivore (They also are
-          offered nutritious high-fiber biscuits and fruits such as apples or <a class="info-section__link" href="#">sweet
-            potatoes</a>)
+        <p class="info-section__paragraph"><span class="info-section__title">Diet : </span>Herbivore (We provide a medley
+          of fruits and vegetables to our western
+          <a class="info-section__link" href="#">lowland gorillas</a>)
         </p>
   
         <p class="info-section__paragraph">
-          <span class="info-section__title">Range: </span>Eastern Asia <a
+          <span class="info-section__title">Range: </span>Western Africa <a
             class="info-section__link" href="#">[VIEW MAP]</a>
         </p>
   
-        <p class="info-section__paragraph"><span class="info-section__title">Habitat: </span>Forests (Simulation of the <a
-            class="info-section__link" href="#">natural environment</a>)
+        <p class="info-section__paragraph"><span class="info-section__title">Habitat: </span>
+          Rainforests (Simulation of the natural environment)
         </p>
       </div>
       <!--    paragraph-->
@@ -221,14 +230,18 @@
       <div class="info-section__paragraph-wrapper">
         <p class="info-section__paragraph info-section__paragraph--new-line"><span class="info-section__title">General Information:</span>
         </p>
-        <p class="info-section__paragraph">Giant pandas are bears and are members of the
-          <a class="info-section__link" href="#">Order Carnivora</a> . They are unique because, although they evolved
-          among the
-          mostly carnivorous bear species of the world, their diet is vegetarian. Despite the availability of other
-          plants, they feed almost exclusively on bamboo.</p>
-        <p class="info-section__paragraph">Giant pandas communicate with one another in dense bamboo forests primarily by
-          scent. Males regularly scent-mark the margins of their territories by adopting a “headstand” position to mark a
-          bamboo stalk with their anogenital glands.</p>
+        <p class="info-section__paragraph">
+          There are two species of gorilla, each containing two subspecies. The two species are eastern and western, and
+          the four sub-species are Cross River and Western Lowland (are sub-species of the Western species) and Grauer’s
+          and Mountain (are sub-species of the Eastern species). Western gorillas can be distinguished from other gorilla
+          <a class="info-section__link" href="#">subspecies</a> by their brownish-gray hair, auburn-colored crests and
+          overall smaller size. Eastern gorillas tend to
+          be black in color and larger in size. In all gorillas, males develop silver coloration along their backs as they
+          mature. The species is diurnal, which means they are active during the day, and of all the great apes, gorillas
+          are the most terrestrial. This means that they primarily live on the ground, although they do
+          <a class="info-section__link" href="#">occasionally climb
+            trees</a> to feed and nest. They are also able to stand on two legs for short periods of time.
+        </p>
       </div>
   
       <div class="info-section__paragraph-wrapper">
@@ -236,22 +249,33 @@
           <span class="info-section__title">Physical features and characteristics:</span>
         </p>
         <p class="info-section__paragraph">
-          The low nutrient value of bamboo figures prominently in the biology of the giant panda. They have extremely
-          powerful jaws and associated muscles to crunch through the woody stems of bamboo. Each hand bears a specialized
-          <a class="info-section__link" href="#">metacarpal bone </a> in the wrist that functions as a thumb would in
-          humans, to allow them to grasp the circular
-          bamboo stalks. While other herbivorous animals, such as antelope, zebras, or rabbits, have very long digestive
-          tracts, the giant panda retains an essentially bear-like digestive tract. Thus, the digestive efficiency of the
-          bamboo they consume is quite low. Examination of the feces demonstrates that their food has been only partially
-          digested. The low nutrient value of their food and their low digestive efficiency results in an animal that is
-          constrained to a low-metabolism. This lifestyle explains why giant pandas sleep so often and why they eat such
-          <a class="info-section__link" href="#">enormous </a> amounts of bamboo.
+          Gorillas are the largest of all primates and reach physical maturity between 12 and 15 years of age. Males can
+          be between 350 and 450 pounds, almost twice as much as females, weighing in between <a
+            class="info-section__link" href="#"> 150 and 250 pounds</a>. Males
+          stand between 5.5 to 6 feet tall. Females are a bit smaller, standing between 4’7” to 4’11”. The males’ heads
+          are large and pointed due to the sagittal crest that forms the back of the top of the head. This crest serves as
+          the foundation for attachment of a great number of jaw muscle fibers, which allows for the chewing power needed
+          to process tough vegetation.
         </p>
         <p class="info-section__paragraph">
-          Individuals do not travel long distances, and males will establish territories that are not particularly large
-          compared with other species in the Order Carnivora. Adult females average about 230 pounds in weight, with males
-          sometimes reaching 350 pounds. Their hair is very dense, conserving their body heat in their cold habitats.
-          Their iconic coloration remains a mystery to scientists but may aid with camouflage.
+          The vision and perception of western lowland gorillas is similar to that of humans. Gorillas have a prominent
+          brow ridge, small, flat ears, and hear about the same as humans. The nose is broad, flat and fleshy. The
+          wrinkles on a gorilla’s nose, known as a noseprint, are like human fingerprints, and every individual’s
+          noseprint is unique. Researchers use these noseprints as identification markers in their studies, both in
+          zoological settings and in the wild.
+        </p>
+        <p class="info-section__paragraph">
+          Gorillas have 32 teeth, including sharp canines used for defense and breaking through vegetation. Their molars
+          have complicated patterns of cups and ridges that facilitate chewing of tough plant fibers.
+        </p>
+        <p class="info-section__paragraph">
+          Gorillas’ faces, hands, and feet are bare, but the rest of their bodies are covered with short, thin hair.
+          Gorilla hands and feet are large, with leathery palms and soles, and broad, flat nails Their hands are very
+          dexterous and can pick up small, delicate objects. Like their hands, their feet have opposable thumbs and toes.
+          Like all apes, gorillas’ arms are longer than their legs—a feature that allows them to walk on all fours. They
+          are called “knuckle-walkers,” meaning that they walk on the knuckles of their forelimbs and the soles of their
+          hind limbs. This form of locomotion develops calluses on the knuckles, preserving the sensitivity of the
+          fingertips necessary for manipulating smaller objects.
         </p>
       </div>
   
@@ -259,41 +283,112 @@
         <p class="info-section__paragraph info-section__paragraph--new-line">
           <span class="info-section__title">Lifestyle and reproduction:</span></p>
         <p class="info-section__paragraph">
-          Females are fertile for only a very short period of time and exhibit delayed implantation. Although twins are
-          not unusual, a mother will typically only rear one cub. Adults are solitary, with mating pairings being quite
-          brief. The tiny cubs are altricial, or not born in an advanced state of development, and are completely
-          helpless, blind and deaf, and without the fur <a class="info-section__link" href="#">necessary</a> to regulate
-          their own body temperatures. As a result,
-          maternal care is extensive. Cubs do not begin eating bamboo until they are around a year old.
+          Gorillas tend to be shy, peaceful creatures; they are not normally aggressive to other animals unless provoked.
+          However, if they are provoked, they can be dangerous. They can demonstrate aggression by charging towards
+          perceived intruders. Typically, they will not actually hit the intruder, but rush past, turn and then charge
+          again.
         </p>
-        <p class="info-section__paragraph">
-          When twins are born in zoos, extraordinary measures are taken to train the female to accept swapping of her cubs
-          regularly 24 hours a day, so that she only cares for one a time, but that both receive adequate care.
+        <p class="info-section__paragraph-list">
+          Gorillas use a combination of vocalizations, visual signals and scents to communicate. They are considered
+          relatively quiet compared to other primates, but do have at least 25 recognized vocalizations, including:
         </p>
+        <ul class="info-section__list">
+          <li class="info-section__list-item">
+            Hooting: Can carry for a mile through the forest and is usually accompanied by display behavior such as
+            chest
+            beating, strutting, and vegetation slapping
+          </li>
+          <li>
+            Screams: Sounds of alarm or warning
+          </li>
+          <li>Belches: Deep rumblings of contentment, comfort, or well-being
+          </li>
+          <li>Sharp Grunts: Used when discipline is required
+          </li>
+          <li>Whoop Barks: High-pitched barks denote curiosity
+          </li>
+          <li>Bark Grunt: Aggression
+          </li>
+          <li>Chuckles: Playfulness
+          </li>
+        </ul>
+  
+        <p class="info-section__paragraph">Infants have three distinct vocalizations; these are similar to the cries of a
+          human baby. They will typically cry when hurt or frightened, resulting in an immediate response from the
+          mother.</p>
+        <p class="info-section__paragraph">Dominant males also have a distinctive smell that they use to communicate with
+          other troops and to maintain contact with their own troop. Perhaps the most recognizable behavior performed by
+          gorillas is chest-beating. It is primarily done by male gorillas at the end of a display meant to intimidate
+          intruding males or predators. The sound can be heard for long distances. Females will chest-beat infrequently;
+          they will typically beat their hands against the insides of their thighs. Chest-beating can also indicate
+          playful behavior, however, especially in the young. Young gorillas play much like humans do, playing tag and
+          doing somersaults.</p>
+        <p class="info-section__paragraph">Western lowland gorillas live in family groups known as troops. These troops
+          can consist of 5 to 30 individuals, although the average size is 11. The group is led by a dominant silverback
+          male and contains several adult females and their young. The females will typically bond with the silverback,
+          but not necessarily with each other. The silverback will remain dominant for as long as he can defeat competing
+          males.</p>
+        <p class="info-section__paragraph">There are several younger, blackback males that remain in the group until they
+          are capable of challenging the silverback. These young males are often driven out of the troop to live a
+          solitary life or to live in a smaller group with other bachelors until they establish their own troops. If a
+          dominant silverback is displaced, the new dominant male will typically kill the infants in the troop, sending
+          the females prematurely into reproductive cycling. This increases the male’s chances of siring offspring, as his
+          time as the dominant male is uncertain. As such, females consider a male’s ability to fight paramount to their
+          offspring’s survival.</p>
+        <p class="info-section__paragraph">On maturing, females will also leave their natal group to join a lone male or
+          another small group. This is vital to prevent inbreeding and to protect the gene pool.</p>
+        <p class="info-section__paragraph">Nesting typically occurs in the late afternoon, with the gorillas bedding down
+          for the night at sundown. The females and their offspring will build nests of leaves and branches, while the
+          dominant silverback will settle at the base of the tree, in order to protect his family. At Zoo Atlanta, while
+          the gorillas are outside, their indoor areas are thoroughly cleaned; the walls and floors are scrubbed with
+          disinfectant. The gorillas are offered hay in their indoor area at night and nest with this material,
+          replicating natural behavior.</p>
+        <p class="info-section__paragraph">In a troop, the single silverback male will mate with the females, siring all
+          the offspring of the troop. Females generally reach reproductive maturity between 7 and 8 years of age, with
+          males reaching maturity later, around 10 years of age, due to competition. The potential breeding season is
+          year-round and gestation typically takes 256 days, or about 8.5 months. Labor can last anywhere from one to 4
+          hours. Babies are usually born singly; twins are rare. Newborns weigh between 3 and 5 pounds and are weaned
+          around 2 to 3 years of age, but can be dependent on their mothers for up to 4 years. The average interval
+          between births for a female gorilla is four to six years.</p>
       </div>
+  
   
       <div class="info-section__paragraph-wrapper">
         <p class="info-section__paragraph info-section__paragraph--new-line">
           <span class="info-section__title">Habitat:</span></p>
         <p class="info-section__paragraph">
-          Their preferred cool and wet bamboo forests are found at <a class="info-section__link" href="#">elevations </a>
-          between 5,000 and 10,000 feet. Cubs are
-          raised in rocky crevices, dead trees, or caves.
+          Western lowland gorillas prefer the tall, lush tropical forest of west and central Africa. The herbs, shrubs and
+          vines that make up its diet grow best where the open canopy allows plenty of light to reach the forest floor.
+          These tropical forests also contain a much higher diversity of arboreal substrates and foods, in particular
+          fruit, than mountainous habitats. Western lowland gorillas live primarily on the ground and build sleeping nests
+          on the ground or in the trees for the night.
         </p>
       </div>
   
       <div class="info-section__paragraph-wrapper">
         <p class="info-section__paragraph info-section__paragraph--new-line">
           <span class="info-section__title">Diet:</span></p>
-        <p class="info-section__paragraph">
-          Our animal care professionals offer each adult or subadult giant panda about 80 pounds of various bamboo species
-          per day, and they generally select and consume only about third of that. They also are offered nutritious
-          high-fiber biscuits and fruits such as apples or sweet potatoes.
-        </p>
+        <p class="info-section__paragraph">Western lowland gorillas are primarily herbivorous, feeding on plant parts
+          including seeds, leaves, stems, shoots, roots and flowers; however, they prefer fruit whenever it’s in season.
+          Occasionally they will eat insects, such as termites or ants, as a supplement to their diet when they are
+          readily available. Due to their dietary preferences, western lowland gorillas spend a lot of their time in and
+          around trees, especially fruit trees. Even large males can sometimes be found up in the trees, but they are
+          careful to stay near a main trunk or on larger branches that are able to support their weight. Younger, lighter
+          gorillas may climb higher in trees, even swinging freely from branch to branch. Gorillas never completely strip
+          vegetation from a single area; rather, the rapid regrowth of the vegetation they consume allows them to stay
+          within a reasonable confined home range for extended periods of time.</p>
+        <p class="info-section__paragraph">Here at Zoo, we provide a medley of fruits and vegetables to our western
+          lowland gorillas. These include apples, oranges, bananas, raisins, sweet potatoes, cabbage, collards, and
+          primate chow. In the morning, vegetables and fruit are chopped up and scattered around the habitat. From there,
+          the gorillas come outside and forage for their food as they would in the wild. Browse foods including bamboo,
+          banana leaves, mulberry, elm and willow are also scattered in their habitat.</p>
       </div>
     </section>
+  
     <button class="btn btn-read-less">Read Less</button>
-    <button class="btn btn-donate-default">Donate</button>
+    <div class="background-wrapper">
+      <button class="btn btn-donate-default">Donate</button>
+    </div>
   
   
   </main>
@@ -303,7 +398,7 @@
   <!--  Footer-->
   <footer class="footer">
     <div class="footer__background"></div>
-    <div class="background-image footer__image-container"></div>
+    <div class="background-image footer__image-rotated"></div>
     <div class="background-image footer__image--default"></div>
     <div class="background-image strelitzia-image-default"></div>
   
@@ -315,11 +410,12 @@
         </a>
   
         <!--    subscribe container-->
-        <form class="footer__subscribe-container">
+        <form class="footer__subscribe-form">
           <h3 class="footer__subscribe-title">Subscribe to our news</h3>
           <label for="input-footer"></label>
-          <input class="footer__subscribe-input" type="email" id="input-footer" placeholder="Enter your email">
-          <button class="btn footer__btn-submit" type="submit">Submit</button>
+          <input class="footer__subscribe-input" type="email" id="input-footer" placeholder="Enter your email"
+                 pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+.)+[A-z]{1,3}$" required>
+          <input class="btn footer__btn-submit" type="submit" value="Submit">
         </form>
       </div>
       <!--    donate button-->
@@ -359,13 +455,13 @@
         <nav class="footer__nav">
           <ul class="footer__nav-list">
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">About</a>
+              <a href="../index/index.html" class="footer__nav-link">About</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">Map</a>
+              <a href="../map/map.html" class="footer__nav-link">Map</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">Zoos</a>
+              <a href="#" class="link-disabled footer__nav-link">Zoos</a>
             </li>
             <li class="footer__nav-item">
               <a href="#" class="footer__nav-link">Contact us</a>

@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="../assets/images/icons/tab-icon.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.min.css">
@@ -78,14 +79,13 @@
             </a></li>
   
           <li class="side-bar__item tooltip-container">
-            <a href="../zoos/alligator.html" class="side-bar__link">
-              <div class="tooltip-container__tooltip">
-                <p class="tooltip__par-one">Alligator</p>
-              </div>
-              <svg class="side-bar__icon">
-                <use xlink:href="../assets/images/sidebar/sprite-sidebar.svg#alligator"></use>
-              </svg>
-            </a></li>
+            <div class="tooltip-container__tooltip">
+              <p class="tooltip__par-one">Alligator</p>
+            </div>
+            <svg class="side-bar__icon-inactive">
+              <use xlink:href="../assets/images/sidebar/sprite-sidebar.svg#alligator"></use>
+            </svg>
+          </li>
   
           <li class="side-bar__item tooltip-container">
             <a href="../zoos/panda.html" class="side-bar__link">
@@ -156,43 +156,49 @@
       <button class="btn photo-section__btn-left"></button>
       <button class="btn photo-section__btn-right"></button>
       <div class="preview-container__overlay">
-        <p class="preview-container__camera-title">Live camera 1</p>
-        <p class="preview-container__camera-title">Live camera 2</p>
-        <p class="preview-container__camera-title">Live camera 3</p>
-        <p class="preview-container__camera-title">Live camera 4</p>
+        <div class="preview-container__title-wrapper">
+          <p class="preview-container__camera-title">Live</p>
+        </div>
+        <div class="preview-container__title-wrapper">
+          <p class="preview-container__camera-title">Live</p>
+        </div>
+        <div class="preview-container__title-wrapper">
+          <p class="preview-container__camera-title">Live</p>
+        </div>
+        <div class="preview-container__title-wrapper">
+          <p class="preview-container__camera-title">Live</p>
+        </div>
+  
       </div>
       <div class="preview-container__videos">
-        <iframe width="267" height="210" src="https://www.youtube.com/embed/8xJyOw8bwZM" title="YouTube video player"
+        <iframe width="267" height="210" src="https://www.youtube.com/embed/gb99Y3cjw1c" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        <iframe width="267" height="210" src="https://www.youtube.com/embed/Tish3KkNnLc" title="YouTube video player"
+        <iframe width="267" height="210" src="https://www.youtube.com/embed/gb99Y3cjw1c" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        <iframe width="267" height="210" src="https://www.youtube.com/embed/D7xWXk5T3-g" title="YouTube video player"
+        <iframe width="267" height="210" src="https://www.youtube.com/embed/gb99Y3cjw1c" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-        <iframe width="267" height="210" src="https://www.youtube.com/embed/dqT-UlYlg1s" title="YouTube video player"
+        <iframe width="267" height="210" src="https://www.youtube.com/embed/gb99Y3cjw1c" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
       </div>
     </div>
   
-    <h2 class="main-title">Giant Panda</h2>
+    <h2 class="main-title">Alligator</h2>
     <div class="main-article-container">
-      <img class="main-article-container__photo" src="../../assets/images/photos/giant-panda-article.png"
+      <img class="main-article-container__photo" src="../assets/images/photos/alligator-article.jpg"
            alt="giant panda">
       <div class="main-article-container__wrapper">
-        <p class="main-article-container__article">Giant pandas are very unusual animals that eat almost exclusively
-          bamboo,
-          which is very low in nutrients. Because of this, they have many unique adaptations for their low-energy
-          lifestyle.
-          Giant pandas are solitary, with males and females coming together only briefly to mate. Habitat loss is the
-          primary threat to this species. Its popularity around the world has helped the giant panda become the focus of
-          successful conservation programs.</p>
+        <p class="main-article-container__article">Alligators differ from other members of the crocodile family in having
+          a <a class="main-article-container__link" href="#"> wider snout</a>; their eyes are more dorsal (at the top of
+          the head). Large alligators' eyes glow red; small
+          alligators' eyes glow green. Alligators can be spotted in the dark by this sign.</p>
         <button class="btn">feed a friend now</button>
       </div>
     </div>
@@ -201,18 +207,17 @@
     <!--=========  info section =======================-->
     <section class="info-section">
       <div class="info-section__paragraph-wrapper">
-        <p class="info-section__paragraph"><span class="info-section__title">Diet : </span>Herbivore (They also are
-          offered nutritious high-fiber biscuits and fruits such as apples or <a class="info-section__link" href="#">sweet
-            potatoes</a>)
+        <p class="info-section__paragraph"><span class="info-section__title">Diet : </span>
+          Carnivore (Fish, lizards, <a class="info-section__link" href="#">snakes</a>, mice)
         </p>
   
         <p class="info-section__paragraph">
-          <span class="info-section__title">Range: </span>Eastern Asia <a
+          <span class="info-section__title">Range: </span>Florida, United States of America <a
             class="info-section__link" href="#">[VIEW MAP]</a>
         </p>
   
-        <p class="info-section__paragraph"><span class="info-section__title">Habitat: </span>Forests (Simulation of the <a
-            class="info-section__link" href="#">natural environment</a>)
+        <p class="info-section__paragraph"><span class="info-section__title">Habitat: </span>
+          Alligators live mostly in fresh brackish water, in marshes, canals, and lakes
         </p>
       </div>
       <!--    paragraph-->
@@ -220,14 +225,10 @@
       <div class="info-section__paragraph-wrapper">
         <p class="info-section__paragraph info-section__paragraph--new-line"><span class="info-section__title">General Information:</span>
         </p>
-        <p class="info-section__paragraph">Giant pandas are bears and are members of the
-          <a class="info-section__link" href="#">Order Carnivora</a> . They are unique because, although they evolved
-          among the
-          mostly carnivorous bear species of the world, their diet is vegetarian. Despite the availability of other
-          plants, they feed almost exclusively on bamboo.</p>
-        <p class="info-section__paragraph">Giant pandas communicate with one another in dense bamboo forests primarily by
-          scent. Males regularly scent-mark the margins of their territories by adopting a “headstand” position to mark a
-          bamboo stalk with their anogenital glands.</p>
+        <p class="info-section__paragraph">Alligators are large, semi-aquatic, carnivorous reptiles with four paws and a
+          huge tail that is half the length of an animal, helps them move around in water used to make water pools in the
+          dry seasons (alligator holes), used as weapons, and stores fat that helps them overwinter. Alligators are
+          cold-blooded; their bodies do not produce heat. They get it by basking in the sun.</p>
       </div>
   
       <div class="info-section__paragraph-wrapper">
@@ -235,22 +236,19 @@
           <span class="info-section__title">Physical features and characteristics:</span>
         </p>
         <p class="info-section__paragraph">
-          The low nutrient value of bamboo figures prominently in the biology of the giant panda. They have extremely
-          powerful jaws and associated muscles to crunch through the woody stems of bamboo. Each hand bears a specialized
-          <a class="info-section__link" href="#">metacarpal bone </a> in the wrist that functions as a thumb would in
-          humans, to allow them to grasp the circular
-          bamboo stalks. While other herbivorous animals, such as antelope, zebras, or rabbits, have very long digestive
-          tracts, the giant panda retains an essentially bear-like digestive tract. Thus, the digestive efficiency of the
-          bamboo they consume is quite low. Examination of the feces demonstrates that their food has been only partially
-          digested. The low nutrient value of their food and their low digestive efficiency results in an animal that is
-          constrained to a low-metabolism. This lifestyle explains why giant pandas sleep so often and why they eat such
-          <a class="info-section__link" href="#">enormous </a> amounts of bamboo.
+          There are two types of alligators: the American alligator, which grows to 19 feet (3.5 m) long and up to 600
+          pounds (270 kg), and the Chinese alligator, which grows to 6 feet (1.8 m) long.
         </p>
         <p class="info-section__paragraph">
-          Individuals do not travel long distances, and males will establish territories that are not particularly large
-          compared with other species in the Order Carnivora. Adult females average about 230 pounds in weight, with males
-          sometimes reaching 350 pounds. Their hair is very dense, conserving their body heat in their cold habitats.
-          Their iconic coloration remains a mystery to scientists but may aid with camouflage.
+          Having four paws, they swim very well, mainly using their tail to move through the water and, to a lesser
+          extent, using their webbed feet.
+        </p>
+        <p class="info-section__paragraph">
+          Alligators are stooping (as are many reptiles); they walk in a flat-footed manner. On land, they can move
+          relatively quickly, but only in short bursts. Different species have different speeds, which also depends on the
+          type of movement (crawling, paddling, swimming). Alligators are the fastest crocodiles on earth, they can move
+          at speeds of up to 17 km per hour. They swim at a speed of about 10 km per hour. Crawling, the animal can travel
+          5-10 km per hour.
         </p>
       </div>
   
@@ -258,16 +256,22 @@
         <p class="info-section__paragraph info-section__paragraph--new-line">
           <span class="info-section__title">Lifestyle and reproduction:</span></p>
         <p class="info-section__paragraph">
-          Females are fertile for only a very short period of time and exhibit delayed implantation. Although twins are
-          not unusual, a mother will typically only rear one cub. Adults are solitary, with mating pairings being quite
-          brief. The tiny cubs are altricial, or not born in an advanced state of development, and are completely
-          helpless, blind and deaf, and without the fur <a class="info-section__link" href="#">necessary</a> to regulate
-          their own body temperatures. As a result,
-          maternal care is extensive. Cubs do not begin eating bamboo until they are around a year old.
+          Alligators are usually solitary animals. They live 30 to 35 years in the wild, and up to 50 years in captivity.
+          These animals have a wide range of calls and vocalizations. These calls are used in mating, defining territory,
+          and distress calls (babies grunt to alert their mother when in danger), etc.
         </p>
         <p class="info-section__paragraph">
-          When twins are born in zoos, extraordinary measures are taken to train the female to accept swapping of her cubs
-          regularly 24 hours a day, so that she only cares for one a time, but that both receive adequate care.
+          Alligators breed in the spring from April to May. One month after noisy mating and bonding rituals, the female
+          lays up to 50 eggs in a large (three feet high and six feet wide) nest, which is made of dirt, leaves, and twigs
+          on non-wet ground. Alligators do not incubate their eggs so as not to crush them. The vegetation that rots in
+          the nest keeps the future babies warm.
+        </p>
+        <p class="info-section__paragraph">
+          The temperature in the nest determines the sex of the chicks. If the eggs were incubated at 93 degrees
+          Fahrenheit (34 degrees Celsius), the embryo develops as a male; temperatures below 86 degrees Fahrenheit (30
+          degrees Celsius) result in a female embryo. The would-be mother alligator guards the nest from predators. The
+          eggs hatch after 2 months, producing chicks about 6 inches long (15 cm). A group of babies (called a pod) are
+          protected by the female for a year.
         </p>
       </div>
   
@@ -275,9 +279,9 @@
         <p class="info-section__paragraph info-section__paragraph--new-line">
           <span class="info-section__title">Habitat:</span></p>
         <p class="info-section__paragraph">
-          Their preferred cool and wet bamboo forests are found at <a class="info-section__link" href="#">elevations </a>
-          between 5,000 and 10,000 feet. Cubs are
-          raised in rocky crevices, dead trees, or caves.
+          Alligators live mostly in fresh brackish water, in marshes, canals, and lakes. The American alligator is found
+          only in the southeastern United States, the Chinese alligator is found in the lower basin of the Yangtze River
+          that flows in China.
         </p>
       </div>
   
@@ -285,14 +289,19 @@
         <p class="info-section__paragraph info-section__paragraph--new-line">
           <span class="info-section__title">Diet:</span></p>
         <p class="info-section__paragraph">
-          Our animal care professionals offer each adult or subadult giant panda about 80 pounds of various bamboo species
-          per day, and they generally select and consume only about third of that. They also are offered nutritious
-          high-fiber biscuits and fruits such as apples or sweet potatoes.
+          Alligators are awake and feed mostly at night. Younger ones eat insects, shrimp, snails, fish, tadpoles, and
+          frogs. Adults eat fish, birds, turtles, reptiles, and mammals. They swallow their prey whole. Their conical
+          teeth are used to catch their prey without tearing it to pieces. The animal has about 80 teeth; a lost tooth
+          recovers quickly.
         </p>
       </div>
     </section>
+  
     <button class="btn btn-read-less">Read Less</button>
-    <button class="btn btn-donate-default">Donate</button>
+  
+    <div class="background-wrapper">
+      <button class="btn btn-donate-default">Donate</button>
+    </div>
   
   
   </main>
@@ -302,7 +311,7 @@
   <!--  Footer-->
   <footer class="footer">
     <div class="footer__background"></div>
-    <div class="background-image footer__image-container"></div>
+    <div class="background-image footer__image-rotated"></div>
     <div class="background-image footer__image--default"></div>
     <div class="background-image strelitzia-image-default"></div>
   
@@ -314,11 +323,12 @@
         </a>
   
         <!--    subscribe container-->
-        <form class="footer__subscribe-container">
+        <form class="footer__subscribe-form">
           <h3 class="footer__subscribe-title">Subscribe to our news</h3>
           <label for="input-footer"></label>
-          <input class="footer__subscribe-input" type="email" id="input-footer" placeholder="Enter your email">
-          <button class="btn footer__btn-submit" type="submit">Submit</button>
+          <input class="footer__subscribe-input" type="email" id="input-footer" placeholder="Enter your email"
+                 pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+.)+[A-z]{1,3}$" required>
+          <input class="btn footer__btn-submit" type="submit" value="Submit">
         </form>
       </div>
       <!--    donate button-->
@@ -358,13 +368,13 @@
         <nav class="footer__nav">
           <ul class="footer__nav-list">
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">About</a>
+              <a href="../index/index.html" class="footer__nav-link">About</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">Map</a>
+              <a href="../map/map.html" class="footer__nav-link">Map</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link">Zoos</a>
+              <a href="#" class="link-disabled footer__nav-link">Zoos</a>
             </li>
             <li class="footer__nav-item">
               <a href="#" class="footer__nav-link">Contact us</a>

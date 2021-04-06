@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="../assets/images/icons/tab-icon.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.min.css">
@@ -29,7 +30,7 @@
 
   <!-- Header -->
   <header class="header-home">
-    <!--  absolute positioned elements -->
+    <h1 class="header-title">PetStory Online</h1>
     <div class="nav-panel"></div>
   
     <!--  nav bar-->
@@ -39,14 +40,14 @@
       </a>
   
       <ul class="nav__list">
-        <li class="nav__item">
+        <li class="nav__item ">
           <a class="nav__link" href="../index/index.html">About</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="../map/map.html">Map</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link link-disabled" href="../zoos/panda.html">Zoos</a>
+          <a class="nav__link" href="../zoos/panda.html">Zoos</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="#">Contact us</a>
@@ -55,6 +56,7 @@
         <li class="nav__item">
           <a class="nav__link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by ©</a>
         </li>
+  
       </ul>
     </nav>
   </header>
@@ -100,7 +102,7 @@
   
       <form class="section-donate__form">
         <div class="section-donate__input-wrapper">
-          <input class="section-donate__input" type="number" id="donate-amount" min="0.00" max="10000.00" step="0.01"
+          <input class="section-donate__input" type="number" id="donate-amount" min="0" max="9999" step="1"
                  placeholder="Another amount"/>
           <i>$</i>
         </div>
@@ -134,11 +136,12 @@
         </a>
   
         <!--    subscribe container-->
-        <form class="footer__subscribe-container">
+        <form class="footer__subscribe-form">
           <h3 class="footer__subscribe-title">Subscribe to our news</h3>
           <label for="input-footer"></label>
-          <input class="footer__subscribe-input" type="email" id="input-footer" placeholder="Enter your email">
-          <button class="btn footer__btn-submit" type="submit">Submit</button>
+          <input class="footer__subscribe-input" type="email" id="input-footer" placeholder="Enter your email"
+                 pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+.)+[A-z]{1,3}$" required>
+          <input class="btn footer__btn-submit" type="submit" value="Submit">
         </form>
       </div>
       <!--    donate button-->

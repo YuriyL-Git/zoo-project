@@ -30,14 +30,13 @@ layout: panda
           </a></li>
 
         <li class="side-bar__item tooltip-container">
-          <a href="../zoos/panda.html" class="side-bar__link">
-            <div class="tooltip-container__tooltip">
-              <p class="tooltip__par-one">Panda</p>
-            </div>
-            <svg class="side-bar__icon">
-              <use xlink:href="../assets/images/sidebar/sprite-sidebar.svg#panda"></use>
-            </svg>
-          </a></li>
+          <div class="tooltip-container__tooltip">
+            <p class="tooltip__par-one">Panda</p>
+          </div>
+          <svg class="side-bar__icon-inactive">
+            <use xlink:href="../assets/images/sidebar/sprite-sidebar.svg#panda"></use>
+          </svg>
+        </li>
 
         <li class="side-bar__item tooltip-container">
           <a href="../zoos/eagle.html" class="side-bar__link">
@@ -97,10 +96,19 @@ layout: panda
     <button class="btn photo-section__btn-left"></button>
     <button class="btn photo-section__btn-right"></button>
     <div class="preview-container__overlay">
-      <p class="preview-container__camera-title">Live camera 1</p>
-      <p class="preview-container__camera-title">Live camera 2</p>
-      <p class="preview-container__camera-title">Live camera 3</p>
-      <p class="preview-container__camera-title">Live camera 4</p>
+      <div class="preview-container__title-wrapper">
+        <p class="preview-container__camera-title">Live</p>
+      </div>
+      <div class="preview-container__title-wrapper">
+        <p class="preview-container__camera-title">Live</p>
+      </div>
+      <div class="preview-container__title-wrapper">
+        <p class="preview-container__camera-title">Live</p>
+      </div>
+      <div class="preview-container__title-wrapper">
+        <p class="preview-container__camera-title">Live</p>
+      </div>
+
     </div>
     <div class="preview-container__videos">
       <iframe width="267" height="210" src="https://www.youtube.com/embed/8xJyOw8bwZM" title="YouTube video player"
@@ -232,7 +240,9 @@ layout: panda
     </div>
   </section>
   <button class="btn btn-read-less">Read Less</button>
-  <button class="btn btn-donate-default">Donate</button>
+  <div class="background-wrapper">
+    <button class="btn btn-donate-default">Donate</button>
+  </div>
 
 
 </main>

@@ -3,3 +3,18 @@ a.nav__link.link-disabled {
   pointer-events: none;
 }
 
+a.link-disabled {
+  color: orange;
+  pointer-events: none;
+}
+
+a.link-inactive {
+  color: orange;
+  cursor: default;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}
+

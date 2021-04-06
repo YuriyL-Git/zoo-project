@@ -131,6 +131,7 @@
 
 
     &__amount-picker {
+      position: relative;
 
       &:checked:after {
         position: absolute;
@@ -138,8 +139,8 @@
         width: 5rem;
         height: 5rem;
         background: url('../images/icons/roller_icon.svg') center no-repeat;
-        left: -54.5%;
-        top: -53%;
+        left: -34.6%;
+        top: -34%;
         border-radius: 50%;
       }
 
