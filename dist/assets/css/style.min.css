@@ -1030,7 +1030,10 @@ body {
   line-height: 130%;
   margin: 0 0 6.2rem 9.9rem;
 }
-.feed-friend__underline {
+.feed-friend__link-donate {
+  text-decoration: none;
+  font: inherit;
+  color: #333B41;
   padding-bottom: 0.2rem;
   border-bottom: 1px solid #f9804b;
 }
@@ -1076,10 +1079,13 @@ body {
   top: 35.5%;
   right: -60.9%;
 }
+.feed-friend__btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .feed-friend__btn {
   position: absolute;
-  margin: 0 auto;
-  left: 37.2%;
   margin-top: 1.7rem;
 }
 
@@ -1137,8 +1143,9 @@ body {
   top: 2rem;
 }
 .testimonials__content-wrapper {
-  height: 30.4rem;
+  height: 33rem;
   overflow: hidden;
+  padding-bottom: 5rem;
 }
 .testimonials__content {
   font: normal 300 1.5rem/120% Roboto, sans-serif;
@@ -1148,7 +1155,55 @@ body {
 .testimonials__feedback-btn {
   position: absolute;
   border-radius: 0.5rem;
-  margin-top: 5.2rem;
+  margin-top: 3.2rem;
+}
+.testimonials__slider-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 0.6rem;
+  margin-top: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+.testimonials__slider-container:after {
+  content: "";
+  position: absolute;
+  width: 60.3rem;
+  border-radius: 1rem;
+  height: 1rem;
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  z-index: -2;
+  top: -32%;
+}
+.testimonials__slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 60rem;
+  height: 100%;
+  outline: none;
+  position: relative;
+  border-radius: 1rem;
+  z-index: 3;
+}
+.testimonials__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 11.6rem;
+  height: 0.7rem;
+  background: orange;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 3;
+}
+.testimonials__slider::-moz-range-thumb {
+  width: 11.6rem;
+  height: 0.7rem;
+  background: orange;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  z-index: 3;
 }
 
 .map-page {

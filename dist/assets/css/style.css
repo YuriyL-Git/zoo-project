@@ -611,7 +611,7 @@ body {
   position: absolute;
   width: 9.9rem;
   height: 100%;
-  left: -10%;
+  left: -16.5%;
   z-index: 20;
 }
 
@@ -1180,7 +1180,10 @@ body {
   margin: 0 0 6.2rem 9.9rem;
 }
 
-.feed-friend__underline {
+.feed-friend__link-donate {
+  text-decoration: none;
+  font: inherit;
+  color: #333B41;
   padding-bottom: 0.2rem;
   border-bottom: 1px solid #f9804b;
 }
@@ -1323,6 +1326,37 @@ body {
   position: absolute;
   border-radius: 0.5rem;
   margin-top: 5.2rem;
+}
+
+.testimonials__slider-container {
+  width: 39rem;
+  height: 1rem;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+.testimonials__slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  -moz-appearance: none;
+  appearance: none;
+  width: 39rem;
+  height: 100%;
+  outline: none;
+}
+
+.testimonials__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #4CAF50;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */;
 }
 
 .map-page {

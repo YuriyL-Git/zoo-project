@@ -52,7 +52,10 @@
     margin: 0 0 6.2rem 9.9rem;
   }
 
-  &__underline {
+  &__link-donate {
+    text-decoration: none;
+    font: inherit;
+    color: #333B41;
     padding-bottom: 0.2rem;
     border-bottom: 1px solid var.$orange;
   }
@@ -108,10 +111,14 @@
     right: -60.9%;
   }
 
+  &__btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   &__btn {
     position: absolute;
-    margin: 0 auto;
-    left: 37.2%;
     margin-top: 1.7rem;
   }
 
