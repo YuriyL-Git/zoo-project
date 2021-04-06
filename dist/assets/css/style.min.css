@@ -799,8 +799,8 @@ body {
   z-index: 3;
   width: 50rem;
   height: 40rem;
-  left: calc(62% - 8.9rem);
-  top: 7.7rem;
+  left: calc(58.4% - 8.9rem);
+  top: 7.5%;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font: normal bold 14.4rem/80% Roboto, sans-serif;
   font-size: 106.496px;
@@ -836,7 +836,7 @@ body {
 .article__image-container {
   background: url("../images/photos/flower_foto.png") no-repeat;
   width: 15rem;
-  height: 100%;
+  height: 61rem;
   right: 0;
   top: 79.2rem;
 }
@@ -979,7 +979,7 @@ body {
 .chose-favorite .strelitzia-image-default {
   background: url("../images/photos/strelitzia.png") no-repeat;
   width: 30rem;
-  height: 100%;
+  height: 40rem;
   right: 0;
   top: 233.4rem;
 }
@@ -1327,7 +1327,7 @@ body {
 .footer__image-container {
   background: url("../images/photos/leav_foto.png") no-repeat;
   width: 24.5rem;
-  height: 100%;
+  height: 30rem;
   right: 0;
   top: 426rem;
 }
@@ -1594,7 +1594,7 @@ body {
 .default-page .strelitzia-image-default {
   background: url("../images/photos/strelitzia.png") no-repeat;
   width: 30rem;
-  height: 100%;
+  height: 40rem;
   left: 0;
   top: 287rem;
   transform: scale(-1, 1);
