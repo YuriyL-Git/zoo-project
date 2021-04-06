@@ -900,8 +900,8 @@ body {
   z-index: 3;
   width: 50rem;
   height: 40rem;
-  left: calc(62% - 8.9rem);
-  top: 7.7rem;
+  left: calc(58.4% - 8.9rem);
+  top: 7.5%;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font: normal bold 14.4rem/80% Roboto, sans-serif;
   font-size: 106.496px;
@@ -945,7 +945,7 @@ body {
 .article__image-container {
   background: url("../images/photos/flower_foto.png") no-repeat;
   width: 15rem;
-  height: 100%;
+  height: 61rem;
   right: 0;
   top: 79.2rem;
 }
@@ -1119,7 +1119,7 @@ body {
 .chose-favorite .strelitzia-image-default {
   background: url("../images/photos/strelitzia.png") no-repeat;
   width: 30rem;
-  height: 100%;
+  height: 40rem;
   right: 0;
   top: 233.4rem;
 }
@@ -1242,10 +1242,16 @@ body {
   right: -60.9%;
 }
 
+.feed-friend__btn-wrapper {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .feed-friend__btn {
   position: absolute;
-  margin: 0 auto;
-  left: 37.2%;
   margin-top: 1.7rem;
 }
 
@@ -1312,8 +1318,9 @@ body {
 }
 
 .testimonials__content-wrapper {
-  height: 30.4rem;
+  height: 33rem;
   overflow: hidden;
+  padding-bottom: 5rem;
 }
 
 .testimonials__content {
@@ -1325,38 +1332,63 @@ body {
 .testimonials__feedback-btn {
   position: absolute;
   border-radius: 0.5rem;
-  margin-top: 5.2rem;
+  margin-top: 3.2rem;
 }
 
 .testimonials__slider-container {
-  width: 39rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 0.6rem;
+  margin-top: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials__slider-container:after {
+  content: "";
+  position: absolute;
+  width: 60.3rem;
+  border-radius: 1rem;
   height: 1rem;
-  background-color: blue;
-  margin: 0 auto;
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  z-index: -2;
+  top: -32%;
 }
 
 .testimonials__slider {
   -webkit-appearance: none;
-  /* Override default CSS styles */
   -moz-appearance: none;
   appearance: none;
-  width: 39rem;
+  width: 60rem;
   height: 100%;
   outline: none;
+  position: relative;
+  border-radius: 1rem;
+  z-index: 3;
 }
 
 .testimonials__slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* Override default look */
   appearance: none;
-  width: 25px;
-  /* Set a specific slider handle width */
-  height: 25px;
-  /* Slider handle height */
-  background: #4CAF50;
-  /* Green background */
+  width: 11.6rem;
+  height: 0.7rem;
+  background: orange;
   cursor: pointer;
-  /* Cursor on hover */;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+.testimonials__slider::-moz-range-thumb {
+  width: 11.6rem;
+  height: 0.7rem;
+  background: orange;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  z-index: 3;
 }
 
 .map-page {
@@ -1514,7 +1546,7 @@ body {
 .footer__image-container {
   background: url("../images/photos/leav_foto.png") no-repeat;
   width: 24.5rem;
-  height: 100%;
+  height: 30rem;
   right: 0;
   top: 426rem;
 }
@@ -1877,7 +1909,7 @@ body {
 .default-page .strelitzia-image-default {
   background: url("../images/photos/strelitzia.png") no-repeat;
   width: 30rem;
-  height: 100%;
+  height: 40rem;
   left: 0;
   top: 287rem;
   -webkit-transform: scale(-1, 1);

@@ -1416,6 +1416,9 @@ body {
   align-items: center;
   font: normal normal 1.6rem/120% Roboto, sans-serif;
 }
+.footer__link-socials:hover .footer__icon {
+  background: orange;
+}
 .footer__icon {
   width: 2.6rem;
   height: 2.6rem;
