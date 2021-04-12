@@ -328,10 +328,11 @@ body {
 /* testimonials */
 .home-container {
   max-width: 1160px;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 100%;
   grid-template-rows: 78rem 14rem 40.3rem 17.7rem 87.2rem 23.2rem 100.4rem 14rem 57.5rem 20rem 44.3rem;
-  grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " .   .   .   .   .   .   .   .   .   .    .    . " " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar" " .   .   .   .   .   .   .   .   .   .    .    . " " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph" " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt" " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd" " .   .   .   .   .   .   .   .   .   .    .    . " " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm" " .   .   .   .   .   .   .   .   .   .    .    . " " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
+  grid-template-areas: " hd" " . " " ar" " . " " ph" " bt" " fd" " . " " tm" " . " " ft";
   /*- footer -*/
   grid-column-gap: 3rem;
   grid-row-gap: 1px;
@@ -914,6 +915,9 @@ body {
 .header-home {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
 }
 
 .header-home .nav-panel {
@@ -955,7 +959,7 @@ body {
 
 .header-home .nav__list {
   height: 100%;
-  width: 52.6rem;
+  width: calc(265px + 22.5%);
   list-style: none;
   display: -ms-flexbox;
   display: flex;
@@ -986,25 +990,43 @@ body {
   z-index: 1;
 }
 
+.header-home__title-wrapper {
+  position: relative;
+  margin-right: 3rem;
+  width: 50%;
+  height: 100px;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  background-color: orange;
+  z-index: 6;
+}
+
 .header-home .circle {
   position: absolute;
   z-index: 3;
   width: 46.5rem;
   height: 46.5rem;
   border-radius: 50%;
-  left: calc(50% - 465px / 2 + 239.5px);
-  top: 92px;
+  left: 1.2%;
+  top: 11%;
   opacity: 0.8;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
 }
 
+@media (max-width: 1000px) {
+  .header-home .circle {
+    width: 36.7rem;
+    height: 36.7rem;
+  }
+}
+
 .header-home .title {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   width: 50rem;
   height: 40rem;
-  left: calc(58.4% - 8.9rem);
-  top: 7.5%;
+  left: 0;
+  top: 0;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font: normal bold 14.4rem/80% Roboto, sans-serif;
   font-size: 106.496px;

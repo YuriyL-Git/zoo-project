@@ -2,9 +2,10 @@
 
 .home-container {
   max-width: 1160px;
+  width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 100%;
   grid-template-rows:
       $hd   // - header -
       $gap1 // - gap1 -
@@ -19,17 +20,17 @@
       $ft; //- footer
 
   grid-template-areas:
-      " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"  /*- header -*/
-      " .   .   .   .   .   .   .   .   .   .    .    . "
-      " ar  ar  ar  ar  ar  ar  ar  ar  ar  ar   ar   ar"  /*- article -*/
-      " .   .   .   .   .   .   .   .   .   .    .    . "
-      " ph  ph  ph  ph  ph  ph  ph  ph  ph  ph   ph   ph"  /*- animals photo -*/
-      " bt  bt  bt  bt  bt  bt  bt  bt  bt  bt   bt   bt"  /*- choose favorite button -*/
-      " fd  fd  fd  fd  fd  fd  fd  fd  fd  fd   fd   fd"  /*- feed a friend -*/
-      " .   .   .   .   .   .   .   .   .   .    .    . "
-      " tm  tm  tm  tm  tm  tm  tm  tm  tm  tm   tm   tm"  /*- testimonials -*/
-      " .   .   .   .   .   .   .   .   .   .    .    . "
-      " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft"; /*- footer -*/
+      " hd"  /*- header -*/
+      " . "
+      " ar"  /*- article -*/
+      " . "
+      " ph"  /*- animals photo -*/
+      " bt"  /*- choose favorite button -*/
+      " fd"  /*- feed a friend -*/
+      " . "
+      " tm"  /*- testimonials -*/
+      " . "
+      " ft"; /*- footer -*/
   //   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-
 
   grid-column-gap: 3rem;
