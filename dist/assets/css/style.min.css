@@ -417,9 +417,11 @@ body {
   text-align: center;
   font: normal 500 1.6rem/140% Roboto, sans-serif;
   outline: none;
-  transition: all 0.05s ease-in-out;
+  transition: transform 0.05s ease-in-out;
+  position: relative;
 }
 .btn:hover {
+  background: #4b9200;
   cursor: pointer;
   transform: scale(1.01);
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);
@@ -429,6 +431,51 @@ body {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
+.btn-glow:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 3px);
+  height: calc(100% + 3px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 0.5rem;
+}
+.btn-glow:hover:before {
+  opacity: 1;
+}
+.btn-glow:hover:after {
+  background: #4b9200;
+}
+.btn-glow:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  left: 0;
+  top: 0;
+  border-radius: 0.5rem;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 .background-image {
   position: absolute;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -453,7 +500,7 @@ body {
   width: 6rem;
   height: 6rem;
   z-index: 10;
-  transform: rotate(45deg) scale(0.7);
+  transform: rotate(-70deg) scale(0.7);
   transition: all 0.25s ease-in;
   cursor: pointer;
 }
@@ -505,6 +552,19 @@ body {
 
 .tooltip-container:hover {
   transform: scale(1.1) rotate(0);
+}
+
+.tooltip-hover:hover .tooltip-container {
+  transform: scale(1.1) rotate(0);
+}
+
+.tooltip-hover:hover .tooltip-container__tooltip {
+  cursor: pointer;
+  visibility: visible;
+  opacity: 0.8;
+  margin-left: -76px;
+  z-index: 10;
+  animation: wave 1s ease-in-out infinite alternate;
 }
 
 .tooltip-container:hover .tooltip-container__tooltip {
@@ -840,6 +900,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: orange;
 }
 @media (max-width: 1160px) {
   .article {
@@ -903,7 +964,6 @@ body {
   border: 1px solid #FE9013;
   border-radius: 5px;
   overflow: hidden;
-  background-color: orange;
   z-index: 5;
   position: relative;
 }
@@ -920,6 +980,11 @@ body {
 .photo-section__photo-container:hover .photo-section__text-float {
   transform: translateY(-170%);
   opacity: 1;
+}
+.photo-section__icon {
+  position: absolute;
+  bottom: 2.5%;
+  right: 2.5%;
 }
 .photo-section__photo {
   height: 36.4rem;
@@ -969,9 +1034,15 @@ body {
   background: url(../images/icons/arrow-left.svg) #f9804b center no-repeat;
   left: -8.3rem;
 }
+.photo-section__btn-left:hover {
+  background: url(../images/icons/arrow-left.svg) #4B9200 center no-repeat;
+}
 .photo-section__btn-right {
   background: url(../images/icons/arrow-right.svg) #f9804b center no-repeat;
   right: -8.3rem;
+}
+.photo-section__btn-right:hover {
+  background: url(../images/icons/arrow-right.svg) #4B9200 center no-repeat;
 }
 
 .chose-favorite {
@@ -1259,8 +1330,8 @@ body {
 .map-main__eagle-two {
   width: 5rem;
   position: absolute;
-  left: 30%;
-  top: 90%;
+  left: 17%;
+  top: 99%;
 }
 .map-main__alligator-container {
   position: absolute;
@@ -1269,8 +1340,8 @@ body {
 }
 .map-main__alligator {
   position: absolute;
-  left: 30%;
-  top: 105%;
+  left: 25%;
+  top: 95%;
   width: 7.5rem;
 }
 .map-main__gorilla-container {
@@ -1281,7 +1352,7 @@ body {
 .map-main__gorilla {
   width: 5rem;
   position: absolute;
-  left: 20%;
+  left: 30%;
   top: 90%;
 }
 .map-main__panda-one-container {
@@ -1293,8 +1364,8 @@ body {
 .map-main__panda-one {
   width: 3.7rem;
   position: absolute;
-  left: 75%;
-  top: 47.5%;
+  left: -25%;
+  top: 27.5%;
 }
 .map-main__panda-two-container {
   position: absolute;
@@ -1304,7 +1375,7 @@ body {
 .map-main__panda-two {
   width: 4.6rem;
   position: absolute;
-  left: 76.5%;
+  left: -28%;
   top: 50.6%;
 }
 .map-main__btn-container {
@@ -1314,8 +1385,8 @@ body {
   height: 11.5rem;
   justify-content: space-between;
   position: absolute;
-  left: 99%;
-  top: 70%;
+  left: 115.2%;
+  top: 85.1%;
 }
 .map-main__map-btn {
   width: 5.4rem;
@@ -1329,9 +1400,9 @@ body {
   transition: all 0.15s ease-out;
 }
 .map-main__map-btn:hover {
-  background-color: rgba(255, 165, 0, 0.5);
-  color: red;
+  background-color: rgba(75, 176, 0, 0.2);
   border-radius: 1rem;
+  border: 1px solid #4B9200;
   cursor: pointer;
 }
 .map-main__map-btn:active {
@@ -1420,6 +1491,11 @@ body {
   color: #4b9200;
   text-transform: none;
 }
+.footer__btn-submit:hover {
+  background: #F1F3F2;
+  border: 2px solid orange;
+  border-radius: 5px;
+}
 .footer__btn-donate {
   border-radius: 0.5rem;
   margin-bottom: 4.3rem;
@@ -1455,8 +1531,11 @@ body {
   align-items: center;
   font: normal normal 1.6rem/120% Roboto, sans-serif;
 }
+.footer__link-socials:hover {
+  color: #4B9200;
+}
 .footer__link-socials:hover .footer__icon {
-  background: orange;
+  background: #4B9200;
 }
 .footer__icon {
   width: 2.6rem;
@@ -1598,6 +1677,7 @@ body {
 }
 .default-main .main-article-container__link:hover {
   text-decoration: underline;
+  color: #f9804b;
 }
 .default-main .separator {
   width: 100%;
@@ -1643,6 +1723,7 @@ body {
 }
 .default-main .info-section__link:hover {
   text-decoration: underline;
+  color: #f9804b;
 }
 .default-main .info-section--small {
   margin-bottom: -0.5rem;
@@ -1748,10 +1829,10 @@ body {
   background-size: cover;
 }
 .alligator-page .footer__image-rotated {
-  top: 250rem;
+  top: 296rem;
 }
 .alligator-page .strelitzia-image-default {
-  top: 250rem;
+  top: 290rem;
 }
 
 .donate-page {
@@ -1805,6 +1886,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(4px);
   /*------ remove arrows from input ----------*/
   /*-------------------------------------------*/
 }
@@ -1980,8 +2063,9 @@ body {
 }
 .donate-main .section-donate__radio-btn {
   background: none;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.6rem;
   border: 2px solid #fe9013;
 }
 .donate-main .section-donate__radio-btn:focus {
@@ -2013,4 +2097,5 @@ a.link-inactive {
 }
 a.link-inactive:hover {
   text-decoration: none;
+  cursor: pointer;
 }

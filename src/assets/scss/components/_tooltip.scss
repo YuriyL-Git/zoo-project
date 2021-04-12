@@ -5,7 +5,7 @@
   width: 6rem;
   height: 6rem;
   z-index: 10;
-  transform: rotate(45deg) scale(0.7);
+  transform: rotate(-70deg) scale(0.7);
   transition: all 0.25s ease-in;
   cursor: pointer;
 
@@ -64,6 +64,19 @@
   transform: scale(1.1) rotate(0);
 }
 
+.tooltip-hover:hover .tooltip-container {
+  transform: scale(1.1) rotate(0);
+}
+
+
+.tooltip-hover:hover .tooltip-container__tooltip {
+  cursor: pointer;
+  visibility: visible;
+  opacity: 0.8;
+  margin-left: -76px;
+  z-index: 10;
+  animation: wave 1s ease-in-out infinite alternate;
+}
 
 .tooltip-container:hover .tooltip-container__tooltip {
   cursor: pointer;
@@ -73,6 +86,7 @@
   z-index: 10;
   animation: wave 1s ease-in-out infinite alternate;
 }
+
 
 @keyframes wave {
   0% {

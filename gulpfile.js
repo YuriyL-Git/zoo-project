@@ -17,24 +17,38 @@ const notify = require("gulp-notify");
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require("browser-sync").create();
-const copy = require('gulp-copy');
-
-
-// save arguments to argv variable
+const git = require('gulp-git');
 var argv = require('minimist')(process.argv.slice(2));
-//console.log(argv);
 
 
-/* Paths */
+/*=============== SETUP VARIABLES ======================================= */
 const srcPath = 'src/';
 const distPath = 'dist/';
+const deployPath = "../deploy/";
+const deployProjectName = 'online-zoo';
+const deployFullPath = {cwd:'/home/admin/MyProjects/RS_Scool/PetStory_GulpTest/deploy/'};
+const gitHubBranch = 'gh-pages';
+/* const sourceBackup = "../../**"; */
+const sourceBackup = ["../../**", "../../**/.git","../../**/.git/**",'!**/node_modules/**'];
+const destinationBackup ="../../../ramdisk_backup/";
 let indexPage = "index.html";
 
-if (argv.p) {
-  indexPage = argv.p + '.html'
-}
-console.log("indexPage", indexPage);
 
+/* ---------------------------------------------------------------------- */
+
+
+/* =============== PARAMETERS FROM CONSOLE ================================*/
+
+/* commit message will be read from console with option -c 'commit message' */
+let commitMessage = '';
+if (argv.c) {
+  commitMessage = argv.c;
+}
+
+/* ----------------------------------------------------------------------- */
+
+
+/* ==================== FOLDER STRUCTURE ================================= */
 const path = {
   build: {
     html: distPath,
@@ -55,40 +69,31 @@ const path = {
     js: srcPath + "assets/js/**/*.js",
     css: srcPath + "assets/scss/**/*.scss",
     images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-    fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+    fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+    allFiles: "../**",
+    git: "../**/.git/**"
   },
-  clean:  "dist/*"
+  
 }
 
-
-
-/* ====================== copy task=================================== */
-/* 
-function copyFile(cb) {
-  return 
-    src('*.html')
-    .pipe(gulpCopy(distPath))
-    .dest(distPath);
-
-  cb();
-} */
-/* ====================== copy task=================================== */
+/* ----------------------------------------------------------------------- */
 
 
 
-/* Tasks */
+/* ============================= DEVELOPER TASKS ==========================*/
 
+/* ----------- LIVE SERVER ----------- */
 function serve() {
   browserSync.init({
     server: {
       baseDir: "./" + distPath,
       index: indexPage
     }
-    // ==== for two browsers ============
     , browser: ["google-chrome" , "firefox"]
   });
 }
 
+/* ------------ HTML ------------------*/
 function html(cb) {
   panini.refresh();
   return src('src/pages/**/*.{html,hbs,handlebars}')
@@ -106,7 +111,7 @@ function html(cb) {
   cb();
 }
 
-
+/* ----------------- CSS -----------------*/
 function css(cb) {
   return src(path.src.css, {base: srcPath + "assets/scss/"})
       .pipe(plumber({
@@ -118,8 +123,6 @@ function css(cb) {
           this.emit('end');
         }
       }))
-      // .pipe(sassify())
-      // sass here
       .pipe(sass().on('error', sass.logError))
       // .pipe(gulp.dest('./css'))
       .pipe(autoprefixer({
@@ -258,32 +261,126 @@ function fonts(cb) {
   cb();
 }
 
-function clean(cb) {
-  return del(path.clean);
-
-  cb();
-}
-
 function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], cssWatch);
   gulp.watch([path.watch.js], jsWatch);
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.fonts], fonts);
+  const fileWatcher =  gulp.watch([path.watch.allFiles], { delay: 5000 }, backupFiles);
+  const gitWatcher =  gulp.watch([path.watch.git], { delay: 5000 }, backupFiles);
+
+  gitWatcher.on('all', function (event, filePath) {
+    console.log('git DELETED ==== ', filePath);
+    del(destinationBackup+'**', {force: true})
+   
+  })
+
+
+  fileWatcher.on('all', function (event, filePath) {
+    if (event === 'unlink') {
+    console.log('FILE DELETED ==== ', filePath);
+    del(destinationBackup+'**', {force: true})
+    }
+   // del.sync(destFilePath);
+  })
 }
 
-const build = gulp.series(/* clean, *//* copyFile, */ gulp.parallel(html, css, js, images, fonts));
+/* =========== BUILD FUNCTIONS =========================================== */
+
+function copyIndexHtml(cb) {
+  return src(path.src.html)
+      .pipe(dest(distPath));
+  cb();
+}
+
+function cleanDist(cb) {
+  return del(distPath + '**', {force: true});
+  cb();
+}
+
+/* =========== BACKUP FILES      ========================================= */
+function backupFiles(cb) {
+  return src(sourceBackup)
+      .pipe(dest(destinationBackup));
+  cb();
+}
+
+
+/* ============ DEPLOY FUNCTIONS ======================================== */
+
+/*-----copy files from dist folder to deploy directory------------- */
+function copyFilesToDeploy(cb) {
+  return src(distPath + '**/*')
+      .pipe(dest(deployPath + deployProjectName));
+  cb();
+}
+
+
+/* ----------clean deploy directory */
+function cleanDeploy(cb) {
+  return del(deployPath +deployProjectName + '**', {force: true});
+  cb();
+}
+
+/* ---- git add -----------------------*/
+function add(cb) {
+  console.log('Git add');
+  return src('./*', deployFullPath)
+  .pipe(git.add(deployFullPath));
+
+  cb();
+}
+
+/* ---- git commit -------------------*/
+function commit(cb) {
+  if (commitMessage === '') {
+    console.log('Enter commit message !!!');
+    return;
+  }
+  console.log('Git commit with message: ', commitMessage);
+  return src('./*', deployFullPath)
+  .pipe(git.commit(commitMessage, deployFullPath));
+
+  cb();
+}
+
+/* ---- git push origin -------------*/
+function push(cb) {
+  return src('./*', deployFullPath)
+  .pipe(git.push('origin',gitHubBranch,deployFullPath,function (err) {
+    if (err) console.log(err);
+}))
+.pipe(plumber());
+
+  cb();
+}
+
+/* ======================================================================= */
+
+
+
+
+const deploy = gulp.series(cleanDeploy, copyFilesToDeploy, add, commit, push);
+const build = gulp.series(cleanDist,copyIndexHtml,  gulp.parallel(html, css, js, images, fonts));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
-/* Exports Tasks */
-exports.html = html;
+
+/*--------------------- Exports Tasks -------------------------------------*/
+/* exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.images = images;
 exports.fonts = fonts;
-exports.clean = clean;
-// exports.clean = copyFile;
 exports.build = build;
 exports.watch = watch;
+exports.default = watch; */
+exports.deploy = deploy;
 exports.default = watch;
+/* exports.cleanDist = cleanDist;
+exports.copyIndexHtml = copyIndexHtml;
+exports.add = add;
+exports.commit = commit;
+exports.push = push;
+exports.backupFiles = backupFiles; */

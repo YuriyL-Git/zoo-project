@@ -97,6 +97,13 @@
     vertical-align: top;
     color: #4b9200;
     text-transform: none;
+
+    &:hover {
+      background: #F1F3F2;
+      border: 2px solid orange;
+      border-radius: 5px;
+    }
+
   }
 
   &__btn-donate {
@@ -140,8 +147,12 @@
     align-items: center;
     font: var.$body-roboto-regular;
 
+    &:hover {
+      color: #4B9200;
+    }
+
     &:hover .footer__icon {
-      background: orange;
+      background: #4B9200;
     }
   }
 

@@ -44,8 +44,8 @@
   &__eagle-two {
     width: 5rem;
     position: absolute;
-    left: 30%;
-    top: 90%;
+    left: 17%;
+    top: 99%;
   }
 
   &__alligator-container {
@@ -56,8 +56,8 @@
 
   &__alligator {
     position: absolute;
-    left: 30%;
-    top: 105%;
+    left: 25%;
+    top: 95%;
     width: 7.5rem;
   }
 
@@ -70,7 +70,7 @@
   &__gorilla {
     width: 5rem;
     position: absolute;
-    left: 20%;
+    left: 30%;
     top: 90%;
   }
 
@@ -84,8 +84,8 @@
   &__panda-one {
     width: 3.7rem;
     position: absolute;
-    left: 75%;
-    top: 47.5%;
+    left: -25%;
+    top: 27.5%;
   }
 
   &__panda-two-container {
@@ -97,7 +97,7 @@
   &__panda-two {
     width: 4.6rem;
     position: absolute;
-    left: 76.5%;
+    left: -28%;
     top: 50.6%;
   }
 
@@ -108,8 +108,8 @@
     height: 11.5rem;
     justify-content: space-between;
     position: absolute;
-    left: 99%;
-    top: 70%;
+    left: 115.2%;
+    top: 85.1%;
   }
 
   &__map-btn {
@@ -124,9 +124,9 @@
     transition: all 0.15s ease-out;
 
     &:hover {
-      background-color: rgba(265, 165, 0, 0.5);
-      color: red;
+      background-color: rgba(75, 176, 0, 0.2);
       border-radius: 1rem;
+      border: 1px solid #4B9200;
       cursor: pointer;
     }
 
