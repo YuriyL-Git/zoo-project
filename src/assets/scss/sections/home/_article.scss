@@ -5,9 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: orange;
   @include media('<=1160px') {
     font-size: 75%;
-
   }
 
   &__image-container {

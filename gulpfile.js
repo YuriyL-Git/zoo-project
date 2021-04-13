@@ -25,13 +25,14 @@ var argv = require('minimist')(process.argv.slice(2));
 const srcPath = 'src/';
 const distPath = 'dist/';
 const deployPath = "../deploy/";
-const deployProjectName = 'online-zoo';
+const deployProjectName = 'online-zoo/';
 const deployFullPath = {cwd:'/ram/ramdisk/PetStory/deploy'};
 const gitHubBranch = 'gh-pages';
 /* const sourceBackup = "../../**"; */
-const sourceBackup = ["../../**", "../../**/.git","../../**/.git/**",'!**/node_modules/**'];
+const sourceBackup = ["../../**", '!**/node_modules/**'];
+const gitBackup = ["../../**/.git","../../**/.git/**"]
 const destinationBackup ="../../../ramdisk_backup/";
-let indexPage = "index.html";
+let indexPage = "index.html";``
 
 
 /* ---------------------------------------------------------------------- */
@@ -235,6 +236,14 @@ function jsWatch(cb) {
 
 function images(cb) {
   return src(path.src.images)
+      .pipe(dest(path.build.images))
+      .pipe(browserSync.reload({stream: true}));
+
+  cb();
+}
+
+function imagesDeploy(cb) {
+  return src(path.src.images)
       .pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
         imagemin.mozjpeg({quality: 80, progressive: true}),
@@ -267,22 +276,21 @@ function watchFiles() {
   gulp.watch([path.watch.js], jsWatch);
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.fonts], fonts);
-  const fileWatcher =  gulp.watch([path.watch.allFiles], { delay: 5000 }, backupFiles);
-  const gitWatcher =  gulp.watch([path.watch.git], { delay: 5000 }, backupFiles);
+  const fileWatcher =  gulp.watch([path.watch.allFiles], { delay: 2500 }, backupFiles);
+  const gitWatcher =  gulp.watch([path.watch.git], { delay: 2500 }, backupGit);
 
   gitWatcher.on('all', function (event, filePath) {
     console.log('git DELETED ==== ', filePath);
-    del(destinationBackup+'**', {force: true})
-   
+    del([destinationBackup + '**/.git/',destinationBackup + '**/.git/**'], {force: true})
   })
 
 
   fileWatcher.on('all', function (event, filePath) {
     if (event === 'unlink') {
-    console.log('FILE DELETED ==== ', filePath);
-    del(destinationBackup+'**', {force: true})
+      let deleteFile = destinationBackup + '**'+ filePath.substring(2);
+    console.log('FILE for DELETE ==== ', deleteFile);
+    del(deleteFile, {force: true})
     }
-   // del.sync(destFilePath);
   })
 }
 
@@ -299,10 +307,41 @@ function cleanDist(cb) {
   cb();
 }
 
+function cleanBackupFolder(cb) {
+  return del(destinationBackup+'**', {force: true});
+  cb();
+}
+
+function cleanBackupGit(cb) {
+  console.log('CLEAN BACKUP GIT');
+  del([destinationBackup + '**/.git/',destinationBackup + '**/.git/**'], {force: true})
+  cb();
+}
+
+function cleanAll(cb) {
+  console.log('CLEAN BACKUP GIT');
+  del([destinationBackup + '**/**',destinationBackup + '**/*'], {force: true});
+  cb();
+}
+
+
+
 /* =========== BACKUP FILES      ========================================= */
 function backupFiles(cb) {
+  console.log('BaCKUP files');
   return src(sourceBackup)
-      .pipe(dest(destinationBackup));
+      .pipe(dest(destinationBackup, {force: true}) );
+  cb();
+}
+
+function backupGit(cb) {
+  //del([destinationBackup + '**/.git/',destinationBackup + '**/.git/**'], {force: true})
+
+  console.log('BaCKUP GIT');
+  return src(gitBackup)
+      .pipe(plumber())
+      .pipe(dest(destinationBackup, {force: true}))
+      .pipe(plumber());
   cb();
 }
 
@@ -319,7 +358,7 @@ function copyFilesToDeploy(cb) {
 
 /* ----------clean deploy directory */
 function cleanDeploy(cb) {
-  return del(deployPath +deployProjectName + '**', {force: true});
+  return del([deployPath +deployProjectName + '**','!'+deployPath +'.git'], {force: true});
   cb();
 }
 
@@ -361,8 +400,8 @@ function push(cb) {
 
 
 
-const deploy = gulp.series(cleanDeploy, copyFilesToDeploy, add, commit, push);
-const build = gulp.series(cleanDist,copyIndexHtml,  gulp.parallel(html, css, js, images, fonts));
+const deploy = gulp.series(cleanBackupGit, cleanDeploy,imagesDeploy, copyFilesToDeploy, add, commit, push);
+const build = gulp.series(cleanAll, cleanDist,copyIndexHtml, gulp.parallel(html, css, js, images, fonts),backupGit);
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
@@ -378,6 +417,7 @@ exports.watch = watch;
 exports.default = watch; */
 exports.deploy = deploy;
 exports.default = watch;
+exports.clean = cleanBackupGit;
 /* exports.cleanDist = cleanDist;
 exports.copyIndexHtml = copyIndexHtml;
 exports.add = add;
