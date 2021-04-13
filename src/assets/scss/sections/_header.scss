@@ -27,7 +27,9 @@
 
     &__logo-link {
       margin-right: 6.3rem;
-
+      @include media('<=small-desktop') {
+        margin-left: 3rem;
+      }
     }
 
 
@@ -81,7 +83,7 @@
     width: 50%;
     height: 100px;
     align-self: flex-end;
-   // background-color: orange;
+    // background-color: orange;
     z-index: 6;
   }
 
@@ -93,6 +95,8 @@
     @include media('<=small-desktop') {
       width: 36.7rem;
       height: 36.7rem;
+      left: -3.2%;
+      top: -14%;
     }
     border-radius: 50%;
     left: 6%;
@@ -110,7 +114,13 @@
     top: 0;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font: var.$h1-roboto-bold;
-    font-size: 106.496px;
+    font-size: 106.5px;
+    @include media('<=small-desktop') {
+      font-size: 8.5rem;
+      line-height: 75%;
+      left: -1%;
+      top: -26%;
+    }
     line-height: 75%;
     text-align: center;
     text-transform: uppercase;

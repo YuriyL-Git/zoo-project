@@ -7,10 +7,10 @@ function calc(outContainer, startW, innerCont, endW) {
   console.log(`calc(${pixels}px + ${percents}%)`)
 }
 
-let outContainerWidth = 1160;
-let startElementWidth = 526;
-let innerContainerWidth = 1000;
-let ednElementWidth = 490;
+let outContainerWidth = 580;
+let startElementWidth = 106.5;
+let innerContainerWidth = 500;
+let ednElementWidth = 85.2;
 
 calc(outContainerWidth, startElementWidth, innerContainerWidth, ednElementWidth)
 

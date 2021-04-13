@@ -277,7 +277,7 @@ function watchFiles() {
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.fonts], fonts);
   const fileWatcher =  gulp.watch([path.watch.allFiles], { delay: 2500 }, backupFiles);
-  const gitWatcher =  gulp.watch([path.watch.git], { delay: 5500 }, backupGit);
+  const gitWatcher =  gulp.watch([path.watch.git], { delay: 6500 }, backupGit);
 
   gitWatcher.on('all', function (event, filePath) {
     console.log('git DELETED ==== ', filePath);
@@ -287,8 +287,9 @@ function watchFiles() {
 
   fileWatcher.on('all', function (event, filePath) {
     if (event === 'unlink') {
+      /* if file deleted, delete in backup folder */
       let deleteFile = destinationBackup + '**'+ filePath.substring(2);
-    console.log('FILE for DELETE ==== ', deleteFile);
+    console.log('file for deletion: ', deleteFile);
     del(deleteFile, {force: true})
     }
   })
@@ -307,17 +308,15 @@ function cleanDist(cb) {
   cb();
 }
 
-function cleanBackupFolder(cb) {
-  return del(destinationBackup+'**', {force: true});
-  cb();
-}
 
+/* delete .git folders in backup folder */
 function cleanBackupGit(cb) {
   console.log('CLEAN BACKUP GIT');
   del([destinationBackup + '**/.git/',destinationBackup + '**/.git/**'], {force: true})
   cb();
 }
 
+/* clean backup folder */
 function cleanAll(cb) {
   console.log('CLEAN BACKUP GIT');
   del([destinationBackup + '**/**',destinationBackup + '**/*'], {force: true});
@@ -387,6 +386,7 @@ function commit(cb) {
 /* ---- git push origin -------------*/
 function push(cb) {
   return src('./*', deployFullPath)
+  .pipe(plumber())
   .pipe(git.push('origin',gitHubBranch,deployFullPath,function (err) {
     if (err) console.log(err);
 }))
@@ -407,20 +407,6 @@ const watch = gulp.parallel(build, watchFiles, serve);
 
 
 /*--------------------- Exports Tasks -------------------------------------*/
-/* exports.html = html;
-exports.css = css;
-exports.js = js;
-exports.images = images;
-exports.fonts = fonts;
-exports.build = build;
-exports.watch = watch;
-exports.default = watch; */
+
 exports.deploy = deploy;
 exports.default = watch;
-exports.clean = cleanBackupGit;
-/* exports.cleanDist = cleanDist;
-exports.copyIndexHtml = copyIndexHtml;
-exports.add = add;
-exports.commit = commit;
-exports.push = push;
-exports.backupFiles = backupFiles; */
