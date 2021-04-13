@@ -342,7 +342,7 @@ body {
 }
 @media (max-width: 1000px) {
   .home-container {
-    grid-template-rows: 58.4rem 11rem 42.7rem 14.3rem 80rem 27.5rem 87.6rem 10rem 60.2rem 14rem 44.3rem;
+    grid-template-rows: 58.4rem 9.8rem 42.7rem 14.3rem 80rem 27.5rem 87.6rem 10rem 60.2rem 14rem 44.3rem;
   }
 }
 
@@ -952,13 +952,11 @@ body {
 
 .article {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-}
-@media (max-width: 1160px) {
-  .article {
-    font-size: 75%;
-  }
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
 }
 .article__image-container {
   background: url("../images/photos/flower_foto.png") no-repeat;
@@ -967,32 +965,84 @@ body {
   right: 0;
   top: 79.2rem;
 }
+.article__photo-wrapper {
+  padding: 0;
+  width: 52.5%;
+  height: 100%;
+}
+@media (max-width: 1000px) {
+  .article__photo-wrapper {
+    width: 45.5%;
+    height: 40.8rem;
+    margin-left: 3rem;
+  }
+}
 .article__photo {
   max-height: 100%;
-  max-width: 100%;
+  max-width: 60.9rem;
+  width: 100%;
   display: inline-block;
+  object-fit: cover;
+  object-position: 0 0;
+}
+@media (max-width: 1000px) {
+  .article__photo {
+    height: 45vw;
+    object-position: -79px 0;
+  }
 }
 .article__text-section {
-  margin-left: 8.7rem;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 46.5rem;
+  font-size: 10px;
   height: 100%;
+  max-height: 42.7rem;
   z-index: 5;
+}
+@media (max-width: 1000px) {
+  .article__text-section {
+    width: 45.3rem;
+    margin-right: 3rem;
+  }
+}
+@media (max-width: 956px) {
+  .article__text-section {
+    font-size: 8px;
+    margin-left: 2rem;
+  }
 }
 .article__title {
   font: normal normal 4.8rem/120% Roboto, sans-serif;
   font-size: 4.8em;
-  margin: 0 0 2.1rem;
+  margin: 0 0 0.7em;
+}
+@media (max-width: 700px) {
+  .article__title {
+    font-size: 3.8em;
+    margin: 0;
+  }
 }
 .article__par-one {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   font-size: 1.6em;
   line-height: 2.08rem;
-  margin-bottom: 5.6rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 700px) {
+  .article__par-one {
+    margin-bottom: 1rem;
+  }
 }
 .article__subtitle {
   font: normal normal 2.4rem/120% Roboto, sans-serif;
   font-size: 2.4em;
   margin-bottom: 3.3rem;
+}
+@media (max-width: 700px) {
+  .article__subtitle {
+    margin-bottom: 1rem;
+  }
 }
 .article__par-two {
   font: normal normal 1.6rem/120% Roboto, sans-serif;

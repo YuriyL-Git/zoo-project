@@ -318,9 +318,15 @@ body {
   overflow-x: hidden;
 }
 
-/*  $page-height * 1fr*/
 /* header */
-/* $page-height * 1fr*/
+/* article */
+/* photo animals */
+/* button - choose favorite */
+/* section - feed a friend */
+/* testimonials */
+/* ------------- home small desktop ------------------------*/
+/* header */
+/* gap-sd*/
 /* article */
 /* photo animals */
 /* button - choose favorite */
@@ -336,6 +342,12 @@ body {
   /*- footer -*/
   grid-column-gap: 3rem;
   grid-row-gap: 1px;
+}
+
+@media (max-width: 1000px) {
+  .home-container {
+    grid-template-rows: 58.4rem 11rem 42.7rem 14.3rem 80rem 27.5rem 87.6rem 10rem 60.2rem 14rem 44.3rem;
+  }
 }
 
 .header {
@@ -996,6 +1008,12 @@ body {
   z-index: 1;
 }
 
+@media (max-width: 1000px) {
+  .header-home .background-photo {
+    height: 58.4rem;
+  }
+}
+
 .header-home__title-wrapper {
   position: relative;
   margin-right: 3rem;
@@ -1058,13 +1076,13 @@ body {
 
 .header-home .btn--watch-online {
   position: absolute;
-  left: 37%;
+  right: 12%;
   top: 54.5rem;
 }
 
 @media (max-width: 1000px) {
   .header-home .btn--watch-online {
-    left: 19%;
+    right: 21.5%;
     top: 40.2rem;
   }
 }

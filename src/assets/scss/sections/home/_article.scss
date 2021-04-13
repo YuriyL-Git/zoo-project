@@ -3,11 +3,12 @@
 
 .article {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  @include media('<=1160px') {
-    font-size: 75%;
-  }
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
+
 
   &__image-container {
     background: url("../images/photos/flower_foto.png") no-repeat;
@@ -17,37 +18,78 @@
     top: 79.2rem;
   }
 
+  &__photo-wrapper {
+    padding: 0;
+    width: 52.5%;
+    height: 100%;
+    @include media('<=small-desktop') {
+      width: 45.5%;
+      height: 40.8rem;
+      margin-left: 3rem;
+    }
+  }
+
   &__photo {
     max-height: 100%;
-    max-width: 100%;
+    max-width: 60.9rem;
+    width: 100%;
     display: inline-block;
+    object-fit: cover;
+    object-position: 0 0;
+    @include media('<=small-desktop') {
+      height: 45vw;
+      object-position: -79px 0;
+    }
+
   }
 
   &__text-section {
-    margin-left: 8.7rem;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 46.5rem;
+    font-size: 10px;
+    @include media('<=small-desktop') {
+      width: 45.3rem;
+      margin-right: 3rem;
+    }
+
+    @include media('<=956px') {
+      font-size: 8px;
+      margin-left: 2rem;
+    }
+
     height: 100%;
+    max-height: 42.7rem;
     z-index: 5;
   }
 
   &__title {
     font: var.$h2-roboto-regular;
     font-size: 4.8em;
-    margin: 0 0 2.1rem;
+    margin: 0 0 0.7em;
+    @include media('<=700px') {
+      font-size: 3.8em;
+      margin: 0;
+    }
   }
 
   &__par-one {
     font: var.$body-roboto-regular;
     font-size: 1.6em;
     line-height: 2.08rem;
-    margin-bottom: 5.6rem;
-
+    margin-bottom: 3rem;
+    @include media('<=700px') {
+      margin-bottom: 1rem;
+    }
   }
 
   &__subtitle {
     font: var.$subtitle-roboto-regular;
     font-size: 2.4em;
     margin-bottom: 3.3rem;
+    @include media('<=700px') {
+      margin-bottom: 1rem;
+    }
   }
 
   &__par-two {
