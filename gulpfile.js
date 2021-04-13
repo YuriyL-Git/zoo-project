@@ -277,7 +277,7 @@ function watchFiles() {
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.fonts], fonts);
   const fileWatcher =  gulp.watch([path.watch.allFiles], { delay: 2500 }, backupFiles);
-  const gitWatcher =  gulp.watch([path.watch.git], { delay: 2500 }, backupGit);
+  const gitWatcher =  gulp.watch([path.watch.git], { delay: 5500 }, backupGit);
 
   gitWatcher.on('all', function (event, filePath) {
     console.log('git DELETED ==== ', filePath);
