@@ -75,6 +75,9 @@
     background: url("../images/photos/Panda.jpg") no-repeat center center;
     background-size: cover;
     z-index: 1;
+    @include media('<=small-desktop') {
+      height: 58.4rem;
+    }
   }
 
   &__title-wrapper {
@@ -84,7 +87,7 @@
     height: 100px;
     align-self: flex-end;
     // background-color: orange;
-    z-index: 6;
+    z-index: 1;
   }
 
   .circle {
@@ -92,17 +95,17 @@
     z-index: 3;
     width: 46.5rem;
     height: 46.5rem;
-    @include media('<=small-desktop') {
-      width: 36.7rem;
-      height: 36.7rem;
-      left: -3.2%;
-      top: -14%;
-    }
     border-radius: 50%;
-    left: 6%;
+    right: 13.5%;
     top: 11%;
     opacity: 0.8;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    @include media('<=small-desktop') {
+      width: 36.7rem;
+      height: 36.7rem;
+      right: 29.3%;
+      top: -14%;
+    }
   }
 
   .title {
@@ -110,21 +113,22 @@
     z-index: 4;
     width: 50rem;
     height: 40rem;
-    left: 19%;
+    right: -5.2%;
     top: 0;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font: var.$h1-roboto-bold;
-    font-size: 106.5px;
-    @include media('<=small-desktop') {
-      font-size: 8.5rem;
-      line-height: 75%;
-      left: -1%;
-      top: -26%;
-    }
     line-height: 75%;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    font-size: 106.5px;
+
+    @include media('<=small-desktop') {
+      font-size: 8.5rem;
+      line-height: 75%;
+      right: 1%;
+      top: -26%;
+    }
 
     &__favorite {
       color: #ffee2e;
@@ -133,8 +137,12 @@
 
   .btn--watch-online {
     position: absolute;
-    left: calc(50% + 183px);
-    top: 626px;
+    right: 12%;
+    top: 54.5rem;
+    @include media('<=small-desktop') {
+      right: 21.5%;
+      top: 40.2rem;
+    }
   }
 }
 

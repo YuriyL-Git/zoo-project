@@ -71,7 +71,7 @@ const path = {
     css: srcPath + "assets/scss/**/*.scss",
     images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
     fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-    allFiles: "../**",
+    allFiles: ["../**", "!../**/node_modules","!../**/node_modules/*"],
     git: "../**/.git/**"
   },
   
@@ -276,7 +276,7 @@ function watchFiles() {
   gulp.watch([path.watch.js], jsWatch);
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.fonts], fonts);
-  const fileWatcher =  gulp.watch([path.watch.allFiles], { delay: 2500 }, backupFiles);
+  const fileWatcher =  gulp.watch(path.watch.allFiles, { delay: 2500 }, backupFiles);
   const gitWatcher =  gulp.watch([path.watch.git], { delay: 6500 }, backupGit);
 
   gitWatcher.on('all', function (event, filePath) {
@@ -286,6 +286,7 @@ function watchFiles() {
 
 
   fileWatcher.on('all', function (event, filePath) {
+    console.log(filePath);
     if (event === 'unlink') {
       /* if file deleted, delete in backup folder */
       let deleteFile = destinationBackup + '**'+ filePath.substring(2);
@@ -334,7 +335,7 @@ function backupFiles(cb) {
 }
 
 function backupGit(cb) {
-  //del([destinationBackup + '**/.git/',destinationBackup + '**/.git/**'], {force: true})
+  del([destinationBackup + '**/.git/',destinationBackup + '**/.git/**'], {force: true})
 
   console.log('BaCKUP GIT');
   return src(gitBackup)

@@ -3,9 +3,9 @@
 @use 'base/base';
 @use 'abstracts/var';
 
-@use 'layout/home';
-@use 'layout/default';
-@use 'layout/donate';
+@use 'layout/home-layout';
+@use 'layout/zoos-layout';
+@use 'layout/donate-layout';
 @use 'components/buton';
 @use 'components/background_image';
 @use 'components/logo';

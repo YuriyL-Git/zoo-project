@@ -2,12 +2,11 @@
 $max-width: 116rem;
 $page-height: 497.5rem;
 
-//=========== page sections heights =============================
+//=========== home sections heights =============================
 
-$hd: 78rem; /*  $page-height * 1fr*/
+$hd: 78rem;
 ; /* header */
-$gap1: 14rem; /* $page-height * 1fr*/
-;
+$gap1: 14rem;
 $ar: 40.3rem; /* article */
 $gap2: 17.7rem;
 $ph: 87.2rem; /* photo animals */
@@ -17,6 +16,19 @@ $gap3: 14rem;
 $tm: 57.5rem; /* testimonials */
 $gap4: 20rem;
 $ft: 44.3rem; //footer
+
+/* ------------- home small desktop ------------------------*/
+$hd-sd: 58.4rem; /* header */
+$gap1-sd: 11rem; /* gap-sd*/
+$ar-sd: 42.7rem; /* article */
+$gap2-sd: 14.3rem;
+$ph-sd: 80rem; /* photo animals */
+$bt-sd: 27.5rem; /* button - choose favorite */
+$fd-sd: 87.6rem; /* section - feed a friend */
+$gap3-sd: 10rem;
+$tm-sd: 60.2rem; /* testimonials */
+$gap4-sd: 14rem;
+$ft-sd: 44.3rem; //footer
 
 //*=========default page===================*/
 

@@ -946,6 +946,12 @@ body {
   margin-right: 6.3rem;
 }
 
+@media (max-width: 1000px) {
+  .header-home .nav__logo-link {
+    margin-left: 3rem;
+  }
+}
+
 .header-home .nav__link {
   color: #fff;
   text-decoration: none;
@@ -997,7 +1003,7 @@ body {
   height: 100px;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  z-index: 6;
+  z-index: 1;
 }
 
 .header-home .circle {
@@ -1006,7 +1012,7 @@ body {
   width: 46.5rem;
   height: 46.5rem;
   border-radius: 50%;
-  left: 6%;
+  right: 13.5%;
   top: 11%;
   opacity: 0.8;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -1016,6 +1022,8 @@ body {
   .header-home .circle {
     width: 36.7rem;
     height: 36.7rem;
+    right: 29.3%;
+    top: -14%;
   }
 }
 
@@ -1024,15 +1032,24 @@ body {
   z-index: 4;
   width: 50rem;
   height: 40rem;
-  left: 19%;
+  right: -5.2%;
   top: 0;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font: normal bold 14.4rem/80% Roboto, sans-serif;
-  font-size: 106.496px;
   line-height: 75%;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+  font-size: 106.5px;
+}
+
+@media (max-width: 1000px) {
+  .header-home .title {
+    font-size: 8.5rem;
+    line-height: 75%;
+    right: 1%;
+    top: -26%;
+  }
 }
 
 .header-home .title__favorite {
@@ -1041,8 +1058,15 @@ body {
 
 .header-home .btn--watch-online {
   position: absolute;
-  left: calc(50% + 183px);
-  top: 626px;
+  left: 37%;
+  top: 54.5rem;
+}
+
+@media (max-width: 1000px) {
+  .header-home .btn--watch-online {
+    left: 19%;
+    top: 40.2rem;
+  }
 }
 
 .header-title {
@@ -1058,7 +1082,6 @@ body {
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: orange;
 }
 
 @media (max-width: 1160px) {
