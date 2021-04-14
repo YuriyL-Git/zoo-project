@@ -1,11 +1,16 @@
 @use '../../abstracts/var';
+@import "../../vendors/include-media";
+
 
 .testimonials {
-
   &__title {
     margin: -0.2rem 0 4.5rem;
     text-align: center;
     font: var.$h3-roboto-regular;
+
+    @include media('<=small-desktop') {
+      margin: -0.2rem 0 3rem;
+    }
   }
 
   &__card-container {
@@ -14,7 +19,12 @@
     width: 100%;
     height: 40rem;
     position: relative;
+    @include media('<=small-desktop') {
+      width: 94%;
+      margin: 0 3rem;
+    }
   }
+
 
   &__card {
     width: 26.8rem;
@@ -23,6 +33,16 @@
     position: relative;
     background: var.$orange_grad;
     border-radius: 2rem;
+
+    @include media('<=small-desktop') {
+      width: 29.4rem;
+    }
+
+    &:last-child {
+      @include media('<=small-desktop') {
+        display: none;
+      }
+    }
 
     &:before {
       content: '';
@@ -72,14 +92,16 @@
     font: var.$small-paragraph;
     padding: 0 1.6rem;
     margin-top: 0.8rem;
-
-
   }
 
   &__feedback-btn {
     position: absolute;
     border-radius: 0.5rem;
-    margin-top: 3.2rem;
+    margin-top: 3.3rem;
+    @include media('<=small-desktop') {
+      margin-top: 5.4rem;
+      margin-left: 3rem;
+    }
   }
 
   &__slider-container {
@@ -91,6 +113,11 @@
     position: relative;
     z-index: 2;
 
+    @include media('<=small-desktop') {
+      height: 0.5rem;
+      margin-left: -0.6rem;
+    }
+
     &:after {
       content: '';
       position: absolute;
@@ -100,6 +127,11 @@
       background: var.$orange_grad;
       z-index: -2;
       top: -32%;
+
+      @include media('<=small-desktop') {
+        width: 39.3rem;
+        top: -46%;
+      }
     }
 
   }
@@ -114,6 +146,9 @@
     border-radius: 1rem;
     z-index: 3;
 
+    @include media('<=small-desktop') {
+      width: 38.9rem;
+    }
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -124,6 +159,11 @@
       cursor: pointer;
       border-radius: 10px;
       z-index: 3;
+
+      @include media('<=small-desktop') {
+        width: 7.5rem;
+        height: 0.5rem;
+      }
     }
 
     &::-moz-range-thumb {
@@ -137,4 +177,5 @@
     }
   }
 }
+
 

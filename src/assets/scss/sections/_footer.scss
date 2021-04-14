@@ -1,4 +1,6 @@
 @use '../abstracts/var';
+@import "../vendors/include-media";
+
 
 .footer {
   display: flex;
@@ -19,6 +21,12 @@
     height: 30rem;
     right: 0;
     top: 426rem;
+
+    @include media('<=small-desktop') {
+      background: url("../images/photos/leav_foto-small-desktop.png") no-repeat;
+      top: 380.5rem;
+      width: 19.6rem;
+    }
   }
 
   &__image-rotated {
@@ -26,13 +34,9 @@
     width: 24.5rem;
     height: 30rem;
     right: -4rem;
-
     top: 320rem;
   }
 
-  &__image--default {
-    //display: none;
-  }
 
   &__container-main {
     height: 35.2rem;
@@ -40,6 +44,10 @@
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
+    @include media('<=small-desktop') {
+      width: 94%;
+      margin-left: 4.5rem;
+    }
   }
 
   &__container-top {
@@ -48,11 +56,17 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 3.5rem;
+    @include media('<=small-desktop') {
+      margin-top: -0.1rem;
+    }
   }
 
   &__subscribe-form {
     height: 100%;
     width: 36.8rem;
+    @include media('<=small-desktop') {
+      margin-right: 3.2rem;
+    }
 
     &:invalid .footer__btn-submit {
       color: red;
@@ -103,26 +117,22 @@
       border: 2px solid orange;
       border-radius: 5px;
     }
-
   }
 
   &__btn-donate {
     border-radius: 0.5rem;
-    margin-bottom: 4.3rem;
+    margin-bottom: 4.7rem;
   }
 
   &__container-bottom {
     width: 100%;
-    height: 13.7rem;
+    height: 13.1rem;
     display: flex;
     justify-content: space-between;
   }
 
 
-  &__nav {
-    height: 100%;
-    width: 36.2rem;
-  }
+
 
   &__designed-by {
     height: 100%;
@@ -166,8 +176,14 @@
   }
 
   &__nav {
+    height: 100%;
+    width: 36.2rem;
     display: flex;
     align-items: flex-end;
+    @include media('<=small-desktop') {
+      width: 33.2rem;
+      margin-right: 2.7rem;
+    }
   }
 
   &__nav-list {
@@ -175,7 +191,7 @@
     display: flex;
     padding: 0;
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     justify-content: space-between;
     list-style: none;
   }
@@ -197,6 +213,7 @@
     line-height: 20.8px;
     font-weight: 200;
     color: #fff;
+    margin-top: -0.3rem;
   }
 
   &__designer-name {

@@ -4,6 +4,7 @@
 .feed-friend {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   &__background {
     background: var.$orange_grad;
@@ -13,6 +14,7 @@
     height: 100.4rem;
     @include media('<=small-desktop') {
       height: 87.6rem;
+      transform: translateY(-4px);
     }
     z-index: -1;
     border-radius: 2rem;
@@ -21,11 +23,15 @@
   &__container-main {
     vertical-align: center;
     height: 83.5rem;
-    width: 116rem;
+    width: 100%;
     background: rgba(253, 253, 255, 0.52);
     backdrop-filter: blur(4px);
     border-radius: 20px;
     margin-top: -3rem;
+    @include media('<=small-desktop') {
+      height: 79.6rem;
+      width: 94%;
+    }
   }
 
   &__title {
@@ -33,6 +39,9 @@
     font: var.$h2-roboto-regular;
     text-align: center;
     margin: 4.1rem 0 3rem 0.4rem;
+    @include media('<=small-desktop') {
+      margin: 3.2rem 0 2.1rem 0;
+    }
   }
 
   &__subtitle-one {
@@ -40,6 +49,9 @@
     color: #333B41;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0 0 4rem 9.9rem;
+    @include media('<=small-desktop') {
+      margin: 0 0 2rem 4.8rem;
+    }
   }
 
   &__par-one {
@@ -47,13 +59,20 @@
     line-height: 130%;
     font-weight: 500;
     margin: 0 0 1.1rem 9.9rem;
+    @include media('<=small-desktop') {
+      margin: 0 8rem 1.1rem 4.9rem;
+    }
   }
 
   &__par-two {
     font: var.$body-roboto-regular;
-    width: 86.3rem;
     line-height: 130%;
-    margin: 0 0 6.2rem 9.9rem;
+    margin: 0 20rem 6.2rem 9.9rem;
+    @include media('<=small-desktop') {
+      margin: 0 6.2rem 1.1rem 4.9rem;
+      padding-right: 2rem;
+      line-height: 21.8px;
+    }
   }
 
   &__link-donate {
@@ -62,12 +81,19 @@
     color: #333B41;
     padding-bottom: 0.2rem;
     border-bottom: 1px solid var.$orange;
+    @include media('<=small-desktop') {
+      padding-bottom: 0.1rem;
+    }
   }
 
   &__subtitle-two {
     font: var.$h3-roboto-regular;
     text-align: center;
     margin-bottom: 4rem;
+    @include media('<=small-desktop') {
+      padding-top: 0.3rem;
+      margin-bottom: 4.1rem;
+    }
   }
 
   &__container-images {
@@ -76,6 +102,10 @@
     align-items: center;
     justify-content: space-between;
     width: 76.4rem;
+    @include media('<=small-desktop') {
+      width: 81.2%;
+    }
+
   }
 
   &__card-container {
@@ -88,7 +118,6 @@
     position: relative;
     display: flex;
     background-color: white;
-
 
     &:first-child .feed-friend__card-text {
       bottom: -6.9rem;
@@ -109,10 +138,13 @@
     margin: auto;
   }
 
+  &__arrow-container {
+    display: flex;
+    margin-bottom: 13.1rem;
+  }
+
   &__arrow {
-    position: absolute;
-    top: 35.5%;
-    right: -60.9%;
+
   }
 
   &__btn-wrapper {
@@ -123,8 +155,13 @@
 
   &__btn {
     position: absolute;
-    margin-top: 1.7rem;
+    margin-top: 1.6rem;
+    @include media('<=small-desktop') {
+      margin-top: 2.6rem;
+    }
+
+    @include media('<=755px') {
+      margin-top: 0;
+    }
   }
-
-
 }

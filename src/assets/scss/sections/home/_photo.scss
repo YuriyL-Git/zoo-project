@@ -38,8 +38,12 @@
     }
 
     &:hover .photo-section__text-float {
-      transform: translateY(-170%);
+
       opacity: 1;
+
+      @include media('<=small-desktop') {
+        transform: translateY(-120%);
+      }
     }
   }
 
@@ -72,6 +76,9 @@
       font: var.$h2-roboto-regular;
       text-align: center;
       margin: 0;
+      @include media('<=small-desktop') {
+        font-size: 4rem;
+      }
     }
 
     &__place {
@@ -79,6 +86,9 @@
       font: var.$subtitle-roboto-regular;
       text-align: center;
       margin-bottom: 2rem;
+      @include media('<=small-desktop') {
+        font-size: 2.2rem;
+      }
     }
   }
 
@@ -123,6 +133,10 @@
       left: 32.3rem;
     }
 
+    @include media('<=835px') {
+      left: 22.3rem;
+    }
+
     &:hover {
       background: url(../images/icons/arrow-left.svg) #4B9200 center no-repeat;
     }
@@ -137,6 +151,9 @@
     }
     @include media('<=small-desktop') {
       right: 32.3rem;
+    }
+    @include media('<=835px') {
+      right: 22.3rem;
     }
 
     &:hover {
