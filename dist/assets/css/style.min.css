@@ -342,7 +342,7 @@ body {
 }
 @media (max-width: 1000px) {
   .home-container {
-    grid-template-rows: 58.4rem 9.8rem 42.7rem 14.3rem 80rem 27.5rem 87.6rem 10rem 60.2rem 14rem 44.3rem;
+    grid-template-rows: 58.4rem 9.8rem 42.7rem 13.9rem 80rem 27.5rem 87.6rem 10rem 60.2rem 14rem 44.3rem;
   }
 }
 
@@ -965,6 +965,11 @@ body {
   right: 0;
   top: 79.2rem;
 }
+@media (max-width: 1000px) {
+  .article__image-container {
+    display: none;
+  }
+}
 .article__photo-wrapper {
   padding: 0;
   width: 52.5%;
@@ -1017,7 +1022,12 @@ body {
   font-size: 4.8em;
   margin: 0 0 0.7em;
 }
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
+  .article__title {
+    margin: 0 0 0.7rem;
+  }
+}
+@media (max-width: 800px) {
   .article__title {
     font-size: 3.8em;
     margin: 0;
@@ -1029,7 +1039,7 @@ body {
   line-height: 2.08rem;
   margin-bottom: 3rem;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .article__par-one {
     margin-bottom: 1rem;
   }
@@ -1039,7 +1049,7 @@ body {
   font-size: 2.4em;
   margin-bottom: 3.3rem;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .article__subtitle {
     margin-bottom: 1rem;
   }
@@ -1062,6 +1072,12 @@ body {
   justify-content: space-between;
   align-content: space-between;
   position: relative;
+}
+@media (max-width: 1000px) {
+  .photo-section {
+    grid-row-gap: 9.2rem;
+    margin: 0 3rem;
+  }
 }
 .photo-section__container {
   border: 1px solid #FE9013;
@@ -1095,6 +1111,11 @@ body {
   z-index: -2;
   transition: transform 0.25s ease-in-out;
 }
+@media (max-width: 1000px) {
+  .photo-section__photo {
+    height: 29.5rem;
+  }
+}
 .photo-section__text-float {
   position: absolute;
   z-index: 10;
@@ -1126,6 +1147,13 @@ body {
   font: normal 300 1.5rem/120% Roboto, sans-serif;
   margin-left: 1.4rem;
 }
+.photo-section__btn-wrapper {
+  position: absolute;
+  background-color: orange;
+  height: 5rem;
+  width: 100%;
+  top: -20%;
+}
 .photo-section__btn-left, .photo-section__btn-right {
   position: absolute;
   width: 6.2rem;
@@ -1137,12 +1165,32 @@ body {
   background: url(../images/icons/arrow-left.svg) #f9804b center no-repeat;
   left: -8.3rem;
 }
+@media (max-width: 1329px) {
+  .photo-section__btn-left {
+    left: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .photo-section__btn-left {
+    left: 32.3rem;
+  }
+}
 .photo-section__btn-left:hover {
   background: url(../images/icons/arrow-left.svg) #4B9200 center no-repeat;
 }
 .photo-section__btn-right {
   background: url(../images/icons/arrow-right.svg) #f9804b center no-repeat;
   right: -8.3rem;
+}
+@media (max-width: 1329px) {
+  .photo-section__btn-right {
+    right: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .photo-section__btn-right {
+    right: 32.3rem;
+  }
 }
 .photo-section__btn-right:hover {
   background: url(../images/icons/arrow-right.svg) #4B9200 center no-repeat;
@@ -1156,12 +1204,24 @@ body {
 .chose-favorite__btn {
   margin-top: -2.4rem;
 }
+@media (max-width: 1000px) {
+  .chose-favorite__btn {
+    margin-top: -6.2rem;
+  }
+}
 .chose-favorite__palm-image {
   background: url("../images/photos/palm_foto.png") no-repeat;
   width: 30rem;
-  height: 100%;
+  height: 46rem;
   left: 0;
   top: 215.8rem;
+}
+@media (max-width: 1000px) {
+  .chose-favorite__palm-image {
+    background: url("../images/photos/palm_small-desktop.png") no-repeat;
+    left: 0;
+    top: 212.7rem;
+  }
 }
 .chose-favorite .strelitzia-image-default {
   background: url("../images/photos/strelitzia.png") no-repeat;
@@ -1169,6 +1229,15 @@ body {
   height: 40rem;
   right: 0;
   top: 233.4rem;
+}
+@media (max-width: 1000px) {
+  .chose-favorite .strelitzia-image-default {
+    background: url("../images/photos/strelitzia-small-desktop.png") no-repeat;
+    width: 24.1rem;
+    height: 18.1rem;
+    right: 0;
+    top: 215rem;
+  }
 }
 
 .feed-friend {
@@ -1183,6 +1252,11 @@ body {
   height: 100.4rem;
   z-index: -1;
   border-radius: 2rem;
+}
+@media (max-width: 1000px) {
+  .feed-friend__background {
+    height: 87.6rem;
+  }
 }
 .feed-friend__container-main {
   vertical-align: center;

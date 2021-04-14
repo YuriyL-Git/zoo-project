@@ -22,11 +22,11 @@ var argv = require('minimist')(process.argv.slice(2));
 
 
 /*=============== SETUP VARIABLES ======================================= */
+const deployProjectName = 'online-zoo/';
+const deployFullPath = {cwd:'/ram/ramdisk/PetStory/deploy'};
 const srcPath = 'src/';
 const distPath = 'dist/';
 const deployPath = "../deploy/";
-const deployProjectName = 'online-zoo/';
-const deployFullPath = {cwd:'/ram/ramdisk/PetStory/deploy'};
 const gitHubBranch = 'gh-pages';
 /* const sourceBackup = "../../**"; */
 const sourceBackup = ["../../**", '!**/node_modules/**'];
@@ -71,7 +71,7 @@ const path = {
     css: srcPath + "assets/scss/**/*.scss",
     images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
     fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-    allFiles: ["../**", "!../**/node_modules","!../**/node_modules/*"],
+    allFiles: ["../**", "!../**/node_modules","!../**/node_modules/**"],
     git: "../**/.git/**"
   },
   
@@ -401,7 +401,7 @@ function push(cb) {
 
 
 
-const deploy = gulp.series(cleanBackupGit, cleanDeploy,imagesDeploy, copyFilesToDeploy, add, commit, push);
+const deploy = gulp.series(cleanDeploy,imagesDeploy, copyFilesToDeploy, add, commit, push);
 const build = gulp.series(cleanAll, cleanDist,copyIndexHtml, gulp.parallel(html, css, js, images, fonts),backupGit);
 const watch = gulp.parallel(build, watchFiles, serve);
 

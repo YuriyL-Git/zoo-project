@@ -12,6 +12,11 @@
   align-content: space-between;
   position: relative;
 
+  @include media('<=small-desktop') {
+    grid-row-gap: 9.2rem;
+    margin: 0 3rem;
+  }
+
   &__container {
     border: 1px solid #FE9013;
     border-radius: 5px;
@@ -24,6 +29,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
+
 
     &:hover .photo-section__photo {
       transform: scale(1.1);
@@ -48,6 +54,9 @@
     width: 100%;
     z-index: -2;
     transition: transform 0.25s ease-in-out;
+    @include media('<=small-desktop') {
+      height: 29.5rem;
+    }
   }
 
   &__text-float {
@@ -86,6 +95,14 @@
     margin-left: 1.4rem;
   }
 
+  &__btn-wrapper {
+    position: absolute;
+    background-color: orange;
+    height: 5rem;
+    width: 100%;
+    top: -20%;
+  }
+
   &__btn-left,
   &__btn-right {
     position: absolute;
@@ -98,6 +115,13 @@
   &__btn-left {
     background: url(../images/icons/arrow-left.svg) #f9804b center no-repeat;
     left: -8.3rem;
+    @include media('<=1329px') {
+      left: 0;
+    }
+
+    @include media('<=small-desktop') {
+      left: 32.3rem;
+    }
 
     &:hover {
       background: url(../images/icons/arrow-left.svg) #4B9200 center no-repeat;
@@ -107,6 +131,13 @@
   &__btn-right {
     background: url(../images/icons/arrow-right.svg) #f9804b center no-repeat;
     right: -8.3rem;
+
+    @include media('<=1329px') {
+      right: 0;
+    }
+    @include media('<=small-desktop') {
+      right: 32.3rem;
+    }
 
     &:hover {
       background: url(../images/icons/arrow-right.svg) #4B9200 center no-repeat;

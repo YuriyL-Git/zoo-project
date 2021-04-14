@@ -16,6 +16,9 @@
     height: 61rem;
     right: 0;
     top: 79.2rem;
+    @include media('<=small-desktop') {
+      display: none;
+    }
   }
 
   &__photo-wrapper {
@@ -67,7 +70,10 @@
     font: var.$h2-roboto-regular;
     font-size: 4.8em;
     margin: 0 0 0.7em;
-    @include media('<=700px') {
+    @include media('<=small-desktop') {
+      margin: 0 0 0.7rem;
+    }
+    @include media('<=800px') {
       font-size: 3.8em;
       margin: 0;
     }
@@ -78,7 +84,7 @@
     font-size: 1.6em;
     line-height: 2.08rem;
     margin-bottom: 3rem;
-    @include media('<=700px') {
+    @include media('<=800px') {
       margin-bottom: 1rem;
     }
   }
@@ -87,7 +93,7 @@
     font: var.$subtitle-roboto-regular;
     font-size: 2.4em;
     margin-bottom: 3.3rem;
-    @include media('<=700px') {
+    @include media('<=800px') {
       margin-bottom: 1rem;
     }
   }
@@ -96,7 +102,6 @@
     font: var.$body-roboto-regular;
     font-size: 1.6em;
     line-height: 2.24rem;
-    //margin-top: 3.1rem;
     margin: 0;
     padding: 0;
   }
