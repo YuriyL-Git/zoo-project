@@ -16,6 +16,10 @@
       height: 87.6rem;
       transform: translateY(-4px);
     }
+    @include media('<=tablet') {
+      height: 78.1rem;
+      border-radius: 0;
+    }
     z-index: -1;
     border-radius: 2rem;
   }
@@ -32,6 +36,12 @@
       height: 79.6rem;
       width: 94%;
     }
+    @include media('<=tablet') {
+      height: 74.1rem;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 0.9rem;
+    }
   }
 
   &__title {
@@ -41,6 +51,11 @@
     margin: 4.1rem 0 3rem 0.4rem;
     @include media('<=small-desktop') {
       margin: 3.2rem 0 2.1rem 0;
+    }
+    @include media('<=tablet') {
+      font-size: 42px;
+      line-height: 120%;
+      margin: 1rem 0.3rem 2rem;
     }
   }
 
@@ -52,6 +67,11 @@
     @include media('<=small-desktop') {
       margin: 0 0 2rem 4.8rem;
     }
+    @include media('<=tablet') {
+      font-size: 22px;
+      line-height: 120%;
+      margin: 0 0 2rem 2.1rem;
+    }
   }
 
   &__par-one {
@@ -61,6 +81,9 @@
     margin: 0 0 1.1rem 9.9rem;
     @include media('<=small-desktop') {
       margin: 0 8rem 1.1rem 4.9rem;
+    }
+    @include media('<=tablet') {
+      margin: 0 1rem 1.1rem 2.1rem;
     }
   }
 
@@ -73,6 +96,9 @@
       padding-right: 2rem;
       line-height: 21.8px;
     }
+    @include media('<=tablet') {
+      margin: 0 0 1.1rem 2.1rem;
+    }
   }
 
   &__link-donate {
@@ -84,6 +110,9 @@
     @include media('<=small-desktop') {
       padding-bottom: 0.1rem;
     }
+    @include media('<=tablet') {
+      padding-bottom: 0;
+    }
   }
 
   &__subtitle-two {
@@ -93,6 +122,9 @@
     @include media('<=small-desktop') {
       padding-top: 0.3rem;
       margin-bottom: 4.1rem;
+    }
+    @include media('<=tablet') {
+      margin-top: 2.5rem;
     }
   }
 
@@ -105,7 +137,10 @@
     @include media('<=small-desktop') {
       width: 81.2%;
     }
-
+    @include media('<=tablet') {
+      margin-top: 2.5rem;
+      width: 91%;
+    }
   }
 
   &__card-container {
@@ -118,6 +153,7 @@
     position: relative;
     display: flex;
     background-color: white;
+
 
     &:first-child .feed-friend__card-text {
       bottom: -6.9rem;
@@ -141,10 +177,6 @@
   &__arrow-container {
     display: flex;
     margin-bottom: 13.1rem;
-  }
-
-  &__arrow {
-
   }
 
   &__btn-wrapper {

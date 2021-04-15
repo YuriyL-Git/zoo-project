@@ -10,6 +10,9 @@
     @include media('<=small-desktop') {
       margin-top: -6.2rem;
     }
+    @include media('<=tablet') {
+      margin-top: -4.2rem;
+    }
   }
 
   &__palm-image {
@@ -23,6 +26,10 @@
       left: 0;
       top: 212.4rem;
     }
+    @include media('<=tablet') {
+      top: 164.6rem;
+      background: url("../images/photos/palm_foto_tablet.png") no-repeat;
+    }
   }
 
   .strelitzia-image-default {
@@ -32,7 +39,6 @@
     right: 0;
     top: 233.4rem;
 
-
     @include media('<=small-desktop') {
       background: url("../images/photos/strelitzia-small-desktop.png") no-repeat;
       width: 24.1rem;
@@ -40,6 +46,10 @@
       right: 0;
       top: 214.7rem;
     }
-
+    @include media('<=tablet') {
+      top: 171.9rem;
+      width: 17.5rem;
+      background: url("../images/photos/strelitzia_tablet.png") no-repeat;
+    }
   }
 }
