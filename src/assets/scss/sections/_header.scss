@@ -16,6 +16,9 @@
     background: #000000;
     backdrop-filter: blur(4px);
     z-index: 2;
+    @include media('<=tablet') {
+      height: 3.4rem;
+    }
   }
 
   .nav {
@@ -24,11 +27,22 @@
     height: 8rem;
     display: flex;
     align-items: center;
+    @include media('<=tablet') {
+      height: 3.4rem;
+      justify-content: space-between;
+    }
 
     &__logo-link {
       margin-right: 6.3rem;
+
       @include media('<=small-desktop') {
         margin-left: 3rem;
+      }
+
+      @include media('<=tablet') {
+        margin-left: 0.3rem;
+        border: 2px solid black;
+        transform: scale(0.65);
       }
     }
 
@@ -42,6 +56,10 @@
       &:hover {
         text-decoration: underline;
       }
+
+      @include media('<=tablet') {
+        color: #000;
+      }
     }
 
     &__list {
@@ -52,6 +70,33 @@
       padding: 0;
       justify-content: space-between;
       align-items: center;
+      @include media('<=small-desktop') {
+        width: calc(265px + 22%);
+      }
+
+      @include media('<=tablet') {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: -1rem;
+        right: 0;
+        background-color: white;
+        height: 32.9rem;
+        width: 32rem;
+        border-radius: 1rem;
+        padding-bottom: 5rem;
+        border: 3px solid orange;
+        display: none;
+      }
+    }
+
+    &__menu-logo {
+      display: none;
+      @include media('<=tablet') {
+        display: flex;
+        border: 1px solid orange;
+        margin-bottom: 3rem;
+      }
     }
 
     &__item {
@@ -61,8 +106,26 @@
       font-size: 1rem;
       line-height: 140%;
       color: #FFFFFF;
+      padding-left: 1rem;
 
+      &:first-child {
+        @include media('<=tablet') {
+          width: 100%;
+          padding-left: 0;
+          margin-left: -0.8rem;
+          margin-bottom: -3rem;
+        }
+      }
+    }
 
+    &__burger-icon {
+      display: none;
+      @include media('<=tablet') {
+        display: inline-block;
+        margin-right: 2rem;
+        justify-self: center;
+        margin-bottom: 0.2rem;
+      }
     }
   }
 
@@ -78,6 +141,10 @@
     @include media('<=small-desktop') {
       height: 58.4rem;
     }
+
+    @include media('<=tablet') {
+      height: 37.3rem;
+    }
   }
 
   &__title-wrapper {
@@ -86,7 +153,6 @@
     width: 50%;
     height: 100px;
     align-self: flex-end;
-    // background-color: orange;
     z-index: 1;
   }
 
@@ -105,6 +171,12 @@
       height: 36.7rem;
       right: 29.3%;
       top: -14%;
+    }
+    @include media('<=tablet') {
+      width: 23.8rem;
+      height: 23.8rem;
+      right: 13%;
+      top: 10%;
     }
   }
 
@@ -130,6 +202,15 @@
       top: -26%;
     }
 
+    @include media('<=tablet') {
+      font-size: 54.2894px;
+      line-height: 75%;
+      width: 25rem;
+      height: 20rem;
+      right: -3.3%;
+      top: 4.2%;
+    }
+
     &__favorite {
       color: #ffee2e;
     }
@@ -142,6 +223,10 @@
     @include media('<=small-desktop') {
       right: 21.5%;
       top: 40.2rem;
+    }
+    @include media('<=tablet') {
+      left: -84.5%;
+      top: 24.4rem;
     }
   }
 }

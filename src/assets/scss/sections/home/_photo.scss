@@ -40,7 +40,7 @@
     &:hover .photo-section__text-float {
 
       opacity: 1;
-
+      transform: translateY(-170%);
       @include media('<=small-desktop') {
         transform: translateY(-120%);
       }
@@ -51,6 +51,7 @@
     position: absolute;
     bottom: 2.5%;
     right: 2.5%;
+    z-index: -1;
   }
 
   &__photo {
@@ -101,6 +102,7 @@
   }
 
   &__text {
+    z-index: 5;
     font: var.$small-paragraph;
     margin-left: 1.4rem;
   }

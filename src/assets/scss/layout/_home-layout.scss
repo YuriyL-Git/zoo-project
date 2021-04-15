@@ -35,6 +35,21 @@
       $ft-sd; //- footer
   }
 
+  @include media('<=tablet') {
+    grid-template-rows:
+      $hd-tb   // - header -
+      $gap1-tb // - gap1 -
+      $ar-tb    //- article -
+      $gap2-tb  //- gap2 -
+      $ph-tb    //- photo animals -
+      $bt-tb    //- button - choose favorite -
+      $fd-tb    //- section - feed a friend -
+      $gap3-tb  //- gap3 -
+      $tm-tb    //- testimonials -
+      $gap4-tb  //- gap
+      $ft-tb; //- footer
+  }
+
   grid-template-areas:
       " hd"  /*- header -*/
       " . "

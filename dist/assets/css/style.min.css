@@ -329,6 +329,14 @@ body {
 /* button - choose favorite */
 /* section - feed a friend */
 /* testimonials */
+/* ------------- home tablet ------------------------*/
+/* header */
+/* gap-sd*/
+/* article */
+/* photo animals */
+/* button - choose favorite */
+/* section - feed a friend */
+/* testimonials */
 .home-container {
   max-width: 1160px;
   width: 100%;
@@ -343,6 +351,11 @@ body {
 @media (max-width: 1000px) {
   .home-container {
     grid-template-rows: 58.4rem 9.8rem 42.7rem 13.9rem 80rem 27.7rem 87.6rem 9.7rem 60.2rem 13.7rem 44.3rem;
+  }
+}
+@media (max-width: 641px) {
+  .home-container {
+    grid-template-rows: 37.3rem 6rem 36.7rem 8rem 75.6rem 21.5rem 78.1rem 6rem 52.8rem 8rem 28.2rem;
   }
 }
 
@@ -824,6 +837,11 @@ body {
   backdrop-filter: blur(4px);
   z-index: 2;
 }
+@media (max-width: 641px) {
+  .header-home .nav-panel {
+    height: 3.4rem;
+  }
+}
 .header-home .nav {
   z-index: 3;
   width: 100%;
@@ -831,12 +849,25 @@ body {
   display: flex;
   align-items: center;
 }
+@media (max-width: 641px) {
+  .header-home .nav {
+    height: 3.4rem;
+    justify-content: space-between;
+  }
+}
 .header-home .nav__logo-link {
   margin-right: 6.3rem;
 }
 @media (max-width: 1000px) {
   .header-home .nav__logo-link {
     margin-left: 3rem;
+  }
+}
+@media (max-width: 641px) {
+  .header-home .nav__logo-link {
+    margin-left: 0.3rem;
+    border: 2px solid black;
+    transform: scale(0.65);
   }
 }
 .header-home .nav__link {
@@ -848,6 +879,11 @@ body {
 .header-home .nav__link:hover {
   text-decoration: underline;
 }
+@media (max-width: 641px) {
+  .header-home .nav__link {
+    color: #000;
+  }
+}
 .header-home .nav__list {
   height: 100%;
   width: calc(265px + 22.5%);
@@ -857,6 +893,37 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1000px) {
+  .header-home .nav__list {
+    width: calc(265px + 22%);
+  }
+}
+@media (max-width: 641px) {
+  .header-home .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    background-color: white;
+    height: 32.9rem;
+    width: 32rem;
+    border-radius: 1rem;
+    padding-bottom: 5rem;
+    border: 3px solid orange;
+    display: none;
+  }
+}
+.header-home .nav__menu-logo {
+  display: none;
+}
+@media (max-width: 641px) {
+  .header-home .nav__menu-logo {
+    display: flex;
+    border: 1px solid orange;
+    margin-bottom: 3rem;
+  }
+}
 .header-home .nav__item {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -864,6 +931,26 @@ body {
   font-size: 1rem;
   line-height: 140%;
   color: #FFFFFF;
+  padding-left: 1rem;
+}
+@media (max-width: 641px) {
+  .header-home .nav__item:first-child {
+    width: 100%;
+    padding-left: 0;
+    margin-left: -0.8rem;
+    margin-bottom: -3rem;
+  }
+}
+.header-home .nav__burger-icon {
+  display: none;
+}
+@media (max-width: 641px) {
+  .header-home .nav__burger-icon {
+    display: inline-block;
+    margin-right: 2rem;
+    justify-self: center;
+    margin-bottom: 0.2rem;
+  }
 }
 .header-home .background-photo {
   width: 100%;
@@ -878,6 +965,11 @@ body {
 @media (max-width: 1000px) {
   .header-home .background-photo {
     height: 58.4rem;
+  }
+}
+@media (max-width: 641px) {
+  .header-home .background-photo {
+    height: 37.3rem;
   }
 }
 .header-home__title-wrapper {
@@ -907,6 +999,14 @@ body {
     top: -14%;
   }
 }
+@media (max-width: 641px) {
+  .header-home .circle {
+    width: 23.8rem;
+    height: 23.8rem;
+    right: 13%;
+    top: 10%;
+  }
+}
 .header-home .title {
   position: absolute;
   z-index: 4;
@@ -930,6 +1030,16 @@ body {
     top: -26%;
   }
 }
+@media (max-width: 641px) {
+  .header-home .title {
+    font-size: 54.2894px;
+    line-height: 75%;
+    width: 25rem;
+    height: 20rem;
+    right: -3.3%;
+    top: 4.2%;
+  }
+}
 .header-home .title__favorite {
   color: #ffee2e;
 }
@@ -942,6 +1052,12 @@ body {
   .header-home .btn--watch-online {
     right: 21.5%;
     top: 40.2rem;
+  }
+}
+@media (max-width: 641px) {
+  .header-home .btn--watch-online {
+    left: -84.5%;
+    top: 24.4rem;
   }
 }
 
@@ -1098,6 +1214,7 @@ body {
 }
 .photo-section__photo-container:hover .photo-section__text-float {
   opacity: 1;
+  transform: translateY(-170%);
 }
 @media (max-width: 1000px) {
   .photo-section__photo-container:hover .photo-section__text-float {
@@ -1108,6 +1225,7 @@ body {
   position: absolute;
   bottom: 2.5%;
   right: 2.5%;
+  z-index: -1;
 }
 .photo-section__photo {
   height: 36.4rem;
@@ -1158,6 +1276,7 @@ body {
   margin-top: 0.4rem;
 }
 .photo-section__text {
+  z-index: 5;
   font: normal 300 1.5rem/120% Roboto, sans-serif;
   margin-left: 1.4rem;
 }
