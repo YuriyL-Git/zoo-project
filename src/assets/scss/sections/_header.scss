@@ -33,7 +33,7 @@
     }
 
     &__logo-link {
-      margin-right: 6.3rem;
+      margin-right: 5.4rem;
 
       @include media('<=small-desktop') {
         margin-left: 3rem;
@@ -64,14 +64,15 @@
 
     &__list {
       height: 100%;
-      width: calc(265px + 22.5%);
+      width: calc(274px + 22.5%);
       list-style: none;
       display: flex;
       padding: 0;
       justify-content: space-between;
       align-items: center;
+
       @include media('<=small-desktop') {
-        width: calc(265px + 22%);
+        width: calc(274px + 22%);
       }
 
       @include media('<=tablet') {

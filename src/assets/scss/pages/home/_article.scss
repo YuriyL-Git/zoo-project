@@ -19,6 +19,13 @@
     @include media('<=small-desktop') {
       display: none;
     }
+    @include media('<=tablet') {
+      display: inline-block;
+      top: 37.2rem;
+      background: url("../images/photos/flower_foto_tablet.png") no-repeat;
+      width: 16rem;
+      right: -2.8rem;
+    }
   }
 
   &__photo-wrapper {
@@ -29,6 +36,9 @@
       width: 45.5%;
       height: 40.8rem;
       margin-left: 3rem;
+    }
+    @include media('<=tablet') {
+      display: none;
     }
   }
 
@@ -43,7 +53,6 @@
       height: 45vw;
       object-position: -79px 0;
     }
-
   }
 
   &__text-section {
@@ -57,6 +66,10 @@
     }
 
     @include media('<=956px') {
+      width: 77%;
+    }
+
+    @include media('<=tablet') {
       font-size: 8px;
       margin-left: 2rem;
     }
@@ -69,7 +82,7 @@
   &__title {
     font: var.$h2-roboto-regular;
     font-size: 4.8em;
-    margin: 0 0 0.7em;
+    margin: 0 0 0.5rem;
     @include media('<=small-desktop') {
       margin: 0 0 0.7rem;
     }
@@ -77,15 +90,23 @@
       font-size: 3.8em;
       margin: 0;
     }
+    @include media('<=tablet') {
+      font-size: 4.8rem;
+      margin-left: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__par-one {
     font: var.$body-roboto-regular;
     font-size: 1.6em;
     line-height: 2.08rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3.2rem;
     @include media('<=800px') {
       margin-bottom: 1rem;
+    }
+    @include media('<=tablet') {
+      font-size: 1.6rem;
     }
   }
 
@@ -96,6 +117,10 @@
     @include media('<=800px') {
       margin-bottom: 1rem;
     }
+    @include media('<=tablet') {
+      font-size: 2.4rem;
+      margin: 2.2rem 0 2rem 0.4rem;
+    }
   }
 
   &__par-two {
@@ -104,5 +129,9 @@
     line-height: 2.24rem;
     margin: 0;
     padding: 0;
+    @include media('<=tablet') {
+      font-size: 1.6rem;
+
+    }
   }
 }

@@ -977,6 +977,8 @@ body {
 @media (max-width: 641px) {
   .header-home .nav {
     height: 3.4rem;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 
@@ -992,7 +994,7 @@ body {
 
 @media (max-width: 641px) {
   .header-home .nav__logo-link {
-    margin-left: 0.4rem;
+    margin-left: 0.3rem;
     border: 2px solid black;
     -webkit-transform: scale(0.65);
     transform: scale(0.65);
@@ -1008,6 +1010,12 @@ body {
 
 .header-home .nav__link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 641px) {
+  .header-home .nav__link {
+    color: #000;
+  }
 }
 
 .header-home .nav__list {
@@ -1029,6 +1037,38 @@ body {
   }
 }
 
+@media (max-width: 641px) {
+  .header-home .nav__list {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    background-color: white;
+    height: 32.9rem;
+    width: 32rem;
+    border-radius: 1rem;
+    padding-bottom: 5rem;
+    border: 3px solid orange;
+    display: none;
+  }
+}
+
+.header-home .nav__menu-logo {
+  display: none;
+}
+
+@media (max-width: 641px) {
+  .header-home .nav__menu-logo {
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid orange;
+    margin-bottom: 3rem;
+  }
+}
+
 .header-home .nav__item {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1036,6 +1076,29 @@ body {
   font-size: 1rem;
   line-height: 140%;
   color: #FFFFFF;
+  padding-left: 1rem;
+}
+
+@media (max-width: 641px) {
+  .header-home .nav__item:first-child {
+    width: 100%;
+    padding-left: 0;
+    margin-left: -0.8rem;
+    margin-bottom: -3rem;
+  }
+}
+
+.header-home .nav__burger-icon {
+  display: none;
+}
+
+@media (max-width: 641px) {
+  .header-home .nav__burger-icon {
+    display: inline-block;
+    margin-right: 2rem;
+    justify-self: center;
+    margin-bottom: 0.2rem;
+  }
 }
 
 .header-home .background-photo {
@@ -1052,6 +1115,12 @@ body {
 @media (max-width: 1000px) {
   .header-home .background-photo {
     height: 58.4rem;
+  }
+}
+
+@media (max-width: 641px) {
+  .header-home .background-photo {
+    height: 37.3rem;
   }
 }
 
@@ -1086,6 +1155,15 @@ body {
   }
 }
 
+@media (max-width: 641px) {
+  .header-home .circle {
+    width: 23.8rem;
+    height: 23.8rem;
+    right: 13%;
+    top: 10%;
+  }
+}
+
 .header-home .title {
   position: absolute;
   z-index: 4;
@@ -1111,6 +1189,17 @@ body {
   }
 }
 
+@media (max-width: 641px) {
+  .header-home .title {
+    font-size: 54.2894px;
+    line-height: 75%;
+    width: 25rem;
+    height: 20rem;
+    right: -3.3%;
+    top: 4.2%;
+  }
+}
+
 .header-home .title__favorite {
   color: #ffee2e;
 }
@@ -1125,6 +1214,13 @@ body {
   .header-home .btn--watch-online {
     right: 21.5%;
     top: 40.2rem;
+  }
+}
+
+@media (max-width: 641px) {
+  .header-home .btn--watch-online {
+    left: -84.5%;
+    top: 24.4rem;
   }
 }
 

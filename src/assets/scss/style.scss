@@ -13,11 +13,11 @@
 @use 'components/side-bar';
 @use 'components/radio-btn';
 @use 'sections/header';
-@use 'sections/home/article';
-@use 'sections/home/photo';
-@use 'sections/home/button-favorite';
-@use 'sections/home/feed-friend';
-@use 'sections/home/testimonials';
+@use 'pages/home/article';
+@use 'pages/home/photo';
+@use 'pages/home/button-favorite';
+@use 'pages/home/feed-friend';
+@use 'pages/home/testimonials';
 @use 'pages/map-page';
 @use 'sections/footer';
 @use 'pages/default-page';

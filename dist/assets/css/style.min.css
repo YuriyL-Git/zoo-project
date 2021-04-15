@@ -355,7 +355,7 @@ body {
 }
 @media (max-width: 641px) {
   .home-container {
-    grid-template-rows: 37.3rem 6rem 36.7rem 8rem 75.6rem 21.5rem 78.1rem 6rem 52.8rem 8rem 28.2rem;
+    grid-template-rows: 37.3rem 6rem 36.7rem 7.5rem 75.6rem 21.5rem 78.1rem 6rem 52.8rem 8rem 28.2rem;
   }
 }
 
@@ -856,7 +856,7 @@ body {
   }
 }
 .header-home .nav__logo-link {
-  margin-right: 6.3rem;
+  margin-right: 5.4rem;
 }
 @media (max-width: 1000px) {
   .header-home .nav__logo-link {
@@ -886,7 +886,7 @@ body {
 }
 .header-home .nav__list {
   height: 100%;
-  width: calc(265px + 22.5%);
+  width: calc(274px + 22.5%);
   list-style: none;
   display: flex;
   padding: 0;
@@ -895,7 +895,7 @@ body {
 }
 @media (max-width: 1000px) {
   .header-home .nav__list {
-    width: calc(265px + 22%);
+    width: calc(274px + 22%);
   }
 }
 @media (max-width: 641px) {
@@ -1086,6 +1086,15 @@ body {
     display: none;
   }
 }
+@media (max-width: 641px) {
+  .article__image-container {
+    display: inline-block;
+    top: 37.2rem;
+    background: url("../images/photos/flower_foto_tablet.png") no-repeat;
+    width: 16rem;
+    right: -2.8rem;
+  }
+}
 .article__photo-wrapper {
   padding: 0;
   width: 52.5%;
@@ -1096,6 +1105,11 @@ body {
     width: 45.5%;
     height: 40.8rem;
     margin-left: 3rem;
+  }
+}
+@media (max-width: 641px) {
+  .article__photo-wrapper {
+    display: none;
   }
 }
 .article__photo {
@@ -1129,6 +1143,11 @@ body {
 }
 @media (max-width: 956px) {
   .article__text-section {
+    width: 77%;
+  }
+}
+@media (max-width: 641px) {
+  .article__text-section {
     font-size: 8px;
     margin-left: 2rem;
   }
@@ -1136,7 +1155,7 @@ body {
 .article__title {
   font: normal normal 4.8rem/120% Roboto, sans-serif;
   font-size: 4.8em;
-  margin: 0 0 0.7em;
+  margin: 0 0 0.5rem;
 }
 @media (max-width: 1000px) {
   .article__title {
@@ -1149,15 +1168,27 @@ body {
     margin: 0;
   }
 }
+@media (max-width: 641px) {
+  .article__title {
+    font-size: 4.8rem;
+    margin-left: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+}
 .article__par-one {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   font-size: 1.6em;
   line-height: 2.08rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.2rem;
 }
 @media (max-width: 800px) {
   .article__par-one {
     margin-bottom: 1rem;
+  }
+}
+@media (max-width: 641px) {
+  .article__par-one {
+    font-size: 1.6rem;
   }
 }
 .article__subtitle {
@@ -1170,12 +1201,23 @@ body {
     margin-bottom: 1rem;
   }
 }
+@media (max-width: 641px) {
+  .article__subtitle {
+    font-size: 2.4rem;
+    margin: 2.2rem 0 2rem 0.4rem;
+  }
+}
 .article__par-two {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   font-size: 1.6em;
   line-height: 2.24rem;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 641px) {
+  .article__par-two {
+    font-size: 1.6rem;
+  }
 }
 
 .photo-section {
@@ -1195,12 +1237,28 @@ body {
     margin: 0 3rem;
   }
 }
+@media (max-width: 641px) {
+  .photo-section {
+    margin: 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .photo-section__container {
   border: 1px solid #FE9013;
   border-radius: 5px;
   overflow: hidden;
   z-index: 5;
   position: relative;
+}
+@media (max-width: 641px) {
+  .photo-section__container:nth-child(7) {
+    display: none;
+  }
+}
+@media (max-width: 641px) {
+  .photo-section__container:nth-child(8) {
+    display: none;
+  }
 }
 .photo-section__photo-container {
   overflow: hidden;
@@ -1236,6 +1294,11 @@ body {
 @media (max-width: 1000px) {
   .photo-section__photo {
     height: 29.5rem;
+  }
+}
+@media (max-width: 641px) {
+  .photo-section__photo {
+    height: 28.6rem;
   }
 }
 .photo-section__text-float {
@@ -1275,10 +1338,25 @@ body {
   margin-left: 1.5rem;
   margin-top: 0.4rem;
 }
+@media (max-width: 641px) {
+  .photo-section__title {
+    font-size: 12.5px;
+    line-height: 140%;
+    margin-left: 1rem;
+  }
+}
 .photo-section__text {
   z-index: 5;
   font: normal 300 1.5rem/120% Roboto, sans-serif;
   margin-left: 1.4rem;
+}
+@media (max-width: 641px) {
+  .photo-section__text {
+    font-size: 11.5px;
+    line-height: 120%;
+    margin-left: 1.1rem;
+    margin-top: -0.2rem;
+  }
 }
 .photo-section__btn-wrapper {
   position: absolute;
@@ -1293,6 +1371,11 @@ body {
   height: 6.2rem;
   border-radius: 50%;
   top: 46.3%;
+}
+@media (max-width: 641px) {
+  .photo-section__btn-left, .photo-section__btn-right {
+    top: 45.3%;
+  }
 }
 .photo-section__btn-left {
   background: url(../images/icons/arrow-left.svg) #f9804b center no-repeat;
