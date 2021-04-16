@@ -125,6 +125,7 @@
     }
     @include media('<=tablet') {
       margin-top: 2.5rem;
+      margin-bottom: -0.3rem;
     }
   }
 
@@ -134,26 +135,35 @@
     align-items: center;
     justify-content: space-between;
     width: 76.4rem;
+    position: relative;
     @include media('<=small-desktop') {
       width: 81.2%;
     }
     @include media('<=tablet') {
       margin-top: 2.5rem;
-      width: 91%;
+      width: 91.9%;
+      margin-right: 3.2rem;
     }
   }
 
   &__card-container {
     width: 16.8rem;
     height: 16.8rem;
-    z-index: 3;
+    z-index: 5;
     border-radius: 5px;
     border: 1px solid var.$orange;
     margin-bottom: 12rem;
-    position: relative;
     display: flex;
     background-color: white;
+    position: relative;
 
+    &:nth-child(3) {
+      z-index: 4;
+    }
+
+    &:nth-child(5) {
+      z-index: 3;
+    }
 
     &:first-child .feed-friend__card-text {
       bottom: -6.9rem;
@@ -161,6 +171,10 @@
 
     &:not(first-child) .feed-friend__card-text {
       bottom: -9.1rem;
+    }
+
+    @include media('<=tablet') {
+      width: 28.6%;
     }
   }
 
@@ -172,11 +186,37 @@
 
   &__image {
     margin: auto;
+    z-index: -1;
+    @include media('<=490px') {
+      width: 80%;
+    }
   }
 
   &__arrow-container {
     display: flex;
     margin-bottom: 13.1rem;
+    @include media('<=tablet') {
+      display: none;
+    }
+  }
+
+  &__arrow-curved-container {
+    position: absolute;
+    z-index: 10;
+    display: none;
+    top: -12%;
+    right: -34.9%;
+
+    @include media('<=tablet') {
+      display: flex;
+      z-index: 1000;
+    }
+  }
+
+  &__arrow-curved {
+    width: 100%;
+    height: 3rem;
+    z-index: 100;
   }
 
   &__btn-wrapper {
@@ -188,12 +228,16 @@
   &__btn {
     position: absolute;
     margin-top: 1.6rem;
+
+
     @include media('<=small-desktop') {
       margin-top: 2.6rem;
     }
-
     @include media('<=755px') {
       margin-top: 0;
+    }
+    @include media('<=tablet') {
+      bottom: 8.1%;
     }
   }
 }

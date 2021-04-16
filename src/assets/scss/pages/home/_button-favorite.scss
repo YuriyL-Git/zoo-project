@@ -20,7 +20,7 @@
     width: 30rem;
     height: 46rem;
     left: 0;
-    top: 215.8rem;
+    top: 215.1rem;
     @include media('<=small-desktop') {
       background: url("../images/photos/palm_small-desktop.png") no-repeat;
       left: 0;
@@ -34,10 +34,11 @@
 
   .strelitzia-image-default {
     background: url("../images/photos/strelitzia.png") no-repeat;
-    width: 30rem;
+    width: 37rem;
     height: 40rem;
     right: 0;
     top: 233.4rem;
+
 
     @include media('<=small-desktop') {
       background: url("../images/photos/strelitzia-small-desktop.png") no-repeat;

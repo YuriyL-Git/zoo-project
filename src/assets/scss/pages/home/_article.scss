@@ -23,8 +23,8 @@
       display: inline-block;
       top: 37.2rem;
       background: url("../images/photos/flower_foto_tablet.png") no-repeat;
-      width: 16rem;
-      right: -2.8rem;
+      width: 13.2rem;
+      right: 0;
     }
   }
 
@@ -66,12 +66,14 @@
     }
 
     @include media('<=956px') {
-      width: 77%;
+      width: 60%;
+      margin-left: 1rem;
     }
 
     @include media('<=tablet') {
       font-size: 8px;
       margin-left: 2rem;
+      width: 76%;
     }
 
     height: 100%;
@@ -86,6 +88,10 @@
     @include media('<=small-desktop') {
       margin: 0 0 0.7rem;
     }
+    @include media('<=877px') {
+      margin-bottom: 0;
+      font-size: 4em;
+    }
     @include media('<=800px') {
       font-size: 3.8em;
       margin: 0;
@@ -94,6 +100,10 @@
       font-size: 4.8rem;
       margin-left: 0.3rem;
       margin-bottom: 0.5rem;
+    }
+    @include media('<=585px') {
+      font-size: 3.8em;
+      margin-bottom: 0;
     }
   }
 
@@ -105,8 +115,12 @@
     @include media('<=800px') {
       margin-bottom: 1rem;
     }
+    @include media('<=860px') {
+      margin-bottom: 0;
+    }
     @include media('<=tablet') {
       font-size: 1.6rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -116,6 +130,10 @@
     margin-bottom: 3.3rem;
     @include media('<=800px') {
       margin-bottom: 1rem;
+    }
+    @include media('<=740px') {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
     }
     @include media('<=tablet') {
       font-size: 2.4rem;
