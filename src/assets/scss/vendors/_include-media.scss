@@ -2,7 +2,8 @@
 
 $breakpoints: (
     'small-desktop' : 1000px,
-    'tablet': 641px
+    'tablet': 641px,
+    'mobile': 321px,
 ) !default;
 
 $media-expressions: (

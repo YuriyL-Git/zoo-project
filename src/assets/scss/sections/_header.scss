@@ -44,6 +44,12 @@
         border: 2px solid black;
         transform: scale(0.65);
       }
+      @include media('<=mobile') {
+        margin-left: -0.6rem;
+        margin-top: 0.2rem;
+        border: none;
+        transform: scale(0.65);
+      }
     }
 
 
@@ -127,6 +133,10 @@
         justify-self: center;
         margin-bottom: 0.2rem;
       }
+      @include media('<=mobile') {
+        margin-right: 1rem;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -145,6 +155,10 @@
 
     @include media('<=tablet') {
       height: 37.3rem;
+    }
+    @include media('<=mobile') {
+      height: 18.9rem;
+      top: 3.2rem;
     }
   }
 
@@ -179,6 +193,12 @@
       right: 13%;
       top: 10%;
     }
+    @include media('<=mobile') {
+      width: 11.9rem;
+      height: 11.9rem;
+      right: 5%;
+      top: 22.5%;
+    }
   }
 
   .title {
@@ -204,12 +224,20 @@
     }
 
     @include media('<=tablet') {
-      font-size: 54.2894px;
+      font-size: 54.3px;
       line-height: 75%;
       width: 25rem;
       height: 20rem;
       right: -3.3%;
       top: 4.2%;
+    }
+    @include media('<=mobile') {
+      font-size: 28px;
+      line-height: 75%;
+      width: 12.8rem;
+      height: 10.2rem;
+      right: -12%;
+      top: 19%;
     }
 
     &__favorite {
@@ -228,6 +256,10 @@
     @include media('<=tablet') {
       left: -84.5%;
       top: 24.4rem;
+    }
+    @include media('<=mobile') {
+      left: -74.5%;
+      top: 20.7rem;
     }
   }
 }

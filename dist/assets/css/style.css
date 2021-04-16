@@ -340,6 +340,14 @@ body {
 /* button - choose favorite */
 /* section - feed a friend */
 /* testimonials */
+/* ------------- home mobile ------------------------*/
+/* header */
+/* gap-sd*/
+/* article */
+/* photo animals */
+/* button - choose favorite */
+/* section - feed a friend */
+/* testimonials */
 .home-container {
   max-width: 1160px;
   width: 100%;
@@ -361,6 +369,12 @@ body {
 @media (max-width: 641px) {
   .home-container {
     grid-template-rows: 37.3rem 6rem 36.7rem 7.5rem 75.6rem 21.7rem 78.1rem 5.6rem 52.8rem 7.5rem 28.2rem;
+  }
+}
+
+@media (max-width: 321px) {
+  .home-container {
+    grid-template-rows: 22rem 3.2rem 4.5rem 4rem 138.8rem 13.5rem 108.2rem 3rem 49rem 6rem 54rem;
   }
 }
 
@@ -1720,7 +1734,7 @@ body {
   width: 30rem;
   height: 46rem;
   left: 0;
-  top: 215.8rem;
+  top: 215.1rem;
 }
 
 @media (max-width: 1000px) {
@@ -1740,7 +1754,7 @@ body {
 
 .chose-favorite .strelitzia-image-default {
   background: url("../images/photos/strelitzia.png") no-repeat;
-  width: 30rem;
+  width: 37rem;
   height: 40rem;
   right: 0;
   top: 233.4rem;
@@ -2793,7 +2807,10 @@ body {
 @media (max-width: 641px) {
   .footer__nav {
     width: 49.5%;
-    margin-right: 2.7rem;
+    margin-right: 2.6rem;
+    margin-left: 0.1rem;
+    -webkit-transform: translateY(0.8rem);
+    transform: translateY(0.8rem);
   }
 }
 
@@ -2827,14 +2844,33 @@ body {
   font-weight: 200;
   color: #fff;
   margin-top: -0.3rem;
+  margin-right: -0.2rem;
+}
+
+@media (max-width: 641px) {
+  .footer__designed-by {
+    width: 38.7%;
+  }
 }
 
 .footer__designer-name {
   margin: 8.3rem 0 0;
 }
 
+@media (max-width: 641px) {
+  .footer__designer-name {
+    margin: 9.1rem 0 0 0.2rem;
+  }
+}
+
 .footer__copyright {
   margin: 1.1rem 0 0;
+}
+
+@media (max-width: 641px) {
+  .footer__copyright {
+    margin-left: 0.2rem;
+  }
 }
 
 .default-main {

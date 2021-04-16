@@ -2,6 +2,7 @@
 @import "../../vendors/include-media";
 
 .photo-section {
+
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -22,6 +23,7 @@
   }
 
   &__container {
+
     border: 1px solid #FE9013;
     border-radius: 5px;
     overflow: hidden;

@@ -49,6 +49,20 @@
       $gap4-tb  //- gap
       $ft-tb; //- footer
   }
+  @include media('<=mobile') {
+    grid-template-rows:
+      $hd-mb   // - header -
+      $gap1-mb // - gap1 -
+      $ar-mb    //- article -
+      $gap2-mb  //- gap2 -
+      $ph-mb    //- photo animals -
+      $bt-mb    //- button - choose favorite -
+      $fd-mb    //- section - feed a friend -
+      $gap3-mb  //- gap3 -
+      $tm-mb    //- testimonials -
+      $gap4-mb  //- gap
+      $ft-mb; //- footer
+  }
 
   grid-template-areas:
       " hd"  /*- header -*/
