@@ -62,8 +62,9 @@
     display: flex;
     flex-direction: column;
     @include media('<=small-desktop') {
-      width: 94%;
-      margin-left: 4.5rem;
+      //width: 94%;
+      width: 94.8%;
+      margin-left: 3.3rem;
     }
     @include media('<=tablet') {
       margin: 0 auto;
@@ -113,7 +114,7 @@
     height: 100%;
     width: 36.8rem;
     @include media('<=small-desktop') {
-      margin-right: 3.2rem;
+      margin-right: 2.8rem;
     }
     @include media('<=tablet') {
       display: none;
@@ -274,7 +275,7 @@
     align-items: flex-end;
     @include media('<=small-desktop') {
       width: 33.2rem;
-      margin-right: 2.7rem;
+      margin-right: 0;
     }
     @include media('<=tablet') {
       width: 49.5%;

@@ -2303,20 +2303,30 @@ body {
   max-width: 116rem;
   width: 100%;
 }
-@media (max-width: 641px) {
-  .map-main {
-    width: 100%;
-  }
-}
 .map-main__container {
-  width: fit-content;
+  width: 93.4%;
   height: fit-content;
   position: relative;
-  margin-bottom: 1.9rem;
+  margin-bottom: 1.6rem;
+  margin-left: 1rem;
+  margin-top: 0.4rem;
+}
+@media (max-width: 1000px) {
+  .map-main__container {
+    margin-top: 3.6rem;
+    margin-bottom: -1.4rem;
+    margin-left: 0.6rem;
+  }
 }
 .map-main .map-main__map {
-  width: 108rem;
+  width: 100%;
   height: 91.7rem;
+}
+@media (max-width: 1000px) {
+  .map-main .map-main__map {
+    height: 72.4rem;
+    width: 101.9%;
+  }
 }
 .map-main__eagles-container {
   z-index: 5;
@@ -2325,22 +2335,45 @@ body {
   left: 10.9%;
   top: 48.4%;
 }
+@media (max-width: 1000px) {
+  .map-main__eagles-container {
+    left: 10.2%;
+    top: 47.4%;
+  }
+}
 .map-main__eagle-one {
   width: 4.4rem;
   position: absolute;
   left: -47%;
   top: 42%;
 }
+@media (max-width: 1000px) {
+  .map-main__eagle-one {
+    transform: scale(0.9);
+    left: -35%;
+  }
+}
 .map-main__eagle-two {
   width: 5rem;
   position: absolute;
   left: 17%;
-  top: 99%;
+  top: 94%;
+}
+@media (max-width: 1000px) {
+  .map-main__eagle-two {
+    transform: scale(0.9);
+  }
 }
 .map-main__alligator-container {
   position: absolute;
-  left: 21.6%;
-  top: 50.4%;
+  left: 21%;
+  top: 50%;
+}
+@media (max-width: 1000px) {
+  .map-main__alligator-container {
+    top: 49%;
+    left: 20.5%;
+  }
 }
 .map-main__alligator {
   position: absolute;
@@ -2348,10 +2381,21 @@ body {
   top: 95%;
   width: 7.5rem;
 }
+@media (max-width: 1000px) {
+  .map-main__alligator {
+    transform: scale(0.9);
+  }
+}
 .map-main__gorilla-container {
   position: absolute;
   left: 48.3%;
-  top: 60%;
+  top: 59.8%;
+}
+@media (max-width: 1000px) {
+  .map-main__gorilla-container {
+    left: 48.4%;
+    top: 59.1%;
+  }
 }
 .map-main__gorilla {
   width: 5rem;
@@ -2359,11 +2403,22 @@ body {
   left: 30%;
   top: 90%;
 }
+@media (max-width: 1000px) {
+  .map-main__gorilla {
+    transform: scale(0.9);
+  }
+}
 .map-main__panda-one-container {
   z-index: 10;
   position: absolute;
-  left: 77%;
-  top: 45.3%;
+  left: 76.8%;
+  top: 44.6%;
+}
+@media (max-width: 1000px) {
+  .map-main__panda-one-container {
+    left: 78%;
+    top: 43.6%;
+  }
 }
 .map-main__panda-one {
   width: 3.7rem;
@@ -2371,10 +2426,21 @@ body {
   left: -25%;
   top: 27.5%;
 }
+@media (max-width: 1000px) {
+  .map-main__panda-one {
+    transform: scale(0.9);
+  }
+}
 .map-main__panda-two-container {
   position: absolute;
-  left: 76.5%;
-  top: 50.6%;
+  left: 76.3%;
+  top: 50.3%;
+}
+@media (max-width: 1000px) {
+  .map-main__panda-two-container {
+    left: 77.4%;
+    top: 50%;
+  }
 }
 .map-main__panda-two {
   width: 4.6rem;
@@ -2382,15 +2448,32 @@ body {
   left: -28%;
   top: 50.6%;
 }
+@media (max-width: 1000px) {
+  .map-main__panda-two {
+    transform: scale(0.9);
+  }
+}
 .map-main__btn-container {
   display: flex;
   flex-direction: column;
   width: fit-content;
   height: 11.5rem;
   justify-content: space-between;
-  position: absolute;
-  right: 2.4%;
-  top: 124.6%;
+  position: sticky;
+  background-color: orange;
+  /* left: 114.8%;
+   top: 77.9rem;*/
+}
+@media (max-width: 1555px) {
+  .map-main__btn-container {
+    left: 93%;
+  }
+}
+@media (max-width: 1000px) {
+  .map-main__btn-container {
+    left: 96.9%;
+    top: 57.5rem;
+  }
 }
 .map-main__map-btn {
   width: 5.4rem;
@@ -2402,6 +2485,7 @@ body {
   background-color: white;
   outline: none;
   transition: all 0.15s ease-out;
+  border-radius: 0.5rem;
 }
 .map-main__map-btn:hover {
   background-color: rgba(75, 176, 0, 0.2);
@@ -2481,8 +2565,8 @@ body {
 }
 @media (max-width: 1000px) {
   .footer__container-main {
-    width: 94%;
-    margin-left: 4.5rem;
+    width: 94.8%;
+    margin-left: 3.3rem;
   }
 }
 @media (max-width: 641px) {
@@ -2535,7 +2619,7 @@ body {
 }
 @media (max-width: 1000px) {
   .footer__subscribe-form {
-    margin-right: 3.2rem;
+    margin-right: 2.8rem;
   }
 }
 @media (max-width: 641px) {
@@ -2699,7 +2783,7 @@ body {
 @media (max-width: 1000px) {
   .footer__nav {
     width: 33.2rem;
-    margin-right: 2.7rem;
+    margin-right: 0;
   }
 }
 @media (max-width: 641px) {

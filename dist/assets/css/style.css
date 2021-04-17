@@ -406,6 +406,30 @@ body {
   grid-area: ft;
 }
 
+.map-container {
+  max-width: 1160px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "hd" "mp" "ft";
+  /*- footer -*/
+  grid-template-rows: 8rem 1fr 44.3rem;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+.map-container .header {
+  grid-area: hd;
+}
+
+.map-container .map-main {
+  grid-area: mp;
+}
+
+.map-container .footer {
+  grid-area: ft;
+}
+
 .default-container {
   max-width: 1160px;
   width: 100%;
@@ -2663,6 +2687,10 @@ body {
   background-color: #e2ecf1;
 }
 
+.header-home.header-map {
+  height: 8rem;
+}
+
 .map-page .footer__image-container {
   display: none;
 }
@@ -2674,22 +2702,40 @@ body {
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 116rem;
+  max-width: 116rem;
+  width: 100%;
+  background-color: orange;
+  /*  &__btn-wrapper {
+      background-color: blue;
+      position: absolute;
+      height: 5.5rem;
+      width: 100%;
+      right: -10%;
+      bottom: 10%;
+      display: flex;
+      justify-content: flex-end;
+    }*/;
+}
+
+@media (max-width: 641px) {
+  .map-main {
+    width: 100%;
+  }
 }
 
 .map-main__container {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 93.4%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
-  margin-bottom: 6.1rem;
+  margin-bottom: 1.6rem;
+  margin-left: 1rem;
+  margin-top: 0.4rem;
 }
 
 .map-main .map-main__map {
-  width: 108rem;
+  width: 100%;
   height: 91.7rem;
 }
 
@@ -2712,13 +2758,13 @@ body {
   width: 5rem;
   position: absolute;
   left: 17%;
-  top: 99%;
+  top: 94%;
 }
 
 .map-main__alligator-container {
   position: absolute;
-  left: 21.6%;
-  top: 50.4%;
+  left: 21%;
+  top: 50%;
 }
 
 .map-main__alligator {
@@ -2731,7 +2777,7 @@ body {
 .map-main__gorilla-container {
   position: absolute;
   left: 48.3%;
-  top: 60%;
+  top: 59.8%;
 }
 
 .map-main__gorilla {
@@ -2744,8 +2790,8 @@ body {
 .map-main__panda-one-container {
   z-index: 10;
   position: absolute;
-  left: 77%;
-  top: 45.3%;
+  left: 76.8%;
+  top: 44.6%;
 }
 
 .map-main__panda-one {
@@ -2757,8 +2803,8 @@ body {
 
 .map-main__panda-two-container {
   position: absolute;
-  left: 76.5%;
-  top: 50.6%;
+  left: 76.3%;
+  top: 50.3%;
 }
 
 .map-main__panda-two {
@@ -2780,8 +2826,15 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: absolute;
-  left: 115.2%;
-  top: 85.1%;
+  left: 114.8%;
+  top: 77.9rem;
+}
+
+@media (max-width: 1340px) {
+  .map-main__btn-container {
+    right: 20%;
+    top: 21.9rem;
+  }
 }
 
 .map-main__map-btn {
@@ -2797,6 +2850,7 @@ body {
   background-color: white;
   outline: none;
   transition: all 0.15s ease-out;
+  border-radius: 0.5rem;
 }
 
 .map-main__map-btn:hover {

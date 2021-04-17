@@ -19,23 +19,32 @@
   align-items: center;
   max-width: 116rem;
   width: 100%;
+  @include media('<=small-desktop') {
 
-  @include media('<=tablet') {
-    width: 100%;
   }
 
   &__container {
-    width: fit-content;
+    width: 93.4%;
     height: fit-content;
     position: relative;
-    margin-bottom: 1.9rem;
+    margin-bottom: 1.6rem;
+    margin-left: 1rem;
+    margin-top: 0.4rem;
+    @include media('<=small-desktop') {
+      margin-top: 3.6rem;
+      margin-bottom: -1.4rem;
+      margin-left: 0.6rem;
+    }
   }
 
   .map-main__map {
-    width: 108rem;
+    width: 100%;
     height: 91.7rem;
+    @include media('<=small-desktop') {
+      height: 72.4rem;
+      width: 101.9%;
+    }
   }
-
 
   &__eagles-container {
     z-index: 5;
@@ -43,6 +52,10 @@
     position: absolute;
     left: 10.9%;
     top: 48.4%;
+    @include media('<=small-desktop') {
+      left: 10.2%;
+      top: 47.4%
+    }
   }
 
   &__eagle-one {
@@ -50,19 +63,30 @@
     position: absolute;
     left: -47%;
     top: 42%;
+    @include media('<=small-desktop') {
+      transform: scale(0.9);
+      left: -35%;
+    }
   }
 
   &__eagle-two {
     width: 5rem;
     position: absolute;
     left: 17%;
-    top: 99%;
+    top: 94%;
+    @include media('<=small-desktop') {
+      transform: scale(0.9);
+    }
   }
 
   &__alligator-container {
     position: absolute;
-    left: 21.6%;
-    top: 50.4%;
+    left: 21%;
+    top: 50%;
+    @include media('<=small-desktop') {
+      top: 49%;
+      left: 20.5%;
+    }
   }
 
   &__alligator {
@@ -70,12 +94,19 @@
     left: 25%;
     top: 95%;
     width: 7.5rem;
+    @include media('<=small-desktop') {
+      transform: scale(0.9);
+    }
   }
 
   &__gorilla-container {
     position: absolute;
     left: 48.3%;
-    top: 60%;
+    top: 59.8%;
+    @include media('<=small-desktop') {
+      left: 48.4%;
+      top: 59.1%;
+    }
   }
 
   &__gorilla {
@@ -83,13 +114,20 @@
     position: absolute;
     left: 30%;
     top: 90%;
+    @include media('<=small-desktop') {
+      transform: scale(0.9);
+    }
   }
 
   &__panda-one-container {
     z-index: 10;
     position: absolute;
-    left: 77%;
-    top: 45.3%;
+    left: 76.8%;
+    top: 44.6%;
+    @include media('<=small-desktop') {
+      left: 78%;
+      top: 43.6%;
+    }
   }
 
   &__panda-one {
@@ -97,12 +135,19 @@
     position: absolute;
     left: -25%;
     top: 27.5%;
+    @include media('<=small-desktop') {
+      transform: scale(0.9);
+    }
   }
 
   &__panda-two-container {
     position: absolute;
-    left: 76.5%;
-    top: 50.6%;
+    left: 76.3%;
+    top: 50.3%;
+    @include media('<=small-desktop') {
+      left: 77.4%;
+      top: 50%;
+    }
   }
 
   &__panda-two {
@@ -110,6 +155,9 @@
     position: absolute;
     left: -28%;
     top: 50.6%;
+    @include media('<=small-desktop') {
+      transform: scale(0.9);
+    }
   }
 
   &__btn-container {
@@ -118,9 +166,19 @@
     width: fit-content;
     height: 11.5rem;
     justify-content: space-between;
-    position: absolute;
-    right: 2.4%;
-    top: 124.6%;
+    position: sticky;
+    background-color: orange;
+    /* left: 114.8%;
+     top: 77.9rem;*/
+
+
+    @include media('<=1555px') {
+      left: 93%;
+    }
+    @include media('<=small-desktop') {
+      left: 96.9%;
+      top: 57.5rem;
+    }
   }
 
   &__map-btn {
@@ -133,6 +191,8 @@
     background-color: white;
     outline: none;
     transition: all 0.15s ease-out;
+    border-radius: 0.5rem;
+
 
     &:hover {
       background-color: rgba(75, 176, 0, 0.2);
