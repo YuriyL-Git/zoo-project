@@ -400,6 +400,27 @@ body {
   grid-area: ft;
 }
 
+.map-container {
+  max-width: 1160px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "hd" "mp" "ft";
+  /*- footer -*/
+  grid-template-rows: 8rem 1fr 44.3rem;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+.map-container .header {
+  grid-area: hd;
+}
+.map-container .map-main {
+  grid-area: mp;
+}
+.map-container .footer {
+  grid-area: ft;
+}
+
 .default-container {
   max-width: 1160px;
   width: 100%;
@@ -2267,6 +2288,10 @@ body {
   background-color: #e2ecf1;
 }
 
+.header-home.header-map {
+  height: 8rem;
+}
+
 .map-page .footer__image-container {
   display: none;
 }
@@ -2275,13 +2300,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 116rem;
+  max-width: 116rem;
+  width: 100%;
+}
+@media (max-width: 641px) {
+  .map-main {
+    width: 100%;
+  }
 }
 .map-main__container {
   width: fit-content;
   height: fit-content;
   position: relative;
-  margin-bottom: 6.1rem;
+  margin-bottom: 1.9rem;
 }
 .map-main .map-main__map {
   width: 108rem;
@@ -2358,8 +2389,8 @@ body {
   height: 11.5rem;
   justify-content: space-between;
   position: absolute;
-  left: 115.2%;
-  top: 85.1%;
+  right: 2.4%;
+  top: 124.6%;
 }
 .map-main__map-btn {
   width: 5.4rem;
