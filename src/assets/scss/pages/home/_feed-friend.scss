@@ -176,7 +176,8 @@
     }
     @include media('<=mobile') {
       flex-direction: column;
-      height: 71.1rem;
+      height: 66.1rem;
+      margin-top: 1.8rem;
     }
   }
 
@@ -194,6 +195,9 @@
 
     &:nth-child(3) {
       z-index: 4;
+      @include media('<=mobile') {
+        margin-bottom: 0.8rem;
+      }
     }
 
     &:nth-child(5) {
@@ -208,15 +212,34 @@
       bottom: -9.1rem;
     }
 
+
+    //--corect size of card images for mobile device --
+    &:nth-child(3) .feed-friend__image {
+      @include media('<=mobile') {
+        width: 55%;
+        height: 59%;
+        margin-top: 3.5rem;
+      }
+    }
+    &:nth-child(5) .feed-friend__image {
+      @include media('<=mobile') {
+        width: 76%;
+        height: 59%;
+        margin-top: 3.5rem;
+      }
+    }
+    //---------------------------------------------------
+
     @include media('<=tablet') {
       width: 28.6%;
     }
     @include media('<=mobile') {
       width: 16.8rem;
-      margin-top: -0.6rem;
+      height: 16.8rem;
+      margin-top: 0;
       margin-left: 2.5rem;
       flex-shrink: 0;
-
+      margin-bottom: 0;
     }
   }
 
@@ -225,7 +248,7 @@
     font: var.$body-roboto-regular;
     line-height: 140%;
     @include media('<=mobile') {
-      margin: 0;
+      margin: 0 0 3.5rem -0.2rem;
     }
   }
 
@@ -234,6 +257,10 @@
     z-index: -1;
     @include media('<=490px') {
       width: 80%;
+    }
+
+    @include media('<=mobile') {
+      width: 65%;
     }
   }
 
@@ -257,11 +284,9 @@
       z-index: 1000;
     }
     @include media('<=mobile') {
-      right: -50%;
-      top: 110%;
-
+      right: -36.5%;
+      top: 116.5%;
     }
-
   }
 
   &__arrow-curved {
@@ -269,7 +294,7 @@
     height: 3rem;
     z-index: 100;
     @include media('<=mobile') {
-      transform: rotate(90deg);
+      transform: rotate(85deg);
 
     }
   }
@@ -292,7 +317,7 @@
       margin-top: 0;
     }
     @include media('<=tablet') {
-      bottom: 8.1%;
+      bottom: 3.9%;
     }
   }
 }
