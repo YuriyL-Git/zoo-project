@@ -8,6 +8,12 @@
   height: 100%;
   width: 100%;
   font-size: 10px;
+  @include media('<=small-desktop') {
+    width: 101.3%;
+  }
+  @include media('<=tablet') {
+    width: 100%;
+  }
 
   &__image-container {
     background: url("../images/photos/flower_foto.png") no-repeat;
@@ -153,6 +159,7 @@
     font: var.$subtitle-roboto-regular;
     font-size: 2.4em;
     margin-bottom: 3.3rem;
+
     @include media('<=800px') {
       margin-bottom: 1rem;
     }
@@ -162,12 +169,12 @@
     }
     @include media('<=tablet') {
       font-size: 2.4rem;
-      margin: 2.2rem 0 2rem 0.4rem;
+      margin: 2.2rem 0 2rem 0.3rem;
     }
-    @include media('<=tablet') {
-      font-size: 2.4rem;
+    @include media('<=mobile') {
       margin: 2.2rem 0 1rem 0.3rem;
     }
+
   }
 
   &__par-two {

@@ -19,9 +19,6 @@
   align-items: center;
   max-width: 116rem;
   width: 100%;
-  @include media('<=small-desktop') {
-
-  }
 
   &__container {
     width: 93.4%;
@@ -43,6 +40,18 @@
     @include media('<=small-desktop') {
       height: 72.4rem;
       width: 101.9%;
+    }
+    @include media('<=927px') {
+      height: 64rem;
+    }
+    @include media('<=844px') {
+      height: 56rem;
+    }
+    @include media('<=755px') {
+      height: 50rem;
+    }
+    @include media('<=696px') {
+      height: 45rem;
     }
   }
 
@@ -67,6 +76,9 @@
       transform: scale(0.9);
       left: -35%;
     }
+    @include media('<=844px') {
+      transform: scale(0.8);
+    }
   }
 
   &__eagle-two {
@@ -76,6 +88,10 @@
     top: 94%;
     @include media('<=small-desktop') {
       transform: scale(0.9);
+    }
+    @include media('<=844px') {
+      transform: scale(0.8);
+      top: 64%;
     }
   }
 
@@ -97,6 +113,10 @@
     @include media('<=small-desktop') {
       transform: scale(0.9);
     }
+    @include media('<=844px') {
+      transform: scale(0.8);
+      top: 65%;
+    }
   }
 
   &__gorilla-container {
@@ -107,6 +127,7 @@
       left: 48.4%;
       top: 59.1%;
     }
+
   }
 
   &__gorilla {
@@ -116,6 +137,13 @@
     top: 90%;
     @include media('<=small-desktop') {
       transform: scale(0.9);
+    }
+    @include media('<=844px') {
+      top: 65%;
+      transform: scale(0.8);
+    }
+    @include media('<=682px') {
+      top: 45%;
     }
   }
 
@@ -138,6 +166,11 @@
     @include media('<=small-desktop') {
       transform: scale(0.9);
     }
+    @include media('<=844px') {
+      top: 0;
+      left: -30%;
+      transform: scale(0.8);
+    }
   }
 
   &__panda-two-container {
@@ -158,27 +191,46 @@
     @include media('<=small-desktop') {
       transform: scale(0.9);
     }
+    @include media('<=844px') {
+      top: 15%;
+      left: -38%;
+      transform: scale(0.8);
+    }
+  }
+
+  &__sticky-wrapper {
+    position: absolute;
+    width: 5.4rem;
+    height: 97.2%;
+    left: 114.8%;
+    top: 0;
+    @include media('<=1555px') {
+      left: 96.9%;
+    }
+    @include media('<=small-desktop') {
+      height: 95.1%;
+    }
+    @include media('<=820px') {
+      left: 92.9%;
+    }
+    @include media('<=tablet') {
+      display: none;
+    }
   }
 
   &__btn-container {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    height: 11.5rem;
+    height: 11.7rem;
     justify-content: space-between;
     position: sticky;
-    background-color: orange;
-    /* left: 114.8%;
-     top: 77.9rem;*/
+    top: 500px;
+    @include media('<=820px') {
+      transform: scale(0.8);
+    }
 
 
-    @include media('<=1555px') {
-      left: 93%;
-    }
-    @include media('<=small-desktop') {
-      left: 96.9%;
-      top: 57.5rem;
-    }
   }
 
   &__map-btn {
@@ -192,7 +244,6 @@
     outline: none;
     transition: all 0.15s ease-out;
     border-radius: 0.5rem;
-
 
     &:hover {
       background-color: rgba(75, 176, 0, 0.2);

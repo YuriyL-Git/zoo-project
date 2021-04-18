@@ -6,6 +6,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  @include media('<=small-desktop') {
+    width: 101.3%;
+  }
+  @include media('<=tablet') {
+    width: 100%;
+  }
 
   .nav-panel {
     width: 100%;

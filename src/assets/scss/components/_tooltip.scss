@@ -1,4 +1,6 @@
 @use "../abstracts/var" as *;
+@import "../vendors/include-media";
+
 
 .tooltip-container {
   position: relative;
@@ -139,3 +141,38 @@
     box-shadow: 1px 1px 3px 3px rgba(207, 110, 64, 0.3);
   }
 }
+
+/*--------tooltip for tablet----------------*/
+.map-page .tooltip-container {
+  &__tooltip {
+    @include media('<=tablet') {
+      width: 10rem;
+      height: 6rem;
+    }
+
+    .tooltip__btn {
+      @include media('<=tablet') {
+        width: 5rem;
+        height: 1.8rem;
+        font-size: 0.8rem;
+        top: 35%;
+      }
+    }
+
+    .tooltip__par-one {
+      @include media('<=tablet') {
+        font-size: 1rem;
+        padding-top: 0;
+      }
+    }
+
+    .tooltip__par-two {
+      @include media('<=tablet') {
+        font-size: 1rem;
+        margin-top: -0.9rem;
+      }
+    }
+  }
+}
+
+

@@ -20,6 +20,20 @@
       $tm    //- testimonials -
       $gap4  //- gap
       $ft; //- footer
+  @include media('<=1100px') {
+    grid-template-rows:
+      $hd   // - header -
+      $gap1 // - gap1 -
+      $ar    //- article -
+      $gap2  //- gap2 -
+      $ph    //- photo animals -
+      $bt    //- button - choose favorite -
+      $fd    //- section - feed a friend -
+      $gap3  //- gap3 -
+      84rem    //- testimonials -
+      $gap4  //- gap
+      $ft; //- footer
+  }
   @include media('<=small-desktop') {
     grid-template-rows:
       $hd-sd   // - header -
@@ -31,6 +45,21 @@
       $fd-sd    //- section - feed a friend -
       $gap3-sd  //- gap3 -
       $tm-sd    //- testimonials -
+      $gap4-sd  //- gap
+      $ft-sd; //- footer
+  }
+
+  @include media('<=950px') {
+    grid-template-rows:
+      $hd-sd   // - header -
+      $gap1-sd // - gap1 -
+      $ar-sd    //- article -
+      $gap2-sd  //- gap2 -
+      $ph-sd    //- photo animals -
+      $bt-sd    //- button - choose favorite -
+      $fd-sd    //- section - feed a friend -
+      $gap3-sd  //- gap3 -
+      90rem    //- testimonials -
       $gap4-sd  //- gap
       $ft-sd; //- footer
   }

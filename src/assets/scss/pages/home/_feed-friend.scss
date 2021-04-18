@@ -37,13 +37,14 @@
     margin-top: -3rem;
     @include media('<=small-desktop') {
       height: 79.6rem;
-      width: 94%;
+      width: 95.5%;
+      margin-left: 1.5rem;
     }
     @include media('<=tablet') {
       height: 74.1rem;
       width: 100%;
-      margin: 0;
-      margin-bottom: 0.9rem;
+      margin: 0 0 0.9rem 0;
+
     }
     @include media('<=mobile') {
       height: 104.2rem;
@@ -66,6 +67,10 @@
       line-height: 120%;
       margin: 1rem 0.3rem 2rem;
     }
+    @include media('<=420px') {
+      font-size: 30px;
+      margin-bottom: 0.5rem;
+    }
     @include media('<=mobile') {
       font-size: 24px;
       margin: 2.1rem 0.3rem 1rem;
@@ -84,6 +89,9 @@
       font-size: 22px;
       line-height: 120%;
       margin: 0 0 2rem 2.1rem;
+    }
+    @include media('<=420px') {
+      font-size: 19px;
     }
     @include media('<=mobile') {
       font-size: 18px;
@@ -104,8 +112,12 @@
     @include media('<=tablet') {
       margin: 0 1rem 1.1rem 2.1rem;
     }
+    @include media('<=420px') {
+      font-size: 14px;
+    }
     @include media('<=mobile') {
       display: none;
+      font-size: 16px;
     }
   }
 
@@ -221,6 +233,7 @@
         margin-top: 3.5rem;
       }
     }
+
     &:nth-child(5) .feed-friend__image {
       @include media('<=mobile') {
         width: 76%;
@@ -228,6 +241,7 @@
         margin-top: 3.5rem;
       }
     }
+
     //---------------------------------------------------
 
     @include media('<=tablet') {
@@ -247,7 +261,12 @@
     position: absolute;
     font: var.$body-roboto-regular;
     line-height: 140%;
+    @include media('<=394px') {
+      font-size: 12px;
+      margin-top: 0.5rem;
+    }
     @include media('<=mobile') {
+      font-size: 16px;
       margin: 0 0 3.5rem -0.2rem;
     }
   }
@@ -317,6 +336,13 @@
       margin-top: 0;
     }
     @include media('<=tablet') {
+      bottom: 7.9%;
+    }
+    @include media('<=440px') {
+      bottom: 1%;
+    }
+
+    @include media('<=mobile') {
       bottom: 3.9%;
     }
   }
