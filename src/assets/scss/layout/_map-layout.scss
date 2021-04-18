@@ -23,6 +23,15 @@
       1fr
       28.2rem;; //- footer
   }
+  /* ----------------mobile --------------------*/
+
+  @include media('<=mobile') {
+    grid-template-rows:
+      3.4rem  // - header -
+      1fr
+      54rem;; //- footer
+  }
+
 
   grid-column-gap: 0;
   grid-row-gap: 0;

@@ -4,9 +4,9 @@
 .map-page {
   background-color: #e2ecf1;
 
+
+
   .footer {
-
-
     &__container-main {
       @include media('<=small-desktop') {
         margin-left: 3.3rem;
@@ -16,6 +16,12 @@
       }
       @include media('<=tablet') {
         margin: 0 2.1rem;
+      }
+      @include media('<=400px') {
+        margin: 0;
+      }
+      @include media('<=mobile') {
+        margin-left: 1rem;
       }
     }
 
@@ -66,6 +72,11 @@
       margin-right: 1.5rem;
       width: 91%;
     }
+    @include media('<=mobile') {
+      overflow: hidden;
+      width: 100%;
+      margin:0;
+    }
   }
 
   .map-main__map {
@@ -86,6 +97,22 @@
     }
     @include media('<=696px') {
       height: 45rem;
+    }
+    @include media('<=602px') {
+      height: 40rem;
+    }
+    @include media('<=470px') {
+      height: 37rem;
+    }
+    @include media('<=400px') {
+      height: 32rem;
+    }
+    @include media('<=mobile') {
+      height: 32.4rem;
+      width: 126.8%;
+      margin-left: -2.6rem;
+      margin-top: 1rem;
+      margin-bottom: -1.3rem;
     }
   }
 
@@ -183,7 +210,18 @@
       top: 59.1%;
     }
     @include media('<=tablet') {
-      left: 46.2%;
+      left: 49.1%;
+      top: 65.3%;
+    }
+    @include media('<=541px') {
+      top: 62.3%;
+    }
+    @include media('<=470px') {
+      top: 59.7%;
+      transform: scale(0.8);
+    }
+    @include media('<=407px') {
+      top: 57.3%;
     }
   }
 
@@ -204,8 +242,8 @@
     }
     @include media('<=tablet') {
       transform: scale(0.56);
-      top: 45%;
-      left: 29%;
+      top: 0;
+      left: 0;
     }
   }
 
@@ -219,7 +257,13 @@
       top: 43.6%;
     }
     @include media('<=tablet') {
-      left: 78.5%;
+      left: 75.5%;
+    }
+
+    .tooltip-container {
+      @include media('<=tablet') {
+        display: none;
+      }
     }
   }
 
@@ -250,8 +294,16 @@
       top: 50%;
     }
     @include media('<=tablet') {
-      left: 78.5%;
+      left: 74.6%;
+      top: 52%;
     }
+
+    .tooltip-container {
+      @include media('<=tablet') {
+        display: none;
+      }
+    }
+
   }
 
   &__panda-two {
