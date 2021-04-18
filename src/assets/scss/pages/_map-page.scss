@@ -3,6 +3,33 @@
 
 .map-page {
   background-color: #e2ecf1;
+
+  .footer {
+
+
+    &__container-main {
+      @include media('<=small-desktop') {
+        margin-left: 3.3rem;
+      }
+      @include media('<=980px') {
+        margin-left: 4.4rem;
+      }
+      @include media('<=tablet') {
+        margin: 0 2.1rem;
+      }
+    }
+
+    &__nav {
+      margin-right: 0;
+    }
+
+    @include media('<=980px') {
+      margin-left: 2.8rem;
+    }
+    @include media('<=tablet') {
+      margin-left: 0;
+    }
+  }
 }
 
 .header-home.header-map {
@@ -31,6 +58,13 @@
       margin-top: 3.6rem;
       margin-bottom: -1.4rem;
       margin-left: 0.6rem;
+    }
+
+    @include media('<=tablet') {
+      margin-top: 2.8rem;
+      margin-bottom: -0.7rem;
+      margin-right: 1.5rem;
+      width: 91%;
     }
   }
 
@@ -65,6 +99,9 @@
       left: 10.2%;
       top: 47.4%
     }
+    @include media('<=tablet') {
+      top: 44.4%
+    }
   }
 
   &__eagle-one {
@@ -78,6 +115,11 @@
     }
     @include media('<=844px') {
       transform: scale(0.8);
+    }
+    @include media('<=tablet') {
+      transform: scale(0.56);
+      top: 34%;
+      left: -31%;
     }
   }
 
@@ -93,6 +135,11 @@
       transform: scale(0.8);
       top: 64%;
     }
+    @include media('<=tablet') {
+      transform: scale(0.56);
+      top: 74%;
+      left: -6%;
+    }
   }
 
   &__alligator-container {
@@ -102,6 +149,9 @@
     @include media('<=small-desktop') {
       top: 49%;
       left: 20.5%;
+    }
+    @include media('<=tablet') {
+      top: 47.4%
     }
   }
 
@@ -117,6 +167,11 @@
       transform: scale(0.8);
       top: 65%;
     }
+    @include media('<=tablet') {
+      transform: scale(0.56);
+      top: 65%;
+      left: -6%;
+    }
   }
 
   &__gorilla-container {
@@ -127,7 +182,9 @@
       left: 48.4%;
       top: 59.1%;
     }
-
+    @include media('<=tablet') {
+      left: 46.2%;
+    }
   }
 
   &__gorilla {
@@ -145,6 +202,11 @@
     @include media('<=682px') {
       top: 45%;
     }
+    @include media('<=tablet') {
+      transform: scale(0.56);
+      top: 45%;
+      left: 29%;
+    }
   }
 
   &__panda-one-container {
@@ -155,6 +217,9 @@
     @include media('<=small-desktop') {
       left: 78%;
       top: 43.6%;
+    }
+    @include media('<=tablet') {
+      left: 78.5%;
     }
   }
 
@@ -171,6 +236,9 @@
       left: -30%;
       transform: scale(0.8);
     }
+    @include media('<=tablet') {
+      transform: scale(0.56);
+    }
   }
 
   &__panda-two-container {
@@ -180,6 +248,9 @@
     @include media('<=small-desktop') {
       left: 77.4%;
       top: 50%;
+    }
+    @include media('<=tablet') {
+      left: 78.5%;
     }
   }
 
@@ -195,6 +266,9 @@
       top: 15%;
       left: -38%;
       transform: scale(0.8);
+    }
+    @include media('<=tablet') {
+      transform: scale(0.55);
     }
   }
 
