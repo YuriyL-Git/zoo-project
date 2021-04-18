@@ -5,7 +5,6 @@
   background-color: #e2ecf1;
 
 
-
   .footer {
     &__container-main {
       @include media('<=small-desktop') {
@@ -75,7 +74,7 @@
     @include media('<=mobile') {
       overflow: hidden;
       width: 100%;
-      margin:0;
+      margin: 0;
     }
   }
 
@@ -129,6 +128,9 @@
     @include media('<=tablet') {
       top: 44.4%
     }
+    @include media('<=mobile') {
+      left: 5.2%;
+    }
   }
 
   &__eagle-one {
@@ -147,6 +149,11 @@
       transform: scale(0.56);
       top: 34%;
       left: -31%;
+    }
+    @include media('<=mobile') {
+      transform: scale(0.38);
+      top: 33%;
+      left: -37%;
     }
   }
 
@@ -167,6 +174,11 @@
       top: 74%;
       left: -6%;
     }
+    @include media('<=mobile') {
+      transform: scale(0.38);
+      top: 65%;
+      left: -18%;
+    }
   }
 
   &__alligator-container {
@@ -179,6 +191,9 @@
     }
     @include media('<=tablet') {
       top: 47.4%
+    }
+    @include media('<=mobile') {
+      left: 14.5%;
     }
   }
 
@@ -198,6 +213,11 @@
       transform: scale(0.56);
       top: 65%;
       left: -6%;
+    }
+    @include media('<=mobile') {
+      transform: scale(0.38);
+      top: 60%;
+      left: -8%;
     }
   }
 
@@ -223,6 +243,9 @@
     @include media('<=407px') {
       top: 57.3%;
     }
+    @include media('<=mobile') {
+      top: 65.3%;
+    }
   }
 
   &__gorilla {
@@ -245,6 +268,11 @@
       top: 0;
       left: 0;
     }
+    @include media('<=mobile') {
+      transform: scale(0.45);
+      left: 7%;
+      top: 1%;
+    }
   }
 
   &__panda-one-container {
@@ -258,6 +286,10 @@
     }
     @include media('<=tablet') {
       left: 75.5%;
+    }
+    @include media('<=mobile') {
+      left: 83.8%;
+      top: 45%;
     }
 
     .tooltip-container {
@@ -283,6 +315,9 @@
     @include media('<=tablet') {
       transform: scale(0.56);
     }
+    @include media('<=mobile') {
+      transform: scale(0.38);
+    }
   }
 
   &__panda-two-container {
@@ -296,6 +331,10 @@
     @include media('<=tablet') {
       left: 74.6%;
       top: 52%;
+    }
+    @include media('<=mobile') {
+      left: 82%;
+      top: 53.5%;
     }
 
     .tooltip-container {
@@ -321,6 +360,9 @@
     }
     @include media('<=tablet') {
       transform: scale(0.55);
+    }
+    @include media('<=mobile') {
+      transform: scale(0.42);
     }
   }
 
