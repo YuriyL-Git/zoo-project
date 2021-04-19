@@ -1,0 +1,64 @@
+.page {
+  background-color: #b1ddeb;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.title {
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  margin-bottom: 3rem;
+}
+
+.link {
+  color: green;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+}
+
+.link:hover {
+  color: #045d04;
+  transform: scale(1.2);
+}
+
+
+.desctop-image {
+  border-radius: 5px;
+  height: 9.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-top: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.desctop-image2 {
+  border-radius: 5px;
+  height: 9.5rem;
+  width: 52.7rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #96c7d5;
+  width: 850px;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.background-image {
+  border-radius: 10px;
+  position: absolute;
+  left: 890px;
+  top: 110px;
+}
+
+.postscript {
+  margin-top: 3rem;
+  font-style: italic;
+}

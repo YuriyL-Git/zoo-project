@@ -60,6 +60,7 @@ const path = {
   },
   src: {
     html: srcPath + "*.html",
+    indexcss:srcPath + "*.css",
     js: srcPath + "assets/js/*.js",
     css: srcPath + "assets/scss/*.scss",
     images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
@@ -304,6 +305,12 @@ function copyIndexHtml(cb) {
   cb();
 }
 
+function copyIndexCSS(cb) {
+  return src(path.src.indexcss)
+      .pipe(dest(distPath));
+  cb();
+}
+
 function cleanDist(cb) {
   return del(distPath + '**', {force: true});
   cb();
@@ -402,7 +409,7 @@ function push(cb) {
 
 
 const deploy = gulp.series(cleanDeploy,imagesDeploy, copyFilesToDeploy, add, commit, push);
-const build = gulp.series(cleanAll, cleanDist,copyIndexHtml, gulp.parallel(html, css, js, images, fonts),backupGit);
+const build = gulp.series(cleanAll, cleanDist,copyIndexHtml,copyIndexCSS, gulp.parallel(html, css, js, images, fonts),backupGit);
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
