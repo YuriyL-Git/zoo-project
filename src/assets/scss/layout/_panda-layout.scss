@@ -1,4 +1,6 @@
 @use '../abstracts/var' as *;
+@import "../vendors/include-media";
+
 
 .panda-container {
   max-width: 1160px;
@@ -10,6 +12,14 @@
       $hd-default    /*- header -*/
       343.7rem
       $ft; /*- footer */
+
+  @include media('<=small-desktop') {
+    grid-template-rows:
+      $hd-default    /*- header -*/
+      326.4rem
+      $ft; /*- footer */
+  }
+
 
   grid-template-areas:
       " hd"  /*- header -*/

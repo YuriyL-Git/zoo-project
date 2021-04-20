@@ -4,6 +4,10 @@
 .default-page {
   position: relative;
 
+  .side-bar {
+    left: 0.5%;
+  }
+
   .footer__image-container {
     top: 285rem;
   }
