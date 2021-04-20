@@ -5020,7 +5020,7 @@ body {
 
 @media (max-width: 1000px) {
   .panda-page .footer__image--default {
-    background: url("../images/footer/panda-footer-small-deskt.png") no-repeat;
+    background: url("../images/footer/panda_bg_smalldesk.jpg") no-repeat;
   }
 }
 

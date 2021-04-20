@@ -20,6 +20,13 @@
       $ft; /*- footer */
   }
 
+  @include media('<=tablet') {
+    grid-template-rows:
+      3.4rem   /*- header -*/
+      350.7rem
+      $ft-tb; /*- footer */
+  }
+
 
   grid-template-areas:
       " hd"  /*- header -*/
