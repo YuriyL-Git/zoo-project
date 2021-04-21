@@ -8,32 +8,39 @@
   .footer {
     &__container-main {
       @include media('<=small-desktop') {
-        margin-left: 2.6rem;
+        margin-left: 3rem;
       }
     }
-    &__logo {
-      margin-top: -0.3rem;
-    }
 
-    &__nav{
-      margin-right: 0;
-    }
-
-  }
-
-
-
-
-
-  .nav {
-    @include media('<=1200px') {
-      padding-left: 2rem;
-    }
-    @include media('<=small-desktop') {
-      padding-left: 0;
-      margin-left: -0.5rem;
+    &__nav {
+      @include media('<=small-desktop') {
+        margin-right: 0;
+      }
     }
   }
+
+  /*
+
+     &__logo {
+       margin-top: -0.3rem;
+     }
+
+     &__nav {
+       margin-right: 0;
+     }
+
+   }*/
+
+
+  /*  .nav {
+      @include media('<=1200px') {
+        padding-left: 2rem;
+      }
+      @include media('<=small-desktop') {
+        padding-left: 0;
+        margin-left: -0.5rem;
+      }
+    }*/
 
 
   .panda-background {
@@ -49,8 +56,11 @@
       background: url("../images/photos/panda_donate_small_desktop.jpg") no-repeat;
       height: 39rem;
     }
-
-
+    @include media('<=tablet') {
+      background: url("../images/photos/panda_donate_tablet.jpg") no-repeat;
+      height: 33.5rem;
+      top: 3.3rem;
+    }
   }
 }
 
@@ -60,6 +70,11 @@
 
 .donate-main {
   position: relative;
+  width: 100%;
+
+  @include media('<=small-desktop') {
+    margin-left: 0.4rem;
+  }
 
   .donate-info {
     width: 100%;
@@ -72,6 +87,11 @@
       padding-right: 3rem;
       margin-top: 39.5rem;
     }
+    @include media('<=850px') {
+      box-sizing: border-box;
+      padding-right: 0;
+      width: 95%;
+    }
 
 
     &__header {
@@ -83,7 +103,6 @@
       @include media('<=small-desktop') {
         padding-right: 10rem;
         margin-bottom: 2rem;
-
       }
     }
 
@@ -143,6 +162,9 @@
         margin-top: 1.3rem;
         margin-left: 0.1rem;
       }
+      @include media('<=900px') {
+        padding-left: 1.5rem;
+      }
     }
 
     &__animal-container {
@@ -187,11 +209,11 @@
     &__amount-title {
       position: absolute;
       font: $body-roboto-regular;
-      bottom: -33.4%;
-      left: -43%;
+      bottom: 44.4%;
+      left: 8.4%;
       @include media('<=small-desktop') {
-        bottom: -31.9%;
-        left: -27.5%;
+        bottom: 44.7%;
+        left: 7.2%;
       }
     }
 

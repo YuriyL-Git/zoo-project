@@ -8,7 +8,7 @@
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 100%;
   grid-template-rows:
       8rem   //- header -
       186.9rem  //- main -
@@ -18,6 +18,31 @@
       8rem   //- header -
       172.5rem  //- main -
       44.2rem; //- footer
+  }
+  @include media('<=996px') {
+    grid-template-rows:
+      8rem   //- header -
+      180.5rem  //- main -
+      44.2rem; //- footer
+  }
+  @include media('<=874px') {
+    grid-template-rows:
+      8rem   //- header -
+      184.5rem  //- main -
+      44.2rem; //- footer
+  }
+
+  @include media('<=700px') {
+    grid-template-rows:
+      8rem   //- header -
+      188.5rem  //- main -
+      44.2rem; //- footer
+  }
+  @include media('<=tablet') {
+    grid-template-rows:
+      3.4rem   //- header -
+      188.5rem  //- main -
+      $ft-tb; //- footer
   }
 
   grid-template-areas:
