@@ -548,7 +548,7 @@ body {
   max-width: 1160px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 100%;
   grid-template-rows: 8rem 186.9rem 44.2rem;
   grid-template-areas: "hd" "dn" "ft";
   /*- footer -*/
@@ -559,6 +559,30 @@ body {
 @media (max-width: 1000px) {
   .donate-container {
     grid-template-rows: 8rem 172.5rem 44.2rem;
+  }
+}
+
+@media (max-width: 996px) {
+  .donate-container {
+    grid-template-rows: 8rem 180.5rem 44.2rem;
+  }
+}
+
+@media (max-width: 874px) {
+  .donate-container {
+    grid-template-rows: 8rem 184.5rem 44.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .donate-container {
+    grid-template-rows: 8rem 188.5rem 44.2rem;
+  }
+}
+
+@media (max-width: 641px) {
+  .donate-container {
+    grid-template-rows: 3.4rem 188.5rem 28.2rem;
   }
 }
 
@@ -5898,31 +5922,18 @@ body {
 
 .donate-page {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
-  /* .footer {
-     &__container-main {
-       @include media('<=small-desktop') {
-         margin-left: 2.6rem;
-       }
-     }
+}
 
-     &__logo {
-       margin-top: -0.3rem;
-     }
+@media (max-width: 1000px) {
+  .donate-page .footer__container-main {
+    margin-left: 3rem;
+  }
+}
 
-     &__nav {
-       margin-right: 0;
-     }
-
-   }*/
-  /*  .nav {
-      @include media('<=1200px') {
-        padding-left: 2rem;
-      }
-      @include media('<=small-desktop') {
-        padding-left: 0;
-        margin-left: -0.5rem;
-      }
-    }*/;
+@media (max-width: 1000px) {
+  .donate-page .footer__nav {
+    margin-right: 0;
+  }
 }
 
 .donate-page .panda-background {
@@ -5942,6 +5953,14 @@ body {
   }
 }
 
+@media (max-width: 641px) {
+  .donate-page .panda-background {
+    background: url("../images/photos/panda_donate_tablet.jpg") no-repeat;
+    height: 33.5rem;
+    top: 3.3rem;
+  }
+}
+
 .donate-page .footer__image-container {
   display: none;
 }
@@ -5949,6 +5968,12 @@ body {
 .donate-main {
   position: relative;
   width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .donate-main {
+    margin-left: 0.4rem;
+  }
 }
 
 .donate-main .donate-info {
@@ -5987,6 +6012,13 @@ body {
   .donate-main .donate-info__header {
     padding-right: 10rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 641px) {
+  .donate-main .donate-info__header {
+    font-size: 24px;
+    line-height: 29px;
   }
 }
 
@@ -6063,6 +6095,12 @@ body {
     align-self: center;
     margin-top: 1.3rem;
     margin-left: 0.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .donate-main .section-donate__info {
+    padding-left: 1.5rem;
   }
 }
 
