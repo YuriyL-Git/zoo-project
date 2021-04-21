@@ -839,7 +839,7 @@
     @include media('<=mobile') {
       background: url("../images/photos/strelitzia-panda-mobile.png") no-repeat;
       width: 7.8rem;
-      bottom: 55.8rem;
+      bottom: 38.3rem;
       transform: none;
     }
   }
@@ -854,7 +854,7 @@
       height: 26rem;
     }
     @include media('<=mobile') {
-      height: 12.4rem;
+      height: 29.8rem;
       margin-top: 0;
     }
   }
@@ -883,7 +883,7 @@
     }
     @include media('<=mobile') {
       left: 4%;
-      bottom: -4.49%;
+      bottom: 0.3%;
     }
 
   }
@@ -905,7 +905,7 @@
     }
     @include media('<=mobile') {
       background: url("../images/footer/panda_footer_mobile.jpg") no-repeat;
-      bottom: 12.8rem;
+      bottom: -4.9rem;
     }
 
 
@@ -998,7 +998,7 @@
         bottom: 43.5rem;
       }
       @include media('<=mobile') {
-        bottom: 75.4rem;
+        bottom: 58rem;
         width: 6.2rem;
         background: url("../images/photos/leave_panda_mobile.png") no-repeat;
       }
