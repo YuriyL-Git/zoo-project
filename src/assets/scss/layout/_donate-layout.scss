@@ -11,8 +11,14 @@
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows:
       8rem   //- header -
-      172.3rem  //- main -
+      186.9rem  //- main -
       44.2rem; //- footer
+  @include media('<=small-desktop') {
+    grid-template-rows:
+      8rem   //- header -
+      172.5rem  //- main -
+      44.2rem; //- footer
+  }
 
   grid-template-areas:
       "hd"  /*- header -*/

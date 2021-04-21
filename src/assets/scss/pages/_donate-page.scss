@@ -5,9 +5,25 @@
 .donate-page {
   background: $orange_grad;
 
-  .footer__logo {
-    margin-top: -0.3rem;
+  .footer {
+    &__container-main {
+      @include media('<=small-desktop') {
+        margin-left: 2.6rem;
+      }
+    }
+    &__logo {
+      margin-top: -0.3rem;
+    }
+
+    &__nav{
+      margin-right: 0;
+    }
+
   }
+
+
+
+
 
   .nav {
     @include media('<=1200px') {
@@ -166,7 +182,6 @@
       @include media('<=small-desktop') {
         bottom: 16%;
       }
-
     }
 
     &__amount-title {
@@ -426,6 +441,9 @@
       margin-top: 2rem;
       margin-left: 0.4rem;
       font: $body-roboto-regular;
+      @include media('<=small-desktop') {
+        margin-top: 2.2rem;
+      }
     }
   }
 
