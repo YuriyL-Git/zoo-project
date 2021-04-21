@@ -523,20 +523,20 @@ body {
 
 .donate-container {
   max-width: 1160px;
-  width: 1160px;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 8rem 186.9rem 44.3rem;
-  grid-template-areas: " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd" " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp" " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft";
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 8rem 182.6rem 53rem;
+  grid-template-areas: "hd" "dn" "ft";
   /*- footer -*/
-  grid-column-gap: 3rem;
+  grid-column-gap: 0;
   grid-row-gap: 0;
 }
 .donate-container .header {
   grid-area: hd;
 }
 .donate-container .donate-main {
-  grid-area: mp;
+  grid-area: dn;
 }
 .donate-container .footer {
   grid-area: ft;
@@ -2056,8 +2056,14 @@ body {
     margin-right: 3.2rem;
   }
 }
+@media (max-width: 560px) {
+  .feed-friend__container-images {
+    margin-right: 1.6rem;
+  }
+}
 @media (max-width: 321px) {
   .feed-friend__container-images {
+    margin-right: 3.2rem;
     flex-direction: column;
     height: 66.1rem;
     margin-top: 1.8rem;
@@ -2073,6 +2079,16 @@ body {
   display: flex;
   background-color: white;
   position: relative;
+}
+@media (max-width: 415px) {
+  .feed-friend__card-container {
+    height: 14rem;
+  }
+}
+@media (max-width: 321px) {
+  .feed-friend__card-container {
+    height: 16.8rem;
+  }
 }
 .feed-friend__card-container:nth-child(3) {
   z-index: 4;
@@ -2129,10 +2145,12 @@ body {
   .feed-friend__card-text {
     font-size: 12px;
     margin-top: 0.5rem;
+    top: 100%;
   }
 }
 @media (max-width: 321px) {
   .feed-friend__card-text {
+    top: auto;
     font-size: 16px;
     margin: 0 0 3.5rem -0.2rem;
   }
@@ -2213,9 +2231,14 @@ body {
     bottom: 7.9%;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 530px) {
   .feed-friend__btn {
-    bottom: 1%;
+    bottom: 5%;
+  }
+}
+@media (max-width: 408px) {
+  .feed-friend__btn {
+    bottom: 8%;
   }
 }
 @media (max-width: 321px) {
@@ -3736,7 +3759,6 @@ body {
     height: 60.7rem;
     top: 0;
     margin-bottom: -17rem;
-    position: static;
   }
 }
 @media (max-width: 1000px) and (max-width: 641px) {
@@ -4884,10 +4906,13 @@ body {
 .donate-page {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
 }
+.donate-page .footer__logo {
+  margin-top: -0.3rem;
+}
 .donate-page .panda-background {
   background: url("../images/photos/panda_donate.jpg") no-repeat;
   width: 100%;
-  height: 39rem;
+  height: 38.7rem;
   left: 0;
   top: 8rem;
   z-index: 5;
@@ -4912,6 +4937,7 @@ body {
   color: #fff;
   font: normal normal 3.6rem/130% Roboto, sans-serif;
   padding: 1rem 0.1rem;
+  margin-top: 2.5rem;
   margin-bottom: 0;
 }
 .donate-main .donate-info__text {
@@ -4942,10 +4968,14 @@ body {
   text-align: center;
   color: #fe9013;
   margin-bottom: 0;
+  margin-right: 1.2rem;
 }
 .donate-main .section-donate__info {
   font: normal normal 2.4rem/120% Roboto, sans-serif;
   margin-bottom: 1rem;
+  align-self: flex-start;
+  margin-left: 9.3rem;
+  margin-top: 2.1rem;
 }
 .donate-main .section-donate__animal-container {
   margin-top: 4.5rem;
@@ -4961,8 +4991,8 @@ body {
   margin-top: 3rem;
 }
 .donate-main .section-donate__figure {
-  margin-left: 5rem;
-  margin-bottom: 5rem;
+  margin-left: 4.7rem;
+  margin-bottom: 4.5rem;
   display: block;
   font: normal bold 14.4rem/80% Roboto, sans-serif;
   font-size: 72px;
@@ -4972,11 +5002,17 @@ body {
 .donate-main .section-donate__diet-info {
   position: absolute;
   font: normal normal 1.6rem/120% Roboto, sans-serif;
-  bottom: 14%;
-  left: -2%;
+  bottom: 14.2%;
+  left: -2.3%;
+}
+.donate-main .section-donate__amount-title {
+  position: absolute;
+  font: normal normal 1.6rem/120% Roboto, sans-serif;
+  bottom: -33.4%;
+  left: -43%;
 }
 .donate-main .section-donate__amount-container {
-  margin-top: 8.4rem;
+  margin-top: 8.5rem;
   width: 97.6rem;
   height: 3rem;
   background-color: #404950;
@@ -4984,7 +5020,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2.1rem;
+  padding: 0 2.1rem 0 1.8rem;
   border-radius: 0.5rem;
   margin-bottom: 10.6rem;
 }
@@ -5014,39 +5050,42 @@ body {
 .donate-main .section-donate__amount-picker:before {
   position: absolute;
   content: "";
-  top: 175%;
+  top: 151%;
   left: -90%;
   font: normal normal 2.4rem/120% Roboto, sans-serif;
   font-size: 2.6rem;
 }
 .donate-main .section-donate__amount-picker:nth-child(1):before {
   content: "$5000";
+  left: -67.3%;
 }
 .donate-main .section-donate__amount-picker:nth-child(2):before {
   content: "$2000";
+  left: -67.3%;
 }
 .donate-main .section-donate__amount-picker:nth-child(3):before {
   content: "$1000";
+  left: -67.3%;
 }
 .donate-main .section-donate__amount-picker:nth-child(4):before {
   content: "$500";
-  left: -85%;
+  left: -61.3%;
 }
 .donate-main .section-donate__amount-picker:nth-child(5):before {
   content: "$250";
-  left: -85%;
+  left: -61.3%;
 }
 .donate-main .section-donate__amount-picker:nth-child(6):before {
   content: "$100";
-  left: -85%;
+  left: -61.3%;
 }
 .donate-main .section-donate__amount-picker:nth-child(7):before {
   content: "$50";
-  left: -60%;
+  left: -59%;
 }
 .donate-main .section-donate__amount-picker:nth-child(8):before {
   content: "$25";
-  left: -60%;
+  left: -59%;
 }
 .donate-main .section-donate__form {
   width: 97.7rem;
@@ -5097,6 +5136,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0.6rem;
+  margin-left: 0.2rem;
 }
 .donate-main .section-donate__label {
   font: normal normal 1.6rem/120% Roboto, sans-serif;
@@ -5119,11 +5160,13 @@ body {
 }
 .donate-main .section-donate__btn {
   position: absolute;
-  margin-top: 3.8rem;
-  left: 50%;
+  margin-top: 3.9rem;
+  left: 50.3%;
   transform: translateX(-50%);
 }
 .donate-main .section-donate__share-text {
+  margin-top: 2rem;
+  margin-left: 0.4rem;
   font: normal normal 1.6rem/120% Roboto, sans-serif;
 }
 

@@ -3,22 +3,22 @@
 .donate-container {
 
   max-width: 1160px;
-  width: 1160px;
+  width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows:
       8rem   //- header -
-      186.9rem  //- main -
-      $ft; //- footer
+      182.6rem  //- main -
+      53rem; //- footer
 
   grid-template-areas:
-      " hd  hd  hd  hd  hd  hd  hd  hd  hd  hd   hd   hd"  /*- header -*/
-      " mp  mp  mp  mp  mp  mp  mp  mp  mp  mp   mp   mp"
-      " ft  ft  ft  ft  ft  ft  ft  ft  ft  ft   ft   ft"; /*- footer -*/
+      "hd"  /*- header -*/
+      "dn"
+      "ft"; /*- footer -*/
   //   -1- -2- -3- -4- -5- -6- -7- -8- -9- -10- -11- -12-
 
-  grid-column-gap: 3rem;
+  grid-column-gap: 0;
   grid-row-gap: 0;
 
   .header {
@@ -26,7 +26,7 @@
   }
 
   .donate-main {
-    grid-area: mp;
+    grid-area: dn;
   }
 
   .footer {

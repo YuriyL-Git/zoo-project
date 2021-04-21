@@ -186,7 +186,13 @@
       width: 91.9%;
       margin-right: 3.2rem;
     }
+
+    @include media('<=560px') {
+      margin-right: 1.6rem;
+    }
+
     @include media('<=mobile') {
+      margin-right: 3.2rem;
       flex-direction: column;
       height: 66.1rem;
       margin-top: 1.8rem;
@@ -203,7 +209,12 @@
     display: flex;
     background-color: white;
     position: relative;
-
+    @include media('<=415px') {
+      height: 14rem;
+    }
+    @include media('<=mobile') {
+      height: 16.8rem;
+    }
 
     &:nth-child(3) {
       z-index: 4;
@@ -264,8 +275,10 @@
     @include media('<=394px') {
       font-size: 12px;
       margin-top: 0.5rem;
+      top: 100%;
     }
     @include media('<=mobile') {
+      top: auto;
       font-size: 16px;
       margin: 0 0 3.5rem -0.2rem;
     }
@@ -338,8 +351,11 @@
     @include media('<=tablet') {
       bottom: 7.9%;
     }
-    @include media('<=440px') {
-      bottom: 1%;
+    @include media('<=530px') {
+      bottom: 5%;
+    }
+    @include media('<=408px') {
+      bottom: 8%;
     }
 
     @include media('<=mobile') {
