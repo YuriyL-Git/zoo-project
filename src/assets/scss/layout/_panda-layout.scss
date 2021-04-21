@@ -27,6 +27,19 @@
       $ft-tb; /*- footer */
   }
 
+  @include media('<=620px') {
+    grid-template-rows:
+      3.4rem   /*- header -*/
+      1fr
+      $ft-tb; /*- footer */
+  }
+  @include media('<=mobile') {
+    grid-template-rows:
+      3.4rem   /*- header -*/
+      1fr
+      89rem; /*- footer */
+  }
+
 
   grid-template-areas:
       " hd"  /*- header -*/

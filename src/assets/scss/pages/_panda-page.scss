@@ -5,6 +5,7 @@
 .panda-page {
   position: relative;
 
+
   .side-bar {
     &--desktop {
       @include media('<=1580px') {
@@ -18,6 +19,7 @@
       }
     }
 
+    //---------- sidebar small desktop ----------------
     &--small-desktop {
       position: relative;
       height: 124rem;
@@ -31,6 +33,10 @@
         .side-bar__item:last-child {
           margin-bottom: -0.5rem;
         }
+        @include media('<=mobile') {
+          display: none;
+        }
+
 
         .side-bar__item:first-child {
           margin-top: -0.5rem;
@@ -45,6 +51,25 @@
           height: 60.7rem;
           top: 0;
           margin-bottom: -17rem;
+          position: static;
+          @include media('<=tablet') {
+            transform: translateY(-8px);
+            position: static;
+          }
+
+          @include media('<=600px') {
+            height: 55rem;
+            margin-bottom: -5rem;
+          }
+          @include media('<=450px') {
+            transform: translateY(-40px);
+          }
+
+
+          @include media('<=mobile') {
+            height: 40rem;
+          }
+
         }
         .side-bar__list {
           transform: scale(0.72);
@@ -58,6 +83,59 @@
       @include media('<=tablet') {
         left: 1%;
         height: 55.5rem;
+      }
+      @include media('<=600px') {
+        height: 40rem;
+        background-color: orange;
+      }
+
+    }
+
+
+    // -----------------sidebar mobile ----------------
+    &--mobile {
+      display: none;
+      position: absolute;
+
+      @include media('<=mobile') {
+        display: inline-block;
+        top: 16.7rem;
+        left: -0.9rem;
+        transform: scale(0.87);
+      }
+
+      .side-bar__item:nth-child(4) {
+        @include media('<=mobile') {
+          display: none;
+        }
+      }
+
+      .side-bar__item:nth-child(5) {
+        @include media('<=mobile') {
+          display: none;
+        }
+      }
+
+      .side-bar__item:nth-child(6) {
+        @include media('<=mobile') {
+          display: none;
+        }
+      }
+
+      .side-bar__item:last-child .side-bar__icon {
+        border: none;
+      }
+
+      .side-bar__nav {
+        height: 35rem;
+        transform: scale(0.72);
+        position: relative;
+
+      }
+
+      .side-bar__list {
+        padding: 0.9rem 0;
+        transform: scale(1.06);
       }
     }
   }
@@ -81,6 +159,11 @@
         padding: 2rem 0 1.1rem;
         font-size: 36px;
         line-height: 130%;
+      }
+      @include media('<=mobile') {
+        padding: 2.1rem 0 1rem;
+        font-size: 24px;
+        line-height: 120%;
       }
     }
 
@@ -111,6 +194,10 @@
       @include media('<=tablet') {
         width: 77.3%;
         margin-right: 2rem;
+      }
+      @include media('<=mobile') {
+        width: 100%;
+        margin: 0 1rem;
       }
     }
 
@@ -157,6 +244,17 @@
       @include media('<=tablet') {
         height: 14rem;
       }
+      @include media('<=500px') {
+        margin-top: 4rem;
+        width: 100%;
+      }
+      @include media('<=mobile') {
+        height: 14.7rem;
+        width: 18.9rem;
+        margin-top: 0;
+        align-self: flex-end;
+        margin-right: 2.8rem;
+      }
 
 
       &__videos {
@@ -173,6 +271,10 @@
         @include media('<=965px') {
           flex-wrap: nowrap;
         }
+        @include media('<=mobile') {
+          flex-wrap: wrap;
+        }
+
 
         & iframe:nth-child(1) {
           @include media('<=small-desktop') {
@@ -183,6 +285,13 @@
           }
           @include media('<=tablet') {
             height: 14rem;
+          }
+          @include media('<=450px') {
+            height: 12rem;
+          }
+          @include media('<=mobile') {
+            width: 8.9rem;
+            height: 6.8rem;
           }
         }
 
@@ -196,11 +305,23 @@
           @include media('<=tablet') {
             height: 14rem;
           }
+          @include media('<=450px') {
+            height: 12rem;
+          }
+          @include media('<=mobile') {
+            width: 8.9rem;
+            height: 6.8rem;
+          }
         }
 
         & iframe:nth-child(3) {
           @include media('<=small-desktop') {
             display: none;
+          }
+          @include media('<=mobile') {
+            display: inline-block;
+            width: 8.9rem;
+            height: 6.8rem;
           }
         }
 
@@ -208,8 +329,12 @@
           @include media('<=small-desktop') {
             display: none;
           }
+          @include media('<=mobile') {
+            display: inline-block;
+            width: 8.9rem;
+            height: 6.8rem;
+          }
         }
-
       }
 
       &__overlay {
@@ -225,6 +350,9 @@
         @include media('<=965px') {
           flex-wrap: nowrap;
         }
+        @include media('<=mobile') {
+          flex-wrap: wrap;
+        }
       }
 
       &__title-wrapper {
@@ -234,6 +362,14 @@
         @include media('<=1580px') {
           margin: 0;
         }
+        @include media('<=small-desktop') {
+          width: 29.3rem;
+        }
+
+        @include media('<=mobile') {
+          width: 8.9rem;
+          height: 6.8rem;
+        }
 
         &:nth-child(2) {
           @include media('<=965px') {
@@ -241,9 +377,10 @@
           }
           @include media('<=tablet') {
             margin-left: 3rem;
-
           }
-
+          @include media('<=mobile') {
+            margin-left: 0;
+          }
         }
 
         &:nth-child(3) {
@@ -251,17 +388,22 @@
             width: 26.7rem;
             display: none;
           }
+          @include media('<=mobile') {
+            width: 8.9rem;
+            display: inline-block;
+          }
         }
 
         &:nth-child(4) {
           @include media('<=small-desktop') {
             display: none;
           }
+          @include media('<=mobile') {
+            display: inline-block;
+          }
         }
 
-        @include media('<=small-desktop') {
-          width: 29.3rem;
-        }
+
       }
 
       &__camera-title {
@@ -288,6 +430,11 @@
           margin-top: 0.1rem;
           margin-left: -0.3rem;
         }
+        @include media('<=mobile') {
+          transform: scale(0.35);
+          margin-top: -0.6rem;
+          margin-left: -1.5rem;
+        }
       }
 
       &__btn-left,
@@ -302,6 +449,9 @@
         }
         @include media('<=tablet') {
           transform: scale(0.7);
+        }
+        @include media('<=mobile') {
+          display: none;
         }
       }
 
@@ -323,6 +473,10 @@
           top: 45%;
           right: -20.8%;
         }
+        @include media('<=500px') {
+          top: -43%;
+          right: 55%;
+        }
       }
 
       &__btn-right {
@@ -341,6 +495,10 @@
         @include media('<=tablet') {
           top: 10%;
           right: -20.8%;
+        }
+        @include media('<=500px') {
+          top: -43%;
+          right: 26%;
         }
       }
     }
@@ -366,6 +524,11 @@
         margin: 0;
         justify-content: center;
         padding-bottom: 2.2rem;
+      }
+      @include media('<=mobile') {
+        font-size: 24px;
+        margin-top: 5.1rem;
+        padding-bottom: 0.9rem;
       }
     }
 
@@ -401,6 +564,9 @@
           height: auto;
           margin-bottom: 3rem;
         }
+        @include media('<=mobile') {
+          margin-bottom: 1.7rem;
+        }
       }
 
       &__photo {
@@ -408,6 +574,18 @@
         @include media('<=small-desktop') {
           max-width: 100%;
           height: auto;
+        }
+        @include media('<=mobile') {
+          display: none;
+        }
+      }
+
+      &__photo-mobile {
+        display: none;
+        @include media('<=mobile') {
+          display: inline-block;
+          margin-left: -0.9rem;
+
         }
       }
 
@@ -427,6 +605,14 @@
           height: auto;
           justify-content: flex-start;
         }
+        @include media('<=450px') {
+          width: 98%;
+          height: fit-content;
+        }
+        @include media('<=mobile') {
+          width: 100%;
+        }
+
 
         .btn {
           margin-left: 0.4rem;
@@ -440,6 +626,15 @@
           @include media('<=tablet') {
             margin-top: 2.9rem;
             left: 32.5%;
+          }
+          @include media('<=500px') {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          @include media('<=mobile') {
+            left: 45.3%;
+            margin-top: 2.7rem;
+
           }
         }
       }
@@ -474,6 +669,15 @@
           height: 34.1rem;
           margin-left: 0;
         }
+        @include media('<=450px') {
+          height: auto;
+          margin-left: 0;
+        }
+        @include media('<=mobile') {
+          font-size: 1.6rem;
+          line-height: 140%;
+          margin: 0;
+        }
       }
 
 
@@ -494,6 +698,10 @@
       margin-top: 1.1rem;
       border-bottom: 1px solid #888;
       margin-bottom: 4.2rem;
+      @include media('<=mobile') {
+        margin-bottom: 2.1rem;
+      }
+
     }
 
 
@@ -506,8 +714,11 @@
       @include media('<=tablet') {
         margin-left: 2rem;
         margin-right: 1rem;
-
       }
+      @include media('<=mobile') {
+        margin-left: 0.9rem;
+      }
+
 
       &__paragraph-wrapper {
         margin: 0;
@@ -578,6 +789,9 @@
       @include media('<=tablet') {
         margin-left: 1.4rem;
       }
+      @include media('<=mobile') {
+        margin-left: 1.1rem;
+      }
 
       &:hover {
         color: $orange;
@@ -619,6 +833,16 @@
       width: 15.9rem;
       top: 313.1rem;
     }
+    @include media('<=620px') {
+      top: auto;
+      bottom: 25.5rem;
+    }
+    @include media('<=mobile') {
+      background: url("../images/photos/strelitzia-panda-mobile.png") no-repeat;
+      width: 7.8rem;
+      bottom: 55.8rem;
+      transform: none;
+    }
   }
 
   .background-wrapper {
@@ -627,6 +851,13 @@
     height: 40rem;
     bottom: 0;
     z-index: -2;
+    @include media('<=620px') {
+      height: 26rem;
+    }
+    @include media('<=mobile') {
+      height: 12.4rem;
+      margin-top: 0;
+    }
   }
 
   .btn-donate-default {
@@ -640,6 +871,20 @@
     @include media('<=tablet') {
       left: 26.6%;
       bottom: 1.04%;
+      background-color: black;
+    }
+    @include media('<=430px') {
+      left: 15%;
+    }
+    @include media('<=370px') {
+      left: 9%;
+    }
+    @include media('<=340px') {
+      left: 5%;
+    }
+    @include media('<=mobile') {
+      left: 4%;
+      bottom: -4.49%;
     }
 
   }
@@ -659,6 +904,12 @@
       bottom: -23.8rem;
 
     }
+    @include media('<=mobile') {
+      background: url("../images/footer/panda_footer_mobile.jpg") no-repeat;
+      bottom: 12.8rem;
+    }
+
+
   }
 
   // === Adjust paddings for infor section===========
@@ -672,22 +923,42 @@
       padding-right: 2rem;
       padding-bottom: 0;
     }
+    @include media('<=mobile') {
+      margin-left: 4.9rem;
+      text-indent: -4.9rem;
+      padding-right: 0;
+      margin-bottom: 2.3rem;
+    }
   }
 
   .info-section__paragraph-wrapper:nth-child(1) .info-section__paragraph:nth-child(2) {
     padding-bottom: 2.9rem;
+    @include media('<=mobile') {
+      padding-bottom: 1.5rem;
+    }
   }
+
+  .info-section__paragraph-wrapper:nth-child(1) .info-section__paragraph:nth-child(3) {
+    @include media('<=mobile') {
+      padding-bottom: 1rem;
+    }
+  }
+
 
   .info-section__paragraph-wrapper:nth-child(2) .info-section__paragraph:nth-child(2) {
     padding-bottom: 1.9rem;
     @include media('<=small-desktop') {
       margin-top: 1.3rem;
     }
+    @include media('<=mobile') {
+      margin-top: 0.1rem;
+    }
   }
 
   .info-section__paragraph-wrapper:nth-child(4) .info-section__paragraph:nth-child(1) {
     padding-top: 0.3rem;
     padding-bottom: 0.6rem;
+
   }
 
   .info-section__paragraph-wrapper:nth-child(3) .info-section__paragraph:nth-child(2) {
@@ -723,8 +994,15 @@
         width: 13rem;
         background: url("../images/photos/leave_zoos_tablet.png") no-repeat;
       }
-
-
+      @include media('<=620px') {
+        top: auto;
+        bottom: 43.5rem;
+      }
+      @include media('<=mobile') {
+        bottom: 75.4rem;
+        width: 6.2rem;
+        background: url("../images/photos/leave_panda_mobile.png") no-repeat;
+      }
     }
 
     &__container-main {
@@ -733,6 +1011,9 @@
       }
       @include media('<=tablet') {
         margin-left: 1.8rem;
+      }
+      @include media('<=mobile') {
+        margin-left: 1.2rem;
       }
     }
 
