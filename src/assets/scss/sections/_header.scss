@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  z-index: 1000;
   @include media('<=small-desktop') {
     width: 101.3%;
   }
@@ -24,11 +25,13 @@
     z-index: 2;
     @include media('<=tablet') {
       height: 3.4rem;
+      position: fixed;
+
     }
   }
 
   .nav {
-    z-index: 3;
+    z-index: 10000;
     width: 100%;
     height: 8rem;
     display: flex;
@@ -36,10 +39,12 @@
     @include media('<=tablet') {
       height: 3.4rem;
       justify-content: space-between;
+      position: fixed;
     }
 
     &__logo-link {
       margin-right: 5.4rem;
+      z-index: 1000;
 
       @include media('<=small-desktop') {
         margin-left: 3rem;

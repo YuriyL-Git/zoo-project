@@ -1011,6 +1011,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  z-index: 1000;
 }
 @media (max-width: 1000px) {
   .header-home {
@@ -1035,10 +1036,11 @@ body {
 @media (max-width: 641px) {
   .header-home .nav-panel {
     height: 3.4rem;
+    position: fixed;
   }
 }
 .header-home .nav {
-  z-index: 3;
+  z-index: 10000;
   width: 100%;
   height: 8rem;
   display: flex;
@@ -1048,10 +1050,12 @@ body {
   .header-home .nav {
     height: 3.4rem;
     justify-content: space-between;
+    position: fixed;
   }
 }
 .header-home .nav__logo-link {
   margin-right: 5.4rem;
+  z-index: 1000;
 }
 @media (max-width: 1000px) {
   .header-home .nav__logo-link {
