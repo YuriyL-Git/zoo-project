@@ -44,6 +44,18 @@
       166.8rem  //- main -
       $ft-tb; //- footer
   }
+  @include media('<=515px') {
+    grid-template-rows:
+      3.4rem   //- header -
+      1fr  //- main -
+      $ft-tb; //- footer
+  }
+  @include media('<=mobile') {
+    grid-template-rows:
+      3.4rem   //- header -
+      133.3rem  //- main -
+      54rem; //- footer
+  }
 
   grid-template-areas:
       "hd"  /*- header -*/

@@ -23,8 +23,13 @@
     &--small-desktop {
       position: relative;
       height: 124rem;
+      left: -0.5%;
       @include media('>=1580px') {
         display: none;
+      }
+      @include media('<=1200px') {
+        left: 2%;
+
       }
 
       @include media('<=small-desktop') {
@@ -33,6 +38,8 @@
         .side-bar__item:last-child {
           margin-bottom: -0.5rem;
         }
+
+
         @include media('<=mobile') {
           display: none;
         }
@@ -57,11 +64,11 @@
           }
 
           @include media('<=600px') {
-            height: 55rem;
             margin-bottom: -5rem;
           }
           @include media('<=450px') {
-            transform: translateY(-40px);
+            transform: translateY(-75px);
+            height: 57rem;
           }
 
 
@@ -83,10 +90,15 @@
         left: 1%;
         height: 55.5rem;
       }
+
+      @include media('<=520px') {
+        left: 0
+      }
+
       @include media('<=600px') {
         height: 40rem;
-        background-color: orange;
       }
+
 
     }
 
