@@ -17,10 +17,23 @@
 
   &__image-container {
     background: url("../images/photos/flower_foto.png") no-repeat;
-    width: 15rem;
+    width: 19.6rem;
     height: 61rem;
     right: 0;
     top: 79.2rem;
+    @include media('<=1520px') {
+      width: 12%;
+    }
+    @include media('<=1470px') {
+      width: 8%;
+    }
+    @include media('<=1326px') {
+      width: 5%;
+    }
+    @include media('<=1200px') {
+      width: 3%;
+    }
+
     @include media('<=small-desktop') {
       display: none;
     }

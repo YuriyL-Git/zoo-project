@@ -24,12 +24,15 @@
     background: url("../images/photos/palm_foto.png") no-repeat;
     width: 30rem;
     height: 46rem;
-    left: 0;
+    left: -0.6rem;
     top: 215.1rem;
+    @include media('<=1330px') {
+
+    }
     @include media('<=small-desktop') {
       background: url("../images/photos/palm_small-desktop.png") no-repeat;
-      left: 0;
       top: 212.4rem;
+      left: 0;
     }
     @include media('<=tablet') {
       top: 164.6rem;
@@ -45,9 +48,13 @@
     background: url("../images/photos/strelitzia.png") no-repeat;
     width: 37rem;
     height: 40rem;
-    right: 0;
+    right: -0.6rem;
     top: 233.4rem;
 
+    @include media('<=1330px') {
+      top: 227.4rem;
+      right: 0;
+    }
 
     @include media('<=small-desktop') {
       background: url("../images/photos/strelitzia-small-desktop.png") no-repeat;

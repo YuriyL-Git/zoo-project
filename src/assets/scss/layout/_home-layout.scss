@@ -20,6 +20,20 @@
       $tm    //- testimonials -
       $gap4  //- gap
       $ft; //- footer
+  @include media('<=1330px') {
+    grid-template-rows:
+      $hd   // - header -
+      $gap1 // - gap1 -
+      $ar    //- article -
+      $gap2  //- gap2 -
+      $ph-sd    //- photo animals -
+      $bt    //- button - choose favorite -
+      $fd    //- section - feed a friend -
+      $gap3  //- gap3 -
+      $tm    //- testimonials -
+      $gap4  //- gap
+      $ft; //- footer
+  }
   @include media('<=1100px') {
     grid-template-rows:
       $hd   // - header -

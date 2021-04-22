@@ -356,6 +356,11 @@ body {
   grid-column-gap: 0;
   grid-row-gap: 1px;
 }
+@media (max-width: 1330px) {
+  .home-container {
+    grid-template-rows: 78rem 14rem 40.3rem 17.7rem 80rem 23.2rem 100.4rem 14rem 57.5rem 20rem 44.3rem;
+  }
+}
 @media (max-width: 1100px) {
   .home-container {
     grid-template-rows: 78rem 14rem 40.3rem 17.7rem 87.2rem 23.2rem 100.4rem 14rem 84rem 20rem 44.3rem;
@@ -1329,10 +1334,30 @@ body {
 }
 .article__image-container {
   background: url("../images/photos/flower_foto.png") no-repeat;
-  width: 15rem;
+  width: 19.6rem;
   height: 61rem;
   right: 0;
   top: 79.2rem;
+}
+@media (max-width: 1520px) {
+  .article__image-container {
+    width: 12%;
+  }
+}
+@media (max-width: 1470px) {
+  .article__image-container {
+    width: 8%;
+  }
+}
+@media (max-width: 1326px) {
+  .article__image-container {
+    width: 5%;
+  }
+}
+@media (max-width: 1200px) {
+  .article__image-container {
+    width: 3%;
+  }
 }
 @media (max-width: 1000px) {
   .article__image-container {
@@ -1548,6 +1573,12 @@ body {
   align-content: space-between;
   position: relative;
 }
+@media (max-width: 1330px) {
+  .photo-section {
+    grid-row-gap: 8.2rem;
+    margin: 0 1.5rem 0 3rem;
+  }
+}
 @media (max-width: 1000px) {
   .photo-section {
     grid-row-gap: 9.2rem;
@@ -1573,6 +1604,7 @@ body {
   overflow: hidden;
   z-index: 5;
   position: relative;
+  background-color: white;
 }
 @media (max-width: 641px) {
   .photo-section__container:nth-child(7) {
@@ -1632,6 +1664,11 @@ body {
   width: 100%;
   z-index: -2;
   transition: transform 0.25s ease-in-out;
+}
+@media (max-width: 1330px) {
+  .photo-section__photo {
+    height: 31rem;
+  }
 }
 @media (max-width: 1000px) {
   .photo-section__photo {
@@ -1808,14 +1845,14 @@ body {
   background: url("../images/photos/palm_foto.png") no-repeat;
   width: 30rem;
   height: 46rem;
-  left: 0;
+  left: -0.6rem;
   top: 215.1rem;
 }
 @media (max-width: 1000px) {
   .chose-favorite__palm-image {
     background: url("../images/photos/palm_small-desktop.png") no-repeat;
-    left: 0;
     top: 212.4rem;
+    left: 0;
   }
 }
 @media (max-width: 641px) {
@@ -1834,8 +1871,14 @@ body {
   background: url("../images/photos/strelitzia.png") no-repeat;
   width: 37rem;
   height: 40rem;
-  right: 0;
+  right: -0.6rem;
   top: 233.4rem;
+}
+@media (max-width: 1330px) {
+  .chose-favorite .strelitzia-image-default {
+    top: 227.4rem;
+    right: 0;
+  }
 }
 @media (max-width: 1000px) {
   .chose-favorite .strelitzia-image-default {
