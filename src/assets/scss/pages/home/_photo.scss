@@ -24,6 +24,33 @@
     margin: 0 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
+  @include media('<=740px') {
+    grid-column-gap: 1rem;
+    grid-row-gap: 14rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+
+  }
+  @include media('<=tablet') {
+    margin-top: 0;
+    margin-bottom: 0;
+    grid-column-gap: 3rem;
+    grid-row-gap: 9.2rem;
+  }
+  @include media('<=500px') {
+    grid-column-gap: 1rem;
+  }
+  @include media('<=460px') {
+    grid-row-gap: 12rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  @include media('<=380px') {
+    grid-row-gap: 14rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
   @include media('<=mobile') {
     margin: 0 2.6rem 0 1rem;
     grid-template-columns: repeat(1, 1fr);
@@ -50,10 +77,10 @@
       }
     }
 
+
     @include media('<=mobile') {
       height: 33.1rem;
       border-radius: 3px;
-
     }
 
   }
@@ -62,6 +89,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
+
 
     @include media('<=mobile') {
       height: 28.3rem;
@@ -105,8 +133,23 @@
     @include media('<=small-desktop') {
       height: 29.5rem;
     }
+    @include media('<=740px') {
+      height: 26.6rem;
+    }
+    @include media('<=670px') {
+      height: 24rem;
+    }
     @include media('<=tablet') {
       height: 28.6rem;
+    }
+    @include media('<=500px') {
+      height: 25.6rem;
+    }
+    @include media('<=460px') {
+      height: 24rem;
+    }
+    @include media('<=380px') {
+      height: 21rem;
     }
     @include media('<=mobile') {
       height: 28.6rem;
@@ -149,10 +192,26 @@
     font: var.$body-btn-roboto;
     margin-left: 1.5rem;
     margin-top: 0.4rem;
+    @include media('<=1101px') {
+      margin-top: 1.7rem;
+    }
+    @include media('<=small-desktop') {
+      margin-top: 0.4rem;
+    }
+    @include media('<=750px') {
+      font-size: 13px;
+    }
+    @include media('<=670px') {
+      margin-top: 1rem;
+    }
     @include media('<=tablet') {
+      margin-top: 0.4rem;
       font-size: 12.5px;
       line-height: 140%;
       margin-left: 1rem;
+    }
+    @include media('<=500px') {
+      margin-top: 1.5rem;
     }
     @include media('<=mobile') {
       margin-top: 0.7rem;
@@ -163,6 +222,9 @@
     z-index: 5;
     font: var.$small-paragraph;
     margin-left: 1.4rem;
+    @include media('<=750px') {
+      font-size: 13px;
+    }
     @include media('<=tablet') {
       font-size: 11.5px;
       line-height: 120%;
@@ -209,6 +271,9 @@
     @include media('<=835px') {
       left: 22.3rem;
     }
+    @include media('<=630px') {
+      left: 15%;
+    }
 
     &:hover {
       background: url(../images/icons/arrow-left.svg) #4B9200 center no-repeat;
@@ -227,6 +292,9 @@
     }
     @include media('<=835px') {
       right: 22.3rem;
+    }
+    @include media('<=630px') {
+      right: 15%;
     }
 
     &:hover {

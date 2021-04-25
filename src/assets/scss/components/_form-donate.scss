@@ -1,0 +1,243 @@
+@use "../abstracts/var" as *;
+@import "../vendors/include-media";
+
+.form-donate {
+  width: 100%;
+  height: 117.3rem;
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  top: 22%;
+  display: flex;
+  flex-direction: column;
+
+  &__amount-one-section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 4.5rem;
+  }
+
+
+  &__title {
+    font: $h3-roboto-regular;
+    color: $orange;
+    margin: 6.3rem 0 2.6rem 9.2rem;
+
+    &--additional {
+      margin-top: 4.5rem;
+      margin-bottom: 2.1rem;
+    }
+
+    &--payment {
+      margin-top: 4.5rem;
+    }
+  }
+
+  &__amount-one-title {
+    font: $body-roboto-regular;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+
+  &__input-one {
+    width: 13rem;
+    height: 4.2rem;
+    margin-right: 3rem;
+    margin-top: 0.2rem;
+    padding-top: 0.5rem;
+  }
+
+  i {
+    transform: translate(8rem, -50%);
+    top: 50%;
+  }
+
+  &__additional-title {
+    font: $h3-roboto-regular;
+    color: $orange;
+    margin: 4.6rem 0 2rem 9.2rem;
+  }
+
+  &__share-section {
+    display: flex;
+    width: 63.3%;
+    height: 23.6rem;
+    align-items: center;
+    align-self: flex-end;
+  }
+
+  &__descriptions-wrapper {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 10.5rem;
+  }
+
+  &__description {
+    font: $body-roboto-regular;
+    font-weight: 500;
+    margin: 0;
+  }
+
+
+  &__body-text {
+    font: $body-roboto-regular;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+
+  }
+
+  &__inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.1rem;
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+
+
+  &__checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+
+    &:nth-child(4) {
+      margin-top: 0.2rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  &__socials-list {
+    list-style: none;
+    padding: 0;
+    width: 15.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__textarea {
+    font: $body-roboto-regular;
+  }
+
+  &__socials-item:nth-child(2) img {
+    margin-left: 1rem;
+  }
+
+  &__payment-title {
+    font: $h3-roboto-regular;
+    color: $orange;
+
+  }
+
+  &__payment-section {
+    width: 60.8%;
+    height: 35.2rem;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 9.8rem
+  }
+
+  &__payment-inputs-wrapper {
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__payment-descriptions-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 23%;
+    height: 93.7%;
+    padding: 0;
+    margin: 0;
+    margin-top: 1.2rem;
+
+    .form-donate__description {
+      position: relative;
+
+      &:before {
+        content: '*';
+        position: absolute;
+        left: -1rem;
+        top: -0.6rem;
+        color: red;
+      }
+
+      &:last-child {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .payment-input {
+    width: 100%;
+    height: 4.2rem;
+  }
+
+  &__card-holder-name-input {
+
+  }
+
+  &__card-type-input {
+
+  }
+
+  &__card-number-input {
+
+  }
+
+  &__card-expiration-wrapper {
+    height: 4.2rem;
+  }
+
+  &__card-expiration-year {
+    width: 15.2rem;
+    height: 4.2rem;
+  }
+
+  &__card-expiration-month {
+    width: 15.2rem;
+    height: 4.2rem;
+    margin-left: 2.8rem;
+  }
+
+  &__card-security-code {
+    height: 4.2rem;
+    width: 7.1rem;
+  }
+
+  &__amount-two-wrapper {
+    position: relative;
+
+    i {
+      left: 3.8%;
+    }
+  }
+
+  &__amount-two {
+    height: 4.2rem;
+    width: 13rem;
+  }
+
+  &__btn {
+    align-self: center;
+    margin-top: 6rem;
+  }
+
+
+}

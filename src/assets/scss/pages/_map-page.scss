@@ -26,14 +26,25 @@
 
     &__nav {
       margin-right: 0;
+      @include media('<=450px') {
+        width: 26rem;
+        margin-right: 0.5rem;
+        margin-left: 0.3rem;
+      }
+      @include media('<=mobile') {
+        width: 27.8rem;
+        margin-right: 0rem;
+        margin-left: 1.1rem;
+      }
     }
 
     @include media('<=980px') {
       margin-left: 2.8rem;
     }
-    @include media('<=tablet') {
+    @include media('<=890px') {
       margin-left: 0;
     }
+
   }
 }
 
@@ -128,8 +139,18 @@
     @include media('<=tablet') {
       top: 44.4%
     }
+    @include media('<=500px') {
+      top: 41%;
+      left: 9.2%;
+    }
+    @include media('<=400px') {
+      top: 38%;
+      left: 9.2%;
+    }
+
     @include media('<=mobile') {
       left: 5.2%;
+      top: 44.4%
     }
   }
 
@@ -192,8 +213,18 @@
     @include media('<=tablet') {
       top: 47.4%
     }
+    @include media('<=480px') {
+      top: 44.4%
+    }
+    @include media('<=410px') {
+      top: 44%
+    }
+    @include media('<=350px') {
+      top: 42%
+    }
     @include media('<=mobile') {
       left: 14.5%;
+      top: 47.4%
     }
   }
 
@@ -225,6 +256,9 @@
     position: absolute;
     left: 48.3%;
     top: 59.8%;
+    @include media('<=1050px') {
+      top: 57.5%;
+    }
     @include media('<=small-desktop') {
       left: 48.4%;
       top: 59.1%;
@@ -286,6 +320,16 @@
     }
     @include media('<=tablet') {
       left: 75.5%;
+    }
+    @include media('<=560px') {
+      left: 74%;
+    }
+    @include media('<=470px') {
+      left: 73%;
+    }
+    @include media('<=400px') {
+      left: 71%;
+      top: 41.6%;
     }
     @include media('<=mobile') {
       left: 83.8%;
@@ -386,6 +430,7 @@
     }
   }
 
+
   &__btn-container {
     display: flex;
     flex-direction: column;
@@ -397,8 +442,9 @@
     @include media('<=820px') {
       transform: scale(0.8);
     }
-
-
+    @include media('<=820px') {
+      transform: scale(0.8);
+    }
   }
 
   &__map-btn {
@@ -424,6 +470,7 @@
       transform: scale(0.9);
     }
   }
+
 }
 
 

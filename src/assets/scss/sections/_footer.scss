@@ -26,6 +26,12 @@
     height: 30rem;
     right: 0;
     top: 426rem;
+    @include media('<=1329px') {
+      top: 419rem;
+    }
+    @include media('<=1100px') {
+      top: 442rem;
+    }
 
     @include media('<=small-desktop') {
       background: url("../images/photos/leav_foto-small-desktop.png") no-repeat;

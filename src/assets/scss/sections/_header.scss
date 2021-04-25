@@ -202,13 +202,16 @@
       width: 23.8rem;
       height: 23.8rem;
       right: 13%;
-      top: 10%;
+      top: 44%;
+    }
+    @include media('<=580px') {
+      top: 32%;
     }
     @include media('<=mobile') {
       width: 11.9rem;
       height: 11.9rem;
       right: 5%;
-      top: 22.5%;
+      top: 55.5%;
     }
   }
 
@@ -240,7 +243,10 @@
       width: 25rem;
       height: 20rem;
       right: -3.3%;
-      top: 4.2%;
+      top: 39.2%;
+    }
+    @include media('<=580px') {
+      top: 20%;
     }
     @include media('<=mobile') {
       font-size: 28px;
@@ -248,7 +254,7 @@
       width: 12.8rem;
       height: 10.2rem;
       right: -12%;
-      top: 19%;
+      top: 53%;
     }
 
     &__favorite {
@@ -266,11 +272,14 @@
     }
     @include media('<=tablet') {
       left: -84.5%;
-      top: 24.4rem;
+      top: 27.9rem;
+    }
+    @include media('<=480px') {
+      left: -76%;
     }
     @include media('<=mobile') {
       left: -74.5%;
-      top: 20.7rem;
+      top: 24.1rem;
     }
   }
 }

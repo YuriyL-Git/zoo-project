@@ -39,7 +39,7 @@
       $hd   // - header -
       $gap1 // - gap1 -
       $ar    //- article -
-      $gap2  //- gap2 -
+      8rem  //- gap2 -
       $ph    //- photo animals -
       $bt    //- button - choose favorite -
       $fd    //- section - feed a friend -
@@ -69,6 +69,21 @@
       $gap1-sd // - gap1 -
       $ar-sd    //- article -
       $gap2-sd  //- gap2 -
+      $ph-sd    //- photo animals -
+      $bt-sd    //- button - choose favorite -
+      $fd-sd    //- section - feed a friend -
+      $gap3-sd  //- gap3 -
+      90rem    //- testimonials -
+      $gap4-sd  //- gap
+      $ft-sd; //- footer
+  }
+
+  @include media('<=800px') {
+    grid-template-rows:
+      $hd-sd   // - header -
+      $gap1-sd // - gap1 -
+      $ar-sd    //- article -
+      2rem  //- gap2 -
       $ph-sd    //- photo animals -
       $bt-sd    //- button - choose favorite -
       $fd-sd    //- section - feed a friend -

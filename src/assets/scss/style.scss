@@ -14,6 +14,8 @@
 @use 'components/tooltip';
 @use 'components/side-bar';
 @use 'components/radio-btn';
+@use 'components/form-donate';
+@use 'components/amount-input';
 @use 'sections/header';
 @use 'pages/home/article';
 @use 'pages/home/photo';
@@ -28,6 +30,7 @@
 @use 'pages/eagle-page';
 @use 'pages/alligator-page';
 @use 'pages/donate-page';
+@use 'pages/home/home-page';
 @use 'components/link-disabled';
 
 

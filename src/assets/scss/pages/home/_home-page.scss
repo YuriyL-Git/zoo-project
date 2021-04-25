@@ -1,0 +1,23 @@
+@import '../../vendors/include-media';
+
+.home-page {
+  @include media('<=999px') {
+    .footer__image-container {
+      right: 0;
+    }
+
+  }
+
+  @include media('>800px', '<=950px') {
+    .footer__image-container {
+      top: 412rem;
+      right: 0;
+    }
+  }
+  @include media('>=tablet', '<=800px') {
+    .footer__image-container {
+      top: 402rem;
+      right: 0;
+    }
+  }
+}

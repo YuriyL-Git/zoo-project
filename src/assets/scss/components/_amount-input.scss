@@ -1,0 +1,36 @@
+@use "../abstracts/var" as *;
+
+
+.amount-input {
+  border: 1px solid #929699;
+  border-radius: 2px;
+  position: relative;
+  -moz-appearance: textfield;
+  font: $body-roboto-regular;
+  font-weight: bold;
+  padding-left: 1rem;
+
+  &::placeholder {
+    color: #929699;
+    font-weight: normal;
+  }
+}
+
+.amount-input::-webkit-outer-spin-button,
+.amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.dollar-placeholder {
+  position: absolute;
+  font: $body-roboto-regular;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #929699;
+  display: block;
+  pointer-events: none;
+  width: 25px;
+  text-align: center;
+  font-style: normal;
+}
