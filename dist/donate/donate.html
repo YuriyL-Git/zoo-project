@@ -6,7 +6,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.min.css">
-  <script defer src="../assets/js/app.js"></script>
   
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,7 +68,7 @@
       <h3 class="form-donate__title form-donate__title--info">Donation Information</h3>
       <div class="form-donate__amount-one-section">
         <p class="form-donate__amount-one-title">Amount:</p>
-        <input class="form-donate__input-one amount-input" type="number" id="donate-input-one" min="0" max="9999" step="1"
+        <input class="form-donate__input-one amount-input" type="number" min="0" max="9999" step="1"
                placeholder="1000"/>
         <i class="dollar-placeholder">$</i>
       </div>
@@ -136,27 +135,27 @@
         </div>
         <div class="form-donate__payment-inputs-wrapper">
           <input class="form-donate__card-holder-name-input amount-input payment-input" type="number"
-                 id="donate-input-one" min="0"
-                 max="9999" step="1"
-                 placeholder=""/>
-          <input class="form-donate__card-type-input amount-input payment-input" type="number" id="donate-input-one"
                  min="0"
                  max="9999" step="1"
                  placeholder=""/>
-          <input class="form-donate__card-number-input amount-input payment-input" type="number" id="donate-input-one"
+          <input class="form-donate__card-type-input amount-input payment-input" type="number"
+                 min="0"
+                 max="9999" step="1"
+                 placeholder=""/>
+          <input class="form-donate__card-number-input amount-input payment-input" type="number"
                  min="0"
                  max="9999" step="1"
                  placeholder=""/>
           <div class="form-donate__card-expiration-wrapper">
-            <select class="form-donate__card-expiration-year" name="" id=""></select>
-            <select class="form-donate__card-expiration-month" name="" id=""></select>
+            <select class="form-donate__card-expiration-year" name=""></select>
+            <select class="form-donate__card-expiration-month" name=""></select>
           </div>
-          <input class="form-donate__card-security-code amount-input" type="number" id="donate-input-one"
+          <input class="form-donate__card-security-code amount-input" type="number"
                  min="0"
                  max="9999" step="1"
                  placeholder="0000"/>
           <div class="form-donate__amount-two-wrapper">
-            <input class="form-donate__amount-two amount-input" type="number" id="donate-input-one"
+            <input class="form-donate__amount-two amount-input" type="number"
                    min="0"
                    max="9999" step="1"
                    placeholder="1000"/>
@@ -320,5 +319,6 @@
 
 
 </div> <!--container-->
+<script defer src="../assets/js/donate.js"></script>
 </body>
 </html>

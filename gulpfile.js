@@ -18,6 +18,7 @@ const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require("browser-sync").create();
 const git = require('gulp-git');
+const concat = require('gulp-concat');
 var argv = require('minimist')(process.argv.slice(2));
 
 
@@ -32,7 +33,8 @@ const gitHubBranch = 'gh-pages';
 const sourceBackup = ["../../**", '!**/node_modules/**'];
 const gitBackup = ["../../**/.git","../../**/.git/**"]
 const destinationBackup ="../../../ramdisk_backup/";
-let indexPage = "index.html";``
+let indexPage = "index.html";
+let scripts = ['home.js','map.js','zoos.js','donate.js']
 
 
 /* ---------------------------------------------------------------------- */
@@ -75,8 +77,13 @@ const path = {
     allFiles: ["../**", "!../**/node_modules","!../**/node_modules/**"],
     git: "../**/.git/**"
   },
-  
 }
+
+const jsScriptsPath = []
+scripts.forEach(script =>{
+  let fullPath = srcPath + "assets/js/" + script;
+  jsScriptsPath.push(fullPath)
+})
 
 /* ----------------------------------------------------------------------- */
 
@@ -191,7 +198,7 @@ function js(cb) {
       .pipe(webpackStream({
         mode: "production",
         output: {
-          filename: 'app.js',
+          filename: 'home.js',
         },
         module: {
           rules: [
@@ -226,9 +233,27 @@ function jsWatch(cb) {
       .pipe(webpackStream({
         mode: "development",
         output: {
-          filename: 'app.js',
+          filename: 'home.js',
         }
       }))
+      .pipe(dest(path.build.js))
+      .pipe(browserSync.reload({stream: true}));
+
+  cb();
+}
+
+function jsConcatWatch(cb) {
+  return src(jsScriptsPath)
+      .pipe(plumber({
+        errorHandler: function (err) {
+          notify.onError({
+            title: "JS Error",
+            message: "Error: <%= error.message %>"
+          })(err);
+          this.emit('end');
+        }
+      }))
+      /* .pipe(concat('script.js')) */
       .pipe(dest(path.build.js))
       .pipe(browserSync.reload({stream: true}));
 
@@ -250,7 +275,7 @@ function imagesDeploy(cb) {
         imagemin.mozjpeg({quality: 80, progressive: true}),
         imagemin.optipng({optimizationLevel: 5})
         /* svgo made problems with svg sprites, creating zero size */
-        // ,imagemin.svgo({  
+        // ,imagemin.svgo({
         //   plugins: [
         //     {removeViewBox: true},
         //     {cleanupIDs: false}
@@ -274,7 +299,7 @@ function fonts(cb) {
 function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], cssWatch);
-  gulp.watch([path.watch.js], jsWatch);
+  gulp.watch([path.watch.js], jsConcatWatch);
   gulp.watch([path.watch.images], images);
   gulp.watch([path.watch.fonts], fonts);
   const fileWatcher =  gulp.watch(path.watch.allFiles, { delay: 2500 }, backupFiles);
@@ -409,7 +434,7 @@ function push(cb) {
 
 
 const deploy = gulp.series(cleanDeploy,imagesDeploy, copyFilesToDeploy, add, commit, push);
-const build = gulp.series(cleanAll, cleanDist,copyIndexHtml,copyIndexCSS, gulp.parallel(html, css, js, images, fonts),backupGit);
+const build = gulp.series(cleanAll, cleanDist,copyIndexHtml,copyIndexCSS, gulp.parallel(html, css, jsConcatWatch ,/* js, */ images, fonts),backupGit);
 const watch = gulp.parallel(build, watchFiles, serve);
 
 

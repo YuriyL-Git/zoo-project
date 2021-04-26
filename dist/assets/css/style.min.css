@@ -1024,8 +1024,8 @@ body {
   background-color: white;
   z-index: 10;
   top: 22%;
-  display: flex;
   flex-direction: column;
+  display: none;
 }
 .form-donate__amount-one-section {
   display: flex;
@@ -1839,7 +1839,14 @@ body {
 
 .photo-section {
   padding: 0;
-  display: grid;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.photo-section__item {
+  width: 94%;
+  flex-shrink: 0;
+  padding: 0;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 3rem;
@@ -1847,27 +1854,29 @@ body {
   justify-content: space-between;
   align-content: space-between;
   position: relative;
+  display: none;
+  animation: all 1s ease-in-out;
 }
 @media (max-width: 1330px) {
-  .photo-section {
+  .photo-section__item {
     grid-row-gap: 8.2rem;
     margin: 0 1.5rem 0 3rem;
   }
 }
 @media (max-width: 1000px) {
-  .photo-section {
+  .photo-section__item {
     grid-row-gap: 9.2rem;
     margin: 0 1.5rem 0 3rem;
   }
 }
 @media (max-width: 641px) {
-  .photo-section {
+  .photo-section__item {
     margin: 0 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 740px) {
-  .photo-section {
+  .photo-section__item {
     grid-column-gap: 1rem;
     grid-row-gap: 14rem;
     margin-top: 2rem;
@@ -1875,7 +1884,7 @@ body {
   }
 }
 @media (max-width: 641px) {
-  .photo-section {
+  .photo-section__item {
     margin-top: 0;
     margin-bottom: 0;
     grid-column-gap: 3rem;
@@ -1883,26 +1892,26 @@ body {
   }
 }
 @media (max-width: 500px) {
-  .photo-section {
+  .photo-section__item {
     grid-column-gap: 1rem;
   }
 }
 @media (max-width: 460px) {
-  .photo-section {
+  .photo-section__item {
     grid-row-gap: 12rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 }
 @media (max-width: 380px) {
-  .photo-section {
+  .photo-section__item {
     grid-row-gap: 14rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
 }
 @media (max-width: 321px) {
-  .photo-section {
+  .photo-section__item {
     margin: 0 2.6rem 0 1rem;
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 2rem;
@@ -2192,6 +2201,51 @@ body {
   background: url(../images/icons/arrow-right.svg) #4B9200 center no-repeat;
 }
 
+.item-active,
+.item-next {
+  display: grid;
+}
+
+.item-following {
+  position: absolute;
+  top: 0;
+  display: grid;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+}
+
+.from-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
 .chose-favorite {
   display: flex;
   justify-content: center;
