@@ -34,7 +34,7 @@
     animation: all 0.5s ease-in-out;
 
     &--fast {
-      animation: all 0.2s ease-in-out;
+      animation: all 0.05s ease-in-out;
     }
 
     @include media('<=1100px') {

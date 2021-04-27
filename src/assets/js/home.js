@@ -43,71 +43,77 @@ function showFollowing(direction, index) {
   });
 }
 
-/*==========================================================*/
-
 /*================ Carousel Testimonials ===============================*/
 
 const cards = [...document.querySelectorAll('.testimonials__card')];
-const btnTestimonials = document.querySelector('.testimonials__feedback-btn');
 const container = document.querySelector('.testimonials__card-container');
 const slider = document.querySelector('.testimonials__slider');
+
+const repeatTime = 10000;
+const waitTime = 30000;
+let timeoutTimer = null;
+let repeatTimer = setInterval(() => moveLeft(), repeatTime);
+
 let cardLast = 3;
-let sliderValue = slider.value;
-let cardMoving = 0;
-let cardHide = 0;
-let animActive = false;
-
-const btnTest = document.querySelector('.btn-test');
-btnTest.addEventListener('click', e => {
-  moveRight();
-});
-
-btnTestimonials.addEventListener('click', event => {
-  moveLeft();
-});
+let cardToMove = 0;
+let cardToHide = 0;
+let sliderPrevValue = slider.value;
+let animationIsActive = false;
 
 container.addEventListener('animationend', () => {
   container.classList.remove('testimonials-left', 'testimonials-right');
-  console.log('cardHide', cardHide);
-  cards[cardHide].classList.remove('testimonials__card--active');
-  cards[cardMoving].classList.add('testimonials__card--active');
-  cards[cardMoving].classList.remove('testimonials__card--left', 'testimonials__card--right');
+  cards[cardToHide].classList.remove('testimonials__card--active');
+  cards[cardToMove].classList.add('testimonials__card--active');
+  cards[cardToMove].classList.remove('testimonials__card--left', 'testimonials__card--right');
   slider.value = cardLast - 2;
-  animActive = false;
+  sliderPrevValue = slider.value;
+  animationIsActive = false;
 });
 
-slider.addEventListener('input', event => {
+slider.addEventListener('input', () => {
   container.classList.add('testimonials__card-container--fast');
-  container.classList.remove('testimonials__card-container--fast');
-  console.log(event.target.value);
+
+  clearInterval(repeatTimer);
+  clearTimeout(timeoutTimer);
+
+  timeoutTimer = setTimeout(() => {
+    repeatTimer = setInterval(() => moveLeft(), repeatTime);
+    container.classList.remove('testimonials__card-container--fast');
+  }, waitTime);
+
+  if (sliderPrevValue - slider.value < 0) {
+    moveLeft();
+  } else {
+    moveRight();
+  }
+  sliderPrevValue = slider.value;
 });
 
 function moveRight() {
-  if (cardLast > 3 && !animActive) {
-    animActive = true;
-    cardMoving = cardLast - 4;
-    cardHide = cardLast;
+  if (cardLast > 3 && !animationIsActive && window.screen.availWidth > 1100) {
+    animationIsActive = true;
+    cardToMove = cardLast - 4;
+    cardToHide = cardLast;
     cardLast--;
-    cards[cardMoving].classList.add('testimonials__card--right');
+    cards[cardToMove].classList.add('testimonials__card--right');
     container.classList.add('testimonials-right');
   }
 }
 
 function moveLeft() {
-  if (cardLast < cards.length - 1 && !animActive) {
-    animActive = true;
-    cardMoving = cardLast + 1;
-    cardHide = cardLast - 3;
+  if (cardLast < cards.length - 1 && !animationIsActive && window.screen.availWidth > 1100) {
+    animationIsActive = true;
+    cardToMove = cardLast + 1;
+    cardToHide = cardLast - 3;
     cardLast++;
-    cards[cardMoving].classList.add('testimonials__card--left');
+    cards[cardToMove].classList.add('testimonials__card--left');
     container.classList.add('testimonials-left');
   } else {
-    resetTestimonials();
+    resetCards();
   }
 }
 
-function resetTestimonials() {
-  console.log('reset called');
+function resetCards() {
   cardLast = 3;
   slider.value = 1;
   cards.forEach((card, index) => {
