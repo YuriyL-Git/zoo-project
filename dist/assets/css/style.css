@@ -3391,8 +3391,8 @@ body {
 }
 
 .testimonials__card-container--fast {
-  -webkit-animation: all 0.2s ease-in-out;
-  animation: all 0.2s ease-in-out;
+  -webkit-animation: all 0.05s ease-in-out;
+  animation: all 0.05s ease-in-out;
 }
 
 @media (max-width: 1100px) {

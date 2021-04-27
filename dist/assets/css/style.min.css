@@ -4776,11 +4776,11 @@ body {
 .panda-page .panda-main .preview-container__title-wrapper {
   width: 26.7rem;
   height: 21rem;
-  margin: 0.3rem 0 0 0.6rem;
+  margin: 0;
 }
 .panda-page .panda-main .preview-container__title-wrapper:hover {
   cursor: pointer;
-  background-color: orange;
+  background-color: blue;
   opacity: 0.2;
 }
 @media (max-width: 1580px) {
