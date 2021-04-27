@@ -94,11 +94,16 @@
       flex-shrink: 0;
     }
 
-    &--moving {
+    &--left {
       display: block;
       position: absolute;
       left: 102.2%;
+    }
 
+    &--right {
+      display: block;
+      position: absolute;
+      left: -25%;
     }
 
     @include media('<=small-desktop') {
@@ -291,12 +296,25 @@
   animation-name: testimonialsLeft;
 }
 
+.testimonials-right {
+  animation-name: testimonialsRight;
+}
+
 @keyframes testimonialsLeft {
   from {
     left: 0;
   }
   to {
     left: -25%;
+  }
+}
+
+@keyframes testimonialsRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 25%;
   }
 }
 

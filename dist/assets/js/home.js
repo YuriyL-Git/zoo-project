@@ -43,30 +43,37 @@ function showFollowing(direction, index) {
   });
 }
 
+/*==========================================================*/
+
 /*================ Carousel Testimonials ===============================*/
+
 const cards = [...document.querySelectorAll('.testimonials__card')];
 const btnTestimonials = document.querySelector('.testimonials__feedback-btn');
 const container = document.querySelector('.testimonials__card-container');
 const slider = document.querySelector('.testimonials__slider');
 let cardLast = 3;
+let sliderValue = slider.value;
+let cardMoving = 0;
+let cardHide = 0;
+let animActive = false;
+
+const btnTest = document.querySelector('.btn-test');
+btnTest.addEventListener('click', e => {
+  moveRight();
+});
 
 btnTestimonials.addEventListener('click', event => {
-  console.log('slider.value', slider.value);
-  if (cardLast < cards.length - 1) {
-    cards[cardLast + 1].classList.add('testimonials__card--moving');
-    container.classList.add('testimonials-left');
-  } else {
-    resetTestimonials();
-  }
+  moveLeft();
 });
 
 container.addEventListener('animationend', () => {
-  container.classList.remove('testimonials-left');
-  cards[cardLast - 3].classList.remove('testimonials__card--active');
-  cards[cardLast + 1].classList.add('testimonials__card--active');
-  cards[cardLast + 1].classList.remove('testimonials__card--moving');
-  cardLast++;
+  container.classList.remove('testimonials-left', 'testimonials-right');
+  console.log('cardHide', cardHide);
+  cards[cardHide].classList.remove('testimonials__card--active');
+  cards[cardMoving].classList.add('testimonials__card--active');
+  cards[cardMoving].classList.remove('testimonials__card--left', 'testimonials__card--right');
   slider.value = cardLast - 2;
+  animActive = false;
 });
 
 slider.addEventListener('input', event => {
@@ -75,8 +82,28 @@ slider.addEventListener('input', event => {
   console.log(event.target.value);
 });
 
-function moveCards(direction){
+function moveRight() {
+  if (cardLast > 3 && !animActive) {
+    animActive = true;
+    cardMoving = cardLast - 4;
+    cardHide = cardLast;
+    cardLast--;
+    cards[cardMoving].classList.add('testimonials__card--right');
+    container.classList.add('testimonials-right');
+  }
+}
 
+function moveLeft() {
+  if (cardLast < cards.length - 1 && !animActive) {
+    animActive = true;
+    cardMoving = cardLast + 1;
+    cardHide = cardLast - 3;
+    cardLast++;
+    cards[cardMoving].classList.add('testimonials__card--left');
+    container.classList.add('testimonials-left');
+  } else {
+    resetTestimonials();
+  }
 }
 
 function resetTestimonials() {

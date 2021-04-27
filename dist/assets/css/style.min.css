@@ -2891,10 +2891,15 @@ body {
   position: relative;
   flex-shrink: 0;
 }
-.testimonials__card--moving {
+.testimonials__card--left {
   display: block;
   position: absolute;
   left: 102.2%;
+}
+.testimonials__card--right {
+  display: block;
+  position: absolute;
+  left: -25%;
 }
 @media (max-width: 1000px) {
   .testimonials__card {
@@ -3096,12 +3101,24 @@ body {
   animation-name: testimonialsLeft;
 }
 
+.testimonials-right {
+  animation-name: testimonialsRight;
+}
+
 @keyframes testimonialsLeft {
   from {
     left: 0;
   }
   to {
     left: -25%;
+  }
+}
+@keyframes testimonialsRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 25%;
   }
 }
 .map-page {
