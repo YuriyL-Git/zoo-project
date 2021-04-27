@@ -379,6 +379,10 @@
           opacity: 0.2;
         }
 
+        &--animate {
+          position: absolute;
+        }
+
         @include media('<=1580px') {
           margin: 0;
         }
@@ -784,11 +788,6 @@
           text-decoration: underline;
           color: rgb(249, 128, 75);
         }
-      }
-
-      &--small {
-        margin-bottom: -0.5rem;
-        padding-bottom: 0;
       }
     }
 
