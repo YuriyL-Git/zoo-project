@@ -8,16 +8,11 @@
     left: 0.5%;
   }
 
-  .footer__image-container {
-    top: 285rem;
-  }
-
   .strelitzia-image-default {
     background: url("../images/photos/strelitzia.png") no-repeat;
     width: 33.5rem;
     height: 44rem;
     left: 0;
-    top: 287rem;
     transform: scale(-1, 1);
   }
 
@@ -46,65 +41,6 @@
     padding: 4rem 0 1.5rem;
   }
 }
-
-
-
-
-/*.preview-container {
-  width: 100%;
-  height: 21rem;
-  position: relative;
-
-  .btn {
-    top: 34.6%;
-  }
-
-  &__btn-left {
-    left: -7%;
-  }
-
-  &__btn-right {
-    right: -7%;
-  }
-
-  &__overlay {
-    position: absolute;
-    width: 116rem;
-    height: 21rem;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__title-wrapper {
-    width: 26.7rem;
-    margin: 0.3rem 0 0 0.6rem;
-  }
-
-  &__camera-title {
-    width: 55px;
-    height: 24px;
-    left: 9px;
-    top: 9px;
-
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    color: #000;
-    margin: 0.2rem;
-    margin-top: 0.4rem;
-    padding-top: 0.4rem;
-    text-align: center;
-    font: $body-roboto-regular;
-    text-transform: uppercase;
-  }
-
-  &__videos {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    z-index: 10;
-  }
-}*/
 
 .main-title {
   margin: 0;

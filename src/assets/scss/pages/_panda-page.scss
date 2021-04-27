@@ -726,7 +726,8 @@
 
 
     .info-section {
-      height: fit-content;
+      //height: 15rem;
+      overflow: hidden;
       @include media('<=small-desktop') {
         margin-left: 2.9rem;
         margin-right: 0.6rem;
@@ -840,18 +841,18 @@
     width: 33.5rem;
     height: 44rem;
     left: 0;
-    top: 286.7rem;
+    bottom: 66rem;
     transform: scale(-1, 1);
     z-index: -100;
     @include media('<=small-desktop') {
       background: url("../images/photos/strelitzia-small-desktop.png") no-repeat;
       width: 21.8rem;
-      top: 278.8rem;
+      bottom: 56.7rem;
     }
     @include media('<=tablet') {
       background: url("../images/photos/strelitzia_tablet.png") no-repeat;
       width: 15.9rem;
-      top: 313.1rem;
+      bottom: 26rem;
     }
     @include media('<=620px') {
       top: auto;
@@ -1003,14 +1004,14 @@
   .footer {
     &__image-rotated {
       width: 20.9rem;
-      top: 292.6rem;
+      bottom: 78rem;
       @include media('<=small-desktop') {
-        top: 278.6rem;
+        bottom: 75.6rem;
         width: 15.4rem;
         background: url("../images/photos/leave_foto_small-desk-rotated.png") no-repeat;
       }
       @include media('<=tablet') {
-        top: 314.7rem;
+        bottom: 44rem;
         width: 13rem;
         background: url("../images/photos/leave_zoos_tablet.png") no-repeat;
       }
