@@ -1457,84 +1457,6 @@ body {
   font-style: normal;
 }
 
-.to-left {
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: left;
-  animation-name: left;
-}
-
-.to-right {
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: right;
-  animation-name: right;
-}
-
-.from-right {
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: right;
-  animation-name: right;
-  animation-direction: reverse;
-}
-
-.from-left {
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: left;
-  animation-name: left;
-  animation-direction: reverse;
-}
-
-@-webkit-keyframes left {
-  from {
-    left: 1%;
-  }
-
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes left {
-  from {
-    left: 1%;
-  }
-
-  to {
-    left: -100%;
-  }
-}
-
-@-webkit-keyframes right {
-  from {
-    left: -1%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes right {
-  from {
-    left: -1%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
 .header-home {
   display: -ms-flexbox;
   display: flex;
@@ -7775,4 +7697,87 @@ a.link-inactive {
 a.link-inactive:hover {
   text-decoration: none;
   cursor: pointer;
+}
+
+:root {
+  --left-minus: 0%;
+  --left-plus: 0%;
+}
+
+.to-left {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: left;
+  animation-name: left;
+}
+
+.to-right {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: right;
+  animation-name: right;
+}
+
+.from-right {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: right;
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: left;
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes left {
+  from {
+    left: var(--left-minus);
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes left {
+  from {
+    left: var(--left-minus);
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes right {
+  from {
+    left: var(--left-plus);
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: var(--left-plus);
+  }
+
+  to {
+    left: 100%;
+  }
 }

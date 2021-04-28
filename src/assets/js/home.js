@@ -72,6 +72,7 @@ container.addEventListener('animationend', () => {
 });
 
 let prevTime = Date.now();
+let prevMoveTime
 
 slider.addEventListener('input', () => {
   container.classList.add('testimonials__card-container--fast');

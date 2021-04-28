@@ -62,6 +62,7 @@
   align-items: center;
   max-width: 116rem;
   width: 100%;
+  position: relative;
 
   &__container {
     width: 93.4%;
@@ -413,14 +414,15 @@
   &__sticky-wrapper {
     position: absolute;
     width: 5.4rem;
-    height: 97.2%;
-    left: 114.8%;
+    height: 96%;
+    left: 100%;
     top: 0;
-    @include media('<=1555px') {
-      left: 96.9%;
+    @include media('<=1300px') {
+      left: 95%;
     }
     @include media('<=small-desktop') {
       height: 95.1%;
+      left: 94%;
     }
     @include media('<=820px') {
       left: 92.9%;
@@ -438,7 +440,7 @@
     height: 11.7rem;
     justify-content: space-between;
     position: sticky;
-    top: 500px;
+    top: 80%;
     @include media('<=820px') {
       transform: scale(0.8);
     }

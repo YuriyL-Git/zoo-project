@@ -3151,6 +3151,7 @@ body {
   align-items: center;
   max-width: 116rem;
   width: 100%;
+  position: relative;
 }
 .map-main__container {
   width: 93.4%;
@@ -3612,18 +3613,19 @@ body {
 .map-main__sticky-wrapper {
   position: absolute;
   width: 5.4rem;
-  height: 97.2%;
-  left: 114.8%;
+  height: 96%;
+  left: 100%;
   top: 0;
 }
-@media (max-width: 1555px) {
+@media (max-width: 1300px) {
   .map-main__sticky-wrapper {
-    left: 96.9%;
+    left: 95%;
   }
 }
 @media (max-width: 1000px) {
   .map-main__sticky-wrapper {
     height: 95.1%;
+    left: 94%;
   }
 }
 @media (max-width: 820px) {
@@ -3643,7 +3645,7 @@ body {
   height: 11.7rem;
   justify-content: space-between;
   position: sticky;
-  top: 500px;
+  top: 80%;
 }
 @media (max-width: 820px) {
   .map-main__btn-container {
