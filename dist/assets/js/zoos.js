@@ -5,6 +5,9 @@ const mainVideo = document.querySelector('.iframe-main');
 const btnLeft = document.querySelector('.preview-container__btn-left');
 const btnRight = document.querySelector('.preview-container__btn-right');
 const items = document.querySelectorAll('.preview-container__block');
+const root = document.documentElement;
+
+root.style.setProperty('--left-minus', '1%');
 
 let animationInProcess = false;
 let currentIndex = 0;

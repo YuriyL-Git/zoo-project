@@ -1457,6 +1457,84 @@ body {
   font-style: normal;
 }
 
+.to-left {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: left;
+  animation-name: left;
+}
+
+.to-right {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: right;
+  animation-name: right;
+}
+
+.from-right {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: right;
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: left;
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes left {
+  from {
+    left: 1%;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes left {
+  from {
+    left: 1%;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes right {
+  from {
+    left: -1%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: -1%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
 .header-home {
   display: -ms-flexbox;
   display: flex;
@@ -2633,84 +2711,6 @@ body {
   top: 0;
 }
 
-.to-left {
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: left;
-  animation-name: left;
-}
-
-.to-right {
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: right;
-  animation-name: right;
-}
-
-.from-right {
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: right;
-  animation-name: right;
-  animation-direction: reverse;
-}
-
-.from-left {
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-name: left;
-  animation-name: left;
-  animation-direction: reverse;
-}
-
-@-webkit-keyframes left {
-  from {
-    left: 0;
-  }
-
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes left {
-  from {
-    left: 0;
-  }
-
-  to {
-    left: -100%;
-  }
-}
-
-@-webkit-keyframes right {
-  from {
-    left: 0;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes right {
-  from {
-    left: 0;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
 .chose-favorite {
   display: -ms-flexbox;
   display: flex;
@@ -3352,6 +3352,10 @@ body {
   }
 }
 
+:root {
+  --animation-speed: 0.01s;
+}
+
 .testimonials {
   overflow: hidden;
 }
@@ -3397,8 +3401,8 @@ body {
 }
 
 .testimonials__card-container--fast {
-  -webkit-animation: all 0.05s ease-in-out;
-  animation: all 0.05s ease-in-out;
+  -webkit-animation: all var(--animation-speed) ease-in-out;
+  animation: all var(--animation-speed) ease-in-out;
 }
 
 @media (max-width: 1100px) {
