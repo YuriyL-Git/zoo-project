@@ -4828,6 +4828,7 @@ body {
   text-align: center;
   font: normal normal 1.6rem/120% Roboto, sans-serif;
   text-transform: uppercase;
+  z-index: 25;
 }
 @media (max-width: 1000px) {
   .panda-page .panda-main .preview-container__camera-title {
