@@ -267,6 +267,25 @@
         margin-right: 2.8rem;
       }
 
+      &__block {
+        display: none;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-content: space-between;
+        position: relative;
+        &--active {
+          display: flex;
+        }
+      }
+
+      .block-following {
+        display: flex;
+        position: absolute;
+        top: 0;
+
+      }
 
       &__videos {
         display: flex;
@@ -275,6 +294,9 @@
         height: 100%;
         justify-content: space-between;
         z-index: 10;
+        overflow: hidden;
+        position: relative;
+
         @include media('<=1580px') {
           align-content: space-between;
         }
@@ -355,6 +377,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        z-index: 20;
 
         @include media('<=1580px') {
           align-content: space-between;

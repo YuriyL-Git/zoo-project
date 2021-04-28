@@ -334,23 +334,30 @@
   width: 100%;
   position: absolute;
   top: 0;
-
 }
 
 .to-left {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
   animation-name: left;
 }
 
 .to-right {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
   animation-name: right;
 }
 
 .from-right {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
   animation-name: right;
   animation-direction: reverse;
 }
 
 .from-left {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
   animation-name: left;
   animation-direction: reverse;
 }
