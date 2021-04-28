@@ -2786,6 +2786,10 @@ body {
   }
 }
 
+:root {
+  --animation-speed: 0.01s;
+}
+
 .testimonials {
   overflow: hidden;
 }
@@ -2822,7 +2826,7 @@ body {
   animation: all 0.5s ease-in-out;
 }
 .testimonials__card-container--fast {
-  animation: all 0.05s ease-in-out;
+  animation: all var(--animation-speed) ease-in-out;
 }
 @media (max-width: 1100px) {
   .testimonials__card-container {

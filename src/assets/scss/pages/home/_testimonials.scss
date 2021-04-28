@@ -1,6 +1,10 @@
 @use '../../abstracts/var';
 @import "../../vendors/include-media";
 
+:root {
+  --animation-speed: 0.01s;
+}
+
 
 .testimonials {
   overflow: hidden;
@@ -34,7 +38,7 @@
     animation: all 0.5s ease-in-out;
 
     &--fast {
-      animation: all 0.05s ease-in-out;
+      animation: all var(--animation-speed) ease-in-out;
     }
 
     @include media('<=1100px') {

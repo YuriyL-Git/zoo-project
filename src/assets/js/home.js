@@ -48,6 +48,7 @@ function showFollowing(direction, index) {
 const cards = [...document.querySelectorAll('.testimonials__card')];
 const container = document.querySelector('.testimonials__card-container');
 const slider = document.querySelector('.testimonials__slider');
+const root = document.documentElement;
 
 const repeatTime = 10000;
 const waitTime = 30000;
@@ -70,9 +71,15 @@ container.addEventListener('animationend', () => {
   animationIsActive = false;
 });
 
+let prevTime = Date.now();
+
 slider.addEventListener('input', () => {
   container.classList.add('testimonials__card-container--fast');
-
+  const moveTime = (Date.now() - prevTime) / 6000;
+  if (moveTime < 0.5) {
+    root.style.setProperty('--animation-speed', moveTime + "s");
+  }
+  prevTime = Date.now();
   clearInterval(repeatTimer);
   clearTimeout(timeoutTimer);
 

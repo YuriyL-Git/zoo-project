@@ -133,10 +133,10 @@ layout: donate
     <div class="section-donate__amount-container">
       <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount1">
       <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount2">
-      <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount3" checked>
+      <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount3">
       <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount4">
       <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount5">
-      <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount6">
+      <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount6" checked>
       <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount7">
       <input class="section-donate__amount-picker radio-btn" name="amount" type="radio" id="amount8">
       <p class="section-donate__amount-title">Amount</p>
@@ -145,7 +145,8 @@ layout: donate
 
     <form class="section-donate__form">
       <div class="section-donate__input-wrapper">
-        <input class="section-donate__input amount-input" type="number" id="donate-amount" min="0" max="9999" step="1"
+        <input class="section-donate__input amount-input" type="number" id="donate-amount" value="100" min="0"
+               max="9999" step="1"
                placeholder="Another amount"/>
         <i class="dollar-placeholder">$</i>
       </div>
