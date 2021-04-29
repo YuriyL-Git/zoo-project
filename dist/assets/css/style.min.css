@@ -3170,12 +3170,10 @@ body {
 .map-main__container {
   width: 93.4%;
   position: relative;
-  margin-bottom: 1.6rem;
-  /*margin-left: 1rem;
-  margin-top: 0.4rem;*/
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   overflow: hidden;
   height: 91.7rem;
-  background-color: blue;
 }
 @media (max-width: 1000px) {
   .map-main__container {
@@ -3330,8 +3328,8 @@ body {
 .map-main__panda-one {
   width: 3.7rem;
   position: absolute;
-  left: -1.6rem;
-  top: 5rem;
+  left: -4.9rem;
+  top: -1.6rem;
 }
 .map-main__panda-two-container {
   position: absolute;
@@ -3346,8 +3344,8 @@ body {
 .map-main__panda-two {
   width: 4.6rem;
   position: absolute;
-  left: 0.3rem;
-  top: -5rem;
+  left: -5rem;
+  top: 0.5rem;
 }
 @media (max-width: 1000px) {
   .map-main__panda-two {
