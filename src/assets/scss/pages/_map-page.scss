@@ -1,5 +1,11 @@
 @import "../vendors/include-media";
 
+:root {
+  --map-width: 100%;
+  --map-height: 100%;
+  --map-left: 0;
+  --map-top: 0;
+}
 
 .map-page {
   background-color: #e2ecf1;
@@ -66,11 +72,13 @@
 
   &__container {
     width: 93.4%;
-    height: fit-content;
     position: relative;
     margin-bottom: 1.6rem;
-    margin-left: 1rem;
-    margin-top: 0.4rem;
+    /*margin-left: 1rem;
+    margin-top: 0.4rem;*/
+    overflow: hidden;
+    height: 91.7rem;
+    background-color: blue;
     @include media('<=small-desktop') {
       margin-top: 3.6rem;
       margin-bottom: -1.4rem;
@@ -91,8 +99,13 @@
   }
 
   .map-main__map {
-    width: 100%;
-    height: 91.7rem;
+
+    width: var(--map-width);
+    height: var(--map-height);
+    left: var(--map-left);
+    top: var(--map-top);
+
+    position: relative;
     @include media('<=small-desktop') {
       height: 72.4rem;
       width: 101.9%;
@@ -133,6 +146,8 @@
     position: absolute;
     left: 10.9%;
     top: 48.4%;
+    background-color: orange;
+    opacity: 0.7;
     @include media('<=small-desktop') {
       left: 10.2%;
       top: 47.4%
@@ -205,7 +220,7 @@
 
   &__alligator-container {
     position: absolute;
-    left: 21%;
+    left: 21.5%;
     top: 50%;
     @include media('<=small-desktop') {
       top: 49%;
@@ -313,8 +328,8 @@
   &__panda-one-container {
     z-index: 10;
     position: absolute;
-    left: 76.8%;
-    top: 44.6%;
+    left: 77%;
+    top: 45.2%;
     @include media('<=small-desktop') {
       left: 78%;
       top: 43.6%;
@@ -367,8 +382,8 @@
 
   &__panda-two-container {
     position: absolute;
-    left: 76.3%;
-    top: 50.3%;
+    left: 76.5%;
+    top: 50.5%;
     @include media('<=small-desktop') {
       left: 77.4%;
       top: 50%;
