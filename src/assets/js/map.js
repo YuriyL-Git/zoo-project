@@ -7,13 +7,13 @@ const animalIcons = [...document.querySelectorAll('.animal-icon')];
 const mapRect = map.getBoundingClientRect();
 
 const mapInitWidth = mapRect.width;
-console.log('init-width', mapInitWidth);
 const mapInitHeight = mapRect.height;
 let initialAnimalPosition = [];
 let initialIconsPosition = [];
 const animalContainers = [...document.querySelectorAll('.tooltip-hover')];
 let scaleValue = 1;
 
+console.log(mapRect);
 
 /*-------------------*/
 class AnimalPosition {
@@ -24,7 +24,42 @@ class AnimalPosition {
 }
 
 /*------------------------drag and drop--------------*/
+let topIndent = 0;
+let leftIndent = 0;
+map.addEventListener('mousedown', event => {
+  let mapPosition = getMapPosition();
+  console.log(map.style.left);
+  let shiftX = event.pageX - mapPosition.left;
+  let shiftY = event.pageY - mapPosition.top;
 
+
+  document.addEventListener('mousemove', event => {
+    moveMap(event);
+  });
+
+
+  function moveMap(e) {
+    let moveX = e.pageX - mapPosition.left - shiftX + 'px';
+    let moveY = e.pageY - mapPosition.top - shiftY + 'px';
+    map.style.left = moveX;
+    map.style.top = moveY;
+  }
+
+  // map.style.left = event.pageX - mapRect.left - shiftX + 'px';
+  //map.style.top = event.pageY - mapRect.top - shiftY + 'px';
+});
+
+
+function getMapPosition() {
+  return {
+    top: mapRect.top + pageYOffset,
+    left: mapRect.left + pageXOffset
+  };
+}
+
+map.ondragstart = function () {
+  return false;
+};
 /*---------------------------------------------------*/
 let multiplier = 1;
 getInitialAnimalPosition();
@@ -67,7 +102,6 @@ function zoomMap(scale) {
   mapHeightPercents *= scale;
   root.style.setProperty('--map-width', mapWidhtPercents + '%');
   root.style.setProperty('--map-height', mapHeightPercents + '%');
-  console.log(getComputedStyle(map).width);
   let offcetX = (getComputedStyle(map).width.slice(0, -2) - mapInitWidth) / 2;
   let offcetY = (getComputedStyle(map).height.slice(0, -2) - mapInitHeight) / 2;
 
@@ -149,7 +183,6 @@ function resetMap() {
 }
 
 
-console.log(initialAnimalPosition);
 
 
 

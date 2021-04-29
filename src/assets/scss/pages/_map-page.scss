@@ -80,8 +80,6 @@
   &__container {
     width: 93.4%;
     position: relative;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
     overflow: hidden;
     height: 91.7rem;
     @include media('<=small-desktop') {
@@ -104,12 +102,11 @@
   }
 
   .map-main__map {
-
     width: var(--map-width);
     height: var(--map-height);
     left: var(--map-left);
     top: var(--map-top);
-
+    background-color: orange;
     position: relative;
     @include media('<=small-desktop') {
       height: 72.4rem;
@@ -221,6 +218,7 @@
     position: absolute;
     left: -4.9rem;
     top: -1.6rem;
+    cursor: pointer;
   }
 
   &__panda-two-container {
@@ -242,6 +240,7 @@
     position: absolute;
     left: -5rem;
     top: 0.5rem;
+    cursor: pointer;
     @include media('<=small-desktop') {
       transform: scale(0.9);
     }
