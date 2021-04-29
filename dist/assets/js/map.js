@@ -1,55 +1,46 @@
 /*============ Map Page ==============*/
 const map = document.querySelector('.map-main__map');
-const eagleContainer = document.querySelector('.map-main__eagles-container');
-const gorillaContainer = document.querySelector('.map-main__gorilla-container');
-const buttonPlus = document.querySelector('.map-main__plus-btn');
+const btnPlus = document.querySelector('.map-main__plus-btn');
+const btnMinus = document.querySelector('.map-main__plus-btn');
 const root = document.documentElement;
+const animalIcons = [...document.querySelectorAll('.animal-icon')];
+
 const mapRect = map.getBoundingClientRect();
 
-let scaleValue = 3;
+const mapInitWidth = mapRect.width;
+const mapInitHeight = mapRect.height;
+
+const animalContainers = [...document.querySelectorAll('.tooltip-hover')];
+
+let scaleValue = 1.8;
 
 /*-------------------*/
-class Animal {
+class AnimalPosition {
   constructor(x, y) {
     this.x = x;
     this.y = y;
   }
 }
 
-let eagle = getAnimal(eagleContainer);
-let gorilla = getAnimal(gorillaContainer);
 
+zoomMap(scaleValue);
+updateAnimalsPosition();
+scaleAnimalIcons();
 
-let containerWidtn = mapRect.width;
-let containerHeight = mapRect.height;
+btnPlus.addEventListener('click', event => {
 
-mapScaleX(scaleValue);
-
-let newEaglePosition = scaleCoordinates(containerWidtn, containerHeight, eagle, scaleValue);
-let newGorillaPosition = scaleCoordinates(containerWidtn, containerHeight, gorilla, scaleValue);
-console.log('gorilla', newGorillaPosition);
-setAnimalPosition(eagleContainer, newEaglePosition.x, newEaglePosition.y);
-setAnimalPosition(gorillaContainer, newGorillaPosition.x, newGorillaPosition.y);
-
-gorillaContainer.style.transform = `scale(${scaleValue})`;
-
-buttonPlus.addEventListener('click', event => {
-  console.log('eagles', eagleContainer.getBoundingClientRect());
-  console.log();
 });
 
 
-function scaleCoordinates(width, height, animal, scale) {
-  const centerX = width / 2;
-  const centerY = height / 2;
-  const relX = animal.x - centerX;
-  const relY = animal.y - centerY;
-  const scaledX = relX * scale;
-  const scaledY = relY * scale;
-  return {x: scaledX + centerX, y: scaledY + centerY};
-};
+function updateAnimalsPosition() {
+  animalContainers.forEach(container => {
+    const animal = getAnimalPosition(container);
+    const newPos = scaleAnimalCoordinates(animal, scaleValue);
+    setAnimalPosition(container, newPos);
+  });
+}
 
-function mapScaleX(scale) {
+function zoomMap(scale) {
   let oldWidthPx = getComputedStyle(map).width.slice(0, -2);
   let oldHeightPx = getComputedStyle(map).height.slice(0, -2);
 
@@ -67,14 +58,38 @@ function mapScaleX(scale) {
   root.style.setProperty('--map-top', (-offcetY) + 'px');
 }
 
-function getAnimal(animalContainer) {
-  const animalRect = animalContainer.getBoundingClientRect();
-  return new Animal(animalRect.x - mapRect.x, animalRect.y - mapRect.y);
+function scaleAnimalIcons() {
+  animalIcons.forEach((icon, index) => {
+    let offset = 1;
+    if (index === 0) offset = 2;
+    icon.style.transform = `scale(${scaleValue * offset})`;
+
+    let iconLeft = getComputedStyle(icon).left.slice(0, -2);
+    let iconTop = getComputedStyle(icon).top.slice(0, -2);
+    icon.style.top = iconTop * scaleValue + 'px';
+    icon.style.left = iconLeft * scaleValue + 'px';
+    console.log('left=', iconLeft);
+  });
 }
 
-function setAnimalPosition(animalContainer, x, y) {
-  animalContainer.style.left = x + 'px';
-  animalContainer.style.top = y + 'px';
+function scaleAnimalCoordinates(animal, scale) {
+  const centerX = mapInitWidth / 2;
+  const centerY = mapInitHeight / 2;
+  const relX = animal.x - centerX;
+  const relY = animal.y - centerY;
+  const scaledX = relX * scale;
+  const scaledY = relY * scale;
+  return {x: scaledX + centerX, y: scaledY + centerY};
+}
+
+function getAnimalPosition(animalContainer) {
+  const animalRect = animalContainer.getBoundingClientRect();
+  return new AnimalPosition(animalRect.x - mapRect.x, animalRect.y - mapRect.y);
+}
+
+function setAnimalPosition(animalContainer, coords) {
+  animalContainer.style.left = coords.x + 'px';
+  animalContainer.style.top = coords.y + 'px';
 }
 
 

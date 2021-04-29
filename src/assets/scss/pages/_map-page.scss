@@ -7,6 +7,13 @@
   --map-top: 0;
 }
 
+.tooltip-hover {
+  background-color: black;
+  opacity: 1;
+  width: 1rem;
+  height: 1rem;
+}
+
 .map-page {
   background-color: #e2ecf1;
 
@@ -144,110 +151,27 @@
     z-index: 5;
     cursor: pointer;
     position: absolute;
-    left: 10.9%;
-    top: 48.4%;
-    background-color: orange;
-    opacity: 0.7;
-    @include media('<=small-desktop') {
-      left: 10.2%;
-      top: 47.4%
-    }
-    @include media('<=tablet') {
-      top: 44.4%
-    }
-    @include media('<=500px') {
-      top: 41%;
-      left: 9.2%;
-    }
-    @include media('<=400px') {
-      top: 38%;
-      left: 9.2%;
-    }
-
-    @include media('<=mobile') {
-      left: 5.2%;
-      top: 44.4%
-    }
+    left: 13.6%;
+    top: 51.6%;
   }
 
-  &__eagle-one {
+  &__eagle {
     width: 4.4rem;
     position: absolute;
-    left: -47%;
-    top: 42%;
-    @include media('<=small-desktop') {
-      transform: scale(0.9);
-      left: -35%;
-    }
-    @include media('<=844px') {
-      transform: scale(0.8);
-    }
-    @include media('<=tablet') {
-      transform: scale(0.56);
-      top: 34%;
-      left: -31%;
-    }
-    @include media('<=mobile') {
-      transform: scale(0.38);
-      top: 33%;
-      left: -37%;
-    }
-  }
-
-  &__eagle-two {
-    width: 5rem;
-    position: absolute;
-    left: 17%;
-    top: 94%;
-    @include media('<=small-desktop') {
-      transform: scale(0.9);
-    }
-    @include media('<=844px') {
-      transform: scale(0.8);
-      top: 64%;
-    }
-    @include media('<=tablet') {
-      transform: scale(0.56);
-      top: 74%;
-      left: -6%;
-    }
-    @include media('<=mobile') {
-      transform: scale(0.38);
-      top: 65%;
-      left: -18%;
-    }
+    left: -3rem;
+    top: 1.5rem;
   }
 
   &__alligator-container {
     position: absolute;
-    left: 21.5%;
-    top: 50%;
-    @include media('<=small-desktop') {
-      top: 49%;
-      left: 20.5%;
-    }
-    @include media('<=tablet') {
-      top: 47.4%
-    }
-    @include media('<=480px') {
-      top: 44.4%
-    }
-    @include media('<=410px') {
-      top: 44%
-    }
-    @include media('<=350px') {
-      top: 42%
-    }
-    @include media('<=mobile') {
-      left: 14.5%;
-      top: 47.4%
-    }
+    left: 24.3%;
+    top: 53.5%;
   }
 
   &__alligator {
     position: absolute;
-    left: 25%;
-    top: 95%;
+    left: -1.4rem;
+    top: 3rem;
     width: 7.5rem;
     @include media('<=small-desktop') {
       transform: scale(0.9);
@@ -270,87 +194,22 @@
 
   &__gorilla-container {
     position: absolute;
-    left: 48.3%;
-    top: 59.8%;
-    @include media('<=1050px') {
-      top: 57.5%;
-    }
-    @include media('<=small-desktop') {
-      left: 48.4%;
-      top: 59.1%;
-    }
-    @include media('<=tablet') {
-      left: 49.1%;
-      top: 65.3%;
-    }
-    @include media('<=541px') {
-      top: 62.3%;
-    }
-    @include media('<=470px') {
-      top: 59.7%;
-      transform: scale(0.8);
-    }
-    @include media('<=407px') {
-      top: 57.3%;
-    }
-    @include media('<=mobile') {
-      top: 65.3%;
-    }
+    left: 51.05%;
+    top: 62.8%;
   }
 
   &__gorilla {
     width: 5rem;
     position: absolute;
-    left: 30%;
-    top: 90%;
-    @include media('<=small-desktop') {
-      transform: scale(0.9);
-    }
-    @include media('<=844px') {
-      top: 65%;
-      transform: scale(0.8);
-    }
-    @include media('<=682px') {
-      top: 45%;
-    }
-    @include media('<=tablet') {
-      transform: scale(0.56);
-      top: 0;
-      left: 0;
-    }
-    @include media('<=mobile') {
-      transform: scale(0.45);
-      left: 7%;
-      top: 1%;
-    }
+    left: -2rem;
+    top: 3rem;
   }
 
   &__panda-one-container {
     z-index: 10;
     position: absolute;
-    left: 77%;
-    top: 45.2%;
-    @include media('<=small-desktop') {
-      left: 78%;
-      top: 43.6%;
-    }
-    @include media('<=tablet') {
-      left: 75.5%;
-    }
-    @include media('<=560px') {
-      left: 74%;
-    }
-    @include media('<=470px') {
-      left: 73%;
-    }
-    @include media('<=400px') {
-      left: 71%;
-      top: 41.6%;
-    }
-    @include media('<=mobile') {
-      left: 83.8%;
-      top: 45%;
-    }
+    left: 79.9%;
+    top: 48.5%;
 
     .tooltip-container {
       @include media('<=tablet') {
@@ -362,40 +221,15 @@
   &__panda-one {
     width: 3.7rem;
     position: absolute;
-    left: -25%;
-    top: 27.5%;
-    @include media('<=small-desktop') {
-      transform: scale(0.9);
-    }
-    @include media('<=844px') {
-      top: 0;
-      left: -30%;
-      transform: scale(0.8);
-    }
-    @include media('<=tablet') {
-      transform: scale(0.56);
-    }
-    @include media('<=mobile') {
-      transform: scale(0.38);
-    }
+    left: -1.6rem;
+    top: 5rem;
   }
 
   &__panda-two-container {
     position: absolute;
-    left: 76.5%;
-    top: 50.5%;
-    @include media('<=small-desktop') {
-      left: 77.4%;
-      top: 50%;
-    }
-    @include media('<=tablet') {
-      left: 74.6%;
-      top: 52%;
-    }
-    @include media('<=mobile') {
-      left: 82%;
-      top: 53.5%;
-    }
+    left: 79.4%;
+    top: 53.6%;
+
 
     .tooltip-container {
       @include media('<=tablet') {
@@ -408,8 +242,8 @@
   &__panda-two {
     width: 4.6rem;
     position: absolute;
-    left: -28%;
-    top: 50.6%;
+    left: 0.3rem;
+    top: -5rem;
     @include media('<=small-desktop') {
       transform: scale(0.9);
     }
