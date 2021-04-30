@@ -3904,8 +3904,8 @@ body {
   z-index: 5;
   cursor: pointer;
   position: absolute;
-  left: 13.6%;
-  top: 51.6%;
+  left: 13.65%;
+  top: 51.55%;
 }
 
 .map-main__eagle {
@@ -3917,7 +3917,7 @@ body {
 
 .map-main__alligator-container {
   position: absolute;
-  left: 24.3%;
+  left: 24.35%;
   top: 53.5%;
 }
 
@@ -3963,15 +3963,15 @@ body {
 
 .map-main__gorilla-container {
   position: absolute;
-  left: 51.05%;
-  top: 62.8%;
+  left: 51.12%;
+  top: 62.85%;
 }
 
 .map-main__gorilla {
   width: 5rem;
   position: absolute;
-  left: -2rem;
-  top: 3rem;
+  left: 0;
+  top: 2.2rem;
 }
 
 .map-main__panda-one-container {

@@ -18,8 +18,8 @@ let initialIconsPosition = [];
 let currentAnimalsPosition = [];
 let scaleValue = 1;
 
-let mapLeftAfterZoom = 0;
-let mapTopAfterZoom = 0;
+let mapCurrentLeft = 0;
+let mapCurrentTop = 0;
 
 /*-------------------*/
 class AnimalPosition {
@@ -32,10 +32,10 @@ class AnimalPosition {
 /*------------------------drag and drop--------------*/
 
 map.addEventListener('mousedown', event => {
+  saveMapPosition();
   let mapCurrentRect = map.getBoundingClientRect();
 
-  let currentLeft = (+getComputedStyle(map).left.slice(0, -2));
-  let currentTop = (+getComputedStyle(map).top.slice(0, -2));
+
   let mapPosition = getMapPosition();
   let shiftX = event.pageX - mapPosition.left;
   let shiftY = event.pageY - mapPosition.top;
@@ -55,8 +55,8 @@ map.addEventListener('mousedown', event => {
     let moveX = e.pageX - mapPosition.left - shiftX + offsetX;
     let moveY = e.pageY - mapPosition.top - shiftY + offsetY;
 
-    let mapLeftPos = currentLeft + moveX;
-    let mapTopPos = currentTop + moveY;
+    let mapLeftPos = mapCurrentLeft + moveX;
+    let mapTopPos = mapCurrentTop + moveY;
 
     let limitLeft = mapRect.width - mapCurrentRect.width;
     let limitTop = mapRect.height - mapCurrentRect.height;
@@ -97,9 +97,10 @@ map.addEventListener('mousedown', event => {
 
   function stopDrag() {
     //console.log('stopDrag executed');
-    document.mousemove = null;
+    // document.mousemove = null;
+    saveMapPosition();
     document.removeEventListener('mousemove', moveMap);
-    map.removeEventListener('mouseup', stopDrag);
+    document.removeEventListener('mouseup', stopDrag);
     saveCurrentAnimalsPosition();
   }
 
@@ -129,19 +130,20 @@ scaleAnimalIcons();
 
 zoomInBtn.addEventListener('click', event => {
   if (multiplier < 4) {
-    multiplier += 0.5;
     resetMap();
+    multiplier += 0.5;
     scaleValue *= multiplier;
     updateMap();
-
   }
 });
 
 zoomOutBtn.addEventListener('click', () => {
   if (multiplier > 1) {
-    multiplier -= 0.5;
     resetMap();
+    multiplier -= 0.5;
     scaleValue *= multiplier;
+    zoomMap(scaleValue);
+    validateMap();
     updateMap();
   }
 });
@@ -151,16 +153,40 @@ function updateMap() {
   updateAnimalsPosition();
   scaleAnimalIcons();
   saveCurrentAnimalsPosition();
+  correctMapPosition();
+}
+
+function validateMap() {
+  let leftIsValid = mapCurrentLeft + (+getComputedStyle(map).width.slice(0, -2));
+  let topIsValid = mapCurrentTop + (+getComputedStyle(map).height.slice(0, -2));
+  if (leftIsValid < mapRect.width) mapCurrentLeft = 0;
+  if (topIsValid < mapRect.height) mapCurrentTop = 0;
+}
+
+function correctMapPosition() {
+  let mapLeft = (mapInitWidth - getComputedStyle(map).width.slice(0, -2)) / 2;
+  let mapTop = (mapInitHeight - getComputedStyle(map).height.slice(0, -2)) / 2;
+  let offsetAnimalX = mapCurrentLeft - mapLeft;
+  let offsetAnimalY = mapCurrentTop - mapTop;
+  moveAnimals(offsetAnimalX, offsetAnimalY);
+  root.style.setProperty('--map-left', mapCurrentLeft + 'px');
+  root.style.setProperty('--map-top', mapCurrentTop + 'px');
+  saveCurrentAnimalsPosition();
+}
+
+function saveMapPosition() {
+  mapCurrentLeft = (+getComputedStyle(map).left.slice(0, -2));
+  mapCurrentTop = (+getComputedStyle(map).top.slice(0, -2));
 }
 
 function zoomMap(scale) {
   root.style.setProperty('--map-width', 100 * scale + '%');
   root.style.setProperty('--map-height', 100 * scale + '%');
-  mapLeftAfterZoom = (getComputedStyle(map).width.slice(0, -2) - mapInitWidth) / 2;
-  mapTopAfterZoom = (getComputedStyle(map).height.slice(0, -2) - mapInitHeight) / 2;
+  let mapLeft = (mapInitWidth - getComputedStyle(map).width.slice(0, -2)) / 2;
+  let mapTop = (mapInitHeight - getComputedStyle(map).height.slice(0, -2)) / 2;
 
-  root.style.setProperty('--map-left', (-mapLeftAfterZoom) + 'px');
-  root.style.setProperty('--map-top', (-mapTopAfterZoom) + 'px');
+  root.style.setProperty('--map-left', mapLeft + 'px');
+  root.style.setProperty('--map-top', mapTop + 'px');
 }
 
 function scaleAnimalIcons() {
@@ -190,13 +216,10 @@ function scaleAnimalCoordinates(animal, scale) {
 }
 
 function getAnimalPosition(animalContainer) {
-  //const animalRect = animalContainer.getBoundingClientRect();
-  //return new AnimalPosition(animalRect.x - mapRect.x, animalRect.y - mapRect.y);
   return new AnimalPosition((+getComputedStyle(animalContainer).left.slice(0, -2)), (+getComputedStyle(animalContainer).top.slice(0, -2)));
 }
 
 function setAnimalPosition(animalContainer, coords) {
-  //console.log('set animal coords =', coords);
   animalContainer.style.left = Math.floor(coords.x) + 'px';
   animalContainer.style.top = Math.floor(coords.y) + 'px';
 }
@@ -245,15 +268,14 @@ function saveCurrentAnimalsPosition() {
     let animalPos = getAnimalPosition(container);
     currentAnimalsPosition.push(animalPos);
   });
-  //console.log('saved position', currentAnimalsPosition);
 }
 
 function resetMap() {
   scaleValue = 1;
   root.style.setProperty('--map-width', '100%');
   root.style.setProperty('--map-height', '100%');
-  root.style.setProperty('--map-left', (-mapLeftAfterZoom) + 'px');
-  root.style.setProperty('--map-top', (-mapTopAfterZoom) + 'px');
+  root.style.setProperty('--map-left', '0px');
+  root.style.setProperty('--map-top', '0px');
   updateMap();
   resetAnimalsPosition();
 }
