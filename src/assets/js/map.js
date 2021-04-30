@@ -42,10 +42,12 @@ map.addEventListener('mousedown', event => {
 
 
   document.addEventListener('mousemove', moveMap);
-  map.addEventListener('mouseup', stopDrag);
+  document.addEventListener('mouseup', stopDrag);
 
   let offsetX = 0;
   let offsetY = 0;
+  let fixedX = 0;
+  let fixedY = 0;
 
   function moveMap(e) {
     /*offsetX, offsetY calculate offsets when map is
@@ -62,18 +64,26 @@ map.addEventListener('mousedown', event => {
     if (mapLeftPos < 0 && mapLeftPos > limitLeft) {
       root.style.setProperty('--map-left', mapLeftPos + 'px');
       moveAnimals(moveX, moveY);
+      fixedX = moveX;
       // console.log('move x= ', moveX);
       // console.log('offsetX=', offsetX);
     } else {
-      offsetX--;
+      offsetX++;
+      moveAnimals(fixedX, moveY);
+      moveX = fixedX;
+      // console.log('offsetX', offsetX);
+
     }
 
     if (mapTopPos < 0 && mapTopPos > limitTop) {
       root.style.setProperty('--map-top', mapTopPos + 'px');
       moveAnimals(moveX, moveY);
+      fixedY = moveY;
       //console.log('move y =', moveY);
       // console.log('offsetY=', offsetY);
     } else {
+      moveY = fixedY;
+      moveAnimals(fixedX, moveY);
       offsetY--;
     }
   }
@@ -93,9 +103,9 @@ map.addEventListener('mousedown', event => {
     saveCurrentAnimalsPosition();
   }
 
-  // header.addEventListener('mouseenter', stopDrag);
-  //footer.addEventListener('mouseenter', stopDrag);
-  //body.addEventListener('mouseenter', stopDrag);
+  header.addEventListener('mouseenter', stopDrag);
+  footer.addEventListener('mouseenter', stopDrag);
+  body.addEventListener('mouseenter', stopDrag);
 });
 let newPosition = {};
 
@@ -162,6 +172,10 @@ function scaleAnimalIcons() {
     let iconTop = getComputedStyle(icon).top.slice(0, -2);
     icon.style.top = iconTop * scaleValue + 'px';
     icon.style.left = iconLeft * scaleValue + 'px';
+    if (index === 2 && scaleValue > 1.5) {
+      icon.style.top = 28 * scaleValue + 'px';
+      icon.style.left = 16 * scaleValue + 'px';
+    }
   });
 }
 
