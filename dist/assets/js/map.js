@@ -3,8 +3,13 @@ const zoomInBtn = document.querySelector('.map-main__plus-btn');
 const zoomOutBtn = document.querySelector('.map-main__minus-btn');
 const root = document.documentElement;
 const animalIcons = [...document.querySelectorAll('.animal-icon')];
+const header = document.querySelector('.header-map');
+const footer = document.querySelector('.footer');
+const body = document.querySelector('.map-page');
 
 const mapRect = map.getBoundingClientRect();
+
+console.log(mapRect);
 
 const mapInitWidth = mapRect.width;
 const mapInitHeight = mapRect.height;
@@ -12,8 +17,6 @@ let initialAnimalPosition = [];
 let initialIconsPosition = [];
 const animalContainers = [...document.querySelectorAll('.tooltip-hover')];
 let scaleValue = 1;
-
-console.log(mapRect);
 
 /*-------------------*/
 class AnimalPosition {
@@ -24,45 +27,69 @@ class AnimalPosition {
 }
 
 /*------------------------drag and drop--------------*/
-let topIndent = 0;
-let leftIndent = 0;
+
 map.addEventListener('mousedown', event => {
+  let mapCurrentRect = map.getBoundingClientRect();
+  let currentLeft = (+getComputedStyle(map).left.slice(0, -2));
+  let currentTop = (+getComputedStyle(map).top.slice(0, -2));
+
+
   let mapPosition = getMapPosition();
-  console.log(map.style.left);
   let shiftX = event.pageX - mapPosition.left;
   let shiftY = event.pageY - mapPosition.top;
 
 
-  document.addEventListener('mousemove', event => {
-    moveMap(event);
-  });
+  document.addEventListener('mousemove', moveMap);
+  map.addEventListener('mouseup', stopDrag);
 
+  let offsetX = 0;
+  let offsetY = 0;
 
   function moveMap(e) {
-    let moveX = e.pageX - mapPosition.left - shiftX + 'px';
-    let moveY = e.pageY - mapPosition.top - shiftY + 'px';
-    map.style.left = moveX;
-    map.style.top = moveY;
+    /*offsetX, offsetY calculate offsets when map is
+    moved in not allowed direction */
+
+    let moveX = currentLeft + (e.pageX - mapPosition.left - shiftX + offsetX);
+    let moveY = currentTop + (e.pageY - mapPosition.top - shiftY + offsetY);
+
+    if (moveX < 0) {
+      map.style.left = moveX + 'px';
+    } else {
+      offsetX--;
+    }
+    if (moveY < 0) {
+      map.style.top = moveY + 'px';
+    } else {
+      offsetY--;
+    }
   }
 
-  // map.style.left = event.pageX - mapRect.left - shiftX + 'px';
-  //map.style.top = event.pageY - mapRect.top - shiftY + 'px';
+  function getMapPosition() {
+    return {
+      top: mapCurrentRect.top + pageYOffset,
+      left: mapCurrentRect.left + pageXOffset
+    };
+  }
+
+  function stopDrag() {
+    console.log('entered');
+    document.mousemove = null;
+    document.removeEventListener('mousemove', moveMap);
+    map.removeEventListener('mouseup', stopDrag);
+  }
+
+  header.addEventListener('mouseenter', stopDrag);
+  footer.addEventListener('mouseenter', stopDrag);
+  body.addEventListener('mouseenter', stopDrag);
 });
 
-
-function getMapPosition() {
-  return {
-    top: mapRect.top + pageYOffset,
-    left: mapRect.left + pageXOffset
-  };
-}
 
 map.ondragstart = function () {
   return false;
 };
 /*---------------------------------------------------*/
 let multiplier = 1;
-getInitialAnimalPosition();
+getInitialAnimalsPosition();
 getInitialIconsPosition();
 scaleAnimalIcons();
 
@@ -96,17 +123,17 @@ function updateMap() {
 }
 
 function zoomMap(scale) {
-  let mapWidhtPercents = getComputedStyle(root).getPropertyValue('--map-width').slice(0, -1);
+  let mapWidthPercents = getComputedStyle(root).getPropertyValue('--map-width').slice(0, -1);
   let mapHeightPercents = getComputedStyle(root).getPropertyValue('--map-height').slice(0, -1);
-  mapWidhtPercents *= scale;
+  mapWidthPercents *= scale;
   mapHeightPercents *= scale;
-  root.style.setProperty('--map-width', mapWidhtPercents + '%');
+  root.style.setProperty('--map-width', mapWidthPercents + '%');
   root.style.setProperty('--map-height', mapHeightPercents + '%');
-  let offcetX = (getComputedStyle(map).width.slice(0, -2) - mapInitWidth) / 2;
-  let offcetY = (getComputedStyle(map).height.slice(0, -2) - mapInitHeight) / 2;
+  let offsetX = (getComputedStyle(map).width.slice(0, -2) - mapInitWidth) / 2;
+  let offsetY = (getComputedStyle(map).height.slice(0, -2) - mapInitHeight) / 2;
 
-  root.style.setProperty('--map-left', (-offcetX) + 'px');
-  root.style.setProperty('--map-top', (-offcetY) + 'px');
+  root.style.setProperty('--map-left', (-offsetX) + 'px');
+  root.style.setProperty('--map-top', (-offsetY) + 'px');
 }
 
 function scaleAnimalIcons() {
@@ -149,7 +176,7 @@ function updateAnimalsPosition() {
   });
 }
 
-function getInitialAnimalPosition() {
+function getInitialAnimalsPosition() {
   animalContainers.forEach(container => {
     let animalPos = getAnimalPosition(container);
     initialAnimalPosition.push(animalPos);
