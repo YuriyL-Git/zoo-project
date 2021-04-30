@@ -30,9 +30,12 @@ class AnimalPosition {
 
 map.addEventListener('mousedown', event => {
   let mapCurrentRect = map.getBoundingClientRect();
+
   let currentLeft = (+getComputedStyle(map).left.slice(0, -2));
   let currentTop = (+getComputedStyle(map).top.slice(0, -2));
-
+  console.log('mapCurrentRect', mapCurrentRect);
+  console.log('currentLeft', currentLeft);
+  console.log('currentTop', currentTop);
 
   let mapPosition = getMapPosition();
   let shiftX = event.pageX - mapPosition.left;
@@ -51,13 +54,17 @@ map.addEventListener('mousedown', event => {
 
     let moveX = currentLeft + (e.pageX - mapPosition.left - shiftX + offsetX);
     let moveY = currentTop + (e.pageY - mapPosition.top - shiftY + offsetY);
-
-    if (moveX < 0) {
+    let limitLeft = mapRect.width - mapCurrentRect.width;
+    let limitTop = mapRect.height - mapCurrentRect.height;
+    console.log('limitLeft = ', limitLeft);
+    console.log('limitTop = ', limitTop);
+    if (moveX < 0 && moveX > limitLeft) {
       map.style.left = moveX + 'px';
     } else {
       offsetX--;
     }
-    if (moveY < 0) {
+
+    if (moveY < 0 && moveY > limitTop) {
       map.style.top = moveY + 'px';
     } else {
       offsetY--;
@@ -115,10 +122,16 @@ zoomOutBtn.addEventListener('click', () => {
 function updateMap() {
   root.style.setProperty('--map-width', '100%');
   root.style.setProperty('--map-height', '100%');
-
+  let currentLeft = (+getComputedStyle(map).left.slice(0, -2));
+  let currentTop = (+getComputedStyle(map).top.slice(0, -2));
+  map.style.left = 0;
+  map.style.top = 0;
   zoomMap(scaleValue);
   updateAnimalsPosition();
   scaleAnimalIcons();
+
+  //map.style.left = currentLeft;
+  //map.style.top = currentTop;
 
 }
 
