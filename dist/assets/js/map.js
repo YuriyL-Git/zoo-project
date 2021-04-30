@@ -7,10 +7,9 @@ const header = document.querySelector('.header-map');
 const footer = document.querySelector('.footer');
 const body = document.querySelector('.map-page');
 const animalContainers = [...document.querySelectorAll('.tooltip-hover')];
+const tooltips = [...document.querySelectorAll('.tooltip-container')];
 
 const mapRect = map.getBoundingClientRect();
-
-
 const mapInitWidth = mapRect.width;
 const mapInitHeight = mapRect.height;
 let initialAnimalsPosition = [];
@@ -29,17 +28,15 @@ class AnimalPosition {
   }
 }
 
-/*------------------------drag and drop--------------*/
+/*------------------------drag and drop----------------------------*/
 
 map.addEventListener('mousedown', event => {
   saveMapPosition();
   let mapCurrentRect = map.getBoundingClientRect();
 
-
   let mapPosition = getMapPosition();
   let shiftX = event.pageX - mapPosition.left;
   let shiftY = event.pageY - mapPosition.top;
-
 
   document.addEventListener('mousemove', moveMap);
   document.addEventListener('mouseup', stopDrag);
@@ -65,22 +62,16 @@ map.addEventListener('mousedown', event => {
       root.style.setProperty('--map-left', mapLeftPos + 'px');
       moveAnimals(moveX, moveY);
       fixedX = moveX;
-      // console.log('move x= ', moveX);
-      // console.log('offsetX=', offsetX);
     } else {
       offsetX++;
       moveAnimals(fixedX, moveY);
       moveX = fixedX;
-      // console.log('offsetX', offsetX);
-
     }
 
     if (mapTopPos < 0 && mapTopPos > limitTop) {
       root.style.setProperty('--map-top', mapTopPos + 'px');
       moveAnimals(moveX, moveY);
       fixedY = moveY;
-      //console.log('move y =', moveY);
-      // console.log('offsetY=', offsetY);
     } else {
       moveY = fixedY;
       moveAnimals(fixedX, moveY);
@@ -96,8 +87,6 @@ map.addEventListener('mousedown', event => {
   }
 
   function stopDrag() {
-    //console.log('stopDrag executed');
-    // document.mousemove = null;
     saveMapPosition();
     document.removeEventListener('mousemove', moveMap);
     document.removeEventListener('mouseup', stopDrag);
@@ -121,7 +110,8 @@ function moveAnimals(shiftX, shiftY) {
 map.ondragstart = function () {
   return false;
 };
-/*---------------------------------------------------*/
+
+/*------------------------ zoom map -------------------------------*/
 let multiplier = 1;
 getInitialAnimalsPosition();
 getInitialIconsPosition();
@@ -153,14 +143,15 @@ function updateMap() {
   updateAnimalsPosition();
   scaleAnimalIcons();
   saveCurrentAnimalsPosition();
+  scaleTooltips();
   correctMapPosition();
 }
 
 function validateMap() {
-  let leftIsValid = mapCurrentLeft + (+getComputedStyle(map).width.slice(0, -2));
-  let topIsValid = mapCurrentTop + (+getComputedStyle(map).height.slice(0, -2));
-  if (leftIsValid < mapRect.width) mapCurrentLeft = 0;
-  if (topIsValid < mapRect.height) mapCurrentTop = 0;
+  let leftShift = mapCurrentLeft + (+getComputedStyle(map).width.slice(0, -2));
+  let topShift = mapCurrentTop + (+getComputedStyle(map).height.slice(0, -2));
+  if (leftShift < mapRect.width) mapCurrentLeft += (mapRect.width - leftShift);
+  if (topShift < mapRect.height) mapCurrentTop += (mapRect.height - topShift);
 }
 
 function correctMapPosition() {
@@ -202,6 +193,22 @@ function scaleAnimalIcons() {
       icon.style.top = 28 * scaleValue + 'px';
       icon.style.left = 16 * scaleValue + 'px';
     }
+    if (index === 3 && scaleValue > 2) {
+      icon.style.left = -38 * scaleValue + 'px';
+    }
+    if (index === 4 && scaleValue > 2) {
+      icon.style.left = -42 * scaleValue + 'px';
+    }
+  });
+}
+
+function scaleTooltips() {
+  tooltips.forEach(tooltip => {
+    if (scaleValue > 1.5) {
+      tooltip.style.transform = 'scale(1.3)';
+    } else {
+      tooltip.removeAttribute('style');
+    }
   });
 }
 
@@ -223,7 +230,6 @@ function setAnimalPosition(animalContainer, coords) {
   animalContainer.style.left = Math.floor(coords.x) + 'px';
   animalContainer.style.top = Math.floor(coords.y) + 'px';
 }
-
 
 function updateAnimalsPosition() {
   animalContainers.forEach((container, index) => {

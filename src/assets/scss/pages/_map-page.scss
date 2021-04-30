@@ -8,7 +8,6 @@
 }
 
 .tooltip-hover {
-  background-color: black;
   opacity: 1;
   width: 1rem;
   height: 1rem;
@@ -106,7 +105,6 @@
     height: var(--map-height);
     left: var(--map-left);
     top: var(--map-top);
-    background-color: orange;
     position: relative;
     @include media('<=small-desktop') {
       height: 72.4rem;
