@@ -3708,7 +3708,6 @@ body {
 }
 
 .tooltip-hover {
-  background-color: black;
   opacity: 1;
   width: 1rem;
   height: 1rem;
@@ -3837,7 +3836,6 @@ body {
   height: var(--map-height);
   left: var(--map-left);
   top: var(--map-top);
-  background-color: orange;
   position: relative;
 }
 

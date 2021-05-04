@@ -37,6 +37,10 @@
     position: relative;
     animation: all 0.5s ease-in-out;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &--fast {
       animation: all var(--animation-speed) ease-in-out;
     }

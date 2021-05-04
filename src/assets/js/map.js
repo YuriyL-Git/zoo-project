@@ -6,7 +6,7 @@ const animalIcons = [...document.querySelectorAll('.animal-icon')];
 const header = document.querySelector('.header-map');
 const footer = document.querySelector('.footer');
 const body = document.querySelector('.map-page');
-const animalContainers = [...document.querySelectorAll('.tooltip-hover')];
+const animalContainers = [...document.querySelectorAll('.animal-container')];
 const tooltips = [...document.querySelectorAll('.tooltip-container')];
 
 const mapRect = map.getBoundingClientRect();
@@ -20,7 +20,6 @@ let scaleValue = 1;
 let mapCurrentLeft = 0;
 let mapCurrentTop = 0;
 
-/*-------------------*/
 class AnimalPosition {
   constructor(x, y) {
     this.x = x;
@@ -28,9 +27,24 @@ class AnimalPosition {
   }
 }
 
+/*----------------------- show tooltips on click ------------------*/
+animalIcons.forEach((icon, index) => {
+  icon.addEventListener('click', () => {
+    removeTooltips();
+    animalContainers[index].classList.add('tooltip-hover');
+  });
+});
+
+function removeTooltips() {
+  animalContainers.forEach(container => {
+    container.classList.remove('tooltip-hover');
+  });
+}
+
 /*------------------------drag and drop----------------------------*/
 
 map.addEventListener('mousedown', event => {
+  removeTooltips();
   saveMapPosition();
   let mapCurrentRect = map.getBoundingClientRect();
 
@@ -47,8 +61,7 @@ map.addEventListener('mousedown', event => {
   let fixedY = 0;
 
   function moveMap(e) {
-    /*offsetX, offsetY calculate offsets when map is
-    moved in not allowed direction */
+    /*offsetX, offsetY calculate offsets when map is moved in not allowed direction */
     let moveX = e.pageX - mapPosition.left - shiftX + offsetX;
     let moveY = e.pageY - mapPosition.top - shiftY + offsetY;
 

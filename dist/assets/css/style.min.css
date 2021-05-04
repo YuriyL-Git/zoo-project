@@ -722,15 +722,11 @@ body {
   border-left: 7px solid transparent;
 }
 
-.tooltip-container:hover {
+.tooltip-hover .tooltip-container {
   transform: scale(1.1) rotate(0);
 }
 
-.tooltip-hover:hover .tooltip-container {
-  transform: scale(1.1) rotate(0);
-}
-
-.tooltip-hover:hover .tooltip-container__tooltip {
+.tooltip-hover .tooltip-container__tooltip {
   cursor: pointer;
   visibility: visible;
   opacity: 0.8;
@@ -744,7 +740,6 @@ body {
   visibility: visible;
   opacity: 0.8;
   margin-left: -76px;
-  z-index: 10;
   animation: wave 1s ease-in-out infinite alternate;
 }
 
@@ -2783,6 +2778,9 @@ body {
   position: relative;
   animation: all 0.5s ease-in-out;
 }
+.testimonials__card-container:hover {
+  cursor: pointer;
+}
 .testimonials__card-container--fast {
   animation: all var(--animation-speed) ease-in-out;
 }
@@ -3097,6 +3095,9 @@ body {
 .map-page {
   background-color: #e2ecf1;
 }
+.map-page .tooltip-container {
+  visibility: hidden;
+}
 @media (max-width: 1000px) {
   .map-page .footer__container-main {
     margin-left: 3.3rem;
@@ -3201,6 +3202,9 @@ body {
   top: var(--map-top);
   position: relative;
 }
+.map-main .map-main__map:hover {
+  cursor: pointer;
+}
 @media (max-width: 1000px) {
   .map-main .map-main__map {
     height: 72.4rem;
@@ -3250,6 +3254,9 @@ body {
     margin-top: 1rem;
     margin-bottom: -1.3rem;
   }
+}
+.map-main .animal-icon {
+  cursor: pointer;
 }
 .map-main__eagles-container {
   z-index: 5;

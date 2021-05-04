@@ -62,16 +62,29 @@
   }
 }
 
-.tooltip-container:hover {
+
+// hover animation for map animals
+//.tooltip-hover:hover .tooltip-container {
+//  transform: scale(1.1) rotate(0);
+//}
+//
+//
+//.tooltip-hover:hover .tooltip-container__tooltip {
+//  cursor: pointer;
+//  visibility: visible;
+//  opacity: 0.8;
+//  margin-left: -76px;
+//  z-index: 10;
+//  animation: wave 1s ease-in-out infinite alternate;
+//}
+
+
+.tooltip-hover .tooltip-container {
   transform: scale(1.1) rotate(0);
 }
 
-.tooltip-hover:hover .tooltip-container {
-  transform: scale(1.1) rotate(0);
-}
 
-
-.tooltip-hover:hover .tooltip-container__tooltip {
+.tooltip-hover .tooltip-container__tooltip {
   cursor: pointer;
   visibility: visible;
   opacity: 0.8;
@@ -85,7 +98,6 @@
   visibility: visible;
   opacity: 0.8;
   margin-left: -76px;
-  z-index: 10;
   animation: wave 1s ease-in-out infinite alternate;
 }
 

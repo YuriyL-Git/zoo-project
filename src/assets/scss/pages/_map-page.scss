@@ -17,6 +17,10 @@
   background-color: #e2ecf1;
 
 
+  .tooltip-container {
+    visibility: hidden;
+  }
+
   .footer {
     &__container-main {
       @include media('<=small-desktop') {
@@ -106,6 +110,11 @@
     left: var(--map-left);
     top: var(--map-top);
     position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+
     @include media('<=small-desktop') {
       height: 72.4rem;
       width: 101.9%;
@@ -138,6 +147,10 @@
       margin-top: 1rem;
       margin-bottom: -1.3rem;
     }
+  }
+
+  .animal-icon {
+    cursor: pointer;
   }
 
   &__eagles-container {
@@ -205,6 +218,7 @@
     top: 48.5%;
 
     .tooltip-container {
+
       @include media('<=tablet') {
         display: none;
       }

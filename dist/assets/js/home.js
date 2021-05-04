@@ -71,8 +71,12 @@ container.addEventListener('animationend', () => {
   animationIsActive = false;
 });
 
+container.addEventListener('click', () => {
+  suspendSlider();
+});
+
 let prevTime = Date.now();
-let prevMoveTime
+let prevMoveTime;
 
 slider.addEventListener('input', () => {
   container.classList.add('testimonials__card-container--fast');
@@ -81,13 +85,7 @@ slider.addEventListener('input', () => {
     root.style.setProperty('--animation-speed', moveTime + "s");
   }
   prevTime = Date.now();
-  clearInterval(repeatTimer);
-  clearTimeout(timeoutTimer);
-
-  timeoutTimer = setTimeout(() => {
-    repeatTimer = setInterval(() => moveLeft(), repeatTime);
-    container.classList.remove('testimonials__card-container--fast');
-  }, waitTime);
+  suspendSlider();
 
   if (sliderPrevValue - slider.value < 0) {
     moveLeft();
@@ -96,6 +94,16 @@ slider.addEventListener('input', () => {
   }
   sliderPrevValue = slider.value;
 });
+
+function suspendSlider() {
+  clearInterval(repeatTimer);
+  clearTimeout(timeoutTimer);
+
+  timeoutTimer = setTimeout(() => {
+    repeatTimer = setInterval(() => moveLeft(), repeatTime);
+    container.classList.remove('testimonials__card-container--fast');
+  }, waitTime);
+}
 
 function moveRight() {
   if (cardLast > 3 && !animationIsActive && window.screen.availWidth > 1100) {
